@@ -3284,6 +3284,10 @@ static const u8 sIvyCudgelDescription[] = _(
     "Type changes with held mask.\n"
     "High critical-hit ratio.");
 
+static const u8 sPsyrippleDescription[] = _(
+    "A weak telekinetic attack.\n"
+    "May lower Sp. Atk.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4127,4 +4131,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MATCHA_GOTCHA - 1] = sMatchaGotchaDescription,
     [MOVE_SYRUP_BOMB - 1] = sSyrupBombDescription,
     [MOVE_IVY_CUDGEL - 1] = sIvyCudgelDescription,
+
+    //SpinarakGreen
+    [MOVE_PSYRIPPLE - 1] = sPsyrippleDescription,
 };
