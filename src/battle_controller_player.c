@@ -80,6 +80,7 @@ static void HandleInputChooseMove(u32 battler);
 static void MoveSelectionDisplayPpNumber(u32 battler);
 static void MoveSelectionDisplayPpString(u32 battler);
 static void MoveSelectionDisplayMoveType(u32 battler);
+static void MoveSelectionDisplaySplitIcon(u32 battler);
 static void MoveSelectionDisplayMoveNames(u32 battler);
 static void HandleMoveSwitching(u32 battler);
 static void SwitchIn_HandleSoundAndEnd(u32 battler);
@@ -1753,6 +1754,22 @@ static void MoveSelectionDisplayMoveType(u32 battler)
 
     StringCopy(txtPtr, gTypeNames[type]);
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
+
+    MoveSelectionDisplaySplitIcon(battler);
+}
+
+static void MoveSelectionDisplaySplitIcon(u32 battler){
+	static const u16 sSplitIcons_Pal[] = INCBIN_U16("graphics/interface/split_icons_battle.gbapal");
+	static const u8 sSplitIcons_Gfx[] = INCBIN_U8("graphics/interface/split_icons_battle.4bpp");
+	struct ChooseMoveStruct *moveInfo;
+	int icon;
+
+	moveInfo = (struct ChooseMoveStruct*)(&gBattleResources->bufferA[battler][4]);
+	icon = GetBattleMoveSplit(moveInfo->moves[gMoveSelectionCursor[battler]]);
+	LoadPalette(sSplitIcons_Pal, 10 * 0x10, 0x20);
+	BlitBitmapToWindow(B_WIN_DUMMY, sSplitIcons_Gfx + 0x80 * icon, 0, 0, 16, 16);
+	PutWindowTilemap(B_WIN_DUMMY);
+	CopyWindowToVram(B_WIN_DUMMY, 3);
 }
 
 void MoveSelectionCreateCursorAt(u8 cursorPosition, u8 baseTileNum)
