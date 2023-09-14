@@ -5267,6 +5267,8 @@ int MoveToHM(u16 move)
     case MOVE_ROCK_CLIMB:
         item = ITEM_HM11;
         break;
+    case MOVE_HEADBUTT:
+        item = ITEM_TM51;
     default:
         item = 0;
         break;
