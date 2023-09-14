@@ -7754,7 +7754,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_HEADBUTT,
     },
 
-    [ITEM_TM52] =
+    [ITEM_TM_DAZZLING_GLEAM] =
     {
         .name = _("TM52"),
         .price = 3000,
@@ -7763,7 +7763,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_DAZZLING_GLEAM, // Todo
     },
 
     [ITEM_TM53] =

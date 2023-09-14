@@ -3291,8 +3291,10 @@ static const u8 sTM51Desc[] = _(
     "A ramming attack that\n"
     "may cause flinching.");
 
-static const u8 sTM52Desc[] = _( // Todo
-    "?????");
+static const u8 sTM52Desc[] = _(
+    "Damages foes by\n"
+    "emitting a bright\n"
+    "flash.");
 
 static const u8 sTM53Desc[] = _( // Todo
     "?????");
