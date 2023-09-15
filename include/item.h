@@ -32,6 +32,7 @@ struct BagPocket
 extern const struct Item gItems[];
 extern struct BagPocket gBagPockets[];
 extern struct ItemSlot gTmHmItemSlots[BAG_TMHM_COUNT];
+extern struct ItemSlot gKeyItemSlots[BAG_KEYITEMS_COUNT];
 
 void ApplyNewEncryptionKeyToBagItems(u32 newKey);
 void ApplyNewEncryptionKeyToBagItems_(u32 newKey);
@@ -77,6 +78,7 @@ u32 ItemId_GetFlingPower(u32 itemId);
 u32 GetItemStatus1Mask(u16 itemId);
 u32 GetItemStatus2Mask(u16 itemId);
 void DeserializeTmHmItemSlots(void);
+void DeserializeKeyItemSlots(void);
 
 /* Expands to:
  * enum

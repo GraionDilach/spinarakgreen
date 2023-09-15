@@ -119,6 +119,7 @@
 #define NUM_FLAG_BYTES ROUND_BITS_TO_BYTES(FLAGS_COUNT)
 #define NUM_TRENDY_SAYING_BYTES ROUND_BITS_TO_BYTES(NUM_TRENDY_SAYINGS)
 #define NUM_TMHM_BYTES ROUND_BITS_TO_BYTES(BAG_TMHM_COUNT)
+#define NUM_KEYITEM_BYTES ROUND_BITS_TO_BYTES(BAG_KEYITEMS_COUNT)
 
 // Calls m0/m1/.../m8 depending on how many arguments are passed.
 #define VARARG_8(m, ...) CAT(m, NARG_8(__VA_ARGS__))(__VA_ARGS__)
@@ -986,11 +987,11 @@ struct SaveBlock1
     /*0x496*/ u16 registeredItem; // registered for use with SELECT button
     /*0x498*/ struct ItemSlot pcItems[PC_ITEMS_COUNT];
     /*0x560*/ struct ItemSlot bagPocket_Items[BAG_ITEMS_COUNT];
-    /*0x5D8*/ struct ItemSlot bagPocket_KeyItems[BAG_KEYITEMS_COUNT];
     /*0x650*/ struct ItemSlot bagPocket_PokeBalls[BAG_POKEBALLS_COUNT];
     /*0x790*/ struct ItemSlot bagPocket_Berries[BAG_BERRIES_COUNT];
     /*0x848*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
     /*0x988*/ u8 bagPocket_TMHMOwnedFlags[NUM_TMHM_BYTES];
+              u8 bagPocket_KeyItemOwnedFlags[NUM_KEYITEM_BYTES];
     /*0x9BC*/ u16 berryBlenderRecords[3];
     /*0x9C8*/ u16 trainerRematchStepCounter;
     /*0x9CA*/ u8 trainerRematches[MAX_REMATCH_ENTRIES];

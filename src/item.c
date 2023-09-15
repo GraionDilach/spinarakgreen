@@ -24,9 +24,92 @@ static bool8 CheckPyramidBagHasSpace(u16 itemId, u16 count);
 EWRAM_DATA struct BagPocket gBagPockets[POCKETS_COUNT] = {0};
 
 EWRAM_DATA struct ItemSlot gTmHmItemSlots[BAG_TMHM_COUNT] = {0};
+EWRAM_DATA struct ItemSlot gKeyItemSlots[BAG_KEYITEMS_COUNT] = {0};
 
 #include "data/text/item_descriptions.h"
 #include "data/items.h"
+
+static const u16 sKeyItemsLookupTable[KEYITEMS_COUNT] =
+{
+    [KEYITEM_ESCAPE_ROPE]        =   ITEM_ESCAPE_ROPE,
+    [KEYITEM_HELIX_FOSSIL]       =   ITEM_HELIX_FOSSIL,
+    [KEYITEM_DOME_FOSSIL]        =   ITEM_DOME_FOSSIL,
+    [KEYITEM_OLD_AMBER]          =   ITEM_OLD_AMBER,
+    [KEYITEM_ROOT_FOSSIL]        =   ITEM_ROOT_FOSSIL,
+    [KEYITEM_CLAW_FOSSIL]        =   ITEM_CLAW_FOSSIL,
+    [KEYITEM_EXP_SHARE]          =   ITEM_EXP_SHARE,
+    [KEYITEM_OVAL_CHARM]         =   ITEM_OVAL_CHARM,
+    [KEYITEM_SHINY_CHARM]        =   ITEM_SHINY_CHARM,
+    [KEYITEM_CATCHING_CHARM]     =   ITEM_CATCHING_CHARM,
+    [KEYITEM_EXP_CHARM]          =   ITEM_EXP_CHARM,
+    [KEYITEM_ROTOM_CATALOG]      =   ITEM_ROTOM_CATALOG,
+    [KEYITEM_GRACIDEA]           =   ITEM_GRACIDEA,
+    [KEYITEM_REVEAL_GLASS]       =   ITEM_REVEAL_GLASS,
+    [KEYITEM_DNA_SPLICERS]       =   ITEM_DNA_SPLICERS,
+    [KEYITEM_ZYGARDE_CUBE]       =   ITEM_ZYGARDE_CUBE,
+    [KEYITEM_PRISON_BOTTLE]      =   ITEM_PRISON_BOTTLE,
+    [KEYITEM_N_SOLARIZER]        =   ITEM_N_SOLARIZER,
+    [KEYITEM_N_LUNARIZER]        =   ITEM_N_LUNARIZER,
+    [KEYITEM_REINS_OF_UNITY]     =   ITEM_REINS_OF_UNITY,
+    [KEYITEM_MEGA_RING]          =   ITEM_MEGA_RING,
+    [KEYITEM_Z_POWER_RING]       =   ITEM_Z_POWER_RING,
+    [KEYITEM_DYNAMAX_BAND]       =   ITEM_DYNAMAX_BAND,
+    [KEYITEM_BICYCLE]            =   ITEM_BICYCLE,
+    [KEYITEM_MACH_BIKE]          =   ITEM_MACH_BIKE,
+    [KEYITEM_ACRO_BIKE]          =   ITEM_ACRO_BIKE,
+    [KEYITEM_OLD_ROD]            =   ITEM_OLD_ROD,
+    [KEYITEM_GOOD_ROD]           =   ITEM_GOOD_ROD,
+    [KEYITEM_SUPER_ROD]          =   ITEM_SUPER_ROD,
+    [KEYITEM_DOWSING_MACHINE]    =   ITEM_DOWSING_MACHINE,
+    [KEYITEM_TOWN_MAP]           =   ITEM_TOWN_MAP,
+    [KEYITEM_VS_SEEKER]          =   ITEM_VS_SEEKER,
+    [KEYITEM_TM_CASE]            =   ITEM_TM_CASE,
+    [KEYITEM_BERRY_POUCH]        =   ITEM_BERRY_POUCH,
+    [KEYITEM_POKEMON_BOX_LINK]   =   ITEM_POKEMON_BOX_LINK,
+    [KEYITEM_COIN_CASE]          =   ITEM_COIN_CASE,
+    [KEYITEM_POWDER_JAR]         =   ITEM_POWDER_JAR,
+    [KEYITEM_WAILMER_PAIL]       =   ITEM_WAILMER_PAIL,
+    [KEYITEM_POKE_RADAR]         =   ITEM_POKE_RADAR,
+    [KEYITEM_POKEBLOCK_CASE]     =   ITEM_POKEBLOCK_CASE,
+    [KEYITEM_SOOT_SACK]          =   ITEM_SOOT_SACK,
+    [KEYITEM_POKE_FLUTE]         =   ITEM_POKE_FLUTE,
+    [KEYITEM_FAME_CHECKER]       =   ITEM_FAME_CHECKER,
+    [KEYITEM_TEACHY_TV]          =   ITEM_TEACHY_TV,
+    [KEYITEM_SS_TICKET]          =   ITEM_SS_TICKET,
+    [KEYITEM_EON_TICKET]         =   ITEM_EON_TICKET,
+    [KEYITEM_MYSTIC_TICKET]      =   ITEM_MYSTIC_TICKET,
+    [KEYITEM_AURORA_TICKET]      =   ITEM_AURORA_TICKET,
+    [KEYITEM_OLD_SEA_MAP]        =   ITEM_OLD_SEA_MAP,
+    [KEYITEM_LETTER]             =   ITEM_LETTER,
+    [KEYITEM_DEVON_PARTS]        =   ITEM_DEVON_PARTS,
+    [KEYITEM_GO_GOGGLES]         =   ITEM_GO_GOGGLES,
+    [KEYITEM_DEVON_SCOPE]        =   ITEM_DEVON_SCOPE,
+    [KEYITEM_BASEMENT_KEY]       =   ITEM_BASEMENT_KEY,
+    [KEYITEM_SCANNER]            =   ITEM_SCANNER,
+    [KEYITEM_STORAGE_KEY]        =   ITEM_STORAGE_KEY,
+    [KEYITEM_KEY_TO_ROOM_1]      =   ITEM_KEY_TO_ROOM_1,
+    [KEYITEM_KEY_TO_ROOM_2]      =   ITEM_KEY_TO_ROOM_2,
+    [KEYITEM_KEY_TO_ROOM_4]      =   ITEM_KEY_TO_ROOM_4,
+    [KEYITEM_KEY_TO_ROOM_6]      =   ITEM_KEY_TO_ROOM_6,
+    [KEYITEM_METEORITE]          =   ITEM_METEORITE,
+    [KEYITEM_MAGMA_EMBLEM]       =   ITEM_MAGMA_EMBLEM,
+    [KEYITEM_CONTEST_PASS]       =   ITEM_CONTEST_PASS,
+    [KEYITEM_OAKS_PARCEL]        =   ITEM_OAKS_PARCEL,
+    [KEYITEM_SECRET_KEY]         =   ITEM_SECRET_KEY,
+    [KEYITEM_BIKE_VOUCHER]       =   ITEM_BIKE_VOUCHER,
+    [KEYITEM_GOLD_TEETH]         =   ITEM_GOLD_TEETH,
+    [KEYITEM_CARD_KEY]           =   ITEM_CARD_KEY,
+    [KEYITEM_LIFT_KEY]           =   ITEM_LIFT_KEY,
+    [KEYITEM_SILPH_SCOPE]        =   ITEM_SILPH_SCOPE,
+    [KEYITEM_TRI_PASS]           =   ITEM_TRI_PASS,
+    [KEYITEM_RAINBOW_PASS]       =   ITEM_RAINBOW_PASS,
+    [KEYITEM_TEA]                =   ITEM_TEA,
+    [KEYITEM_RUBY]               =   ITEM_RUBY,
+    [KEYITEM_SAPPHIRE]           =   ITEM_SAPPHIRE,
+    [KEYITEM_SCROLL_OF_DARKNESS] =   ITEM_SCROLL_OF_DARKNESS,
+    [KEYITEM_SCROLL_OF_WATERS]   =   ITEM_SCROLL_OF_WATERS,
+    [KEYITEM_TERA_ORB]           =   ITEM_TERA_ORB,
+};
 
 static u16 GetBagItemQuantity(u16 *quantity)
 {
@@ -78,12 +161,42 @@ void DeserializeTmHmItemSlots(void)
     }
 }
 
+void DeserializeKeyItemSlots(void)
+{
+    int i;
+
+    for (i = 0; i < KEYITEMS_COUNT; ++i)
+    {
+        u8 bit = i % 8;
+
+        gKeyItemSlots[i].itemId = 0;
+        SetBagItemQuantity(&(gKeyItemSlots[i].quantity), 0);
+        if (gSaveBlock1Ptr->bagPocket_KeyItemOwnedFlags[i / 8] & (1<<bit))
+            AddBagItem(sKeyItemsLookupTable[i], 1);
+    }
+}
+
+static void SetKeyItemOwned(u16 itemId)
+{
+    int i;
+
+    for (i = 0; i < KEYITEMS_COUNT; ++i)
+    {
+        if (sKeyItemsLookupTable[i] == itemId)
+        {
+            u8* flagByte = &gSaveBlock1Ptr->bagPocket_KeyItemOwnedFlags[i / 8];
+            *flagByte = (*flagByte) | (1 << (i % 8));
+            break;
+        }
+    }
+}
+
 void SetBagItemsPointers(void)
 {
     gBagPockets[ITEMS_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_Items;
     gBagPockets[ITEMS_POCKET].capacity = BAG_ITEMS_COUNT;
 
-    gBagPockets[KEYITEMS_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_KeyItems;
+    gBagPockets[KEYITEMS_POCKET].itemSlots = &gKeyItemSlots[0];
     gBagPockets[KEYITEMS_POCKET].capacity = BAG_KEYITEMS_COUNT;
 
     gBagPockets[BALLS_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_PokeBalls;
@@ -213,6 +326,7 @@ bool8 CheckBagHasSpace(u16 itemId, u16 count)
     case BERRIES_POCKET:
         slotCapacity = MAX_BERRY_CAPACITY;
         break;
+    case KEYITEMS_POCKET:
     case TMHM_POCKET:
         slotCapacity = 1;
         break;
@@ -361,6 +475,8 @@ bool8 AddBagItem(u16 itemId, u16 count)
                         SetBagItemQuantity(&newItems[i].quantity, count);
                         if (pocket == TMHM_POCKET)
                             SetTmHmOwned(itemId);
+                        if (pocket == KEYITEMS_POCKET)
+                            SetKeyItemOwned(itemId);
                         count = 0;
                         break;
                     }

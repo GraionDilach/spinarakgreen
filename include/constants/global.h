@@ -58,7 +58,7 @@
 #define POKE_NEWS_COUNT 16
 #define PC_ITEMS_COUNT 50
 #define BAG_ITEMS_COUNT 30
-#define BAG_KEYITEMS_COUNT 30
+#define BAG_KEYITEMS_COUNT KEYITEMS_COUNT
 #define BAG_POKEBALLS_COUNT 16
 #define BAG_TMHM_COUNT (NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES) // Number of TMs and HMs that can fit in the TMs & HMs pocket of the bag.
 #define BAG_BERRIES_COUNT 46

@@ -205,6 +205,7 @@ void CopyPartyAndObjectsFromSave(void)
     LoadPlayerParty();
     LoadObjectEvents();
     DeserializeTmHmItemSlots();
+    DeserializeKeyItemSlots();
 }
 
 void LoadPlayerBag(void)
@@ -217,7 +218,7 @@ void LoadPlayerBag(void)
 
     // load player key items.
     for (i = 0; i < BAG_KEYITEMS_COUNT; i++)
-        gLoadedSaveData.keyItems[i] = gSaveBlock1Ptr->bagPocket_KeyItems[i];
+        gLoadedSaveData.keyItems[i] = gKeyItemSlots[i];
 
     // load player pokeballs.
     for (i = 0; i < BAG_POKEBALLS_COUNT; i++)
@@ -249,7 +250,7 @@ void SavePlayerBag(void)
 
     // save player key items.
     for (i = 0; i < BAG_KEYITEMS_COUNT; i++)
-        gSaveBlock1Ptr->bagPocket_KeyItems[i] = gLoadedSaveData.keyItems[i];
+        gKeyItemSlots[i] = gLoadedSaveData.keyItems[i];
 
     // save player pokeballs.
     for (i = 0; i < BAG_POKEBALLS_COUNT; i++)
