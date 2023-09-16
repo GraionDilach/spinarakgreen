@@ -14794,15 +14794,25 @@ static void Cmd_handleballthrow(void)
             switch (gLastUsedItem)
             {
             case ITEM_ULTRA_BALL:
+            #if B_SPGREEN_POKEBALLS
+                ballMultiplier = 400;
+                break;
+            #else
                 ballMultiplier = 200;
                 break;
+            #endif
             case ITEM_SPORT_BALL:
                 if (B_SPORT_BALL_MODIFIER <= GEN_7)
                     ballMultiplier = 150;
             case ITEM_GREAT_BALL:
             case ITEM_SAFARI_BALL:
+            #if B_SPGREEN_POKEBALLS
+                ballMultiplier = 200;
+                break;
+            #else
                 ballMultiplier = 150;
                 break;
+            #endif
             case ITEM_NET_BALL:
                 if (IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_WATER) || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_BUG))
                     ballMultiplier = B_NET_BALL_MODIFIER >= GEN_7 ? 350 : 300;
@@ -14933,7 +14943,16 @@ static void Cmd_handleballthrow(void)
                     ballMultiplier = 400;
                 break;
             case ITEM_BEAST_BALL:
+            #if B_SPGREEN_POKEBALLS
+                ballMultiplier = 800;
+            #else
                 ballMultiplier = 10;
+            #endif
+            #if B_SPGREEN_POKEBALLS
+            case ITEM_PREMIER_BALL:
+                ballMultiplier = 250;
+                break;
+            #endif
                 break;
             }
         }
