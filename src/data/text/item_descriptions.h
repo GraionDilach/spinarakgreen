@@ -3296,8 +3296,10 @@ static const u8 sTM52Desc[] = _(
     "emitting a bright\n"
     "flash.");
 
-static const u8 sTM53Desc[] = _( // Todo
-    "?????");
+static const u8 sTM53Desc[] = _(
+    "Fires three types\n"
+    "of beams at the\n"
+    "same time.");
 
 static const u8 sTM54Desc[] = _( // Todo
     "?????");
