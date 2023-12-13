@@ -42,4 +42,7 @@
 // Go here if you want to disable specific families of Pokémon.
 #include "config/species_enabled.h"
 
+// Spinarak Green settings
+#define P_STAT_EXP                  GEN_SPGRN   // SpinarakGreen uses Gen1/Gen2 stat experience.
+
 #endif // GUARD_CONFIG_POKEMON_H
