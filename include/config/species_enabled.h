@@ -346,7 +346,7 @@
 #define P_FAMILY_DEERLING                FALSE
 #define P_FAMILY_EMOLGA                  FALSE
 #define P_FAMILY_KARRABLAST              FALSE
-#define P_FAMILY_FOONGUS                 FALSE
+#define P_FAMILY_FOONGUS                 TRUE
 #define P_FAMILY_FRILLISH                TRUE
 #define P_FAMILY_ALOMOMOLA               TRUE
 #define P_FAMILY_JOLTIK                  FALSE
@@ -354,7 +354,7 @@
 #define P_FAMILY_KLINK                   FALSE
 #define P_FAMILY_TYNAMO                  FALSE
 #define P_FAMILY_ELGYEM                  FALSE
-#define P_FAMILY_LITWICK                 FALSE
+#define P_FAMILY_LITWICK                 TRUE
 #define P_FAMILY_AXEW                    FALSE
 #define P_FAMILY_CUBCHOO                 FALSE
 #define P_FAMILY_CRYOGONAL               FALSE
@@ -566,7 +566,7 @@
 #define P_FAMILY_TATSUGIRI               FALSE
 #define P_FAMILY_GREAT_TUSK              TRUE
 #define P_FAMILY_SCREAM_TAIL             TRUE
-#define P_FAMILY_BRUTE_BONNET            FALSE
+#define P_FAMILY_BRUTE_BONNET            TRUE
 #define P_FAMILY_FLUTTER_MANE            TRUE
 #define P_FAMILY_SLITHER_WING            FALSE
 #define P_FAMILY_SANDY_SHOCKS            TRUE
