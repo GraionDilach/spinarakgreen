@@ -53,7 +53,8 @@
     F(SNATCH) \
     F(OVERHEAT) \
     F(HEADBUTT) \
-    F(DAZZLING_GLEAM)
+    F(DAZZLING_GLEAM) \
+    F(TRI_ATTACK)
 
 #define FOREACH_HM(F) \
     F(CUT) \
