@@ -11,6 +11,7 @@
 #include "battle_z_move.h"
 #include "bg.h"
 #include "data.h"
+#include "event_data.h"
 #include "item.h"
 #include "item_menu.h"
 #include "link.h"
@@ -31,6 +32,7 @@
 #include "util.h"
 #include "window.h"
 #include "constants/battle_anim.h"
+#include "constants/battle_move_effects.h"
 #include "constants/hold_effects.h"
 #include "constants/items.h"
 #include "constants/moves.h"
@@ -38,6 +40,66 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "constants/rgb.h"
+
+#define X UQ_4_12
+#define ______ X(1.0) // Regular effectiveness.
+
+static const uq4_12_t sTypeEffectivenessTable[NUMBER_OF_MON_TYPES][NUMBER_OF_MON_TYPES] =
+{//                   Defender -->
+ //  Attacker         Normal  Fighting Flying  Poison  Ground   Rock    Bug     Ghost   Steel  Mystery  Fire   Water   Grass  Electric Psychic   Ice   Dragon   Dark   Fairy
+#if B_SPGREEN_TYPE_MATCHUP == GEN_SPGRN
+    [TYPE_NORMAL]   = {______, ______, ______, ______, ______, X(0.5), ______, X(0.0), X(0.5), ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_FIGHTING] = {X(2.0), ______, X(0.5), X(0.5), ______, X(2.0), X(0.5), X(0.0), X(2.0), ______, ______, ______, X(0.5), ______, X(0.5), X(2.0), ______, X(2.0), X(0.5)},
+    [TYPE_FLYING]   = {______, X(2.0), ______, ______, ______, X(0.5), X(2.0), ______, X(0.5), ______, ______, ______, X(2.0), X(0.5), ______, X(0.5), ______, ______, ______},
+    [TYPE_POISON]   = {______, ______, ______, X(0.5), X(0.5), X(0.5), X(2.0), X(0.5), X(0.0), ______, ______, X(2.0), X(2.0), ______, ______, ______, ______, X(0.5), X(2.0)},
+    [TYPE_GROUND]   = {______, ______, X(0.0), X(2.0), ______, X(2.0), X(0.5), ______, X(2.0), ______, X(2.0), ______, X(0.5), X(2.0), ______, X(0.5), ______, ______, ______},
+    [TYPE_ROCK]     = {______, X(0.5), X(2.0), ______, X(0.5), X(0.5), X(2.0), ______, X(0.5), ______, X(2.0), ______, X(0.5), ______, ______, X(2.0), ______, ______, ______},
+    [TYPE_BUG]      = {______, X(0.5), X(0.5), X(2.0), ______, ______, ______, X(2.0), X(0.5), ______, X(0.5), ______, X(2.0), ______, X(2.0), ______, ______, X(2.0), X(0.5)},
+    [TYPE_GHOST]    = {X(0.0), ______, ______, ______, ______, ______, X(0.5), X(2.0), X(0.5), ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), X(2.0)},
+    [TYPE_STEEL]    = {______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), ______, X(0.5), X(0.5), ______, X(0.5), ______, X(2.0), ______, X(0.5), X(2.0)},
+    [TYPE_MYSTERY]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_FIRE]     = {______, ______, ______, ______, ______, X(0.5), X(2.0), ______, X(2.0), ______, X(0.5), X(0.5), X(2.0), ______, ______, X(2.0), X(0.5), ______, ______},
+    [TYPE_WATER]    = {______, ______, ______, ______, X(2.0), X(2.0), ______, ______, X(2.0), ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), X(0.5), ______, ______},
+    [TYPE_GRASS]    = {______, ______, X(0.5), X(0.5), X(2.0), X(2.0), X(0.5), ______, X(0.5), ______, X(0.5), X(2.0), X(0.5), ______, ______, X(0.5), X(0.5), ______, ______},
+    [TYPE_ELECTRIC] = {______, ______, X(2.0), ______, X(0.0), ______, ______, ______, X(2.0), ______, ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), ______, ______},
+    [TYPE_PSYCHIC]  = {______, X(2.0), ______, X(2.0), ______, ______, X(0.5), ______, X(0.5), ______, ______, ______, ______, ______, X(0.5), ______, ______, X(0.0), X(2.0)},
+    [TYPE_ICE]      = {______, ______, X(2.0), ______, X(2.0), ______, ______, ______, X(0.5), ______, X(2.0), X(0.5), X(2.0), ______, ______, X(0.5), X(2.0), ______, ______},
+    [TYPE_DRAGON]   = {______, ______, ______, ______, ______, X(0.5), ______, ______, X(0.5), ______, ______, ______, ______, ______, ______, ______, X(2.0), X(2.0), X(0.0)},
+    [TYPE_DARK]     = {X(0.5), X(0.5), ______, ______, ______, ______, ______, X(2.0), X(0.5), ______, ______, ______, ______, ______, X(2.0), ______, X(0.5), X(0.5), X(2.0)},
+    [TYPE_FAIRY]    = {X(0.5), X(2.0), ______, X(0.5), ______, ______, ______, X(0.5), X(0.5), ______, X(0.5), ______, ______, ______, X(0.5), ______, X(2.0), X(2.0), X(0.5)},
+#else
+    [TYPE_NORMAL]   = {______, ______, ______, ______, ______, X(0.5), ______, X(0.0), X(0.5), ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_FIGHTING] = {X(2.0), ______, X(0.5), X(0.5), ______, X(2.0), X(0.5), X(0.0), X(2.0), ______, ______, ______, ______, ______, X(0.5), X(2.0), ______, X(2.0), X(0.5)},
+    [TYPE_FLYING]   = {______, X(2.0), ______, ______, ______, X(0.5), X(2.0), ______, X(0.5), ______, ______, ______, X(2.0), X(0.5), ______, ______, ______, ______, ______},
+    [TYPE_POISON]   = {______, ______, ______, X(0.5), X(0.5), X(0.5), ______, X(0.5), X(0.0), ______, ______, ______, X(2.0), ______, ______, ______, ______, ______, X(2.0)},
+    [TYPE_GROUND]   = {______, ______, X(0.0), X(2.0), ______, X(2.0), X(0.5), ______, X(2.0), ______, X(2.0), ______, X(0.5), X(2.0), ______, ______, ______, ______, ______},
+    [TYPE_ROCK]     = {______, X(0.5), X(2.0), ______, X(0.5), ______, X(2.0), ______, X(0.5), ______, X(2.0), ______, ______, ______, ______, X(2.0), ______, ______, ______},
+    [TYPE_BUG]      = {______, X(0.5), X(0.5), X(0.5), ______, ______, ______, X(0.5), X(0.5), ______, X(0.5), ______, X(2.0), ______, X(2.0), ______, ______, X(2.0), X(0.5)},
+#if B_STEEL_RESISTANCES >= GEN_6
+    [TYPE_GHOST]    = {X(0.0), ______, ______, ______, ______, ______, ______, X(2.0), ______, ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), ______},
+#else
+    [TYPE_GHOST]    = {X(0.0), ______, ______, ______, ______, ______, ______, X(2.0), X(0.5), ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), ______},
+#endif
+    [TYPE_STEEL]    = {______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), ______, X(0.5), X(0.5), ______, X(0.5), ______, X(2.0), ______, ______, X(2.0)},
+    [TYPE_MYSTERY]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_FIRE]     = {______, ______, ______, ______, ______, X(0.5), X(2.0), ______, X(2.0), ______, X(0.5), X(0.5), X(2.0), ______, ______, X(2.0), X(0.5), ______, ______},
+    [TYPE_WATER]    = {______, ______, ______, ______, X(2.0), X(2.0), ______, ______, ______, ______, X(2.0), X(0.5), X(0.5), ______, ______, ______, X(0.5), ______, ______},
+    [TYPE_GRASS]    = {______, ______, X(0.5), X(0.5), X(2.0), X(2.0), X(0.5), ______, X(0.5), ______, X(0.5), X(2.0), X(0.5), ______, ______, ______, X(0.5), ______, ______},
+    [TYPE_ELECTRIC] = {______, ______, X(2.0), ______, X(0.0), ______, ______, ______, ______, ______, ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), ______, ______},
+    [TYPE_PSYCHIC]  = {______, X(2.0), ______, X(2.0), ______, ______, ______, ______, X(0.5), ______, ______, ______, ______, ______, X(0.5), ______, ______, X(0.0), ______},
+    [TYPE_ICE]      = {______, ______, X(2.0), ______, X(2.0), ______, ______, ______, X(0.5), ______, X(0.5), X(0.5), X(2.0), ______, ______, X(0.5), X(2.0), ______, ______},
+    [TYPE_DRAGON]   = {______, ______, ______, ______, ______, ______, ______, ______, X(0.5), ______, ______, ______, ______, ______, ______, ______, X(2.0), ______, X(0.0)},
+#if B_STEEL_RESISTANCES >= GEN_6
+    [TYPE_DARK]     = {______, X(0.5), ______, ______, ______, ______, ______, X(2.0), ______, ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), X(0.5)},
+#else
+    [TYPE_DARK]     = {______, X(0.5), ______, ______, ______, ______, ______, X(2.0), X(0.5), ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), X(0.5)},
+#endif
+    [TYPE_FAIRY]    = {______, X(2.0), ______, X(0.5), ______, ______, ______, ______, X(0.5), ______, X(0.5), ______, ______, ______, ______, ______, X(2.0), X(2.0), ______},
+#endif
+};
+
+#undef ______
+#undef X
 
 static void PlayerBufferExecCompleted(u32 battler);
 static void PlayerHandleLoadMonSprite(u32 battler);
@@ -80,6 +142,7 @@ static void HandleInputChooseMove(u32 battler);
 static void MoveSelectionDisplayPpNumber(u32 battler);
 static void MoveSelectionDisplayPpString(u32 battler);
 static void MoveSelectionDisplayMoveType(u32 battler);
+static void MoveSelectionDisplayMoveTypeDoubles(u32 battler, u8 targetId);
 static void MoveSelectionDisplaySplitIcon(u32 battler);
 static void MoveSelectionDisplayMoveNames(u32 battler);
 static void HandleMoveSwitching(u32 battler);
@@ -511,6 +574,7 @@ static void HandleInputChooseTarget(u32 battler)
                     i++;
                     break;
                 }
+                MoveSelectionDisplayMoveTypeDoubles(battler, GetBattlerPosition(gMultiUsePlayerCursor));
 
                 if (gAbsentBattlerFlags & gBitTable[gMultiUsePlayerCursor]
                  || !CanTargetBattler(battler, gMultiUsePlayerCursor, move))
@@ -561,6 +625,7 @@ static void HandleInputChooseTarget(u32 battler)
                     i++;
                     break;
                 }
+                MoveSelectionDisplayMoveTypeDoubles(battler, GetBattlerPosition(gMultiUsePlayerCursor));
 
                 if (gAbsentBattlerFlags & gBitTable[gMultiUsePlayerCursor]
                  || !CanTargetBattler(battler, gMultiUsePlayerCursor, move))
@@ -1726,20 +1791,161 @@ static void MoveSelectionDisplayPpNumber(u32 battler)
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_PP_REMAINING);
 }
 
-static void MoveSelectionDisplayMoveType(u32 battler)
+static void MulModifier(u16 *modifier, u16 val)
+{
+    *modifier = UQ_4_12_TO_INT((*modifier * val) + UQ_4_12_ROUND);
+}
+
+u8 TypeEffectiveness(struct ChooseMoveStruct *moveInfo, u32 battler, u8 targetId, u8 type)
+{
+    bool8 isInverse = (B_FLAG_INVERSE_BATTLE != 0 && FlagGet(B_FLAG_INVERSE_BATTLE)) ? TRUE : FALSE;
+    u16 mod = 1.0;
+    
+    if (gBattleMoves[moveInfo->moves[gMoveSelectionCursor[battler]]].power == 0)
+        return B_WIN_MOVE_TYPE;
+    else
+    {
+        u16 moveID = moveInfo->moves[gMoveSelectionCursor[battler]];
+
+        //passed over Hidden Power type as argument
+        if (type != TYPE_MYSTERY)
+        {
+
+            mod = sTypeEffectivenessTable[type][gBattleMons[targetId].type1];
+
+            if (gBattleMons[targetId].type2 != gBattleMons[targetId].type1)
+            {
+                u16 mod2 = sTypeEffectivenessTable[type][gBattleMons[targetId].type2];
+                MulModifier(&mod, mod2);
+            }
+
+            if (gBattleMons[targetId].type3 != TYPE_MYSTERY)
+            {
+                u16 mod3 = sTypeEffectivenessTable[type][gBattleMons[targetId].type3];
+                MulModifier(&mod, mod3);
+            }
+
+        }
+        else
+        {
+            mod = sTypeEffectivenessTable[gBattleMoves[moveID].type][gBattleMons[targetId].type1];
+
+            if (gBattleMons[targetId].type2 != gBattleMons[targetId].type1)
+            {
+                u16 mod2 = sTypeEffectivenessTable[gBattleMoves[moveID].type][gBattleMons[targetId].type2];
+                MulModifier(&mod, mod2);
+            }
+
+            if (gBattleMons[targetId].type3 != TYPE_MYSTERY)
+            {
+                u16 mod3 = sTypeEffectivenessTable[gBattleMoves[moveID].type][gBattleMons[targetId].type3];
+                MulModifier(&mod, mod3);
+            }
+
+        }
+
+        if (gBattleMoves[moveID].effect == EFFECT_TWO_TYPED_MOVE)
+        {
+            u16 mod4 = sTypeEffectivenessTable[gBattleMoves[moveID].argument][gBattleMons[targetId].type1];
+            MulModifier(&mod, mod4);
+
+            if (gBattleMons[targetId].type2 != gBattleMons[targetId].type1)
+            {
+                u16 mod5 = sTypeEffectivenessTable[gBattleMoves[moveID].argument][gBattleMons[targetId].type2];
+                MulModifier(&mod, mod5);
+            }
+
+            if (gBattleMons[targetId].type3 != TYPE_MYSTERY)
+            {
+                u16 mod6 = sTypeEffectivenessTable[gBattleMoves[moveID].argument][gBattleMons[targetId].type3];
+                MulModifier(&mod, mod6);
+            }
+        }
+
+        if (mod == UQ_4_12(0.0)) {
+            if(isInverse)
+                return B_WIN_MOVE_TYPE_SUPER_EFFECTIVE;
+            else
+                return B_WIN_MOVE_TYPE_IMMUNE;
+        }
+        else if (mod <= UQ_4_12(0.5)) {
+            if(isInverse)
+                return B_WIN_MOVE_TYPE_SUPER_EFFECTIVE;
+            else
+                return B_WIN_MOVE_TYPE_NOT_VERY_EFFECTIVE;
+        }
+        else if (mod >= UQ_4_12(2.0)) {
+            if(isInverse)
+                return B_WIN_MOVE_TYPE_NOT_VERY_EFFECTIVE;
+            else
+                return B_WIN_MOVE_TYPE_SUPER_EFFECTIVE;
+        }
+        else
+            return B_WIN_MOVE_TYPE;
+    }
+}
+
+static void MoveSelectionDisplayMoveTypeDoubles(u32 battler, u8 targetId)
 {
     u8 *txtPtr;
-    u8 type;
-    u32 itemId;
-    struct Pokemon *mon;
-    struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleResources->bufferA[battler][4]);
+    struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct*)(&gBattleResources->bufferA[battler][4]);
+    u8 type = TYPE_MYSTERY;
 
     txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
     *(txtPtr)++ = EXT_CTRL_CODE_BEGIN;
     *(txtPtr)++ = EXT_CTRL_CODE_FONT;
     *(txtPtr)++ = FONT_NORMAL;
 
-    if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_IVY_CUDGEL)
+    if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_HIDDEN_POWER)
+    {
+        u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_HP_IV) & 1) << 0)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_ATK_IV) & 1) << 1)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_DEF_IV) & 1) << 2)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_SPEED_IV) & 1) << 3)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_SPATK_IV) & 1) << 4)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_SPDEF_IV) & 1) << 5);
+
+        type = ((NUMBER_OF_MON_TYPES - 3) * typeBits) / 63 + 1;
+        if (type >= TYPE_MYSTERY)
+            type++;
+        StringCopy(txtPtr, gTypeNames[type]);
+    }
+    else
+    {
+        StringCopy(txtPtr, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[battler]]].type]);
+    }
+
+    BattlePutTextOnWindow(gDisplayedStringBattle, TypeEffectiveness(moveInfo, battler, targetId, type));
+}
+
+static void MoveSelectionDisplayMoveType(u32 battler)
+{
+    u8 *txtPtr;
+    u32 itemId;
+    struct Pokemon *mon;
+    struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleResources->bufferA[battler][4]);
+    u8 type = TYPE_MYSTERY;
+
+    txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
+    *(txtPtr)++ = EXT_CTRL_CODE_BEGIN;
+    *(txtPtr)++ = EXT_CTRL_CODE_FONT;
+    *(txtPtr)++ = FONT_NORMAL;
+
+    if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_HIDDEN_POWER)
+    {
+        u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_HP_IV) & 1) << 0)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_ATK_IV) & 1) << 1)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_DEF_IV) & 1) << 2)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_SPEED_IV) & 1) << 3)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_SPATK_IV) & 1) << 4)
+                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_SPDEF_IV) & 1) << 5);
+
+        type = ((NUMBER_OF_MON_TYPES - 3) * typeBits) / 63 + 1;
+        if (type >= TYPE_MYSTERY)
+            type++;
+        StringCopy(txtPtr, gTypeNames[type]);
+    }
+    else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_IVY_CUDGEL)
     {
         mon = &GetSideParty(GetBattlerSide(battler))[gBattlerPartyIndexes[battler]];
         itemId = GetMonData(mon, MON_DATA_HELD_ITEM);
@@ -1748,28 +1954,31 @@ static void MoveSelectionDisplayMoveType(u32 battler)
             type = ItemId_GetSecondaryId(itemId);
         else
             type = gBattleMoves[MOVE_IVY_CUDGEL].type;
+
+        StringCopy(txtPtr, gTypeNames[type]);
     }
     else
-        type = gBattleMoves[moveInfo->moves[gMoveSelectionCursor[battler]]].type;
+    {
+    StringCopy(txtPtr, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[battler]]].type]);
+    }
 
-    StringCopy(txtPtr, gTypeNames[type]);
-    BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
+    BattlePutTextOnWindow(gDisplayedStringBattle, TypeEffectiveness(moveInfo, battler, 1, type));
 
     MoveSelectionDisplaySplitIcon(battler);
 }
 
 static void MoveSelectionDisplaySplitIcon(u32 battler){
-	static const u16 sSplitIcons_Pal[] = INCBIN_U16("graphics/interface/split_icons_battle.gbapal");
-	static const u8 sSplitIcons_Gfx[] = INCBIN_U8("graphics/interface/split_icons_battle.4bpp");
-	struct ChooseMoveStruct *moveInfo;
-	int icon;
+    static const u16 sSplitIcons_Pal[] = INCBIN_U16("graphics/interface/split_icons_battle.gbapal");
+    static const u8 sSplitIcons_Gfx[] = INCBIN_U8("graphics/interface/split_icons_battle.4bpp");
+    struct ChooseMoveStruct *moveInfo;
+    int icon;
 
-	moveInfo = (struct ChooseMoveStruct*)(&gBattleResources->bufferA[battler][4]);
-	icon = GetBattleMoveSplit(moveInfo->moves[gMoveSelectionCursor[battler]]);
-	LoadPalette(sSplitIcons_Pal, 10 * 0x10, 0x20);
-	BlitBitmapToWindow(B_WIN_DUMMY, sSplitIcons_Gfx + 0x80 * icon, 0, 0, 16, 16);
-	PutWindowTilemap(B_WIN_DUMMY);
-	CopyWindowToVram(B_WIN_DUMMY, 3);
+    moveInfo = (struct ChooseMoveStruct*)(&gBattleResources->bufferA[battler][4]);
+    icon = GetBattleMoveSplit(moveInfo->moves[gMoveSelectionCursor[battler]]);
+    LoadPalette(sSplitIcons_Pal, 10 * 0x10, 0x20);
+    BlitBitmapToWindow(B_WIN_DUMMY, sSplitIcons_Gfx + 0x80 * icon, 0, 0, 16, 16);
+    PutWindowTilemap(B_WIN_DUMMY);
+    CopyWindowToVram(B_WIN_DUMMY, 3);
 }
 
 void MoveSelectionCreateCursorAt(u8 cursorPosition, u8 baseTileNum)
