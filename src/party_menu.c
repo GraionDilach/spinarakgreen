@@ -5227,7 +5227,6 @@ bool8 BoxMonKnowsMove(struct BoxPokemon *boxMon, u16 move)
 
 int MoveToHM(u16 move)
 {
-    u8 i;
     int item;
     switch (move)
     {
