@@ -2,11 +2,11 @@
 #define GUARD_CONFIG_POKEMON_H
 
 // Species data settings
-#define P_UPDATED_TYPES             GEN_LATEST  // Since Gen 6, several Pokémon were changed to be partially or fully Fairy type.
-#define P_UPDATED_STATS             GEN_LATEST  // Since Gen 6, Pokémon stats are updated with each passing generation.
-#define P_UPDATED_ABILITIES         GEN_LATEST  // Since Gen 6, certain Pokémon have their abilities changed.
-#define P_UPDATED_EGG_GROUPS        GEN_LATEST  // Since Gen 8, certain Pokémon have gained new egg groups.
-#define P_UPDATED_FRIENDSHIP        GEN_LATEST  // Since Gen 8, the base friendship of certain Pokémon was changed.
+#define P_UPDATED_TYPES             GEN_SPGRN  // Since Gen 6, several Pokémon were changed to be partially or fully Fairy type.
+#define P_UPDATED_STATS             GEN_SPGRN  // Since Gen 6, Pokémon stats are updated with each passing generation.
+#define P_UPDATED_ABILITIES         GEN_SPGRN  // Since Gen 6, certain Pokémon have their abilities changed.
+#define P_UPDATED_EGG_GROUPS        GEN_SPGRN  // Since Gen 8, certain Pokémon have gained new egg groups.
+#define P_UPDATED_FRIENDSHIP        GEN_SPGRN  // Since Gen 8, the base friendship of certain Pokémon was changed.
 
 // Evolution settings
 #define P_FRIENDSHIP_EVO_THRESHOLD   GEN_7       // Since Gen 8, Pokémon that evolve by friendship evolve at or above 160 friendship instead of 220.
