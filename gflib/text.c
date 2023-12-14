@@ -937,7 +937,7 @@ static u16 RenderText(struct TextPrinter *textPrinter)
     u16 currChar;
     s32 width;
     s32 widthHelper;
-    u8 repeats;
+    u8 repeats = 1;
 
     switch (textPrinter->state)
     {
@@ -964,7 +964,6 @@ static u16 RenderText(struct TextPrinter *textPrinter)
         switch (GetPlayerTextSpeed())
         {
             case OPTIONS_TEXT_SPEED_SLOW:
-                repeats = 1;
                 break;
             case OPTIONS_TEXT_SPEED_MID:
                 repeats = 2;
