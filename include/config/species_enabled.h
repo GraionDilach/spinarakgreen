@@ -362,7 +362,7 @@
 #define P_FAMILY_STUNFISK                FALSE
 #define P_FAMILY_MIENFOO                 FALSE
 #define P_FAMILY_DRUDDIGON               FALSE
-#define P_FAMILY_GOLETT                  FALSE
+#define P_FAMILY_GOLETT                  TRUE
 #define P_FAMILY_PAWNIARD                FALSE
 #define P_FAMILY_BOUFFALANT              FALSE
 #define P_FAMILY_RUFFLET                 FALSE
@@ -433,7 +433,7 @@
 #define P_FAMILY_CUTIEFLY                TRUE
 #define P_FAMILY_ROCKRUFF                FALSE
 #define P_FAMILY_WISHIWASHI              FALSE
-#define P_FAMILY_MAREANIE                FALSE
+#define P_FAMILY_MAREANIE                TRUE
 #define P_FAMILY_MUDBRAY                 FALSE
 #define P_FAMILY_DEWPIDER                FALSE
 #define P_FAMILY_FOMANTIS                FALSE
@@ -481,7 +481,7 @@
 #define P_FAMILY_GROOKEY                 FALSE
 #define P_FAMILY_SCORBUNNY               FALSE
 #define P_FAMILY_SOBBLE                  FALSE
-#define P_FAMILY_SKWOVET                 FALSE
+#define P_FAMILY_SKWOVET                 TRUE
 #define P_FAMILY_ROOKIDEE                FALSE
 #define P_FAMILY_BLIPBUG                 TRUE
 #define P_FAMILY_NICKIT                  FALSE
@@ -498,7 +498,7 @@
 #define P_FAMILY_SIZZLIPEDE              FALSE
 #define P_FAMILY_CLOBBOPUS               FALSE
 #define P_FAMILY_SINISTEA                FALSE
-#define P_FAMILY_HATENNA                 FALSE
+#define P_FAMILY_HATENNA                 TRUE
 #define P_FAMILY_IMPIDIMP                FALSE
 #define P_FAMILY_MILCERY                 FALSE
 #define P_FAMILY_FALINKS                 FALSE
@@ -536,17 +536,17 @@
 #define P_FAMILY_PAWMI                   FALSE
 #define P_FAMILY_TANDEMAUS               FALSE
 #define P_FAMILY_FIDOUGH                 FALSE
-#define P_FAMILY_SMOLIV                  FALSE
+#define P_FAMILY_SMOLIV                  TRUE
 #define P_FAMILY_SQUAWKABILLY            FALSE
 #define P_FAMILY_NACLI                   FALSE
 #define P_FAMILY_CHARCADET               FALSE
 #define P_FAMILY_TADBULB                 FALSE
 #define P_FAMILY_WATTREL                 FALSE
-#define P_FAMILY_MASCHIFF                FALSE
+#define P_FAMILY_MASCHIFF                TRUE
 #define P_FAMILY_SHROODLE                FALSE
 #define P_FAMILY_BRAMBLIN                FALSE
 #define P_FAMILY_TOEDSCOOL               TRUE
-#define P_FAMILY_KLAWF                   FALSE
+#define P_FAMILY_KLAWF                   TRUE
 #define P_FAMILY_CAPSAKID                FALSE
 #define P_FAMILY_RELLOR                  FALSE
 #define P_FAMILY_FLITTLE                 FALSE
