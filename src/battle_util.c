@@ -10516,6 +10516,10 @@ u16 GetBattleFormChangeTargetSpecies(u32 battler, u16 method)
                     if (formChanges[i].param1 == GetBattlerAbility(battler))
                         targetSpecies = formChanges[i].targetSpecies;
                     break;
+                case FORM_CHANGE_STATUS:
+                    if (gBattleMons[battler].status1 & formChanges[i].param1)
+                        targetSpecies = formChanges[i].targetSpecies;
+                    break;
                 }
             }
         }
