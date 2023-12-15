@@ -1061,6 +1061,8 @@ struct SaveBlock1
     /*0x3???*/ struct TrainerHillSave trainerHill;
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
     // sizeof: 0x3???
+               u8 dexNavSearchLevels[NUM_SPECIES];
+               u8 dexNavChain;
 };
 
 extern struct SaveBlock1* gSaveBlock1Ptr;

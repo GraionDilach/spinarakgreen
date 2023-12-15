@@ -342,6 +342,7 @@ SECTIONS {
         src/battle_transition_frontier.o(.text);
         src/international_string_util.o(.text);
         src/pokemon_debug.o(.text);
+        src/dexnav.o(.text);
         src/expansion_intro.o(.text);
         src/sound_check_menu.o(.text);
     } > ROM =0
@@ -710,6 +711,7 @@ SECTIONS {
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
         src/pokemon_debug.o(.rodata);
+        src/dexnav.o(.rodata);
         src/expansion_intro.o(.rodata);
         src/sound_check_menu.o(.rodata);
     } > ROM =0
