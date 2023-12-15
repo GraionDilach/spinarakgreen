@@ -869,7 +869,7 @@ u32 FldEff_ShakingGrass2(void)
         struct Sprite *sprite = &gSprites[spriteId];
         sprite->coordOffsetEnabled = TRUE;
         sprite->oam.priority = gFieldEffectArguments[3];
-        sprite->sWaitFldEff = FLDEFF_SHAKING_GRASS_2;
+        sprite->sWaitFldEff = FLDEFF_SHAKING_LONG_GRASS;
     }
     
     return spriteId;

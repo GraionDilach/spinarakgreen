@@ -763,17 +763,10 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     }
     else // Player is the OT
     {
-        #ifdef ITEM_SHINY_CHARM
-        u32 shinyRolls = (CheckBagHasItem(ITEM_SHINY_CHARM, 1)) ? 3 : 1;
-        #else
-        u32 shinyRolls = 1;
-        #endif
-        u32 i;
-        
         value = gSaveBlock2Ptr->playerTrainerId[0]
-                  | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
-                  | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
-                  | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+              | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
+              | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
+              | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
 
 #if P_FLAG_FORCE_NO_SHINY != 0
         if (FlagGet(P_FLAG_FORCE_NO_SHINY))
@@ -790,6 +783,9 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         {
             while (GET_SHINY_VALUE(value, personality) >= SHINY_ODDS)
                 personality = Random32();
+            
+            // clear the flag after use
+            FlagClear(FLAG_SHINY_CREATION);
         }
 #endif
 #if P_FLAG_FORCE_SHINY != 0 || P_FLAG_FORCE_NO_SHINY != 0
@@ -808,21 +804,8 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
                 totalRerolls--;
             }
         }
-        }
-
-    SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
-        {
-            u8 nature = personality % NUM_NATURES;  // keep current nature
-            do {
-                personality = Random32();
-                personality = ((((Random() % SHINY_ODDS) ^ (HIHALF(value) ^ LOHALF(value))) ^ LOHALF(personality)) << 16) | LOHALF(personality);
-            } while (nature != GetNatureFromPersonality(personality));
-            
-            // clear the flag after use
-            FlagClear(FLAG_SHINY_CREATION);
-        }
     }
-    
+
     SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
     SetBoxMonData(boxMon, MON_DATA_OT_ID, &value);
 
@@ -884,7 +867,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
             SetBoxMonData(boxMon, MON_DATA_SPATK_IV, &iv);
             SetBoxMonData(boxMon, MON_DATA_SPDEF_IV, &iv);
         }
-        else if (P_LEGENDARY_PERFECT_IVS >= GEN_6 
+        else if (P_LEGENDARY_PERFECT_IVS >= GEN_6
          && (gSpeciesInfo[species].isLegendary
           || gSpeciesInfo[species].isMythical
           || gSpeciesInfo[species].isUltraBeast))
@@ -1850,11 +1833,11 @@ void SetMultiuseSpriteTemplateToPokemon(u16 speciesTag, u8 battlerPosition)
     gMultiuseSpriteTemplate.paletteTag = speciesTag;
     if (battlerPosition == B_POSITION_PLAYER_LEFT || battlerPosition == B_POSITION_PLAYER_RIGHT)
         gMultiuseSpriteTemplate.anims = gAnims_MonPic;
-    else 
+    else
     {
         if (speciesTag > SPECIES_SHINY_TAG)
             speciesTag = speciesTag - SPECIES_SHINY_TAG;
-        
+
         speciesTag = SanitizeSpeciesId(speciesTag);
         if (gSpeciesInfo[speciesTag].frontAnimFrames != NULL)
             gMultiuseSpriteTemplate.anims = gSpeciesInfo[speciesTag].frontAnimFrames;
@@ -4566,7 +4549,7 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
 
         switch (i)
         {
-        #if P_STAT_EXP < GEN_SPGRN 
+        #if P_STAT_EXP < GEN_SPGRN
         case STAT_HP:
             if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_HP)
                 evIncrease = (gSpeciesInfo[defeatedSpecies].evYield_HP + bonus) * multiplier;
@@ -5695,7 +5678,7 @@ void HandleSetPokedexFlag(u16 nationalNum, u8 caseId, u32 personality)
         if (NationalPokedexNumToSpecies(nationalNum) == SPECIES_SPINDA)
             gSaveBlock2Ptr->pokedex.spindaPersonality = personality;
     }
-    
+
     if (caseId == FLAG_SET_SEEN)
         TryIncrementSpeciesSearchLevel(nationalNum);    // encountering pokemon increments its search level
 }
