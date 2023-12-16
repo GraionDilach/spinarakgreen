@@ -209,7 +209,7 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
     
-    if (input->pressedRButton && TryStartDexnavSearch() && EnableAutoRun)
+    if (input->pressedRButton && TryStartDexnavSearch())
         return TRUE;
 
 #if DEBUG_OVERWORLD_MENU == TRUE && DEBUG_OVERWORLD_IN_MENU == FALSE
@@ -1062,12 +1062,12 @@ static bool8 EnableAutoRun(void)
     if (gSaveBlock2Ptr->autoRun)
     {
         gSaveBlock2Ptr->autoRun = FALSE;
-        ScriptContext1_SetupScript(EventScript_DisableAutoRun);
+        ScriptContext_SetupScript(EventScript_DisableAutoRun);
     }
     else
     {
         gSaveBlock2Ptr->autoRun = TRUE;
-        ScriptContext1_SetupScript(EventScript_EnableAutoRun);
+        ScriptContext_SetupScript(EventScript_EnableAutoRun);
     }
     
     return TRUE;
