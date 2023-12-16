@@ -50,6 +50,7 @@
 #include "constants/item_effects.h"
 #include "constants/items.h"
 #include "constants/layouts.h"
+#include "constants/map_types.h"
 #include "constants/moves.h"
 #include "constants/songs.h"
 #include "constants/species.h"
@@ -5000,6 +5001,11 @@ bool32 IsSpeciesInHoennDex(u16 species)
 
 u16 GetBattleBGM(void)
 {
+    if (FlagGet(FLAG_SYS_SET_BATTLE_BGM)){
+        FlagClear(FLAG_SYS_SET_BATTLE_BGM);
+        return VarGet(VAR_BATTLE_BGM);
+    }
+
     if (gBattleTypeFlags & BATTLE_TYPE_LEGENDARY)
     {
         switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL))
@@ -5064,7 +5070,19 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
         default:
-            return MUS_VS_TRAINER;
+            switch (gMapHeader.mapType)
+            {
+            case MAP_TYPE_CITY:
+            case MAP_TYPE_INDOOR:
+                return MUS_DP_VS_TRAINER;
+            case MAP_TYPE_UNDERGROUND:
+                return MUS_HG_VS_TRAINER_KANTO;
+            case MAP_TYPE_UNDERWATER:
+            case MAP_TYPE_OCEAN_ROUTE:
+                return MUS_VS_TRAINER;
+            default:
+                return MUS_RG_VS_TRAINER;
+            }
         }
     }
     else
@@ -5115,7 +5133,7 @@ u16 GetBattleBGM(void)
         case SPECIES_LATIAS_MEGA:
         case SPECIES_LATIOS_MEGA:
         #endif
-            return MUS_VS_WILD;
+            return MUS_DP_VS_WILD;
         case SPECIES_GROUDON:
         case SPECIES_KYOGRE:
         case SPECIES_RAYQUAZA:
@@ -5126,7 +5144,7 @@ u16 GetBattleBGM(void)
         #endif
             return MUS_VS_KYOGRE_GROUDON;
         case SPECIES_JIRACHI:
-            return MUS_VS_WILD;
+            return MUS_DP_VS_WILD;
         case SPECIES_DEOXYS:
         #ifdef POKEMON_EXPANSION
         case SPECIES_DEOXYS_ATTACK:
@@ -5181,7 +5199,18 @@ u16 GetBattleBGM(void)
             return MUS_DP_VS_ARCEUS;
         #endif
         default:
-            return MUS_VS_WILD;
+            switch (gMapHeader.mapType)
+            {
+            case MAP_TYPE_CITY:
+            case MAP_TYPE_INDOOR:
+                return MUS_HG_VS_WILD;
+            case MAP_TYPE_UNDERGROUND:
+                return MUS_RG_VS_WILD;
+            case MAP_TYPE_UNDERWATER:
+                return MUS_HG_VS_WILD_KANTO;
+            default:
+                return MUS_VS_WILD;
+            }
         }
     }
 }
