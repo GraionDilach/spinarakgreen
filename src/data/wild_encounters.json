@@ -366,26 +366,6 @@
               }
             ]
           },
-          "hidden_mons": {
-            "encounter_rate": 0,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_SMOLIV"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_HATENNA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PHANTUMP"
-              }
-            ]
-          },
           "headbutt_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -413,6 +393,26 @@
                 "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_CUTIEFLY"
+              }
+            ]
+          },
+          "hidden_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SMOLIV"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_HATENNA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_PHANTUMP"
               }
             ]
           }
@@ -9231,6 +9231,36 @@
                 "species": "SPECIES_CORPHISH"
               }
             ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_RATTATA_ALOLAN"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_RATTATA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MINCCINO"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SKWOVET"
+              }
+            ]
           }
         },
         {
@@ -11606,6 +11636,74 @@
                 "min_level": 40,
                 "max_level": 40,
                 "species": "SPECIES_GOLBAT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_LITTLEROOT_TOWN",
+          "base_label": "gLittlerootTown0",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_KRICKETOT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SKITTY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MEOWTH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_RATTATA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_RATTATA_ALOLAN"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_OLDALE_TOWN",
+          "base_label": "gOldaleTown0",
+          "headbutt_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_SPINARAK"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_SPEAROW"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_LEDYBA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_SNUBBULL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_MEOWTH_ALOLAN"
               }
             ]
           }
