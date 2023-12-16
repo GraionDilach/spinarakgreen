@@ -398,10 +398,11 @@ const s8 gNatureStatTable[NUM_NATURES][NUM_NATURE_STATS] =
 #include "data/pokemon/experience_tables.h"
 #if P_UPDATED_STATS == GEN_SPGRN
 #include "data/pokemon/level_up_learnsets_spgreen.h"
+#include "data/pokemon/teachable_learnsets_spgreen.h"
 #else
 #include "data/pokemon/level_up_learnsets.h"
-#endif
 #include "data/pokemon/teachable_learnsets.h"
+#endif
 #include "data/pokemon/form_species_tables.h"
 #include "data/pokemon/form_change_tables.h"
 #include "data/pokemon/form_change_table_pointers.h"
