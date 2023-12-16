@@ -74,7 +74,7 @@ static void UpdateFriendshipStepCounter(void);
 #if OW_POISON_DAMAGE < GEN_5
 static bool8 UpdatePoisonStepCounter(void);
 #endif // OW_POISON_DAMAGE
-static bool8 EnableAutoRun(void);
+// static bool8 EnableAutoRun(void);
 
 void FieldClearPlayerInput(struct FieldInput *input)
 {
@@ -1051,6 +1051,7 @@ int SetCableClubWarp(void)
     return 0;
 }
 
+/*
 extern const u8 EventScript_DisableAutoRun[];
 extern const u8 EventScript_EnableAutoRun[];
 static bool8 EnableAutoRun(void)
@@ -1072,4 +1073,5 @@ static bool8 EnableAutoRun(void)
     
     return TRUE;
 }
+*/
 
