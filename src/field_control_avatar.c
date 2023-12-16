@@ -74,6 +74,7 @@ static void UpdateFriendshipStepCounter(void);
 #if OW_POISON_DAMAGE < GEN_5
 static bool8 UpdatePoisonStepCounter(void);
 #endif // OW_POISON_DAMAGE
+static bool8 EnableAutoRun(void);
 
 void FieldClearPlayerInput(struct FieldInput *input)
 {
@@ -208,7 +209,7 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
     
-    if (input->pressedRButton && TryStartDexnavSearch())
+    if (input->pressedRButton && TryStartDexnavSearch() && EnableAutoRun)
         return TRUE;
 
 #if DEBUG_OVERWORLD_MENU == TRUE && DEBUG_OVERWORLD_IN_MENU == FALSE
@@ -1049,3 +1050,26 @@ int SetCableClubWarp(void)
     SetupWarp(&gMapHeader, GetWarpEventAtMapPosition(&gMapHeader, &position), &position);
     return 0;
 }
+
+extern const u8 EventScript_DisableAutoRun[];
+extern const u8 EventScript_EnableAutoRun[];
+static bool8 EnableAutoRun(void)
+{
+    if (!FlagGet(FLAG_SYS_B_DASH))
+        return FALSE;   //auto run unusable until you get running shoes
+
+    PlaySE(SE_SELECT);
+    if (gSaveBlock2Ptr->autoRun)
+    {
+        gSaveBlock2Ptr->autoRun = FALSE;
+        ScriptContext1_SetupScript(EventScript_DisableAutoRun);
+    }
+    else
+    {
+        gSaveBlock2Ptr->autoRun = TRUE;
+        ScriptContext1_SetupScript(EventScript_EnableAutoRun);
+    }
+    
+    return TRUE;
+}
+
