@@ -411,7 +411,7 @@
 #define P_FAMILY_CARBINK                 FALSE
 #define P_FAMILY_GOOMY                   FALSE
 #define P_FAMILY_KLEFKI                  FALSE
-#define P_FAMILY_PHANTUMP                FALSE
+#define P_FAMILY_PHANTUMP                TRUE
 #define P_FAMILY_PUMPKABOO               FALSE
 #define P_FAMILY_BERGMITE                FALSE
 #define P_FAMILY_NOIBAT                  FALSE
