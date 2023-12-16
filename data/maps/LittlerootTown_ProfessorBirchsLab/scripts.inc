@@ -552,7 +552,6 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedex::
 	waitfanfare
 	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_SYS_DEXNAV_GET
-	setflag FLAG_SYS_DEXNAV_SEARCH
 	@ TODO GRAION - DISTRIBUTE THIS LATER IN THE STORY
 	setflag FLAG_SYS_DETECTOR_MODE
 	special SetUnlockedPokedexFlags
