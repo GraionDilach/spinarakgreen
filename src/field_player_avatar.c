@@ -654,7 +654,15 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     {
         if (heldKeys & B_BUTTON && gSaveBlock2Ptr->autoRun == TRUE)
         {
-            PlayerWalkNormal(direction);
+            if (FlagGet(FLAG_SYS_DEXNAV_SEARCH) && (heldKeys & A_BUTTON))
+            {
+                gPlayerAvatar.creeping = TRUE;
+                PlayerGoSlow(direction);
+            }
+            else
+            {
+                PlayerWalkNormal(direction);
+            }
         }
         else
         {
