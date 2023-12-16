@@ -102,6 +102,7 @@ SECTIONS {
         src/battle_debug.o(.text);
         src/pokemon.o(.text);
         src/trig.o(.text);
+        src/random32.o(.text)
         src/random.o(.text);
         src/util.o(.text);
         src/daycare.o(.text);

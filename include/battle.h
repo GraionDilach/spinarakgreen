@@ -648,7 +648,7 @@ struct BattleStruct
     u16 lastTakenMoveFrom[MAX_BATTLERS_COUNT][MAX_BATTLERS_COUNT]; // a 2-D array [target][attacker]
     union {
         struct LinkBattlerHeader linkBattlerHeader;
-        u32 battleVideo[2];
+        u32 battleVideo[4];
     } multiBuffer;
     u8 wishPerishSongState;
     u8 wishPerishSongBattlerId;

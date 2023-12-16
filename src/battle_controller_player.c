@@ -2260,7 +2260,7 @@ static void PlayerChooseMoveInBattlePalace(u32 battler)
 {
     if (--*(gBattleStruct->arenaMindPoints + battler) == 0)
     {
-        gBattlePalaceMoveSelectionRngValue = gRngValue;
+        gBattlePalaceMoveSelectionRngValue = gPCGRng;
         BtlController_EmitTwoReturnValues(battler, BUFFER_B, 10, ChooseMoveAndTargetInBattlePalace(battler));
         PlayerBufferExecCompleted(battler);
     }
