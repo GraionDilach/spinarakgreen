@@ -14261,7 +14261,6 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .split = SPLIT_SPECIAL,
-        .zMoveEffect = Z_EFFECT_NONE,
         .sheerForceBoost = TRUE,
     },
 
