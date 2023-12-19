@@ -314,7 +314,7 @@
 #define P_FAMILY_MUNNA                   FALSE
 #define P_FAMILY_PIDOVE                  FALSE
 #define P_FAMILY_BLITZLE                 FALSE
-#define P_FAMILY_ROGGENROLA              FALSE
+#define P_FAMILY_ROGGENROLA              TRUE
 #define P_FAMILY_WOOBAT                  FALSE
 #define P_FAMILY_DRILBUR                 FALSE
 #define P_FAMILY_AUDINO                  TRUE
@@ -370,7 +370,7 @@
 #define P_FAMILY_HEATMOR                 FALSE
 #define P_FAMILY_DURANT                  FALSE
 #define P_FAMILY_DEINO                   FALSE
-#define P_FAMILY_LARVESTA                FALSE
+#define P_FAMILY_LARVESTA                TRUE
 #define P_FAMILY_COBALION                FALSE
 #define P_FAMILY_TERRAKION               FALSE
 #define P_FAMILY_VIRIZION                FALSE
@@ -568,13 +568,13 @@
 #define P_FAMILY_SCREAM_TAIL             TRUE
 #define P_FAMILY_BRUTE_BONNET            TRUE
 #define P_FAMILY_FLUTTER_MANE            TRUE
-#define P_FAMILY_SLITHER_WING            FALSE
+#define P_FAMILY_SLITHER_WING            TRUE
 #define P_FAMILY_SANDY_SHOCKS            TRUE
 #define P_FAMILY_IRON_TREADS             TRUE
 #define P_FAMILY_IRON_BUNDLE             TRUE
 #define P_FAMILY_IRON_HANDS              TRUE
 #define P_FAMILY_IRON_JUGULIS            FALSE
-#define P_FAMILY_IRON_MOTH               FALSE
+#define P_FAMILY_IRON_MOTH               TRUE
 #define P_FAMILY_IRON_THORNS             TRUE
 #define P_FAMILY_FRIGIBAX                FALSE
 #define P_FAMILY_GIMMIGHOUL              FALSE
