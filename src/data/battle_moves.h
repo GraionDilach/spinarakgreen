@@ -14260,7 +14260,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .split = SPLIT_SPECIAL,
+        .category = BATTLE_CATEGORY_SPECIAL,
         .sheerForceBoost = TRUE,
     },
 
