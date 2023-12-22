@@ -73,12 +73,16 @@ u32 IntrMain_Buffer[0x200];
 s8 gPcmDmaCounter;
 void *gAgbMainLoop_sp;
 
+static EWRAM_DATA u16 sTrainerId = 0;
+
 //EWRAM_DATA void (**gFlashTimerIntrFunc)(void) = NULL;
 
 static void UpdateLinkAndCallCallbacks(void);
 static void InitMainCallbacks(void);
 static void CallCallbacks(void);
+#ifdef BUGFIX
 static void SeedRngWithRtc(void);
+#endif
 static void ReadKeys(void);
 void InitIntrHandlers(void);
 static void WaitForVBlank(void);
@@ -105,7 +109,9 @@ void AgbMain()
     CheckForFlashMemory();
     InitMainCallbacks();
     InitMapMusic();
-    SeedRngWithRtc();
+#ifdef BUGFIX
+    SeedRngWithRtc(); // see comment at SeedRngWithRtc definition below
+#endif
     ClearDma3Requests();
     ResetBgs();
     SetDefaultFontsPointer();
@@ -204,6 +210,24 @@ void SetMainCallback2(MainCallback callback)
     gMain.state = 0;
 }
 
+void StartTimer1(void)
+{
+    REG_TM1CNT_H = 0x80;
+}
+
+void SeedRngAndSetTrainerId(void)
+{
+    u16 val = REG_TM1CNT_L;
+    SeedRng(val);
+    REG_TM1CNT_H = 0;
+    sTrainerId = val;
+}
+
+u16 GetGeneratedTrainerIdLower(void)
+{
+    return sTrainerId;
+}
+
 void EnableVCountIntrAtLine150(void)
 {
     u16 gpuReg = (GetGpuReg(REG_OFFSET_DISPSTAT) & 0xFF) | (150 << 8);
@@ -211,10 +235,15 @@ void EnableVCountIntrAtLine150(void)
     EnableInterrupts(INTR_FLAG_VCOUNT);
 }
 
+// FRLG commented this out to remove RTC, however Emerald didn't undo this!
+#ifdef BUGFIX
 static void SeedRngWithRtc(void)
 {
-    SeedRng(RtcGetMinuteCount());
+    u32 seed = RtcGetMinuteCount();
+    seed = (seed >> 16) ^ (seed & 0xFFFF);
+    SeedRng(seed);
 }
+#endif
 
 void InitKeys(void)
 {

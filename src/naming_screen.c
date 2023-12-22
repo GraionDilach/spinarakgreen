@@ -408,6 +408,9 @@ void DoNamingScreen(u8 templateNum, u8 *destBuffer, u16 monSpecies, u16 monGende
         sNamingScreen->destBuffer = destBuffer;
         sNamingScreen->returnCallback = returnCallback;
 
+        if (templateNum == NAMING_SCREEN_PLAYER)
+            StartTimer1();
+
         SetMainCallback2(CB2_LoadNamingScreen);
     }
 }
@@ -694,6 +697,8 @@ static bool8 MainState_Exit(void)
 {
     if (!gPaletteFade.active)
     {
+        if (sNamingScreen->templateNum == NAMING_SCREEN_PLAYER)
+            SeedRngAndSetTrainerId();
         SetMainCallback2(sNamingScreen->returnCallback);
         DestroyTask(FindTaskIdByFunc(Task_NamingScreen));
         FreeAllWindowBuffers();

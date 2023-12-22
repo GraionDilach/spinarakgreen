@@ -8,33 +8,31 @@ EWRAM_DATA static u8 sUnknown = 0;
 EWRAM_DATA static u32 sRandCount = 0;
 
 // IWRAM common
-struct PCG32 gPCGRng;
-struct PCG32 gPCGRng2;
+u32 gRngValue;
+u32 gRng2Value;
 
 u16 Random(void)
 {
+    gRngValue = ISO_RANDOMIZE1(gRngValue);
     sRandCount++;
-    return Random16(&gPCGRng);
+    return gRngValue >> 16;
 }
 
-void SeedRng(u32 seed)
+void SeedRng(u16 seed)
 {
-    gPCGRng.seed = seed;
-    gPCGRng.low = seed;
-    gPCGRng.high = seed;
+    gRngValue = seed;
     sUnknown = 0;
 }
 
-void SeedRng2(u32 seed)
+void SeedRng2(u16 seed)
 {
-    gPCGRng2.seed = seed;
-    gPCGRng2.low = seed;
-    gPCGRng2.high = seed;
+    gRng2Value = seed;
 }
 
 u16 Random2(void)
 {
-    return Random16(&gPCGRng2);
+    gRng2Value = ISO_RANDOMIZE1(gRng2Value);
+    return gRng2Value >> 16;
 }
 
 #define SHUFFLE_IMPL \

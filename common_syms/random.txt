@@ -1,2 +1,2 @@
-gPCGRng
-gPCGRng2
+gRngValue
+gRng2Value

@@ -33,8 +33,8 @@ struct PlayerInfo
 // Save data using TryWriteSpecialSaveSector is allowed to exceed SECTOR_DATA_SIZE (up to the counter field)
 STATIC_ASSERT(sizeof(struct RecordedBattleSave) <= SECTOR_COUNTER_OFFSET, RecordedBattleSaveFreeSpace);
 
-EWRAM_DATA struct PCG32 gRecordedBattleRngSeed = {0};
-EWRAM_DATA struct PCG32 gBattlePalaceMoveSelectionRngValue = {0};
+EWRAM_DATA u32 gRecordedBattleRngSeed = 0;
+EWRAM_DATA u32 gBattlePalaceMoveSelectionRngValue = 0;
 EWRAM_DATA static u8 sBattleRecords[MAX_BATTLERS_COUNT][BATTLER_RECORD_SIZE] = {0};
 EWRAM_DATA static u16 sBattlerRecordSizes[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA static u16 sBattlerPrevRecordSizes[MAX_BATTLERS_COUNT] = {0};
@@ -98,13 +98,13 @@ void RecordedBattle_SetTrainerInfo(void)
 
     if (sRecordMode == B_RECORD_MODE_RECORDING)
     {
-        gRecordedBattleRngSeed = gPCGRng;
+        gRecordedBattleRngSeed = gRngValue;
         sFrontierFacility = VarGet(VAR_FRONTIER_FACILITY);
         sFrontierBrainSymbol = GetFronterBrainSymbol();
     }
     else if (sRecordMode == B_RECORD_MODE_PLAYBACK)
     {
-        gPCGRng = gRecordedBattleRngSeed;
+        gRngValue = gRecordedBattleRngSeed;
     }
 
     if (gBattleTypeFlags & BATTLE_TYPE_LINK)
