@@ -36,7 +36,6 @@ EWRAM_DATA u8 sItemIconSpriteId2 = 0;
 EWRAM_DATA struct ItemSlot gTmHmItemSlots[BAG_TMHM_COUNT] = {0};
 EWRAM_DATA struct ItemSlot gKeyItemSlots[BAG_KEYITEMS_COUNT] = {0};
 
-#include "data/text/item_descriptions.h"
 #include "data/items.h"
 
 static const u16 sKeyItemsLookupTable[KEYITEMS_COUNT] =
