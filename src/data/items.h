@@ -12460,7 +12460,7 @@ const struct Item gItems[] =
         .description = COMPOUND_STRING("Ability changes are\n"
                                        "prevented for this\n"
                                        "items's holder."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -12474,7 +12474,7 @@ const struct Item gItems[] =
         .description = COMPOUND_STRING("Stat lowering is\n"
                                        "prevented for this\n"
                                        "items's holder."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -12488,7 +12488,7 @@ const struct Item gItems[] =
         .description = COMPOUND_STRING("Powers up punching\n"
                                        "moves and removes\n"
                                        "their contact."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -12502,7 +12502,7 @@ const struct Item gItems[] =
         .description = COMPOUND_STRING("Protects the holder\n"
                                        "from secondary\n"
                                        "move effects."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
@@ -12516,7 +12516,7 @@ const struct Item gItems[] =
         .description = COMPOUND_STRING("Rolls high numbers.\n"
                                        "Multihit strikes\n"
                                        "hit more times."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
