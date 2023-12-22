@@ -11524,7 +11524,7 @@ const struct Item gItems[] =
         .price = 0,
         .description = COMPOUND_STRING("Traps and hurts the\n"
                                        "foe in a whirlpool\n"
-                                       "for "BINDING_TURNS" turns."),
+                                       "for 4-5 turns."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
