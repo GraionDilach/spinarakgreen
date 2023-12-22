@@ -128,7 +128,7 @@ TEST("ModifyPersonalityForNature can set any nature")
     {
         for (k = 0; k < NUM_NATURES; k++)
         {
-            PARAMETRIZE { personality = Random32(&gPCGRng); nature = k; }
+            PARAMETRIZE { personality = Random32(); nature = k; }
         }
     }
     ModifyPersonalityForNature(&personality, nature);
