@@ -10,7 +10,11 @@
 #include "constants/flags.h"
 #include "constants/vars.h"
 #include "constants/species.h"
+#if P_GEN_SPGRN_POKEMON == TRUE
+#include "constants/pokedex_spgreen.h"
+#else
 #include "constants/pokedex.h"
+#endif
 #include "constants/berry.h"
 #include "constants/maps.h"
 #include "constants/pokemon.h"

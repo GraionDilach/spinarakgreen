@@ -13,8 +13,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 65,
         .baseSpDefense = 65,
         .types = { TYPE_GRASS, TYPE_POISON },
-        .catchRate = 45,
-        .expYield = 64,
+        .catchRate = 145,
+        .expYield = 127,
         .evYield_SpAttack = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
@@ -55,14 +55,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_IVYSAUR] =
     {
         .baseHP        = 60,
-        .baseAttack    = 62,
-        .baseDefense   = 63,
+        .baseAttack    = 65,
+        .baseDefense   = 65,
         .baseSpeed     = 60,
         .baseSpAttack  = 80,
         .baseSpDefense = 80,
         .types = { TYPE_GRASS, TYPE_POISON },
-        .catchRate = 45,
-        .expYield = 142,
+        .catchRate = 101,
+        .expYield = 180,
         .evYield_SpAttack = 1,
         .evYield_SpDefense = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
@@ -98,12 +98,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Ivysaur, 4),
         .footprint = gMonFootprint_Ivysaur,
         LEARNSETS(Ivysaur),
-        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_VENUSAUR}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_VENUSAUR},
+                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_VENUSAUR_MEGA},
+                                {EVO_ITEM, ITEM_LEAF_STONE, SPECIES_VENUSAUR_GIGANTAMAX}),
     },
 
 #define VENUSAUR_MISC_INFO                                                  \
-        .types = { TYPE_GRASS, TYPE_POISON },                               \
-        .catchRate = 45,                                                    \
+        .catchRate = 48,                                                    \
         .evYield_SpAttack = 2,                                              \
         .evYield_SpDefense = 1,                                             \
         .genderRatio = PERCENT_FEMALE(12.5),                                \
@@ -112,26 +113,26 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_SLOW,                                   \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_GRASS },                \
         .bodyColor = BODY_COLOR_GREEN,                                      \
-        .speciesName = _("Venusaur"),                                       \
-        .natDexNum = NATIONAL_DEX_VENUSAUR,                                 \
         .categoryName = _("Seed"),                                          \
         .footprint = gMonFootprint_Venusaur,                                \
         LEARNSETS(Venusaur),                                                \
-        .formSpeciesIdTable = sVenusaurFormSpeciesIdTable,                  \
-        .formChangeTable = sVenusaurFormChangeTable
+        .formSpeciesIdTable = sVenusaurFormSpeciesIdTable
 
     [SPECIES_VENUSAUR] =
     {
         VENUSAUR_MISC_INFO,
         .baseHP        = 80,
-        .baseAttack    = 82,
-        .baseDefense   = 83,
+        .baseAttack    = 85,
+        .baseDefense   = 85,
         .baseSpeed     = 80,
-        .baseSpAttack  = 100,
-        .baseSpDefense = 100,
-        .expYield = 236,
+        .baseSpAttack  = 110,
+        .baseSpDefense = 110,
+        .types = { TYPE_GRASS, TYPE_POISON },
+        .expYield = 293,
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_CHLOROPHYLL },
+        .speciesName = _("Venusaur"),
         .cryId = CRY_VENUSAUR,
+        .natDexNum = NATIONAL_DEX_VENUSAUR,
         .height = 20,
         .weight = 1000,
         .description = COMPOUND_STRING(
@@ -156,19 +157,21 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Venusaur, 4),
     },
 
-#if P_MEGA_EVOLUTIONS
     [SPECIES_VENUSAUR_MEGA] =
     {
         VENUSAUR_MISC_INFO,
         .baseHP        = 80,
         .baseAttack    = 100,
         .baseDefense   = 123,
-        .baseSpeed     = 80,
-        .baseSpAttack  = 122,
-        .baseSpDefense = 120,
-        .expYield = 281,
+        .baseSpeed     = 65,
+        .baseSpAttack  = 91,
+        .baseSpDefense = 91,
+        .types = { TYPE_GRASS, TYPE_POISON },
+        .expYield = 293,
         .abilities = { ABILITY_THICK_FAT, ABILITY_THICK_FAT, ABILITY_THICK_FAT },
+        .speciesName = _("Megasaur"),
         .cryId = CRY_VENUSAUR_MEGA,
+        .natDexNum = NATIONAL_DEX_VENUSAUR_MEGA,
         .height = 24,
         .weight = 1555,
         .description = COMPOUND_STRING(
@@ -188,25 +191,25 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_GREEN,
         PALETTES(VenusaurMega),
         ICON(VenusaurMega, 4),
-        .isMegaEvolution = TRUE,
     },
-#endif //P_MEGA_EVOLUTIONS
 
-#if P_GIGANTAMAX_FORMS
     [SPECIES_VENUSAUR_GIGANTAMAX] =
     {
         VENUSAUR_MISC_INFO,
-        .baseHP        = 80,
-        .baseAttack    = 82,
-        .baseDefense   = 83,
+        .baseHP        = 88,
+        .baseAttack    = 70,
+        .baseDefense   = 70,
         .baseSpeed     = 80,
-        .baseSpAttack  = 100,
-        .baseSpDefense = 100,
-        .expYield = 236,
+        .baseSpAttack  = 122,
+        .baseSpDefense = 120,
+        .types = { TYPE_GRASS, TYPE_GRASS },
+        .expYield = 293,
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_CHLOROPHYLL },
+        .speciesName = _("Flowosaur"),
         .cryId = CRY_VENUSAUR,
-        .height = 240,
-        .weight = 0,
+        .natDexNum = NATIONAL_DEX_VENUSAUR_GIGANTAMAX,
+        .height = 24,
+        .weight = 1555,
         .description = COMPOUND_STRING(
             "Spits big amounts of pollen like a volcano.\n"
             "Breathing too much of it causes fainting.\n"
@@ -225,9 +228,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(VenusaurGigantamax),
         ICON(VenusaurGigantamax, 0),
-        .isGigantamax = TRUE,
     },
-#endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_BULBASAUR
 
 #if P_FAMILY_CHARMANDER
