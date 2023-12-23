@@ -115,8 +115,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_GREEN,                                      \
         .categoryName = _("Seed"),                                          \
         .footprint = gMonFootprint_Venusaur,                                \
-        LEARNSETS(Venusaur),                                                \
-        .formSpeciesIdTable = sVenusaurFormSpeciesIdTable
+        LEARNSETS(Venusaur)
 
     [SPECIES_VENUSAUR] =
     {
@@ -234,15 +233,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_FAMILY_CHARMANDER
     [SPECIES_CHARMANDER] =
     {
-        .baseHP        = 39,
+        .baseHP        = 40,
         .baseAttack    = 52,
         .baseDefense   = 43,
         .baseSpeed     = 65,
-        .baseSpAttack  = 60,
-        .baseSpDefense = 50,
+        .baseSpAttack  = 64,
+        .baseSpDefense = 54,
         .types = { TYPE_FIRE, TYPE_FIRE },
-        .catchRate = 45,
-        .expYield = 62,
+        .catchRate = 145,
+        .expYield = 127,
         .evYield_Speed = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
@@ -283,14 +282,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_CHARMELEON] =
     {
         .baseHP        = 58,
-        .baseAttack    = 64,
+        .baseAttack    = 69,
         .baseDefense   = 58,
         .baseSpeed     = 80,
         .baseSpAttack  = 80,
         .baseSpDefense = 65,
         .types = { TYPE_FIRE, TYPE_FIRE },
-        .catchRate = 45,
-        .expYield = 142,
+        .catchRate = 101,
+        .expYield = 180,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
@@ -326,24 +325,22 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Charmeleon, 0),
         .footprint = gMonFootprint_Charmeleon,
         LEARNSETS(Charmeleon),
-        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_CHARIZARD}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_CHARIZARD},
+                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_CHARIZARD_MEGA_X},
+                                {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_CHARIZARD_GIGANTAMAX}),
     },
 
 #define CHARIZARD_MISC_INFO                                             \
-        .catchRate = 45,                                                \
+        .catchRate = 48,                                                \
         .evYield_SpAttack = 3,                                          \
         .genderRatio = PERCENT_FEMALE(12.5),                            \
         .eggCycles = 20,                                                \
         .friendship = STANDARD_FRIENDSHIP,                              \
         .growthRate = GROWTH_MEDIUM_SLOW,                               \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_DRAGON },           \
-        .speciesName = _("Charizard"),                                  \
-        .natDexNum = NATIONAL_DEX_CHARIZARD,                            \
         .categoryName = _("Flame"),                                     \
         .footprint = gMonFootprint_Charizard,                           \
-        LEARNSETS(Charizard),                                           \
-        .formSpeciesIdTable = sCharizardFormSpeciesIdTable,             \
-        .formChangeTable = sCharizardFormChangeTable
+        LEARNSETS(Charizard)
 
     [SPECIES_CHARIZARD] =
     {
@@ -351,14 +348,16 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseHP        = 78,
         .baseAttack    = 84,
         .baseDefense   = 78,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 109,
+        .baseSpeed     = 110,
+        .baseSpAttack  = 115,
         .baseSpDefense = 85,
         .types = { TYPE_FIRE, TYPE_FLYING },
-        .expYield = 240,
+        .expYield = 293,
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_SOLAR_POWER },
         .bodyColor = BODY_COLOR_RED,
+        .speciesName = _("Charizard"),
         .cryId = CRY_CHARIZARD,
+        .natDexNum = NATIONAL_DEX_CHARIZARD,
         .height = 17,
         .weight = 905,
         .description = COMPOUND_STRING(
@@ -385,17 +384,19 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_CHARIZARD_MEGA_X] =
     {
         CHARIZARD_MISC_INFO,
-        .baseHP        = 78,
+        .baseHP        = 62,
         .baseAttack    = 130,
         .baseDefense   = 111,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 130,
-        .baseSpDefense = 85,
+        .baseSpeed     = 70,
+        .baseSpAttack  = 105,
+        .baseSpDefense = 72,
         .types = { TYPE_FIRE, TYPE_DRAGON },
-        .expYield = 285,
+        .expYield = 293,
         .abilities = { ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS },
         .bodyColor = BODY_COLOR_BLACK,
+        .speciesName = _("Charistyle"),
         .cryId = CRY_CHARIZARD_MEGA_X,
+        .natDexNum = NATIONAL_DEX_CHARIZARD_MEGA_X,
         .height = 17,
         .weight = 1105,
         .description = COMPOUND_STRING(
@@ -415,7 +416,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
         PALETTES(CharizardMegaX),
         ICON(CharizardMegaX, 0),
-        .isMegaEvolution = TRUE,
     },
 
     [SPECIES_CHARIZARD_MEGA_Y] =
@@ -460,17 +460,19 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_CHARIZARD_GIGANTAMAX] =
     {
         CHARIZARD_MISC_INFO,
-        .baseHP        = 78,
-        .baseAttack    = 84,
-        .baseDefense   = 78,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 109,
-        .baseSpDefense = 85,
-        .types = { TYPE_FIRE, TYPE_FLYING },
+        .baseHP        = 60,
+        .baseAttack    = 70,
+        .baseDefense   = 60,
+        .baseSpeed     = 86,
+        .baseSpAttack  = 159,
+        .baseSpDefense = 115,
+        .types = { TYPE_FIRE, TYPE_FIRE },
         .expYield = 240,
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_SOLAR_POWER },
         .bodyColor = BODY_COLOR_RED,
+        .speciesName = _("Charizilla"),
         .cryId = CRY_CHARIZARD,
+        .natDexNum = NATIONAL_DEX_CHARIZARD_GIGANTAMAX,
         .height = 280,
         .weight = 0,
         .description = COMPOUND_STRING(
@@ -491,7 +493,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(CharizardGigantamax),
         ICON(CharizardGigantamax, 0),
-        .isGigantamax = TRUE,
     },
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_CHARMANDER
