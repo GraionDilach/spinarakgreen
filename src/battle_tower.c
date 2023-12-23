@@ -2993,6 +2993,11 @@ static void FillPartnerParty(u16 trainerId)
             else
                 otID = ((firstIdPart % 72) * 1000) + ((secondIdPart % 23) * 10) + (thirdIdPart % 37) % 65536;
 
+            do
+            {
+                personality = Random32();
+            } while (IsShinyOtIdPersonality(otID, personality));
+
             if (partyData[i].gender == TRAINER_MON_MALE)
                 personality = (personality & 0xFFFFFF00) | GeneratePersonalityForGender(MON_MALE, partyData[i].species);
             else if (partyData[i].gender == TRAINER_MON_FEMALE)
