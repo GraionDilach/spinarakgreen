@@ -9239,6 +9239,7 @@ BattleScript_BattlerAbilityStatRaiseOnSwitchIn::
 	waitanimation
 	printstring STRINGID_BATTLERABILITYRAISEDSTAT
 	waitmessage B_WAIT_TIME_LONG
+	copybyte gBattlerAttacker, sSAVED_BATTLER
 	end3
 
 BattleScript_ScriptingAbilityStatRaise::
