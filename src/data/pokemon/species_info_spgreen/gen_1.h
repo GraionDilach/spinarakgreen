@@ -502,13 +502,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         .baseHP        = 44,
         .baseAttack    = 48,
-        .baseDefense   = 65,
+        .baseDefense   = 67,
         .baseSpeed     = 43,
         .baseSpAttack  = 50,
-        .baseSpDefense = 64,
+        .baseSpDefense = 66,
         .types = { TYPE_WATER, TYPE_WATER },
-        .catchRate = 45,
-        .expYield = 63,
+        .catchRate = 145,
+        .expYield = 127,
         .evYield_Defense = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
@@ -550,13 +550,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         .baseHP        = 59,
         .baseAttack    = 63,
-        .baseDefense   = 80,
+        .baseDefense   = 83,
         .baseSpeed     = 58,
         .baseSpAttack  = 65,
-        .baseSpDefense = 80,
+        .baseSpDefense = 82,
         .types = { TYPE_WATER, TYPE_WATER },
-        .catchRate = 45,
-        .expYield = 142,
+        .catchRate = 101,
+        .expYield = 180,
         .evYield_Defense = 1,
         .evYield_SpDefense = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
@@ -592,12 +592,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Wartortle, 2),
         .footprint = gMonFootprint_Wartortle,
         LEARNSETS(Wartortle),
-        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_BLASTOISE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_BLASTOISE},
+                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_BLASTOISE_MEGA},
+                                {EVO_ITEM, ITEM_WATER_STONE, SPECIES_BLASTOISE_GIGANTAMAX}),
     },
 
 #define BLASTOISE_MISC_INFO                                             \
-        .types = { TYPE_WATER, TYPE_WATER },                            \
-        .catchRate = 45,                                                \
+        .catchRate = 48,                                                \
         .evYield_SpDefense = 3,                                         \
         .genderRatio = PERCENT_FEMALE(12.5),                            \
         .eggCycles = 20,                                                \
@@ -605,26 +606,25 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_SLOW,                               \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_WATER_1 },          \
         .bodyColor = BODY_COLOR_BLUE,                                   \
-        .speciesName = _("Blastoise"),                                  \
-        .natDexNum = NATIONAL_DEX_BLASTOISE,                            \
         .categoryName = _("Shellfish"),                                 \
         .footprint = gMonFootprint_Blastoise,                           \
-        LEARNSETS(Blastoise),                                           \
-        .formSpeciesIdTable = sBlastoiseFormSpeciesIdTable,             \
-        .formChangeTable = sBlastoiseFormChangeTable
+        LEARNSETS(Blastoise)
 
     [SPECIES_BLASTOISE] =
     {
         BLASTOISE_MISC_INFO,
-        .baseHP        = 79,
+        .baseHP        = 84,
         .baseAttack    = 83,
-        .baseDefense   = 100,
+        .baseDefense   = 110,
         .baseSpeed     = 78,
         .baseSpAttack  = 85,
-        .baseSpDefense = 105,
-        .expYield = 239,
+        .baseSpDefense = 110,
+        .types = { TYPE_WATER, TYPE_WATER },
+        .expYield = 293,
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_RAIN_DISH },
+        .speciesName = _("Blastoise"),
         .cryId = CRY_BLASTOISE,
+        .natDexNum = NATIONAL_DEX_BLASTOISE,
         .height = 16,
         .weight = 855,
         .description = COMPOUND_STRING(
@@ -653,14 +653,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         BLASTOISE_MISC_INFO,
         .baseHP        = 79,
-        .baseAttack    = 103,
-        .baseDefense   = 120,
-        .baseSpeed     = 78,
+        .baseAttack    = 68,
+        .baseDefense   = 105,
+        .baseSpeed     = 63,
         .baseSpAttack  = 135,
-        .baseSpDefense = 115,
-        .expYield = 284,
+        .baseSpDefense = 100,
+        .types = { TYPE_WATER, TYPE_STEEL },
+        .expYield = 293,
         .abilities = { ABILITY_MEGA_LAUNCHER, ABILITY_MEGA_LAUNCHER, ABILITY_MEGA_LAUNCHER },
+        .speciesName = _("Mortoise"),
         .cryId = CRY_BLASTOISE_MEGA,
+        .natDexNum = NATIONAL_DEX_BLASTOISE_MEGA,
         .height = 16,
         .weight = 1011,
         .description = COMPOUND_STRING(
@@ -681,7 +684,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
         PALETTES(BlastoiseMega),
         ICON(BlastoiseMega, 2),
-        .isMegaEvolution = TRUE,
     },
 #endif //P_MEGA_EVOLUTIONS
 
@@ -689,17 +691,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_BLASTOISE_GIGANTAMAX] =
     {
         BLASTOISE_MISC_INFO,
-        .baseHP        = 79,
-        .baseAttack    = 83,
-        .baseDefense   = 100,
-        .baseSpeed     = 78,
-        .baseSpAttack  = 85,
-        .baseSpDefense = 105,
+        .baseHP        = 84,
+        .baseAttack    = 103,
+        .baseDefense   = 110,
+        .baseSpeed     = 68,
+        .baseSpAttack  = 75,
+        .baseSpDefense = 110,
+        .types = { TYPE_WATER, TYPE_DARK },
         .expYield = 239,
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_RAIN_DISH },
+        .speciesName = _("Tantortle"),
         .cryId = CRY_BLASTOISE,
+        .natDexNum = NATIONAL_DEX_BLASTOISE_GIGANTAMAX,
         .height = 250,
-        .weight = 0,
+        .weight = 1011,
         .description = COMPOUND_STRING(
             "It's not very good at precision\n"
             "shooting. When attacking, it just fires\n"
@@ -718,7 +723,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(BlastoiseGigantamax),
         ICON(BlastoiseGigantamax, 0),
-        .isGigantamax = TRUE,
     },
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_SQUIRTLE
