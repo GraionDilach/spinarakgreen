@@ -737,8 +737,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 20,
         .baseSpDefense = 20,
         .types = { TYPE_BUG, TYPE_BUG },
-        .catchRate = 255,
-        .expYield = 39,
+        .catchRate = 204,
+        .expYield = 71,
         .evYield_HP = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -780,13 +780,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         .baseHP        = 50,
         .baseAttack    = 20,
-        .baseDefense   = 55,
+        .baseDefense   = 120,
         .baseSpeed     = 30,
         .baseSpAttack  = 25,
-        .baseSpDefense = 25,
+        .baseSpDefense = 60,
         .types = { TYPE_BUG, TYPE_BUG },
-        .catchRate = 120,
-        .expYield = 72,
+        .catchRate = 151,
+        .expYield = 122,
         .evYield_Defense = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -821,19 +821,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Metapod, 1),
         .footprint = gMonFootprint_Metapod,
         LEARNSETS(Metapod),
-        .evolutions = EVOLUTION({EVO_LEVEL, 10, SPECIES_BUTTERFREE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 10, SPECIES_BUTTERFREE},
+                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_BUTTERFREE_GIGANTAMAX}),
     },
 
 #define BUTTERFREE_MISC_INFO                                                        \
-        .baseHP        = 60,                                                        \
-        .baseAttack    = 45,                                                        \
-        .baseDefense   = 50,                                                        \
-        .baseSpeed     = 70,                                                        \
-        .baseSpDefense = 80,                                                        \
-        .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 90 : 80,                        \
-        .types = { TYPE_BUG, TYPE_FLYING },                                         \
-        .catchRate = 45,                                                            \
-        .expYield = 178,                                                            \
         .evYield_SpAttack = 2,                                                      \
         .evYield_SpDefense = 1,                                                     \
         .itemRare = ITEM_SILVER_POWDER,                                             \
@@ -844,18 +836,25 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },                              \
         .abilities = { ABILITY_COMPOUND_EYES, ABILITY_NONE, ABILITY_TINTED_LENS },  \
         .bodyColor = BODY_COLOR_WHITE,                                              \
-        .speciesName = _("Butterfree"),                                             \
         .cryId = CRY_BUTTERFREE,                                                    \
-        .natDexNum = NATIONAL_DEX_BUTTERFREE,                                       \
         .categoryName = _("Butterfly"),                                             \
         .footprint = gMonFootprint_Butterfree,                                      \
-        LEARNSETS(Butterfree),                                                      \
-        .formSpeciesIdTable = sButterfreeFormSpeciesIdTable,                        \
-        .formChangeTable = sButterfreeFormChangeTable
+        LEARNSETS(Butterfree)
 
     [SPECIES_BUTTERFREE] =
     {
         BUTTERFREE_MISC_INFO,
+        .baseHP        = 90,
+        .baseAttack    = 55,
+        .baseDefense   = 75,
+        .baseSpeed     = 95,
+        .baseSpAttack  = 92,
+        .baseSpDefense = 92,
+        .types = { TYPE_BUG, TYPE_FLYING },
+        .catchRate = 65,
+        .expYield = 241,
+        .speciesName = _("Butterfree"),
+        .natDexNum = NATIONAL_DEX_BUTTERFREE,
         .height = 11,
         .weight = 320,
         .description = COMPOUND_STRING(
@@ -885,8 +884,19 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_BUTTERFREE_GIGANTAMAX] =
     {
         BUTTERFREE_MISC_INFO,
-        .height = 170,
-        .weight = 0,
+        .baseHP        = 85,
+        .baseAttack    = 15,
+        .baseDefense   = 95,
+        .baseSpeed     = 95,
+        .baseSpAttack  = 119,
+        .baseSpDefense = 90,
+        .types = { TYPE_BUG, TYPE_PSYCHIC },
+        .catchRate = 65,
+        .expYield = 241,
+        .speciesName = _("Papilusion"),
+        .natDexNum = NATIONAL_DEX_BUTTERFREE_GIGANTAMAX,
+        .height = 11,
+        .weight = 320,
         .description = COMPOUND_STRING(
             "Once it has opponents trapped in a\n"
             "tornado that could blow away a 10-\n"
@@ -905,8 +915,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backPicYOffset = 3,
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(ButterfreeGigantamax),
-        ICON(ButterfreeGigantamax, 0),
-        .isGigantamax = TRUE,
+        ICON(ButterfreeGigantamax, 0)
     },
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_CATERPIE
