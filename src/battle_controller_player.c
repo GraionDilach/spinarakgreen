@@ -41,6 +41,7 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "constants/rgb.h"
+#include "level_caps.h"
 
 #define X UQ_4_12
 #define ______ X(1.0) // Regular effectiveness.
@@ -2371,7 +2372,7 @@ void PlayerHandleExpUpdate(u32 battler)
     u8 monId = gBattleResources->bufferA[battler][1];
     s32 taskId, expPointsToGive;
 
-    if (GetMonData(&gPlayerParty[monId], MON_DATA_LEVEL) >= MAX_LEVEL)
+    if (GetMonData(&gPlayerParty[monId], MON_DATA_LEVEL) >= GetCurrentLevelCap())
     {
         PlayerBufferExecCompleted(battler);
     }
