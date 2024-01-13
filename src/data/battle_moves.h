@@ -557,7 +557,6 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         #if B_UPDATED_MOVE_DATA == GEN_SPGRN
             .power = 50,
-            .accuracy = 100,
         #elif B_UPDATED_MOVE_DATA >= GEN_7
             .power = 40,
         #elif B_UPDATED_MOVE_DATA >= GEN_5
@@ -1511,10 +1510,14 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DIG] =
     {
+        #if B_UPDATED_MOVE_DATA == GEN_SPGRN
             .power = 100,
         #elif B_UPDATED_MOVE_DATA >= GEN_4
+            .power = 80,
+        #else
+            .power = 60,
+        #endif
         .effect = EFFECT_SEMI_INVULNERABLE,
-        .power = B_UPDATED_MOVE_DATA >= GEN_4 ? 80 : 60,
         .type = TYPE_GROUND,
         .accuracy = 100,
         .pp = 10,
@@ -1780,13 +1783,11 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_MINIMIZE] =
     {
-            .pp = 20,
-        #elif B_UPDATED_MOVE_DATA >= GEN_6
         .effect = EFFECT_MINIMIZE,
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = B_UPDATED_MOVE_DATA >= GEN_6 ? 10 : 20,
+        .pp = B_UPDATED_MOVE_DATA != GEN_SPGRN && B_UPDATED_MOVE_DATA >= GEN_6 ? 10 : 20,
         .target = MOVE_TARGET_USER,
         .priority = 0,
         .category = BATTLE_CATEGORY_STATUS,
@@ -1858,13 +1859,11 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_BARRIER] =
     {
-            .pp = 30,
-        #elif B_UPDATED_MOVE_DATA >= GEN_6
         .effect = EFFECT_DEFENSE_UP_2,
         .power = 0,
         .type = TYPE_PSYCHIC,
         .accuracy = 0,
-        .pp = B_UPDATED_MOVE_DATA >= GEN_6 ? 20 : 30,
+        .pp = B_UPDATED_MOVE_DATA != GEN_SPGRN && B_UPDATED_MOVE_DATA >= GEN_6 ? 20 : 30,
         .target = MOVE_TARGET_USER,
         .priority = 0,
         .category = BATTLE_CATEGORY_STATUS,
