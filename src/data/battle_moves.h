@@ -4421,13 +4421,13 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         #if B_UPDATED_MOVE_DATA >= GEN_4
             .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_DEF_MINUS_1,
-            .chance = 10,
+            .chance = 20,
         }
             ),
         #else
             .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SP_DEF_MINUS_1,
-            .chance = 10,
+            .chance = 20,
         }
             ),
         #endif
