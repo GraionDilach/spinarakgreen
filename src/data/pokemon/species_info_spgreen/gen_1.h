@@ -2257,27 +2257,21 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD }
 
 #define SANDSHREW_MISC_INFO                                 \
-        .catchRate = 255,                                   \
-        .expYield = 60,                                     \
+        .catchRate = 154,                                   \
+        .expYield = 120,                                    \
         .evYield_Defense = 1,                               \
-        .speciesName = _("Sandshrew"),                      \
         .cryId = CRY_SANDSHREW,                             \
-        .natDexNum = NATIONAL_DEX_SANDSHREW,                \
         .categoryName = _("Mouse"),                         \
         .footprint = gMonFootprint_Sandshrew,               \
-        .formSpeciesIdTable = sSandshrewFormSpeciesIdTable, \
         SANDSHREW_FAMILY_MISC_INFO
 
 #define SANDSLASH_MISC_INFO                                 \
-        .catchRate = 90,                                    \
-        .expYield = 158,                                    \
+        .catchRate = 69,                                    \
+        .expYield = 235,                                    \
         .evYield_Defense = 2,                               \
-        .speciesName = _("Sandslash"),                      \
         .cryId = CRY_SANDSLASH,                             \
-        .natDexNum = NATIONAL_DEX_SANDSLASH,                \
         .categoryName = _("Mouse"),                         \
         .footprint = gMonFootprint_Sandslash,               \
-        .formSpeciesIdTable = sSandslashFormSpeciesIdTable, \
         SANDSHREW_FAMILY_MISC_INFO
 
     [SPECIES_SANDSHREW] =
@@ -2289,8 +2283,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 40,
         .baseSpAttack  = 20,
         .baseSpDefense = 30,
-        .types = { TYPE_GROUND, TYPE_GROUND },
+        .types = { TYPE_GROUND, TYPE_NORMAL },
         .abilities = { ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_SAND_RUSH },
+        .speciesName = _("Sandshrew"),
+        .natDexNum = NATIONAL_DEX_SANDSHREW,
         .bodyColor = BODY_COLOR_YELLOW,
         .height = 6,
         .weight = 120,
@@ -2320,13 +2316,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         SANDSLASH_MISC_INFO,
         .baseHP        = 75,
-        .baseAttack    = 100,
-        .baseDefense   = 110,
-        .baseSpeed     = 65,
+        .baseAttack    = 105,
+        .baseDefense   = 115,
+        .baseSpeed     = 91,
         .baseSpAttack  = 45,
         .baseSpDefense = 55,
-        .types = { TYPE_GROUND, TYPE_GROUND },
+        .types = { TYPE_GROUND, TYPE_NORMAL },
         .abilities = { ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_SAND_RUSH },
+        .speciesName = _("Sandslash"),
+        .natDexNum = NATIONAL_DEX_SANDSLASH,
         .bodyColor = BODY_COLOR_YELLOW,
         .height = 10,
         .weight = 295,
@@ -2363,6 +2361,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpDefense = 35,
         .types = { TYPE_ICE, TYPE_STEEL },
         .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_SLUSH_RUSH },
+        .speciesName = _("Hailshrew"),
+        .natDexNum = NATIONAL_DEX_SANDSHREW_ALOLAN,
         .bodyColor = BODY_COLOR_BLUE,
         .height = 7,
         .weight = 400,
@@ -2385,7 +2385,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(SandshrewAlolan),
         ICON(SandshrewAlolan, 0),
         LEARNSETS(SandshrewAlolan),
-        .isAlolanForm = TRUE,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_ICE_STONE, SPECIES_SANDSLASH_ALOLAN}),
     },
 
@@ -2393,13 +2392,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         SANDSLASH_MISC_INFO,
         .baseHP        = 75,
-        .baseAttack    = 100,
-        .baseDefense   = 120,
-        .baseSpeed     = 65,
+        .baseAttack    = 105,
+        .baseDefense   = 125,
+        .baseSpeed     = 91,
         .baseSpAttack  = 25,
         .baseSpDefense = 65,
         .types = { TYPE_ICE, TYPE_STEEL },
         .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_SLUSH_RUSH },
+        .speciesName = _("Hailslash"),
+        .natDexNum = NATIONAL_DEX_SANDSLASH_ALOLAN,
         .bodyColor = BODY_COLOR_BLUE,
         .height = 12,
         .weight = 550,
@@ -2422,7 +2423,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(SandslashAlolan),
         ICON(SandslashAlolan, 0),
         LEARNSETS(SandslashAlolan),
-        .isAlolanForm = TRUE,
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_SANDSHREW
@@ -2437,8 +2437,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 40,
         .baseSpDefense = 40,
         .types = { TYPE_POISON, TYPE_POISON },
-        .catchRate = 235,
-        .expYield = 55,
+        .catchRate = 166,
+        .expYield = 110,
         .evYield_HP = 1,
         .genderRatio = MON_FEMALE,
         .eggCycles = 20,
@@ -2479,21 +2479,21 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_NIDORINA] =
     {
-        .baseHP        = 70,
+        .baseHP        = 80,
         .baseAttack    = 62,
         .baseDefense   = 67,
         .baseSpeed     = 56,
         .baseSpAttack  = 55,
         .baseSpDefense = 55,
         .types = { TYPE_POISON, TYPE_POISON },
-        .catchRate = 120,
-        .expYield = 128,
+        .catchRate = 117,
+        .expYield = 165,
         .evYield_HP = 2,
         .genderRatio = MON_FEMALE,
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
+        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_FIELD },
         .abilities = { ABILITY_POISON_POINT, ABILITY_RIVALRY, ABILITY_HUSTLE },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Nidorina"),
@@ -2527,21 +2527,21 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_NIDOQUEEN] =
     {
-        .baseHP        = 90,
-        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 92 : 82,
+        .baseHP        = 120,
+        .baseAttack    = 92,
         .baseDefense   = 87,
         .baseSpeed     = 76,
         .baseSpAttack  = 75,
-        .baseSpDefense = 85,
+        .baseSpDefense = 95,
         .types = { TYPE_POISON, TYPE_GROUND },
-        .catchRate = 45,
-        .expYield = 227,
+        .catchRate = 49,
+        .expYield = 264,
         .evYield_HP = 3,
         .genderRatio = MON_FEMALE,
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
+        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_FIELD },
         .abilities = { ABILITY_POISON_POINT, ABILITY_RIVALRY, ABILITY_SHEER_FORCE },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Nidoqueen"),
@@ -2577,12 +2577,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseHP        = 46,
         .baseAttack    = 57,
         .baseDefense   = 40,
-        .baseSpeed     = 50,
+        .baseSpeed     = 52,
         .baseSpAttack  = 40,
         .baseSpDefense = 40,
         .types = { TYPE_POISON, TYPE_POISON },
-        .catchRate = 235,
-        .expYield = 55,
+        .catchRate = 166,
+        .expYield = 110,
         .evYield_Attack = 1,
         .genderRatio = MON_MALE,
         .eggCycles = 20,
@@ -2623,14 +2623,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_NIDORINO] =
     {
         .baseHP        = 61,
-        .baseAttack    = 72,
+        .baseAttack    = 82,
         .baseDefense   = 57,
         .baseSpeed     = 65,
         .baseSpAttack  = 55,
         .baseSpDefense = 55,
         .types = { TYPE_POISON, TYPE_POISON },
-        .catchRate = 120,
-        .expYield = 128,
+        .catchRate = 117,
+        .expYield = 165,
         .evYield_Attack = 2,
         .genderRatio = MON_MALE,
         .eggCycles = 20,
@@ -2670,15 +2670,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_NIDOKING] =
     {
-        .baseHP        = 81,
-        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 102 : 92,
+        .baseHP        = 91,
+        .baseAttack    = 112,
         .baseDefense   = 77,
-        .baseSpeed     = 85,
-        .baseSpAttack  = 85,
+        .baseSpeed     = 90,
+        .baseSpAttack  = 100,
         .baseSpDefense = 75,
         .types = { TYPE_POISON, TYPE_GROUND },
-        .catchRate = 45,
-        .expYield = 227,
+        .catchRate = 49,
+        .expYield = 264,
         .evYield_Attack = 3,
         .genderRatio = MON_MALE,
         .eggCycles = 20,
@@ -2718,12 +2718,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #endif //P_FAMILY_NIDORAN
 
 #if P_FAMILY_CLEFAIRY
-#if P_UPDATED_TYPES >= GEN_6
-    #define CLEFAIRY_FAMILY_TYPES { TYPE_FAIRY, TYPE_FAIRY }
-#else
-    #define CLEFAIRY_FAMILY_TYPES { TYPE_NORMAL, TYPE_NORMAL }
-#endif
-
 #if P_GEN_2_CROSS_EVOS
     [SPECIES_CLEFFA] =
     {
@@ -2733,9 +2727,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 15,
         .baseSpAttack  = 45,
         .baseSpDefense = 55,
-        .types = CLEFAIRY_FAMILY_TYPES,
-        .catchRate = 150,
-        .expYield = 44,
+        .types = { TYPE_FAIRY, TYPE_FAIRY },
+        .catchRate = 193,
+        .expYield = 79,
         .evYield_SpDefense = 1,
         .itemRare = ITEM_MOON_STONE,
         .genderRatio = PERCENT_FEMALE(75),
@@ -2778,15 +2772,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_CLEFAIRY] =
     {
-        .baseHP        = 70,
+        .baseHP        = 80,
         .baseAttack    = 45,
         .baseDefense   = 48,
         .baseSpeed     = 35,
         .baseSpAttack  = 60,
         .baseSpDefense = 65,
-        .types = CLEFAIRY_FAMILY_TYPES,
-        .catchRate = 150,
-        .expYield = 113,
+        .types = { TYPE_FAIRY, TYPE_FAIRY },
+        .catchRate = 130,
+        .expYield = 139,
         .evYield_HP = 2,
         .itemRare = ITEM_MOON_STONE,
         .genderRatio = PERCENT_FEMALE(75),
@@ -2828,15 +2822,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_CLEFABLE] =
     {
-        .baseHP        = 95,
-        .baseAttack    = 70,
-        .baseDefense   = 73,
-        .baseSpeed     = 60,
-        .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 95 : 85,
+        .baseHP        = 110,
+        .baseAttack    = 85,
+        .baseDefense   = 78,
+        .baseSpeed     = 61,
+        .baseSpAttack  = 110,
         .baseSpDefense = 90,
-        .types = CLEFAIRY_FAMILY_TYPES,
-        .catchRate = 25,
-        .expYield = 217,
+        .types = { TYPE_FAIRY, TYPE_FAIRY },
+        .catchRate = 53,
+        .expYield = 258,
         .evYield_HP = 3,
         .itemRare = ITEM_MOON_STONE,
         .genderRatio = PERCENT_FEMALE(75),
