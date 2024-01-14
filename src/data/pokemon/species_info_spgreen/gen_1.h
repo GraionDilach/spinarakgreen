@@ -1486,14 +1486,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_SPEAROW] =
     {
         .baseHP        = 40,
-        .baseAttack    = 60,
-        .baseDefense   = 30,
+        .baseAttack    = 65,
+        .baseDefense   = 34,
         .baseSpeed     = 70,
         .baseSpAttack  = 31,
         .baseSpDefense = 31,
         .types = { TYPE_NORMAL, TYPE_FLYING },
-        .catchRate = 255,
-        .expYield = 52,
+        .catchRate = 168,
+        .expYield = 108,
         .evYield_Speed = 1,
         .itemRare = ITEM_SHARP_BEAK,
         .genderRatio = PERCENT_FEMALE(50),
@@ -1534,15 +1534,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_FEAROW] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 90,
+        .baseHP        = 85,
+        .baseAttack    = 100,
         .baseDefense   = 65,
-        .baseSpeed     = 100,
+        .baseSpeed     = 105,
         .baseSpAttack  = 61,
         .baseSpDefense = 61,
         .types = { TYPE_NORMAL, TYPE_FLYING },
-        .catchRate = 90,
-        .expYield = 155,
+        .catchRate = 73,
+        .expYield = 231,
         .evYield_Speed = 2,
         .itemRare = ITEM_SHARP_BEAK,
         .genderRatio = PERCENT_FEMALE(50),
@@ -1587,14 +1587,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_EKANS] =
     {
         .baseHP        = 35,
-        .baseAttack    = 60,
-        .baseDefense   = 44,
-        .baseSpeed     = 55,
+        .baseAttack    = 70,
+        .baseDefense   = 50,
+        .baseSpeed     = 60,
         .baseSpAttack  = 40,
         .baseSpDefense = 54,
         .types = { TYPE_POISON, TYPE_POISON },
-        .catchRate = 255,
-        .expYield = 58,
+        .catchRate = 149,
+        .expYield = 124,
         .evYield_Attack = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -1635,15 +1635,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_ARBOK] =
     {
-        .baseHP        = 60,
-        .baseAttack    = P_UPDATED_STATS >= GEN_7 ? 95 : 85,
-        .baseDefense   = 69,
-        .baseSpeed     = 80,
+        .baseHP        = 85,
+        .baseAttack    = 105,
+        .baseDefense   = 80,
+        .baseSpeed     = 96,
         .baseSpAttack  = 65,
-        .baseSpDefense = 79,
-        .types = { TYPE_POISON, TYPE_POISON },
-        .catchRate = 90,
-        .expYield = 157,
+        .baseSpDefense = 85,
+        .types = { TYPE_POISON, TYPE_DRAGON },
+        .catchRate = 59,
+        .expYield = 250,
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -1691,8 +1691,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 35,                                                            \
         .baseSpDefense = 35,                                                            \
         .types = { TYPE_ELECTRIC, TYPE_ELECTRIC },                                      \
-        .catchRate = 190,                                                               \
-        .expYield = 41,                                                                 \
+        .catchRate = 199,                                                               \
+        .expYield = 74,                                                                 \
         .evYield_Speed = 1,                                                             \
         .genderRatio = PERCENT_FEMALE(50),                                              \
         .eggCycles = 10,                                                                \
@@ -1748,15 +1748,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #endif //P_GEN_2_CROSS_EVOS
 
 #define PIKACHU_MISC_INFO                                                       \
-        .baseHP        = 35,                                                    \
-        .baseAttack    = 55,                                                    \
-        .baseDefense   = P_UPDATED_STATS >= GEN_6 ? 40 : 30,                    \
-        .baseSpeed     = 90,                                                    \
-        .baseSpAttack  = 50,                                                    \
-        .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 50 : 40,                    \
+        .baseHP        = 45,                                                    \
+        .baseAttack    = 80,                                                    \
+        .baseDefense   = 50,                                                    \
+        .baseSpeed     = 95,                                                    \
+        .baseSpAttack  = 75,                                                    \
+        .baseSpDefense = 60,                                                    \
         .types = { TYPE_ELECTRIC, TYPE_ELECTRIC },                              \
-        .catchRate = 190,                                                       \
-        .expYield = 112,                                                        \
+        .catchRate = 103,                                                       \
+        .expYield = 178,                                                        \
         .evYield_Speed = 2,                                                     \
         .itemRare = ITEM_LIGHT_BALL,                                            \
         .eggCycles = 10,                                                        \
@@ -1804,7 +1804,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     #endif
         .formChangeTable = sPikachuFormChangeTable,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_RAICHU},
-                                {EVO_NONE, 0, SPECIES_RAICHU_ALOLAN}),
+                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_RAICHU_ALOLAN},
+                                {EVO_ITEM, ITEM_SHINY_STONE, SPECIES_PIKACHU_GIGANTAMAX},
+                                {EVO_ITEM, ITEM_MOON_STONE, SPECIES_GOROCHU}),
     },
 
 #if P_COSPLAY_PIKACHU_FORMS
@@ -2070,7 +2072,27 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_PIKACHU_GIGANTAMAX] =
     {
-        PIKACHU_MISC_INFO,
+        .baseHP        = 70,
+        .baseAttack    = 120,
+        .baseDefense   = 60,
+        .baseSpeed     = 120,
+        .baseSpAttack  = 91,
+        .baseSpDefense = 95,
+        .types = { TYPE_ELECTRIC, TYPE_NORMAL },
+        .catchRate = 46,
+        .expYield = 296,
+        .evYield_Speed = 2,
+        .eggCycles = 10,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .abilities = { ABILITY_STATIC, ABILITY_NONE, ABILITY_LIGHTNING_ROD },
+        .bodyColor = BODY_COLOR_YELLOW,
+        .speciesName = _("Gigachu"),
+        .cryId = CRY_PIKACHU,
+        .natDexNum = NATIONAL_DEX_PIKACHU_GIGANTAMAX,
+        .categoryName = _("Mouse"),
+        .footprint = gMonFootprint_Pikachu,
+        LEARNSETS(Raichu),
         .genderRatio = PERCENT_FEMALE(50),
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FAIRY },
         .height = 210,
@@ -2093,41 +2115,36 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(PikachuGigantamax),
         ICON(PikachuGigantamax, 2),
-        .formChangeTable = sPikachuFormChangeTable,
-        .isGigantamax = TRUE,
     },
 #endif //P_GIGANTAMAX_FORMS
 
-#define RAICHU_SPEED (P_UPDATED_STATS >= GEN_6 ? 110 : 100)
-
 #define RAICHU_MISC_INFO                                    \
-        .catchRate = 75,                                    \
-        .expYield = 218,                                    \
+        .catchRate = 46,                                    \
+        .expYield = 296,                                    \
         .evYield_Speed = 3,                                 \
         .genderRatio = PERCENT_FEMALE(50),                  \
         .eggCycles = 10,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_MEDIUM_FAST,                   \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FAIRY },  \
-        .speciesName = _("Raichu"),                         \
         .cryId = CRY_RAICHU,                                \
-        .natDexNum = NATIONAL_DEX_RAICHU,                   \
         .categoryName = _("Mouse"),                         \
-        .footprint = gMonFootprint_Raichu,                  \
-        .formSpeciesIdTable = sRaichuFormSpeciesIdTable
+        .footprint = gMonFootprint_Raichu
 
     [SPECIES_RAICHU] =
     {
         RAICHU_MISC_INFO,
-        .baseHP        = 60,
-        .baseAttack    = 90,
-        .baseDefense   = 55,
-        .baseSpeed     = RAICHU_SPEED,
-        .baseSpAttack  = 90,
-        .baseSpDefense = 80,
+        .baseHP        = 70,
+        .baseAttack    = 100,
+        .baseDefense   = 65,
+        .baseSpeed     = 121,
+        .baseSpAttack  = 100,
+        .baseSpDefense = 100,
         .types = { TYPE_ELECTRIC, TYPE_ELECTRIC },
         .abilities = { ABILITY_STATIC, ABILITY_NONE, ABILITY_LIGHTNING_ROD },
         .bodyColor = BODY_COLOR_YELLOW,
+        .speciesName = _("Raichu"),
+        .natDexNum = NATIONAL_DEX_RAICHU,
         .height = 8,
         .weight = 300,
         .description = COMPOUND_STRING(
@@ -2156,16 +2173,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_RAICHU_ALOLAN] =
     {
         RAICHU_MISC_INFO,
-        .baseHP        = 60,
-        .baseAttack    = 85,
-        .baseDefense   = 50,
-        .baseSpeed     = RAICHU_SPEED,
-        .baseSpAttack  = 95,
+        .baseHP        = 70,
+        .baseAttack    = 90,
+        .baseDefense   = 65,
+        .baseSpeed     = 131,
+        .baseSpAttack  = 115,
         .baseSpDefense = 85,
         .types = { TYPE_ELECTRIC, TYPE_PSYCHIC },
         .abilities = { ABILITY_SURGE_SURFER, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BROWN,
-        .isAlolanForm = TRUE,
+        .speciesName = _("Psaichu"),
+        .natDexNum = NATIONAL_DEX_RAICHU_ALOLAN,
         .height = 7,
         .weight = 210,
         .description = COMPOUND_STRING(
@@ -2190,6 +2208,43 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         LEARNSETS(RaichuAlolan),
     },
 #endif //P_ALOLAN_FORMS
+
+    [SPECIES_GOROCHU] =
+    {
+        RAICHU_MISC_INFO,
+        .baseHP        = 70,
+        .baseAttack    = 113,
+        .baseDefense   = 67,
+        .baseSpeed     = 126,
+        .baseSpAttack  = 113,
+        .baseSpDefense = 67,
+        .types = { TYPE_ELECTRIC, TYPE_DARK },
+        .abilities = { ABILITY_STATIC, ABILITY_NONE, ABILITY_LIGHTNING_ROD },
+        .bodyColor = BODY_COLOR_YELLOW,
+        .speciesName = _("Gorochu"),
+        .natDexNum = NATIONAL_DEX_GOROCHU,
+        LEARNSETS(Raichu),
+        .height = 210,
+        .weight = 0,
+        .pokemonScale = 479,
+        .pokemonOffset = 19,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .description = COMPOUND_STRING(
+            "When it smashes its opponents with\n"
+            "its bolt-shaped tail, it delivers a\n"
+            "surge of electricity equivalent to a\n"
+            "lightning strike."),
+        FRONT_PIC(PikachuGigantamax, 64, 64),
+        .frontPicYOffset = 2,
+        .frontAnimFrames = sAnims_PikachuGigantamax,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        BACK_PIC(PikachuGigantamax, 64, 64),
+        .backPicYOffset = 0,
+        //.backAnimId = BACK_ANIM_NONE,
+        PALETTES(PikachuGigantamax),
+        ICON(PikachuGigantamax, 2),
+    },
 #endif //P_FAMILY_PIKACHU
 
 #if P_FAMILY_SANDSHREW
