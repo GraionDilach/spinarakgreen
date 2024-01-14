@@ -930,8 +930,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 20,
         .baseSpDefense = 20,
         .types = { TYPE_BUG, TYPE_POISON },
-        .catchRate = 255,
-        .expYield = 39,
+        .catchRate = 204,
+        .expYield = 71,
         .evYield_Speed = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -974,13 +974,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         .baseHP        = 45,
         .baseAttack    = 25,
-        .baseDefense   = 50,
+        .baseDefense   = 115,
         .baseSpeed     = 35,
         .baseSpAttack  = 25,
-        .baseSpDefense = 25,
+        .baseSpDefense = 60,
         .types = { TYPE_BUG, TYPE_POISON },
-        .catchRate = 120,
-        .expYield = 72,
+        .catchRate = 151,
+        .expYield = 122,
         .evYield_Defense = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -1016,14 +1016,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Kakuna, 2),
         .footprint = gMonFootprint_Kakuna,
         LEARNSETS(Kakuna),
-        .evolutions = EVOLUTION({EVO_LEVEL, 10, SPECIES_BEEDRILL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 10, SPECIES_BEEDRILL},
+                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_BUTTERFREE_GIGANTAMAX}),
     },
-
-#define BEEDRILL_ATTACK (P_UPDATED_STATS >= GEN_6 ? 90 : 80)
 
 #define BEEDRILL_MISC_INFO                                  \
         .types = { TYPE_BUG, TYPE_POISON },                 \
-        .catchRate = 45,                                    \
+        .catchRate = 65,                                    \
         .evYield_Attack = 2,                                \
         .evYield_SpDefense = 1,                             \
         .itemRare = ITEM_POISON_BARB,                       \
@@ -1033,26 +1032,24 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_FAST,                   \
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },      \
         .bodyColor = BODY_COLOR_YELLOW,                     \
-        .speciesName = _("Beedrill"),                       \
-        .natDexNum = NATIONAL_DEX_BEEDRILL,                 \
         .categoryName = _("Poison Bee"),                    \
         .footprint = gMonFootprint_Beedrill,                \
-        LEARNSETS(Beedrill),                                \
-        .formSpeciesIdTable = sBeedrillFormSpeciesIdTable,  \
-        .formChangeTable = sBeedrillFormChangeTable
+        LEARNSETS(Beedrill)
 
     [SPECIES_BEEDRILL] =
     {
         BEEDRILL_MISC_INFO,
-        .baseHP        = 65,
-        .baseDefense   = 40,
-        .baseSpeed     = 75,
+        .baseHP        = 100,
+        .baseAttack    = 115,
+        .baseDefense   = 75,
+        .baseSpeed     = 100,
         .baseSpAttack  = 45,
-        .baseSpDefense = 80,
-        .baseAttack    = BEEDRILL_ATTACK,
-        .expYield = 178,
+        .baseSpDefense = 64,
+        .expYield = 241,
         .abilities = { ABILITY_SWARM, ABILITY_NONE, ABILITY_SNIPER },
+        .speciesName = _("Beedrill"),
         .cryId = CRY_BEEDRILL,
+        .natDexNum = NATIONAL_DEX_BEEDRILL,
         .height = 10,
         .weight = 295,
         .description = COMPOUND_STRING(
@@ -1080,15 +1077,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_BEEDRILL_MEGA] =
     {
         BEEDRILL_MISC_INFO,
-        .baseHP        = 65,
-        .baseAttack    = BEEDRILL_ATTACK + 60,
+        .baseHP        = 69,
+        .baseAttack    = 150,
         .baseDefense   = 40,
         .baseSpeed     = 145,
         .baseSpAttack  = 15,
         .baseSpDefense = 80,
-        .expYield = 223,
+        .expYield = 241,
         .abilities = { ABILITY_ADAPTABILITY, ABILITY_ADAPTABILITY, ABILITY_ADAPTABILITY },
+        .speciesName = _("Beerivet"),
         .cryId = CRY_BEEDRILL_MEGA,
+        .natDexNum = NATIONAL_DEX_BEEDRILL_MEGA,
         .height = 14,
         .weight = 405,
         .description = COMPOUND_STRING(
@@ -1110,7 +1109,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backAnimId = BACK_ANIM_H_VIBRATE,
         PALETTES(BeedrillMega),
         ICON(BeedrillMega, 2),
-        .isMegaEvolution = TRUE,
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_WEEDLE
