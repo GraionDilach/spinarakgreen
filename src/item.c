@@ -338,17 +338,6 @@ bool8 CheckBagHasSpace(u16 itemId, u16 count)
     if (InBattlePyramid() || FlagGet(FLAG_STORING_ITEMS_IN_PYRAMID_BAG) == TRUE)
         return CheckPyramidBagHasSpace(itemId, count);
 
-    switch(pocket)
-    {
-    case KEYITEMS_POCKET:
-    case TMHM_POCKET:
-        slotCapacity = 1;
-        break;
-    default:
-        slotCapacity = MAX_BAG_ITEM_CAPACITY;
-        break;
-    }
-
     // Check space in any existing item slots that already contain this item
     for (i = 0; i < gBagPockets[pocket].capacity; i++)
     {
@@ -1257,7 +1246,7 @@ void DrawHeaderBox(void)
     u8 textY;
     u8 *dst;
     bool8 handleFlash = FALSE;
-    
+
     if (GetFlashLevel() > 0 || InBattlePyramid_())
         handleFlash = TRUE;
 
@@ -1309,7 +1298,7 @@ void HideHeaderBox(void)
 static void ShowItemIconSprite(u16 item, bool8 firstTime, bool8 flash)
 {
     s16 x = 0, y = 0;
-    u8 iconSpriteId;   
+    u8 iconSpriteId;
     u8 spriteId2 = MAX_SPRITES;
 
     if (flash)
