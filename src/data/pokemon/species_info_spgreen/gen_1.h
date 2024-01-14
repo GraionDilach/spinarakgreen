@@ -5902,7 +5902,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
 #if P_FAMILY_PONYTA
 #define KANTONIAN_PONYTA_FAMILY_INFO                                                \
-        .types = { TYPE_FIRE, TYPE_FIRE },                                          \
+        .types = { TYPE_FIRE, TYPE_NORMAL },                                        \
         .abilities = { ABILITY_RUN_AWAY, ABILITY_FLASH_FIRE, ABILITY_FLAME_BODY },  \
         .bodyColor = BODY_COLOR_YELLOW
 
@@ -5920,42 +5920,30 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 90,                            \
         .baseSpAttack  = 65,                            \
         .baseSpDefense = 65,                            \
-        .catchRate = 190,                               \
-        .expYield = 82,                                 \
+        .catchRate = 101,                               \
+        .expYield = 180,                                \
         .evYield_Speed = 1,                             \
-        .speciesName = _("Ponyta"),                     \
         .cryId = CRY_PONYTA,                            \
-        .natDexNum = NATIONAL_DEX_PONYTA,               \
-        .footprint = gMonFootprint_Ponyta,              \
-        .formSpeciesIdTable = sPonytaFormSpeciesIdTable,\
         PONYTA_FAMILY_MISC_INFO
 
 #define RAPIDASH_MISC_INFO                                  \
-        .baseHP        = 65,                                \
-        .baseAttack    = 100,                               \
-        .baseDefense   = 70,                                \
-        .baseSpeed     = 105,                               \
-        .baseSpAttack  = 80,                                \
-        .baseSpDefense = 80,                                \
-        .catchRate = 60,                                    \
-        .expYield = 175,                                    \
+        .catchRate = 54,                                    \
+        .expYield = 256,                                    \
         .evYield_Speed = 2,                                 \
-        .speciesName = _("Rapidash"),                       \
         .cryId = CRY_RAPIDASH,                              \
-        .natDexNum = NATIONAL_DEX_RAPIDASH,                 \
         .height = 17,                                       \
         .pokemonScale = 256,                                \
         .pokemonOffset = 0,                                 \
         .trainerScale = 289,                                \
         .trainerOffset = 1,                                 \
-        .footprint = gMonFootprint_Rapidash,                \
-        .formSpeciesIdTable = sRapidashFormSpeciesIdTable,  \
         PONYTA_FAMILY_MISC_INFO
 
     [SPECIES_PONYTA] =
     {
         KANTONIAN_PONYTA_FAMILY_INFO,
         PONYTA_MISC_INFO,
+        .speciesName = _("Ponyta"),
+        .natDexNum = NATIONAL_DEX_PONYTA,
         .categoryName = _("Fire Horse"),
         .height = 10,
         .weight = 300,
@@ -5986,6 +5974,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         KANTONIAN_PONYTA_FAMILY_INFO,
         RAPIDASH_MISC_INFO,
+        .baseHP        = 65,
+        .baseAttack    = 100,
+        .baseDefense   = 70,
+        .baseSpeed     = 115,
+        .baseSpAttack  = 90,
+        .baseSpDefense = 90,
+        .speciesName = _("Rapidash"),
+        .natDexNum = NATIONAL_DEX_RAPIDASH,
         .categoryName = _("Fire Horse"),
         .weight = 950,
         .description = COMPOUND_STRING(
@@ -6005,17 +6001,18 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         LEARNSETS(Rapidash),
     },
 
-#define GALARIAN_PONYTA_FAMILY_INFO                                                 \
+#define GALARIAN_PONYTA_FAMILY_INFO                                                  \
         .abilities = { ABILITY_RUN_AWAY, ABILITY_PASTEL_VEIL, ABILITY_ANTICIPATION },\
-        .bodyColor = BODY_COLOR_WHITE,                                              \
-        .isGalarianForm = TRUE
+        .bodyColor = BODY_COLOR_WHITE
 
 #if P_GALARIAN_FORMS
     [SPECIES_PONYTA_GALARIAN] =
     {
         GALARIAN_PONYTA_FAMILY_INFO,
         PONYTA_MISC_INFO,
-        .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },
+        .speciesName = _("Ponycute"),
+        .natDexNum = NATIONAL_DEX_PONYTA_GALARIAN,
+        .types = { TYPE_PSYCHIC, TYPE_FAIRY },
         .categoryName = _("Unique Horn"),
         .height = 8,
         .weight = 240,
@@ -6045,6 +6042,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         GALARIAN_PONYTA_FAMILY_INFO,
         RAPIDASH_MISC_INFO,
+        .baseHP        = 85,
+        .baseAttack    = 110,
+        .baseDefense   = 70,
+        .baseSpeed     = 105,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 80,
+        .speciesName = _("Rapicute"),
+        .natDexNum = NATIONAL_DEX_RAPIDASH_GALARIAN,
         .types = { TYPE_PSYCHIC, TYPE_FAIRY },
         .categoryName = _("Unique Horn"),
         .weight = 800,
