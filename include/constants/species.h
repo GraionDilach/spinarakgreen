@@ -1775,8 +1775,9 @@
 
 #define SPECIES_GOROCHU                                 SPGREEN_START + 1
 #define SPECIES_POLIFROG                                SPGREEN_START + 2
+#define SPECIES_PITCHTREEBEL                            SPGREEN_START + 3
 
-#define SPGREEN_END                                     SPGREEN_START + 3
+#define SPGREEN_END                                     SPGREEN_START + 4
 
 #define SPECIES_EGG SPGREEN_END
 

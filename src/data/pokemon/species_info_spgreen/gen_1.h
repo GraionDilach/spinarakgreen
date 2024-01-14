@@ -5361,8 +5361,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 70,
         .baseSpDefense = 30,
         .types = { TYPE_GRASS, TYPE_POISON },
-        .catchRate = 255,
-        .expYield = 60,
+        .catchRate = 154,
+        .expYield = 120,
         .evYield_Attack = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -5409,8 +5409,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 85,
         .baseSpDefense = 45,
         .types = { TYPE_GRASS, TYPE_POISON },
-        .catchRate = 120,
-        .expYield = 137,
+        .catchRate = 110,
+        .expYield = 171,
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -5446,20 +5446,21 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Weepinbell, 1),
         .footprint = gMonFootprint_Weepinbell,
         LEARNSETS(Weepinbell),
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_VICTREEBEL}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_VICTREEBEL},
+                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_PITCHTREEBEL}),
     },
 
     [SPECIES_VICTREEBEL] =
     {
         .baseHP        = 80,
-        .baseAttack    = 105,
+        .baseAttack    = 115,
         .baseDefense   = 65,
         .baseSpeed     = 70,
-        .baseSpAttack  = 100,
-        .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 70 : 60,
+        .baseSpAttack  = 110,
+        .baseSpDefense = 70,
         .types = { TYPE_GRASS, TYPE_POISON },
-        .catchRate = 45,
-        .expYield = 221,
+        .catchRate = 61,
+        .expYield = 247,
         .evYield_Attack = 3,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -5495,6 +5496,53 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .footprint = gMonFootprint_Victreebel,
         LEARNSETS(Victreebel),
     },
+
+    [SPECIES_PITCHTREEBEL] =
+    {
+        .baseHP        = 80,
+        .baseAttack    = 120,
+        .baseDefense   = 65,
+        .baseSpeed     = 70,
+        .baseSpAttack  = 115,
+        .baseSpDefense = 60,
+        .types = { TYPE_GRASS, TYPE_DRAGON },
+        .catchRate = 61,
+        .expYield = 247,
+        .evYield_Attack = 3,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_GRASS, EGG_GROUP_GRASS },
+        .abilities = { ABILITY_CHLOROPHYLL, ABILITY_NONE, ABILITY_GLUTTONY },
+        .bodyColor = BODY_COLOR_GREEN,
+        .speciesName = _("Pichtrebel"),
+        .cryId = CRY_VICTREEBEL,
+        .natDexNum = NATIONAL_DEX_PITCHTREEBEL,
+        .categoryName = _("Flycatcher"),
+        .height = 17,
+        .weight = 155,
+        .description = COMPOUND_STRING(
+            "The long vine extending from its head is\n"
+            "waved about as if it were a living thing to\n"
+            "attract prey. When an unsuspecting victim\n"
+            "approaches, it is swallowed whole."),
+        .pokemonScale = 256,
+        .pokemonOffset = 1,
+        .trainerScale = 312,
+        .trainerOffset = 3,
+        FRONT_PIC(Bellsprout, 40, 40),
+        .frontPicYOffset = 12,
+        .frontAnimFrames = sAnims_Bellsprout,
+        .frontAnimId = ANIM_H_JUMPS,
+        BACK_PIC(Bellsprout, 40, 48),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_V_STRETCH,
+        PALETTES(Bellsprout),
+        ICON(Bellsprout, 1),
+        .footprint = gMonFootprint_Bellsprout,
+        LEARNSETS(Victreebel),
+    },
 #endif //P_FAMILY_BELLSPROUT
 
 #if P_FAMILY_TENTACOOL
@@ -5507,8 +5555,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 50,
         .baseSpDefense = 100,
         .types = { TYPE_WATER, TYPE_POISON },
-        .catchRate = 190,
-        .expYield = 67,
+        .catchRate = 137,
+        .expYield = 134,
         .evYield_SpDefense = 1,
         .itemRare = ITEM_POISON_BARB,
         .genderRatio = PERCENT_FEMALE(50),
@@ -5556,8 +5604,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 80,
         .baseSpDefense = 120,
         .types = { TYPE_WATER, TYPE_POISON },
-        .catchRate = 60,
-        .expYield = 180,
+        .catchRate = 59,
+        .expYield = 249,
         .evYield_SpDefense = 2,
         .itemRare = ITEM_POISON_BARB,
         .genderRatio = PERCENT_FEMALE(50),
@@ -5611,75 +5659,51 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_BROWN
 
 #define GEODUDE_MISC_INFO                                   \
-        .baseHP        = 40,                                \
-        .baseAttack    = 80,                                \
-        .baseDefense   = 100,                               \
-        .baseSpeed     = 20,                                \
-        .baseSpAttack  = 30,                                \
-        .baseSpDefense = 30,                                \
-        .catchRate = 255,                                   \
-        .expYield = 60,                                     \
+        .catchRate = 139,                                   \
+        .expYield = 132,                                    \
         .evYield_Defense = 1,                               \
-        .speciesName = _("Geodude"),                        \
         .cryId = CRY_GEODUDE,                               \
-        .natDexNum = NATIONAL_DEX_GEODUDE,                  \
         .categoryName = _("Rock"),                          \
         .height = 4,                                        \
         .pokemonScale = 347,                                \
         .pokemonOffset = 18,                                \
         .trainerScale = 256,                                \
         .trainerOffset = 0,                                 \
-        .footprint = gMonFootprint_Geodude,                 \
-        .formSpeciesIdTable = sGeodudeFormSpeciesIdTable,   \
         GEODUDE_FAMILY_MISC_INFO
 
 #define GRAVELER_MISC_INFO                                  \
-        .baseHP        = 55,                                \
-        .baseAttack    = 95,                                \
-        .baseDefense   = 115,                               \
-        .baseSpeed     = 35,                                \
-        .baseSpAttack  = 45,                                \
-        .baseSpDefense = 45,                                \
-        .catchRate = 120,                                   \
-        .expYield = 137,                                    \
+        .catchRate = 92,                                    \
+        .expYield = 189,                                    \
         .evYield_Defense = 2,                               \
-        .speciesName = _("Graveler"),                       \
         .cryId = CRY_GRAVELER,                              \
-        .natDexNum = NATIONAL_DEX_GRAVELER,                 \
         .categoryName = _("Rock"),                          \
         .height = 10,                                       \
         .pokemonScale = 256,                                \
         .pokemonOffset = 2,                                 \
         .trainerScale = 256,                                \
         .trainerOffset = 0,                                 \
-        .footprint = gMonFootprint_Graveler,                \
-        .formSpeciesIdTable = sGravelerFormSpeciesIdTable,  \
         GEODUDE_FAMILY_MISC_INFO
 
-#define GOLEM_ATTACK (P_UPDATED_STATS >= GEN_6 ? 120 : 110)
-
 #define GOLEM_MISC_INFO                                 \
-        .baseHP        = 80,                            \
-        .baseAttack    = GOLEM_ATTACK,                  \
-        .baseDefense   = 130,                           \
-        .baseSpeed     = 45,                            \
-        .baseSpAttack  = 55,                            \
-        .baseSpDefense = 65,                            \
-        .catchRate = 45,                                \
-        .expYield = 223,                                \
+        .catchRate = 51,                                \
+        .expYield = 261,                                \
         .evYield_Defense = 3,                           \
-        .speciesName = _("Golem"),                      \
         .cryId = CRY_GOLEM,                             \
-        .natDexNum = NATIONAL_DEX_GOLEM,                \
         .categoryName = _("Megaton"),                   \
-        .footprint = gMonFootprint_Golem,               \
-        .formSpeciesIdTable = sGolemFormSpeciesIdTable, \
         GEODUDE_FAMILY_MISC_INFO
 
     [SPECIES_GEODUDE] =
     {
         KANTONIAN_GEODUDE_FAMILY_INFO,
         GEODUDE_MISC_INFO,
+        .baseHP        = 40,
+        .baseAttack    = 80,
+        .baseDefense   = 100,
+        .baseSpeed     = 20,
+        .baseSpAttack  = 45,
+        .baseSpDefense = 45,
+        .speciesName = _("Geodude"),
+        .natDexNum = NATIONAL_DEX_GEODUDE,
         .weight = 200,
         .description = COMPOUND_STRING(
             "It climbs mountain paths using only the\n"
@@ -5704,6 +5728,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         KANTONIAN_GEODUDE_FAMILY_INFO,
         GRAVELER_MISC_INFO,
+        .baseHP        = 60,
+        .baseAttack    = 95,
+        .baseDefense   = 120,
+        .baseSpeed     = 35,
+        .baseSpAttack  = 60,
+        .baseSpDefense = 60,
+        .speciesName = _("Graveler"),
+        .natDexNum = NATIONAL_DEX_GRAVELER,
         .weight = 1050,
         .description = COMPOUND_STRING(
             "They descend from mountains by tumbling\n"
@@ -5728,6 +5760,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         KANTONIAN_GEODUDE_FAMILY_INFO,
         GOLEM_MISC_INFO,
+        .baseHP        = 85,
+        .baseAttack    = 120,
+        .baseDefense   = 140,
+        .baseSpeed     = 45,
+        .baseSpAttack  = 75,
+        .baseSpDefense = 75,
+        .speciesName = _("Golem"),
+        .natDexNum = NATIONAL_DEX_GOLEM,
         .height = 14,
         .weight = 3000,
         .description = COMPOUND_STRING(
@@ -5754,13 +5794,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_ALOLAN_FORMS
 #define ALOLAN_GEODUDE_FAMILY_INFO                                              \
         .types = { TYPE_ROCK, TYPE_ELECTRIC },                                  \
-        .abilities = { ABILITY_MAGNET_PULL, ABILITY_STURDY, ABILITY_GALVANIZE },\
-        .isAlolanForm = TRUE
+        .abilities = { ABILITY_MAGNET_PULL, ABILITY_STURDY, ABILITY_GALVANIZE }
 
     [SPECIES_GEODUDE_ALOLAN] =
     {
         ALOLAN_GEODUDE_FAMILY_INFO,
         GEODUDE_MISC_INFO,
+        .baseHP        = 40,
+        .baseAttack    = 80,
+        .baseDefense   = 100,
+        .baseSpeed     = 30,
+        .baseSpAttack  = 40,
+        .baseSpDefense = 40,
+        .speciesName = _("Geocharge"),
+        .natDexNum = NATIONAL_DEX_GEODUDE_ALOLAN,
         .itemRare = ITEM_CELL_BATTERY,
         .weight = 203,
         .description = COMPOUND_STRING(
@@ -5786,6 +5833,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         ALOLAN_GEODUDE_FAMILY_INFO,
         GRAVELER_MISC_INFO,
+        .baseHP        = 65,
+        .baseAttack    = 105,
+        .baseDefense   = 115,
+        .baseSpeed     = 40,
+        .baseSpAttack  = 50,
+        .baseSpDefense = 55,
+        .speciesName = _("Geospark"),
+        .natDexNum = NATIONAL_DEX_GRAVELER_ALOLAN,
         .itemRare = ITEM_CELL_BATTERY,
         .weight = 1100,
         .description = COMPOUND_STRING(
@@ -5811,6 +5866,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         ALOLAN_GEODUDE_FAMILY_INFO,
         GOLEM_MISC_INFO,
+        .baseHP        = 85,
+        .baseAttack    = 125,
+        .baseDefense   = 135,
+        .baseSpeed     = 50,
+        .baseSpAttack  = 70,
+        .baseSpDefense = 75,
+        .speciesName = _("Geozap"),
+        .natDexNum = NATIONAL_DEX_GOLEM_ALOLAN,
         .itemCommon = ITEM_CELL_BATTERY,
         .height = 17,
         .weight = 3160,
