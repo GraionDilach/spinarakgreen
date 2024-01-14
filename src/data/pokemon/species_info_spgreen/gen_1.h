@@ -3970,23 +3970,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
 #if P_FAMILY_MEOWTH
 #define MEOWTH_MISC_INFO                                                    \
-        .catchRate = 255,                                                   \
-        .expYield = 58,                                                     \
+        .catchRate = 147,                                                   \
+        .expYield = 126,                                                    \
         .genderRatio = PERCENT_FEMALE(50),                                  \
         .eggCycles = 20,                                                    \
         .friendship = STANDARD_FRIENDSHIP,                                  \
         .growthRate = GROWTH_MEDIUM_FAST,                                   \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },                  \
-        .speciesName = _("Meowth"),                                         \
         .cryId = CRY_MEOWTH,                                                \
-        .natDexNum = NATIONAL_DEX_MEOWTH,                                   \
         .categoryName = _("Scratch Cat"),                                   \
-        .footprint = gMonFootprint_Meowth,                                  \
-        .formSpeciesIdTable = sMeowthFormSpeciesIdTable
+        .footprint = gMonFootprint_Meowth
 
 #define PERSIAN_MISC_INFO                                   \
-        .catchRate = 90,                                    \
-        .expYield = 154,                                    \
+        .catchRate = 62,                                    \
+        .expYield = 244,                                    \
         .evYield_Speed = 2,                                 \
         .itemRare = ITEM_QUICK_CLAW,                        \
         .genderRatio = PERCENT_FEMALE(50),                  \
@@ -3994,27 +3991,26 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_MEDIUM_FAST,                   \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },  \
-        .speciesName = _("Persian"),                        \
         .cryId = CRY_PERSIAN,                               \
-        .natDexNum = NATIONAL_DEX_PERSIAN,                  \
         .categoryName = _("Classy Cat"),                    \
-        .footprint = gMonFootprint_Persian,                 \
-        .formSpeciesIdTable = sPersianFormSpeciesIdTable
+        .footprint = gMonFootprint_Persian
 
     [SPECIES_MEOWTH] =
     {
         MEOWTH_MISC_INFO,
         .baseHP        = 40,
-        .baseAttack    = 45,
+        .baseAttack    = 50,
         .baseDefense   = 35,
         .baseSpeed     = 90,
-        .baseSpAttack  = 40,
-        .baseSpDefense = 40,
+        .baseSpAttack  = 50,
+        .baseSpDefense = 50,
         .evYield_Speed = 1,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
         .itemRare = ITEM_QUICK_CLAW,
         .abilities = { ABILITY_PICKUP, ABILITY_TECHNICIAN, ABILITY_UNNERVE },
         .bodyColor = BODY_COLOR_YELLOW,
+        .speciesName = _("Meowth"),
+        .natDexNum = NATIONAL_DEX_MEOWTH,
         .height = 4,
         .weight = 42,
         .description = COMPOUND_STRING(
@@ -4037,22 +4033,23 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Meowth),
         ICON(Meowth, 1),
         LEARNSETS(Meowth),
-        .formChangeTable = sMeowthFormChangeTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_PERSIAN}),
     },
 
     [SPECIES_PERSIAN] =
     {
         PERSIAN_MISC_INFO,
-        .baseHP        = 65,
-        .baseAttack    = 70,
+        .baseHP        = 70,
+        .baseAttack    = 100,
         .baseDefense   = 60,
-        .baseSpeed     = 115,
-        .baseSpAttack  = 65,
-        .baseSpDefense = 65,
+        .baseSpeed     = 125,
+        .baseSpAttack  = 75,
+        .baseSpDefense = 75,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
         .abilities = { ABILITY_LIMBER, ABILITY_TECHNICIAN, ABILITY_UNNERVE },
         .bodyColor = BODY_COLOR_YELLOW,
+        .speciesName = _("Persian"),
+        .natDexNum = NATIONAL_DEX_PERSIAN,
         .height = 10,
         .weight = 320,
         .description = COMPOUND_STRING(
@@ -4081,17 +4078,19 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_MEOWTH_ALOLAN] =
     {
         MEOWTH_MISC_INFO,
-        .baseHP        = 40,
-        .baseAttack    = 35,
-        .baseDefense   = 35,
+        .baseHP        = 45,
+        .baseAttack    = 40,
+        .baseDefense   = 40,
         .baseSpeed     = 90,
-        .baseSpAttack  = 50,
-        .baseSpDefense = 40,
+        .baseSpAttack  = 55,
+        .baseSpDefense = 45,
         .evYield_Speed = 1,
         .types = { TYPE_DARK, TYPE_DARK },
         .itemRare = ITEM_QUICK_CLAW,
         .abilities = { ABILITY_PICKUP, ABILITY_TECHNICIAN, ABILITY_RATTLED },
         .bodyColor = BODY_COLOR_GRAY,
+        .speciesName = _("Manxuth"),
+        .natDexNum = NATIONAL_DEX_MEOWTH_ALOLAN,
         .height = 4,
         .weight = 42,
         .description = COMPOUND_STRING(
@@ -4113,22 +4112,23 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(MeowthAlolan),
         ICON(MeowthAlolan, 2),
         LEARNSETS(MeowthAlolan),
-        .isAlolanForm = TRUE,
         .evolutions = EVOLUTION({EVO_FRIENDSHIP, 0, SPECIES_PERSIAN_ALOLAN}),
     },
 
     [SPECIES_PERSIAN_ALOLAN] =
     {
         PERSIAN_MISC_INFO,
-        .baseHP        = 65,
-        .baseAttack    = 60,
-        .baseDefense   = 60,
-        .baseSpeed     = 115,
-        .baseSpAttack  = 75,
-        .baseSpDefense = 65,
+        .baseHP        = 75,
+        .baseAttack    = 70,
+        .baseDefense   = 70,
+        .baseSpeed     = 130,
+        .baseSpAttack  = 85,
+        .baseSpDefense = 75,
         .types = { TYPE_DARK, TYPE_DARK },
         .abilities = { ABILITY_FUR_COAT, ABILITY_TECHNICIAN, ABILITY_RATTLED },
         .bodyColor = BODY_COLOR_GRAY,
+        .speciesName = _("Charrian"),
+        .natDexNum = NATIONAL_DEX_PERSIAN_ALOLAN,
         .height = 11,
         .weight = 330,
         .description = COMPOUND_STRING(
@@ -4150,7 +4150,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(PersianAlolan),
         ICON(PersianAlolan, 2),
         LEARNSETS(PersianAlolan),
-        .isAlolanForm = TRUE,
     },
 #endif //P_ALOLAN_FORMS
 
@@ -4159,8 +4158,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         MEOWTH_MISC_INFO,
         .baseHP        = 50,
-        .baseAttack    = 65,
-        .baseDefense   = 55,
+        .baseAttack    = 82,
+        .baseDefense   = 63,
         .baseSpeed     = 40,
         .baseSpAttack  = 40,
         .baseSpDefense = 40,
@@ -4168,13 +4167,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_STEEL, TYPE_STEEL },
         .abilities = { ABILITY_PICKUP, ABILITY_TOUGH_CLAWS, ABILITY_UNNERVE },
         .bodyColor = BODY_COLOR_BROWN,
+        .speciesName = _("Ragamuff"),
+        .natDexNum = NATIONAL_DEX_MEOWTH_GALARIAN,
         .height = 4,
         .weight = 75,
         .description = COMPOUND_STRING(
             "Living with a savage, seafaring people has\n"
             "hardened its body so much that parts of it\n"
             "turned to iron. Darker coins are harder\n"
-            "and garner more respect among Meowth."),
+            "and garner more respect among Ragamuff."),
         .pokemonScale = 480,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -4189,21 +4190,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(MeowthGalarian),
         ICON(MeowthGalarian, 0),
         LEARNSETS(MeowthGalarian),
-        .isGalarianForm = TRUE,
         .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_PERRSERKER}),
     },
 
     [SPECIES_PERRSERKER] =
     {
         .baseHP        = 70,
-        .baseAttack    = 110,
-        .baseDefense   = 100,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 50,
-        .baseSpDefense = 60,
+        .baseAttack    = 130,
+        .baseDefense   = 115,
+        .baseSpeed     = 60,
+        .baseSpAttack  = 60,
+        .baseSpDefense = 70,
         .types = { TYPE_STEEL, TYPE_STEEL },
-        .catchRate = 90,
-        .expYield = 154,
+        .catchRate = 62,
+        .expYield = 244,
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
