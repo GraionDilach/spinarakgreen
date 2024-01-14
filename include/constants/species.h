@@ -1774,8 +1774,9 @@
 #define SPGREEN_START                                   SPECIES_URSHIFU_RAPID_STRIKE_STYLE_GIGANTAMAX
 
 #define SPECIES_GOROCHU                                 SPGREEN_START + 1
+#define SPECIES_POLIFROG                                SPGREEN_START + 2
 
-#define SPGREEN_END                                     SPGREEN_START + 2
+#define SPGREEN_END                                     SPGREEN_START + 3
 
 #define SPECIES_EGG SPGREEN_END
 
