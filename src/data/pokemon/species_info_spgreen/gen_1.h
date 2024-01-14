@@ -2885,12 +2885,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 65,                            \
         .baseSpAttack  = 50,                            \
         .baseSpDefense = 65,                            \
-        .catchRate = 190,                               \
-        .expYield = 60,                                 \
+        .catchRate = 154,                               \
+        .expYield = 120,                                \
         .evYield_Speed = 1,                             \
-        .speciesName = _("Vulpix"),                     \
         .cryId = CRY_VULPIX,                            \
-        .natDexNum = NATIONAL_DEX_VULPIX,               \
         .categoryName = _("Fox"),                       \
         .height = 6,                                    \
         .weight = 99,                                   \
@@ -2899,17 +2897,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .trainerScale = 256,                            \
         .trainerOffset = 0,                             \
         .footprint = gMonFootprint_Vulpix,              \
-        .formSpeciesIdTable = sVulpixFormSpeciesIdTable,\
         VULPIX_FAMILY_MISC_INFO
 
 #define NINETALES_MISC_INFO                                 \
-        .catchRate = 75,                                    \
-        .expYield = 177,                                    \
+        .catchRate = 59,                                    \
+        .expYield = 249,                                    \
         .evYield_Speed = 1,                                 \
         .evYield_SpDefense = 1,                             \
-        .speciesName = _("Ninetales"),                      \
         .cryId = CRY_NINETALES,                             \
-        .natDexNum = NATIONAL_DEX_NINETALES,                \
         .categoryName = _("Fox"),                           \
         .height = 11,                                       \
         .weight = 199,                                      \
@@ -2918,7 +2913,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .trainerScale = 256,                                \
         .trainerOffset = 0,                                 \
         .footprint = gMonFootprint_Ninetales,               \
-        .formSpeciesIdTable = sNinetalesFormSpeciesIdTable, \
         VULPIX_FAMILY_MISC_INFO
 
     [SPECIES_VULPIX] =
@@ -2928,6 +2922,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .itemRare = ITEM_CHARCOAL,
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_NONE, ABILITY_DROUGHT },
         .bodyColor = BODY_COLOR_BROWN,
+        .speciesName = _("Vulpix"),
+        .natDexNum = NATIONAL_DEX_VULPIX,
         .description = COMPOUND_STRING(
             "It can freely control fire, making fiery\n"
             "orbs fly like will-o'-the-wisps. Just\n"
@@ -2952,13 +2948,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseHP        = 73,
         .baseAttack    = 76,
         .baseDefense   = 75,
-        .baseSpeed     = 100,
+        .baseSpeed     = 109,
         .baseSpAttack  = 81,
         .baseSpDefense = 100,
-        .types = { TYPE_FIRE, TYPE_FIRE },
+        .types = { TYPE_FIRE, TYPE_GHOST },
         .itemRare = ITEM_CHARCOAL,
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_NONE, ABILITY_DROUGHT },
         .bodyColor = BODY_COLOR_YELLOW,
+        .speciesName = _("Ninetales"),
+        .natDexNum = NATIONAL_DEX_NINETALES,
         .description = COMPOUND_STRING(
             "It has long been said that each of the\n"
             "nine tails embody an enchanted power.\n"
@@ -2984,6 +2982,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .itemRare = ITEM_SNOWBALL,
         .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_SNOW_WARNING },
         .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Coolpix"),
+        .natDexNum = NATIONAL_DEX_VULPIX_ALOLAN,
         .description = COMPOUND_STRING(
             "They live together in a skulk, helping\n"
             "one another. In hot weather, this Pokémon\n"
@@ -3000,7 +3000,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(VulpixAlolan, 2),
         LEARNSETS(VulpixAlolan),
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_ICE_STONE, SPECIES_NINETALES_ALOLAN}),
-        .isAlolanForm = TRUE,
     },
 
     [SPECIES_NINETALES_ALOLAN] =
@@ -3008,13 +3007,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         NINETALES_MISC_INFO,
         .baseHP        = 73,
         .baseAttack    = 67,
-        .baseDefense   = 75,
+        .baseDefense   = 76,
         .baseSpeed     = 109,
         .baseSpAttack  = 81,
         .baseSpDefense = 100,
         .types = { TYPE_ICE, TYPE_FAIRY },
         .itemRare = ITEM_SNOWBALL,
         .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_SNOW_WARNING },
+        .speciesName = _("Ninehails"),
+        .natDexNum = NATIONAL_DEX_NINETALES_ALOLAN,
         .bodyColor = BODY_COLOR_BLUE,
         .description = COMPOUND_STRING(
             "While it will guide travelers who get lost\n"
@@ -3031,18 +3032,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(NinetalesAlolan),
         ICON(NinetalesAlolan, 2),
         LEARNSETS(NinetalesAlolan),
-        .isAlolanForm = TRUE,
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_VULPIX
 
 #if P_FAMILY_JIGGLYPUFF
-#if P_UPDATED_TYPES >= GEN_6
-    #define JIGGLYPUFF_FAMILY_TYPES { TYPE_NORMAL, TYPE_FAIRY}
-#else
-    #define JIGGLYPUFF_FAMILY_TYPES { TYPE_NORMAL, TYPE_NORMAL}
-#endif
-
 #if P_GEN_2_CROSS_EVOS
     [SPECIES_IGGLYBUFF] =
     {
@@ -3052,9 +3046,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 15,
         .baseSpAttack  = 40,
         .baseSpDefense = 20,
-        .types = JIGGLYPUFF_FAMILY_TYPES,
-        .catchRate = 170,
-        .expYield = 42,
+        .types = { TYPE_NORMAL, TYPE_FAIRY },
+        .catchRate = 197,
+        .expYield = 76,
         .evYield_HP = 1,
         .genderRatio = PERCENT_FEMALE(75),
         .eggCycles = 10,
@@ -3096,15 +3090,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_JIGGLYPUFF] =
     {
-        .baseHP        = 115,
-        .baseAttack    = 45,
-        .baseDefense   = 20,
-        .baseSpeed     = 20,
-        .baseSpAttack  = 45,
-        .baseSpDefense = 25,
-        .types = JIGGLYPUFF_FAMILY_TYPES,
-        .catchRate = 170,
-        .expYield = 95,
+        .baseHP        = 140,
+        .baseAttack    = 70,
+        .baseDefense   = 45,
+        .baseSpeed     = 45,
+        .baseSpAttack  = 85,
+        .baseSpDefense = 50,
+        .types = { TYPE_NORMAL, TYPE_FAIRY },
+        .catchRate = 90,
+        .expYield = 191,
         .evYield_HP = 2,
         .itemRare = ITEM_MOON_STONE,
         .genderRatio = PERCENT_FEMALE(75),
@@ -3141,20 +3135,21 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Jigglypuff, 0),
         .footprint = gMonFootprint_Jigglypuff,
         LEARNSETS(Jigglypuff),
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOON_STONE, SPECIES_WIGGLYTUFF}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOON_STONE, SPECIES_WIGGLYTUFF},
+                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_SCREAM_TAIL}),
     },
 
     [SPECIES_WIGGLYTUFF] =
     {
-        .baseHP        = 140,
-        .baseAttack    = 70,
-        .baseDefense   = 45,
-        .baseSpeed     = 45,
-        .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 85 : 75,
-        .baseSpDefense = 50,
-        .types = JIGGLYPUFF_FAMILY_TYPES,
-        .catchRate = 50,
-        .expYield = 196,
+        .baseHP        = 160,
+        .baseAttack    = 80,
+        .baseDefense   = 99,
+        .baseSpeed     = 71,
+        .baseSpAttack  = 95,
+        .baseSpDefense = 115,
+        .types = { TYPE_NORMAL, TYPE_FAIRY },
+        .catchRate = 29,
+        .expYield = 330,
         .evYield_HP = 3,
         .itemRare = ITEM_MOON_STONE,
         .genderRatio = PERCENT_FEMALE(75),
@@ -3192,6 +3187,54 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .footprint = gMonFootprint_Wigglytuff,
         LEARNSETS(Wigglytuff),
     },
+
+    [SPECIES_SCREAM_TAIL] =
+    {
+        .baseHP        = 140,
+        .baseAttack    = 70,
+        .baseDefense   = 99,
+        .baseSpeed     = 111,
+        .baseSpAttack  = 85,
+        .baseSpDefense = 115,
+        .types = { TYPE_PSYCHIC, TYPE_FAIRY },
+        .catchRate = 29,
+        .expYield = 330,
+        .evYield_HP = 3,
+        .itemRare = ITEM_MOON_STONE,
+        .genderRatio = PERCENT_FEMALE(75),
+        .eggCycles = 10,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_FAST,
+        .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_FAIRY },
+        .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_PINK,
+        .speciesName = _("Biggyfuff"),
+        .cryId = CRY_SCREAM_TAIL,
+        .natDexNum = NATIONAL_DEX_SCREAM_TAIL,
+        .categoryName = _("Paradox"),
+        .height = 12,
+        .weight = 80,
+        .description = COMPOUND_STRING(
+            "There has been only one reported\n"
+            "sighting of this Pokémon. It\n"
+            "resembles a mysterious creature depicted\n"
+            "in an old expedition journal."),
+        .pokemonScale = 356,
+        .pokemonOffset = 17,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        FRONT_PIC(ScreamTail, 64, 64),
+        .frontPicYOffset = 7,
+        .frontAnimFrames = sAnims_ScreamTail,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        BACK_PIC(ScreamTail, 64, 64),
+        .backPicYOffset = 0,
+        //.backAnimId = BACK_ANIM_NONE,
+        PALETTES(ScreamTail),
+        ICON(ScreamTail, 0),
+        //.footprint = gMonFootprint_ScreamTail,
+        LEARNSETS(ScreamTail),
+    },
 #endif //P_FAMILY_JIGGLYPUFF
 
 #if P_FAMILY_ZUBAT
@@ -3200,12 +3243,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseHP        = 40,
         .baseAttack    = 45,
         .baseDefense   = 35,
-        .baseSpeed     = 55,
+        .baseSpeed     = 75,
         .baseSpAttack  = 30,
         .baseSpDefense = 40,
         .types = { TYPE_POISON, TYPE_FLYING },
-        .catchRate = 255,
-        .expYield = 49,
+        .catchRate = 171,
+        .expYield = 106,
         .evYield_Speed = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -3255,8 +3298,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 65,
         .baseSpDefense = 75,
         .types = { TYPE_POISON, TYPE_FLYING },
-        .catchRate = 90,
-        .expYield = 159,
+        .catchRate = 82,
+        .expYield = 220,
         .evYield_Speed = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -3301,14 +3344,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_CROBAT] =
     {
         .baseHP        = 85,
-        .baseAttack    = 90,
+        .baseAttack    = 95,
         .baseDefense   = 80,
         .baseSpeed     = 130,
-        .baseSpAttack  = 70,
+        .baseSpAttack  = 85,
         .baseSpDefense = 80,
         .types = { TYPE_POISON, TYPE_FLYING },
-        .catchRate = 90,
-        .expYield = 241,
+        .catchRate = 46,
+        .expYield = 295,
         .evYield_Speed = 3,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -3351,15 +3394,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_FAMILY_ODDISH
     [SPECIES_ODDISH] =
     {
-        .baseHP        = 45,
+        .baseHP        = 50,
         .baseAttack    = 50,
-        .baseDefense   = 55,
+        .baseDefense   = 65,
         .baseSpeed     = 30,
         .baseSpAttack  = 75,
         .baseSpDefense = 65,
         .types = { TYPE_GRASS, TYPE_POISON },
-        .catchRate = 255,
-        .expYield = 64,
+        .catchRate = 137,
+        .expYield = 134,
         .evYield_SpAttack = 1,
         .itemRare = ITEM_ABSORB_BULB,
         .genderRatio = PERCENT_FEMALE(50),
@@ -3400,15 +3443,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_GLOOM] =
     {
-        .baseHP        = 60,
+        .baseHP        = 65,
         .baseAttack    = 65,
-        .baseDefense   = 70,
+        .baseDefense   = 80,
         .baseSpeed     = 40,
-        .baseSpAttack  = 85,
+        .baseSpAttack  = 95,
         .baseSpDefense = 75,
         .types = { TYPE_GRASS, TYPE_POISON },
-        .catchRate = 120,
-        .expYield = 138,
+        .catchRate = 97,
+        .expYield = 185,
         .evYield_SpAttack = 2,
         .itemRare = ITEM_ABSORB_BULB,
         .genderRatio = PERCENT_FEMALE(50),
@@ -3452,15 +3495,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_VILEPLUME] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 80,
-        .baseDefense   = 85,
+        .baseHP        = 105,
+        .baseAttack    = 90,
+        .baseDefense   = 95,
         .baseSpeed     = 50,
-        .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 110 : 100,
-        .baseSpDefense = 90,
+        .baseSpAttack  = 120,
+        .baseSpDefense = 100,
         .types = { TYPE_GRASS, TYPE_POISON },
         .catchRate = 45,
-        .expYield = 221,
+        .expYield = 298,
         .evYield_SpAttack = 3,
         .itemRare = ITEM_ABSORB_BULB,
         .genderRatio = PERCENT_FEMALE(50),
@@ -3503,15 +3546,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_GEN_2_CROSS_EVOS
     [SPECIES_BELLOSSOM] =
     {
-        .baseHP        = 75,
+        .baseHP        = 105,
         .baseAttack    = 80,
-        .baseDefense   = P_UPDATED_STATS >= GEN_6 ? 95 : 85,
+        .baseDefense   = 95,
         .baseSpeed     = 50,
-        .baseSpAttack  = 90,
-        .baseSpDefense = 100,
+        .baseSpAttack  = 110,
+        .baseSpDefense = 120,
         .types = { TYPE_GRASS, TYPE_GRASS },
         .catchRate = 45,
-        .expYield = 221,
+        .expYield = 298,
         .evYield_SpDefense = 3,
         .itemRare = ITEM_ABSORB_BULB,
         .genderRatio = PERCENT_FEMALE(50),
@@ -3554,15 +3597,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_FAMILY_PARAS
     [SPECIES_PARAS] =
     {
-        .baseHP        = 35,
-        .baseAttack    = 70,
-        .baseDefense   = 55,
+        .baseHP        = 45,
+        .baseAttack    = 80,
+        .baseDefense   = 65,
         .baseSpeed     = 25,
         .baseSpAttack  = 45,
-        .baseSpDefense = 55,
+        .baseSpDefense = 65,
         .types = { TYPE_BUG, TYPE_GRASS },
-        .catchRate = 190,
-        .expYield = 57,
+        .catchRate = 142,
+        .expYield = 130,
         .evYield_Attack = 1,
         .itemCommon = ITEM_TINY_MUSHROOM,
         .itemRare = ITEM_BIG_MUSHROOM,
@@ -3605,15 +3648,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_PARASECT] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 95,
-        .baseDefense   = 80,
+        .baseHP        = 140,
+        .baseAttack    = 125,
+        .baseDefense   = 110,
         .baseSpeed     = 30,
         .baseSpAttack  = 60,
-        .baseSpDefense = 80,
+        .baseSpDefense = 110,
         .types = { TYPE_BUG, TYPE_GRASS },
-        .catchRate = 75,
-        .expYield = 142,
+        .catchRate = 40,
+        .expYield = 306,
         .evYield_Attack = 2,
         .evYield_Defense = 1,
         .itemCommon = ITEM_TINY_MUSHROOM,
@@ -3663,10 +3706,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseDefense   = 50,
         .baseSpeed     = 45,
         .baseSpAttack  = 40,
-        .baseSpDefense = 55,
-        .types = { TYPE_BUG, TYPE_POISON },
-        .catchRate = 190,
-        .expYield = 61,
+        .baseSpDefense = 70,
+        .types = { TYPE_PSYCHIC, TYPE_POISON },
+        .catchRate = 144,
+        .expYield = 128,
         .evYield_SpDefense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -3708,14 +3751,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_VENOMOTH] =
     {
         .baseHP        = 70,
-        .baseAttack    = 65,
-        .baseDefense   = 60,
-        .baseSpeed     = 90,
-        .baseSpAttack  = 90,
+        .baseAttack    = 85,
+        .baseDefense   = 70,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 115,
         .baseSpDefense = 75,
-        .types = { TYPE_BUG, TYPE_POISON },
-        .catchRate = 75,
-        .expYield = 158,
+        .types = { TYPE_PSYCHIC, TYPE_POISON },
+        .catchRate = 59,
+        .expYield = 249,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
         .itemRare = ITEM_SHED_SHELL,
@@ -3767,12 +3810,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_BROWN
 
 #define DIGLETT_MISC_INFO                                   \
-        .catchRate = 255,                                   \
-        .expYield = 53,                                     \
+        .catchRate = 169,                                   \
+        .expYield = 108,                                    \
         .evYield_Speed = 1,                                 \
-        .speciesName = _("Diglett"),                        \
         .cryId = CRY_DIGLETT,                               \
-        .natDexNum = NATIONAL_DEX_DIGLETT,                  \
         .categoryName = _("Mole"),                          \
         .height = 2,                                        \
         .pokemonScale = 833,                                \
@@ -3780,16 +3821,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .trainerScale = 256,                                \
         .trainerOffset = 0,                                 \
         .footprint = gMonFootprint_Diglett,                 \
-        .formSpeciesIdTable = sDiglettFormSpeciesIdTable,   \
         DIGLETT_FAMILY_MISC_INFO
 
 #define DUGTRIO_MISC_INFO                   \
-        .catchRate = 50,                    \
-        .expYield = 149,                    \
+        .catchRate = 70,                    \
+        .expYield = 235,                    \
         .evYield_Speed = 2,                 \
-        .speciesName = _("Dugtrio"),        \
         .cryId = CRY_DUGTRIO,               \
-        .natDexNum = NATIONAL_DEX_DUGTRIO,  \
         .categoryName = _("Mole"),          \
         .height = 7,                        \
         .pokemonScale = 406,                \
@@ -3798,19 +3836,19 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .trainerOffset = 0,                 \
         DIGLETT_FAMILY_MISC_INFO
 
-#define DUGTRIO_ATTACK (P_UPDATED_STATS >= GEN_7 ? 100 : 80)
-
     [SPECIES_DIGLETT] =
     {
         DIGLETT_MISC_INFO,
         .baseHP        = 10,
         .baseAttack    = 55,
         .baseDefense   = 25,
-        .baseSpeed     = 95,
+        .baseSpeed     = 100,
         .baseSpAttack  = 35,
         .baseSpDefense = 45,
         .types = { TYPE_GROUND, TYPE_GROUND },
         .abilities = { ABILITY_SAND_VEIL, ABILITY_ARENA_TRAP, ABILITY_SAND_FORCE },
+        .speciesName = _("Diglett"),
+        .natDexNum = NATIONAL_DEX_DIGLETT,
         .weight = 8,
         .description = COMPOUND_STRING(
             "Diglett are raised in most farms.\n"
@@ -3834,14 +3872,16 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_DUGTRIO] =
     {
         DUGTRIO_MISC_INFO,
-        .baseHP        = 35,
-        .baseAttack    = DUGTRIO_ATTACK,
-        .baseDefense   = 50,
-        .baseSpeed     = 120,
+        .baseHP        = 50,
+        .baseAttack    = 100,
+        .baseDefense   = 60,
+        .baseSpeed     = 145,
         .baseSpAttack  = 50,
-        .baseSpDefense = 70,
+        .baseSpDefense = 80,
         .types = { TYPE_GROUND, TYPE_GROUND },
         .abilities = { ABILITY_SAND_VEIL, ABILITY_ARENA_TRAP, ABILITY_SAND_FORCE },
+        .speciesName = _("Dugtrio"),
+        .natDexNum = NATIONAL_DEX_DUGTRIO,
         .weight = 333,
         .description = COMPOUND_STRING(
             "Because the triplets originally split from\n"
@@ -3868,11 +3908,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseHP        = 10,
         .baseAttack    = 55,
         .baseDefense   = 30,
-        .baseSpeed     = 90,
+        .baseSpeed     = 95,
         .baseSpAttack  = 35,
         .baseSpDefense = 45,
         .types = { TYPE_GROUND, TYPE_STEEL },
         .abilities = { ABILITY_SAND_VEIL, ABILITY_TANGLING_HAIR, ABILITY_SAND_FORCE },
+        .speciesName = _("Steelett"),
+        .natDexNum = NATIONAL_DEX_DIGLETT_ALOLAN,
         .weight = 10,
         .description = COMPOUND_STRING(
             "The metal-rich geology of its habitat\n"
@@ -3889,7 +3931,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(DiglettAlolan),
         ICON(DiglettAlolan, 2),
         LEARNSETS(DiglettAlolan),
-        .isAlolanForm = TRUE,
         .evolutions = EVOLUTION({EVO_LEVEL, 26, SPECIES_DUGTRIO_ALOLAN}),
     },
 
@@ -3897,13 +3938,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         DUGTRIO_MISC_INFO,
         .baseHP        = 35,
-        .baseAttack    = DUGTRIO_ATTACK,
-        .baseDefense   = 60,
+        .baseAttack    = 100,
+        .baseDefense   = 80,
         .baseSpeed     = 110,
         .baseSpAttack  = 50,
-        .baseSpDefense = 70,
+        .baseSpDefense = 110,
         .types = { TYPE_GROUND, TYPE_STEEL },
         .abilities = { ABILITY_SAND_VEIL, ABILITY_TANGLING_HAIR, ABILITY_SAND_FORCE },
+        .speciesName = _("Steetrio"),
+        .natDexNum = NATIONAL_DEX_DUGTRIO_ALOLAN,
         .noFlip = TRUE,
         .weight = 666,
         .description = COMPOUND_STRING(
@@ -3921,7 +3964,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(DugtrioAlolan),
         ICON(DugtrioAlolan, 2),
         LEARNSETS(DugtrioAlolan),
-        .isAlolanForm = TRUE,
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_DIGLETT
