@@ -1123,8 +1123,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 35,
         .baseSpDefense = 35,
         .types = { TYPE_NORMAL, TYPE_FLYING },
-        .catchRate = 255,
-        .expYield = 50,
+        .catchRate = 178,
+        .expYield = 100,
         .evYield_Speed = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -1167,12 +1167,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseHP        = 63,
         .baseAttack    = 60,
         .baseDefense   = 55,
-        .baseSpeed     = 71,
+        .baseSpeed     = 82,
         .baseSpAttack  = 50,
         .baseSpDefense = 50,
         .types = { TYPE_NORMAL, TYPE_FLYING },
-        .catchRate = 120,
-        .expYield = 122,
+        .catchRate = 125,
+        .expYield = 158,
         .evYield_Speed = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -1208,14 +1208,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Pidgeotto, 0),
         .footprint = gMonFootprint_Pidgeotto,
         LEARNSETS(Pidgeotto),
-        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_PIDGEOT}),
+        .evolutions = EVOLUTION({EVO_LEVEL_NIGHT, 36, SPECIES_PIDGEOT},
+                                {EVO_LEVEL_DAY, 36, SPECIES_PIDGEOT_MEGA}),
     },
-
-#define PIDGEOT_SPEED (P_UPDATED_STATS >= GEN_6 ? 101 : 91)
 
 #define PIDGEOT_MISC_INFO                                   \
         .types = { TYPE_NORMAL, TYPE_FLYING },              \
-        .catchRate = 45,                                    \
+        .catchRate = 39,                                    \
         .evYield_Speed = 3,                                 \
         .genderRatio = PERCENT_FEMALE(50),                  \
         .eggCycles = 15,                                    \
@@ -1223,26 +1222,24 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_SLOW,                   \
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },\
         .bodyColor = BODY_COLOR_BROWN,                      \
-        .speciesName = _("Pidgeot"),                        \
-        .natDexNum = NATIONAL_DEX_PIDGEOT,                  \
         .categoryName = _("Bird"),                          \
         .footprint = gMonFootprint_Pidgeot,                 \
-        LEARNSETS(Pidgeot),                                 \
-        .formSpeciesIdTable = sPidgeotFormSpeciesIdTable,   \
-        .formChangeTable = sPidgeotFormChangeTable
+        LEARNSETS(Pidgeot)
 
     [SPECIES_PIDGEOT] =
     {
         PIDGEOT_MISC_INFO,
-        .baseHP        = 83,
-        .baseAttack    = 80,
-        .baseDefense   = 75,
-        .baseSpAttack  = 70,
-        .baseSpDefense = 70,
-        .baseSpeed     = PIDGEOT_SPEED,
-        .expYield = 216,
+        .baseHP        = 103,
+        .baseAttack    = 101,
+        .baseDefense   = 85,
+        .baseSpeed     = 111,
+        .baseSpAttack  = 99,
+        .baseSpDefense = 80,
+        .expYield = 308,
         .abilities = { ABILITY_KEEN_EYE, ABILITY_TANGLED_FEET, ABILITY_BIG_PECKS },
+        .speciesName = _("Pidgeot"),
         .cryId = CRY_PIDGEOT,
+        .natDexNum = NATIONAL_DEX_PIDGEOT,
         .height = 15,
         .weight = 395,
         .description = COMPOUND_STRING(
@@ -1273,12 +1270,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseHP        = 83,
         .baseAttack    = 80,
         .baseDefense   = 80,
-        .baseSpeed     = PIDGEOT_SPEED + 20,
+        .baseSpeed     = 121,
         .baseSpAttack  = 135,
         .baseSpDefense = 80,
-        .expYield = 261,
+        .expYield = 308,
         .abilities = { ABILITY_NO_GUARD, ABILITY_NO_GUARD, ABILITY_NO_GUARD },
+        .speciesName = _("Pidgeotor"),
         .cryId = CRY_PIDGEOT_MEGA,
+        .natDexNum = NATIONAL_DEX_PIDGEOT_MEGA,
         .height = 22,
         .weight = 505,
         .description = COMPOUND_STRING(
@@ -1299,7 +1298,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backAnimId = BACK_ANIM_TRIANGLE_DOWN,
         PALETTES(PidgeotMega),
         ICON(PidgeotMega, 0),
-        .isMegaEvolution = TRUE,
     },
 #endif
 #endif //P_FAMILY_PIDGEY
@@ -1319,27 +1317,21 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 72,                                \
         .baseSpAttack  = 25,                                \
         .baseSpDefense = 35,                                \
-        .catchRate = 255,                                   \
-        .expYield = 51,                                     \
+        .catchRate = 177,                                   \
+        .expYield = 101,                                    \
         .evYield_Speed = 1,                                 \
-        .speciesName = _("Rattata"),                        \
         .cryId = CRY_RATTATA,                               \
-        .natDexNum = NATIONAL_DEX_RATTATA,                  \
         .categoryName = _("Mouse"),                         \
-        .footprint = gMonFootprint_Rattata,                 \
-        .formSpeciesIdTable = sRattataFormSpeciesIdTable
+        .footprint = gMonFootprint_Rattata
 
 #define RATICATE_MISC_INFO                  \
-        .catchRate = 127,                   \
-        .expYield = 145,                    \
+        .catchRate = 79,                    \
+        .expYield = 223,                    \
         .evYield_Speed = 2,                 \
-        .speciesName = _("Raticate"),       \
         .cryId = CRY_RATICATE,              \
-        .natDexNum = NATIONAL_DEX_RATICATE, \
         .categoryName = _("Mouse"),         \
         .height = 7,                        \
-        .footprint = gMonFootprint_Raticate,\
-        .formSpeciesIdTable = sRaticateFormSpeciesIdTable
+        .footprint = gMonFootprint_Raticate
 
     [SPECIES_RATTATA] =
     {
@@ -1348,6 +1340,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_NORMAL, TYPE_NORMAL },
         .abilities = { ABILITY_RUN_AWAY, ABILITY_GUTS, ABILITY_HUSTLE },
         .bodyColor = BODY_COLOR_PURPLE,
+        .speciesName = _("Rattata"),
+        .natDexNum = NATIONAL_DEX_RATTATA,
         .height = 3,
         .weight = 35,
         .description = COMPOUND_STRING(
@@ -1378,15 +1372,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         RATTATA_FAMILY_MISC_INFO,
         RATICATE_MISC_INFO,
-        .baseHP        = 55,
-        .baseAttack    = 81,
+        .baseHP        = 65,
+        .baseAttack    = 101,
         .baseDefense   = 60,
-        .baseSpeed     = 97,
+        .baseSpeed     = 115,
         .baseSpAttack  = 50,
         .baseSpDefense = 70,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
         .abilities = { ABILITY_RUN_AWAY, ABILITY_GUTS, ABILITY_HUSTLE },
         .bodyColor = BODY_COLOR_BROWN,
+        .speciesName = _("Raticate"),
+        .natDexNum = NATIONAL_DEX_RATICATE,
         .weight = 185,
         .description = COMPOUND_STRING(
             "A Raticate's sturdy fangs grow steadily.\n"
@@ -1420,6 +1416,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .itemRare = ITEM_PECHA_BERRY,
         .abilities = { ABILITY_GLUTTONY, ABILITY_HUSTLE, ABILITY_THICK_FAT },
         .bodyColor = BODY_COLOR_BLACK,
+        .speciesName = _("Ratattack"),
+        .natDexNum = NATIONAL_DEX_RATTATA_ALOLAN,
         .height = 3,
         .weight = 38,
         .description = COMPOUND_STRING(
@@ -1441,7 +1439,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(RattataAlolan),
         ICON(RattataAlolan, 2),
         LEARNSETS(RattataAlolan),
-        .isAlolanForm = TRUE,
         .evolutions = EVOLUTION({EVO_LEVEL_NIGHT, 20, SPECIES_RATICATE_ALOLAN}),
     },
 
@@ -1450,8 +1447,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         RATTATA_FAMILY_MISC_INFO,
         RATICATE_MISC_INFO,
         .baseHP        = 75,
-        .baseAttack    = 71,
-        .baseDefense   = 70,
+        .baseAttack    = 109,
+        .baseDefense   = 80,
         .baseSpeed     = 77,
         .baseSpAttack  = 40,
         .baseSpDefense = 80,
@@ -1459,10 +1456,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .itemRare = ITEM_PECHA_BERRY,
         .abilities = { ABILITY_GLUTTONY, ABILITY_HUSTLE, ABILITY_THICK_FAT },
         .bodyColor = BODY_COLOR_BLACK,
+        .speciesName = _("Ratidark"),
+        .natDexNum = NATIONAL_DEX_RATICATE_ALOLAN,
         .weight = 255,
         .description = COMPOUND_STRING(
-            "It forms a group of Rattata, which it \n"
-            "assumes command of. Each group\n"
+            "It forms a group of Ratattack, which\n"
+            "it assumes command of. Each group\n"
             "has its own territory, and disputes\n"
             "over food happen often."),
         .pokemonScale = 459,
@@ -1479,7 +1478,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(RaticateAlolan),
         ICON(RaticateAlolan, 2),
         LEARNSETS(RaticateAlolan),
-        .isAlolanForm = TRUE,
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_RATTATA
