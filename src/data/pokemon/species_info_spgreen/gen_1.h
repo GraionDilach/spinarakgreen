@@ -6078,10 +6078,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseAttack    = 65,                                    \
         .baseDefense   = 65,                                    \
         .baseSpeed     = 15,                                    \
-        .baseSpAttack  = 40,                                    \
-        .baseSpDefense = 40,                                    \
-        .catchRate = 190,                                       \
-        .expYield = 63,                                         \
+        .baseSpAttack  = 55,                                    \
+        .baseSpDefense = 55,                                    \
+        .catchRate = 132,                                       \
+        .expYield = 138,                                        \
         .evYield_HP = 1,                                        \
         .genderRatio = PERCENT_FEMALE(50),                      \
         .eggCycles = 20,                                        \
@@ -6089,8 +6089,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_FAST,                       \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_WATER_1 },  \
         .bodyColor = BODY_COLOR_PINK,                           \
-        .speciesName = _("Slowpoke"),                           \
-        .natDexNum = NATIONAL_DEX_SLOWPOKE,                     \
         .categoryName = _("Dopey"),                             \
         .height = 12,                                           \
         .weight = 360,                                          \
@@ -6098,11 +6096,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .pokemonOffset = 10,                                    \
         .trainerScale = 256,                                    \
         .trainerOffset = 0,                                     \
-        .footprint = gMonFootprint_Slowpoke,                    \
-        .formSpeciesIdTable = sSlowpokeFormSpeciesIdTable
+        .footprint = gMonFootprint_Slowpoke
 
 #define SLOWBRO_MISC_INFO                                       \
-        .catchRate = 75,                                        \
+        .catchRate = 51,                                        \
         .itemRare = ITEM_KINGS_ROCK,                            \
         .genderRatio = PERCENT_FEMALE(50),                      \
         .eggCycles = 20,                                        \
@@ -6110,28 +6107,22 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_FAST,                       \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_WATER_1 },  \
         .bodyColor = BODY_COLOR_PINK,                           \
-        .speciesName = _("Slowbro"),                            \
         .cryId = CRY_SLOWBRO,                                   \
-        .natDexNum = NATIONAL_DEX_SLOWBRO,                      \
         .categoryName = _("Hermit Crab"),                       \
-        .footprint = gMonFootprint_Slowbro,                     \
-        .formSpeciesIdTable = sSlowbroFormSpeciesIdTable
+        .footprint = gMonFootprint_Slowbro
 
 #define SLOWKING_MISC_INFO                                      \
-        .catchRate = 70,                                        \
-        .expYield = 172,                                        \
+        .catchRate = 51,                                        \
+        .expYield = 261,                                        \
         .genderRatio = PERCENT_FEMALE(50),                      \
         .eggCycles = 20,                                        \
         .friendship = STANDARD_FRIENDSHIP,                      \
         .growthRate = GROWTH_MEDIUM_FAST,                       \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_WATER_1 },  \
         .bodyColor = BODY_COLOR_PINK,                           \
-        .speciesName = _("Slowking"),                           \
         .cryId = CRY_SLOWKING,                                  \
-        .natDexNum = NATIONAL_DEX_SLOWKING,                     \
         .weight = 795,                                          \
-        .footprint = gMonFootprint_Slowking,                    \
-        .formSpeciesIdTable = sSlowkingFormSpeciesIdTable
+        .footprint = gMonFootprint_Slowking
 
     [SPECIES_SLOWPOKE] =
     {
@@ -6139,6 +6130,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_WATER, TYPE_PSYCHIC },
         .itemRare = ITEM_LAGGING_TAIL,
         .abilities = { ABILITY_OBLIVIOUS, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
+        .speciesName = _("Slowpoke"),
+        .natDexNum = NATIONAL_DEX_SLOWPOKE,
         .cryId = CRY_SLOWPOKE,
         .description = COMPOUND_STRING(
             "It catches prey by dipping its tail in\n"
@@ -6157,22 +6150,25 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         LEARNSETS(Slowpoke),
         .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_SLOWBRO},
                                 {EVO_TRADE_ITEM, ITEM_KINGS_ROCK, SPECIES_SLOWKING},
-                                {EVO_ITEM, ITEM_KINGS_ROCK, SPECIES_SLOWKING}),
+                                {EVO_ITEM, ITEM_KINGS_ROCK, SPECIES_SLOWKING},
+                                {EVO_ITEM, ITEM_SHINY_STONE, SPECIES_SLOWBRO_MEGA}),
     },
 
     [SPECIES_SLOWBRO] =
     {
         SLOWBRO_MISC_INFO,
         .baseHP        = 95,
-        .baseAttack    = 75,
-        .baseDefense   = 110,
+        .baseAttack    = 105,
+        .baseDefense   = 125,
         .baseSpeed     = 30,
-        .baseSpAttack  = 100,
+        .baseSpAttack  = 105,
         .baseSpDefense = 80,
         .types = { TYPE_WATER, TYPE_PSYCHIC },
-        .expYield = 172,
+        .expYield = 261,
         .evYield_Defense = 2,
         .abilities = { ABILITY_OBLIVIOUS, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
+        .speciesName = _("Slowbro"),
+        .natDexNum = NATIONAL_DEX_SLOWBRO,
         .height = 16,
         .weight = 785,
         .description = COMPOUND_STRING(
@@ -6194,7 +6190,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Slowbro),
         ICON(Slowbro, 0),
         LEARNSETS(Slowbro),
-        .formChangeTable = sSlowbroFormChangeTable,
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -6203,8 +6198,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         SLOWKING_MISC_INFO,
         .baseHP        = 95,
         .baseAttack    = 75,
-        .baseDefense   = 80,
-        .baseSpeed     = 30,
+        .baseDefense   = 110,
+        .baseSpeed     = 50,
         .baseSpAttack  = 100,
         .baseSpDefense = 110,
         .types = { TYPE_WATER, TYPE_PSYCHIC },
@@ -6212,6 +6207,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .itemRare = ITEM_KINGS_ROCK,
         .abilities = { ABILITY_OBLIVIOUS, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
         .categoryName = _("Royal"),
+        .speciesName = _("Slowking"),
+        .natDexNum = NATIONAL_DEX_SLOWKING,
         .height = 20,
         .description = COMPOUND_STRING(
             "It undertakes research every day to\n"
@@ -6241,14 +6238,16 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         SLOWBRO_MISC_INFO,
         .baseHP        = 95,
         .baseAttack    = 75,
-        .baseDefense   = 180,
+        .baseDefense   = 150,
         .baseSpeed     = 30,
-        .baseSpAttack  = 130,
+        .baseSpAttack  = 110,
         .baseSpDefense = 80,
         .types = { TYPE_WATER, TYPE_PSYCHIC },
-        .expYield = 207,
+        .expYield = 261,
         .evYield_Defense = 2,
         .abilities = { ABILITY_SHELL_ARMOR, ABILITY_SHELL_ARMOR, ABILITY_SHELL_ARMOR },
+        .speciesName = _("Slowbro"),
+        .natDexNum = NATIONAL_DEX_SLOWBRO_MEGA,
         .height = 20,
         .weight = 1200,
         .description = COMPOUND_STRING(
@@ -6281,11 +6280,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         SLOWPOKE_MISC_INFO,
         .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },
         .abilities = { ABILITY_GLUTTONY, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
+        .speciesName = _("Poipoke"),
+        .natDexNum = NATIONAL_DEX_SLOWPOKE_GALARIAN,
         .cryId = CRY_SLOWPOKE_GALARIAN,
         .description = COMPOUND_STRING(
             "Although it is normally zoned out, its\n"
             "expression abruptly sharpens on occasion.\n"
-            "The cause seems to lie in Slowpoke's diet,\n"
+            "The cause seems to lie in Poipoke's diet,\n"
             "which also give their tails a spicy flavor."),
         FRONT_PIC(SlowpokeGalarian, 56, 32),
         .frontPicYOffset = 19,
@@ -6297,7 +6298,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(SlowpokeGalarian),
         ICON(SlowpokeGalarian, 1),
         LEARNSETS(SlowpokeGalarian),
-        .isGalarianForm = TRUE,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_GALARICA_CUFF, SPECIES_SLOWBRO_GALARIAN},
                                 {EVO_ITEM, ITEM_GALARICA_WREATH, SPECIES_SLOWKING_GALARIAN}),
     },
@@ -6306,21 +6306,23 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         SLOWBRO_MISC_INFO,
         .baseHP        = 95,
-        .baseAttack    = 100,
+        .baseAttack    = 125,
         .baseDefense   = 95,
         .baseSpeed     = 30,
-        .baseSpAttack  = 100,
+        .baseSpAttack  = 125,
         .baseSpDefense = 70,
         .types = { TYPE_POISON, TYPE_PSYCHIC },
-        .expYield = 172,
+        .expYield = 261,
         .evYield_Attack = 2,
         .abilities = { ABILITY_QUICK_DRAW, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
+        .speciesName = _("Poibro"),
+        .natDexNum = NATIONAL_DEX_SLOWBRO_GALARIAN,
         .height = 16,
         .weight = 705,
         .description = COMPOUND_STRING(
             "A Shellder bite set off a chemical reaction\n"
-            "with the spices inside Slowbro's body,\n"
-            "causing Slowbro to become a\n"
+            "with the spices inside Poibro's body,\n"
+            "causing Poibro to become a\n"
             "Poison-type Pokémon."),
         .pokemonScale = 256,
         .pokemonOffset = 6,
@@ -6336,7 +6338,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(SlowbroGalarian),
         ICON(SlowbroGalarian, 0),
         LEARNSETS(SlowbroGalarian),
-        .isGalarianForm = TRUE,
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -6347,18 +6348,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseAttack    = 65,
         .baseDefense   = 80,
         .baseSpeed     = 30,
-        .baseSpAttack  = 110,
-        .baseSpDefense = 110,
+        .baseSpAttack  = 135,
+        .baseSpDefense = 135,
         .types = { TYPE_POISON, TYPE_PSYCHIC },
         .evYield_SpDefense = 2,
         .abilities = { ABILITY_CURIOUS_MEDICINE, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
+        .speciesName = _("Poiking"),
+        .natDexNum = NATIONAL_DEX_SLOWKING_GALARIAN,
         .categoryName = _("Hexpert"),
         .height = 18,
         .description = COMPOUND_STRING(
             "A combination of toxins and the shock of\n"
             "evolving has increased Shellder's\n"
             "intelligence to the point that Shellder\n"
-            "now controls Slowking."),
+            "now controls Poiking."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 309,
@@ -6373,7 +6376,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(SlowkingGalarian),
         ICON(SlowkingGalarian, 2),
         LEARNSETS(SlowkingGalarian),
-        .isGalarianForm = TRUE,
     },
 #endif //P_GEN_2_CROSS_EVOS
 #endif //P_GALARIAN_FORMS
@@ -6383,14 +6385,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_MAGNEMITE] =
     {
         .baseHP        = 25,
-        .baseAttack    = 35,
+        .baseAttack    = 50,
         .baseDefense   = 70,
         .baseSpeed     = 45,
         .baseSpAttack  = 95,
         .baseSpDefense = 55,
         .types = { TYPE_ELECTRIC, TYPE_STEEL },
-        .catchRate = 190,
-        .expYield = 65,
+        .catchRate = 134,
+        .expYield = 136,
         .evYield_SpAttack = 1,
         .itemRare = ITEM_METAL_COAT,
         .genderRatio = MON_GENDERLESS,
@@ -6439,8 +6441,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 120,
         .baseSpDefense = 70,
         .types = { TYPE_ELECTRIC, TYPE_STEEL },
-        .catchRate = 60,
-        .expYield = 163,
+        .catchRate = 78,
+        .expYield = 225,
         .evYield_SpAttack = 2,
         .itemRare = ITEM_METAL_COAT,
         .genderRatio = MON_GENDERLESS,
@@ -6478,7 +6480,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .footprint = gMonFootprint_Magneton,
         LEARNSETS(Magneton),
         .evolutions = EVOLUTION({EVO_MAPSEC, MAPSEC_NEW_MAUVILLE, SPECIES_MAGNEZONE},
-                                {EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_MAGNEZONE}),
+                                {EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_MAGNEZONE},
+                                {EVO_ITEM, ITEM_SHINY_STONE, SPECIES_SANDY_SHOCKS}),
     },
 
 #if P_GEN_4_CROSS_EVOS
@@ -6486,13 +6489,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         .baseHP        = 70,
         .baseAttack    = 70,
-        .baseDefense   = 115,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 130,
-        .baseSpDefense = 90,
+        .baseDefense   = 120,
+        .baseSpeed     = 70,
+        .baseSpAttack  = 142,
+        .baseSpDefense = 110,
         .types = { TYPE_ELECTRIC, TYPE_STEEL },
-        .catchRate = 30,
-        .expYield = 241,
+        .catchRate = 38,
+        .expYield = 310,
         .evYield_SpAttack = 3,
         .itemRare = ITEM_METAL_COAT,
         .genderRatio = MON_GENDERLESS,
@@ -6531,6 +6534,53 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         LEARNSETS(Magnezone),
     },
 #endif //P_GEN_4_CROSS_EVOS
+
+    [SPECIES_SANDY_SHOCKS] =
+    {
+        .baseHP        = 85,
+        .baseAttack    = 81,
+        .baseDefense   = 105,
+        .baseSpeed     = 101,
+        .baseSpAttack  = 125,
+        .baseSpDefense = 85,
+        .types = { TYPE_ELECTRIC, TYPE_GROUND },
+        .catchRate = 38,
+        .expYield = 310,
+        .evYield_SpAttack = 3,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 50,
+        .friendship = 0,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
+        .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_GRAY,
+        .speciesName = _("Magnesoil"),
+        .cryId = CRY_SANDY_SHOCKS,
+        .natDexNum = NATIONAL_DEX_SANDY_SHOCKS,
+        .categoryName = _("Paradox"),
+        .height = 23,
+        .weight = 600,
+        .description = COMPOUND_STRING(
+            "It slightly resembles a Magneton\n"
+            "that lived for 10,000 years and was\n"
+            "featured in an article in a\n"
+            "paranormal magazine."),
+        .pokemonScale = 356,
+        .pokemonOffset = 17,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        FRONT_PIC(SandyShocks, 64, 64),
+        .frontPicYOffset = 1,
+        .frontAnimFrames = sAnims_SandyShocks,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        BACK_PIC(SandyShocks, 64, 64),
+        .backPicYOffset = 10,
+        //.backAnimId = BACK_ANIM_NONE,
+        PALETTES(SandyShocks),
+        ICON(SandyShocks, 0),
+        //.footprint = gMonFootprint_SandyShocks,
+        LEARNSETS(SandyShocks),
+    },
 #endif //P_FAMILY_MAGNEMITE
 
 #if P_FAMILY_FARFETCHD

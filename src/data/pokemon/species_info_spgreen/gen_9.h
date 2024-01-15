@@ -3920,53 +3920,6 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_SLITHER_WING
 
 #if P_FAMILY_SANDY_SHOCKS
-    [SPECIES_SANDY_SHOCKS] =
-    {
-        .baseHP        = 85,
-        .baseAttack    = 81,
-        .baseDefense   = 97,
-        .baseSpeed     = 101,
-        .baseSpAttack  = 121,
-        .baseSpDefense = 85,
-        .types = { TYPE_ELECTRIC, TYPE_GROUND },
-        .catchRate = 30,
-        .expYield = 285,
-        .evYield_SpAttack = 3,
-        .genderRatio = MON_GENDERLESS,
-        .eggCycles = 50,
-        .friendship = 0,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
-        .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_GRAY,
-        .isParadoxForm = TRUE,
-        .speciesName = _("SndyShocks"),
-        .cryId = CRY_SANDY_SHOCKS,
-        .natDexNum = NATIONAL_DEX_SANDY_SHOCKS,
-        .categoryName = _("Paradox"),
-        .height = 23,
-        .weight = 600,
-        .description = COMPOUND_STRING(
-            "It slightly resembles a Magneton\n"
-            "that lived for 10,000 years and was\n"
-            "featured in an article in a\n"
-            "paranormal magazine."),
-        .pokemonScale = 356,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        FRONT_PIC(SandyShocks, 64, 64),
-        .frontPicYOffset = 1,
-        .frontAnimFrames = sAnims_SandyShocks,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        BACK_PIC(SandyShocks, 64, 64),
-        .backPicYOffset = 10,
-        //.backAnimId = BACK_ANIM_NONE,
-        PALETTES(SandyShocks),
-        ICON(SandyShocks, 0),
-        //.footprint = gMonFootprint_SandyShocks,
-        LEARNSETS(SandyShocks),
-    },
 #endif //P_FAMILY_SANDY_SHOCKS
 
 #if P_FAMILY_IRON_TREADS
