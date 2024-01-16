@@ -3357,7 +3357,7 @@ static void SpriteCB_FlyBirdLeaveBall(struct Sprite *sprite)
             sprite->affineAnims = sAffineAnims_FlyBird;
             InitSpriteAffineAnim(sprite);
             StartSpriteAffineAnim(sprite, 0);
-            sprite->x = 0x76;
+            sprite->x = 0x80;
             sprite->y = -0x30;
             sprite->data[0]++;
             sprite->data[1] = 0x40;
@@ -3420,7 +3420,7 @@ static void SpriteCB_FlyBirdReturnToBall(struct Sprite *sprite)
         sprite->data[1] += sprite->data[2] >> 8;
         sprite->data[3] += sprite->data[2] >> 8;
         sprite->data[1] &= 0xff;
-        sprite->x2 = Cos(sprite->data[1], 0x20);
+        sprite->x2 = Cos(sprite->data[1], 0x40);
         sprite->y2 = Sin(sprite->data[1], 0x78);
         if (sprite->data[2] > 0x100)
         {
@@ -3909,7 +3909,7 @@ static void Task_MoveDeoxysRock(u8 taskId)
 u8 FldEff_CaveDust(void)
 {
     u8 spriteId;
-    
+
     SetSpritePosToOffsetMapCoords((s16 *)&gFieldEffectArguments[0], (s16 *)&gFieldEffectArguments[1], 8, 8);
     spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_CAVE_DUST], gFieldEffectArguments[0], gFieldEffectArguments[1], 0xFF);
     if (spriteId != MAX_SPRITES)
@@ -3917,7 +3917,7 @@ u8 FldEff_CaveDust(void)
         gSprites[spriteId].coordOffsetEnabled = TRUE;
         gSprites[spriteId].data[0] = 22;
     }
-    
+
     return spriteId;
 }
 
