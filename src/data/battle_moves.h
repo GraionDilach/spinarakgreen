@@ -13885,6 +13885,22 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         }),
     },
 
+    [MOVE_COMET_CRASH] =
+    {
+        .effect = EFFECT_HIT,
+        .power = B_UPDATED_MOVE_DATA != GEN_SPGRN && B_UPDATED_MOVE_DATA >= GEN_6 ? 130 : 140,
+        .type = TYPE_ROCK,
+        .accuracy = 90,
+        .pp = 5,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = BATTLE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SP_ATK_TWO_DOWN,
+            .self = TRUE,
+        }),
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

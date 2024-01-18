@@ -5631,3 +5631,14 @@ static void AnimTask_SlackOffSquish_Step(u8 taskId)
     if (!RunAffineAnimFromTaskData(&gTasks[taskId]))
         DestroyAnimVisualTask(taskId);
 }
+
+const struct SpriteTemplate gCometCrashSmashSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_WARM_ROCK,
+    .paletteTag = ANIM_TAG_WARM_ROCK,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimMeteorMashStar,
+};

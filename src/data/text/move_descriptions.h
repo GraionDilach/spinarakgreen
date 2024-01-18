@@ -3336,6 +3336,10 @@ static const u8 sPsyrippleDescription[] = _(
     "A weak telekinetic attack.\n"
     "May lower Sp. Atk.");
 
+static const u8 sCometCrashDescription[] = _(
+    "Casts comets onto the foe.\n"
+    "Harshly lowers the Sp. Atk.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4197,4 +4201,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 
     //SpinarakGreen
     [MOVE_PSYRIPPLE - 1] = sPsyrippleDescription,
+    [MOVE_COMET_CRASH - 1] = sCometCrashDescription,
 };

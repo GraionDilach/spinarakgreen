@@ -877,6 +877,7 @@ gBattleAnims_Moves::
 	.4byte Move_MALIGNANT_CHAIN
 @@@@ SpinarakGreen
 	.4byte Move_PSYRIPPLE
+	.4byte Move_COMET_CRASH
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
 	.4byte Move_ALL_OUT_PUMMELING
@@ -3333,6 +3334,29 @@ Move_DRACO_METEOR:
 	delay 40
 	createsprite gDracoMetorSpriteTemplate, 131, 4, 0, 0, 0, 30
 	createsprite gDracoMeteorSmashSpriteTemplate, 131, 5, -79, -63, 40, 32, 30
+	delay 20
+	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	delay 10
+	restorebg
+	waitbgfadein
+	waitforvisualfinish
+	end
+
+Move_COMET_CRASH:
+	loadspritegfx ANIM_TAG_WARM_ROCK
+	loadspritegfx ANIM_TAG_GOLD_STARS
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_ICE_SPIKES
+	playsewithpan SE_M_CHARGE, SOUND_PAN_TARGET
+	fadetobg BG_COSMIC
+	waitbgfadein
+	waitforvisualfinish
+	createsprite gCometCrashSmashSpriteTemplate, 131, 5, -47, -63, 72, 32, 30
+	delay 10
+	createsprite gCometCrashSmashSpriteTemplate, 131, 5, -111, -63, 8, 32, 30
+	delay 40
+	createsprite gDracoMetorSpriteTemplate, 131, 4, 0, 0, 0, 30
+	createsprite gCometCrashSmashSpriteTemplate, 131, 5, -79, -63, 40, 32, 30
 	delay 20
 	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
 	delay 10
@@ -15927,7 +15951,7 @@ Move_SPRINGTIDE_STORM::
 	loadspritegfx ANIM_TAG_RED_HEART
 	playsewithpan SE_M_GUST, SOUND_PAN_TARGET
 	createvisualtaskontargets AnimTask_ShakeMon2, 2, 0, ANIM_TARGET, 0, 4, 0x58, 1
-	createvisualtask AnimTask_BlendColorCycle, 0x2, F_PAL_TARGET, 0x2, 0x6, 0x0, 0xB, 0x7ADF 
+	createvisualtask AnimTask_BlendColorCycle, 0x2, F_PAL_TARGET, 0x2, 0x6, 0x0, 0xB, 0x7ADF
 	call HurricaneGustCentered
 	call SpringtideStormHeartSwirl
 	call HurricaneGustCentered
@@ -15945,17 +15969,17 @@ Move_SPRINGTIDE_STORM::
 	end
 
 SpringtideStormHeartSwirl:
-	createspriteontargets gSpriteTemplate_SpringtideHeart, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x210, 0x1e, 0xa, 0x32, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_SpringtideHeart, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x210, 0x1e, 0xa, 0x32, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_SpringtideHeart, ANIM_TARGET, 2, 6, 0x0, 0x24, 0x1e0, 0x14, 0xd, 0xffd2, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_SpringtideHeart, ANIM_TARGET, 2, 6, 0x0, 0x24, 0x1e0, 0x14, 0xd, 0xffd2, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_SpringtideHeart, ANIM_TARGET, 2, 6, 0x0, 0x25, 0x240, 0x14, 0x5, 0x2a, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_SpringtideHeart, ANIM_TARGET, 2, 6, 0x0, 0x25, 0x240, 0x14, 0x5, 0x2a, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_SpringtideHeart, ANIM_TARGET, 2, 6, 0x0, 0x23, 0x190, 0x19, 0x8, 0xffd6, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_SpringtideHeart, ANIM_TARGET, 2, 6, 0x0, 0x23, 0x190, 0x19, 0x8, 0xffd6, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_SpringtideHeart, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x200, 0x19, 0xd, 0x2e, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_SpringtideHeart, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x200, 0x19, 0xd, 0x2e, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_SpringtideHeart, ANIM_TARGET, 2, 6, 0x0, 0x25, 0x1d0, 0x1e, 0xc, 0xffce, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_SpringtideHeart, ANIM_TARGET, 2, 6, 0x0, 0x25, 0x1d0, 0x1e, 0xc, 0xffce, ANIM_TARGET
 	return
 
 
@@ -16497,7 +16521,7 @@ Move_BLEAKWIND_STORM::
 	loadspritegfx ANIM_TAG_ICE_CRYSTALS
 	playsewithpan SE_M_GUST, SOUND_PAN_TARGET
 	createvisualtaskontargets AnimTask_ShakeMon2, 2, 0, ANIM_TARGET, 0, 4, 0x58, 1
-	createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_TARGET, 0x4, 0x0, 0xB, 0x7FFF 
+	createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_TARGET, 0x4, 0x0, 0xB, 0x7FFF
 	call HurricaneGustCentered
 	call BleakwindStormIceSwirl
 	call HurricaneGustCentered
@@ -16512,21 +16536,21 @@ Move_BLEAKWIND_STORM::
 	call BleakwindStormIceSwirl
 	waitforvisualfinish
 	stopsound
-	createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_TARGET, 0x1, 0xB, 0x0, 0x7FFF 
+	createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_TARGET, 0x1, 0xB, 0x0, 0x7FFF
 	waitforvisualfinish
 	end
 BleakwindStormIceSwirl:
-	createspriteontargets gSpriteTemplate_BleakwindIce, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x210, 0x1e, 0xa, 0x32, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_BleakwindIce, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x210, 0x1e, 0xa, 0x32, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_BleakwindIce, ANIM_TARGET, 2, 6, 0x0, 0x24, 0x1e0, 0x14, 0xd, 0xffd2, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_BleakwindIce, ANIM_TARGET, 2, 6, 0x0, 0x24, 0x1e0, 0x14, 0xd, 0xffd2, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_BleakwindIce, ANIM_TARGET, 2, 6, 0x0, 0x25, 0x240, 0x14, 0x5, 0x2a, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_BleakwindIce, ANIM_TARGET, 2, 6, 0x0, 0x25, 0x240, 0x14, 0x5, 0x2a, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_BleakwindIce, ANIM_TARGET, 2, 6, 0x0, 0x23, 0x190, 0x19, 0x8, 0xffd6, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_BleakwindIce, ANIM_TARGET, 2, 6, 0x0, 0x23, 0x190, 0x19, 0x8, 0xffd6, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_BleakwindIce, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x200, 0x19, 0xd, 0x2e, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_BleakwindIce, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x200, 0x19, 0xd, 0x2e, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_BleakwindIce, ANIM_TARGET, 2, 6, 0x0, 0x25, 0x1d0, 0x1e, 0xc, 0xffce, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_BleakwindIce, ANIM_TARGET, 2, 6, 0x0, 0x25, 0x1d0, 0x1e, 0xc, 0xffce, ANIM_TARGET
 	return
 
 
@@ -16540,7 +16564,7 @@ Move_WILDBOLT_STORM::
 	waitbgfadein
 	playsewithpan SE_M_GUST, SOUND_PAN_TARGET
 	createvisualtaskontargets AnimTask_ShakeMon2, 2, 0, ANIM_TARGET, 0, 4, 0x58, 1
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 0x4, 0x0, 0xB, 0x07FE 
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 0x4, 0x0, 0xB, 0x07FE
 	call HurricaneGustCentered
 	call WildboltStormSparkSwirl
 	call HurricaneGustCentered
@@ -16555,23 +16579,23 @@ Move_WILDBOLT_STORM::
 	call WildboltStormSparkSwirl
 	waitforvisualfinish
 	stopsound
-	createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_TARGET, 0x1, 0xB, 0x0, 0x07FE 
+	createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_TARGET, 0x1, 0xB, 0x0, 0x07FE
 	call UnsetPsychicBg
 	waitforvisualfinish
 	end
 
 WildboltStormSparkSwirl:
-	createspriteontargets gSpriteTemplate_WildboltStormSpark, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x210, 0x1e, 0xa, 0x32, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_WildboltStormSpark, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x210, 0x1e, 0xa, 0x32, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_WildboltStormSpark, ANIM_TARGET, 2, 6, 0x0, 0x24, 0x1e0, 0x14, 0xd, 0xffd2, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_WildboltStormSpark, ANIM_TARGET, 2, 6, 0x0, 0x24, 0x1e0, 0x14, 0xd, 0xffd2, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_WildboltStormSpark, ANIM_TARGET, 2, 6, 0x0, 0x25, 0x240, 0x14, 0x5, 0x2a, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_WildboltStormSpark, ANIM_TARGET, 2, 6, 0x0, 0x25, 0x240, 0x14, 0x5, 0x2a, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_WildboltStormSpark, ANIM_TARGET, 2, 6, 0x0, 0x23, 0x190, 0x19, 0x8, 0xffd6, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_WildboltStormSpark, ANIM_TARGET, 2, 6, 0x0, 0x23, 0x190, 0x19, 0x8, 0xffd6, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_WildboltStormSpark, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x200, 0x19, 0xd, 0x2e, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_WildboltStormSpark, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x200, 0x19, 0xd, 0x2e, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gSpriteTemplate_WildboltStormSpark, ANIM_TARGET, 2, 6, 0x0, 0x25, 0x1d0, 0x1e, 0xc, 0xffce, ANIM_TARGET 
+	createspriteontargets gSpriteTemplate_WildboltStormSpark, ANIM_TARGET, 2, 6, 0x0, 0x25, 0x1d0, 0x1e, 0xc, 0xffce, ANIM_TARGET
 	return
 
 
@@ -16582,7 +16606,7 @@ Move_SANDSEAR_STORM::
 	createvisualtask AnimTask_BlendParticle, 0x5, ANIM_TAG_GUST, 0x0, 0xA, 0xA, 0x190B
 	playsewithpan SE_M_GUST, SOUND_PAN_TARGET
 	createvisualtaskontargets AnimTask_ShakeMon2, 2, 0, ANIM_TARGET, 0, 4, 0x58, 1
-	createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_TARGET, 0x4, 0x0, 0xB, 0x1F 
+	createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_TARGET, 0x4, 0x0, 0xB, 0x1F
 	call HurricaneGustCentered
 	call SandsearStormFireSpin
 	call HurricaneGustCentered
@@ -16597,22 +16621,22 @@ Move_SANDSEAR_STORM::
 	call SandsearStormFireSpin
 	waitforvisualfinish
 	stopsound
-	createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_TARGET, 0x1, 0xB, 0x0, 0x1F 
+	createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_TARGET, 0x1, 0xB, 0x0, 0x1F
 	waitforvisualfinish
 	end
 
 SandsearStormFireSpin:
-	createspriteontargets gFireSpinSpriteTemplate, ANIM_TARGET, 2, 6, 0x0, 0x1c, 0x210, 0x1e, 0xd, 0x32, ANIM_TARGET 
+	createspriteontargets gFireSpinSpriteTemplate, ANIM_TARGET, 2, 6, 0x0, 0x1c, 0x210, 0x1e, 0xd, 0x32, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gFireSpinSpriteTemplate, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x1e0, 0x14, 0x10, 0xffd2, ANIM_TARGET 
+	createspriteontargets gFireSpinSpriteTemplate, ANIM_TARGET, 2, 6, 0x0, 0x20, 0x1e0, 0x14, 0x10, 0xffd2, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gFireSpinSpriteTemplate, ANIM_TARGET, 2, 6, 0x0, 0x21, 0x240, 0x14, 0x8, 0x2a, ANIM_TARGET 
+	createspriteontargets gFireSpinSpriteTemplate, ANIM_TARGET, 2, 6, 0x0, 0x21, 0x240, 0x14, 0x8, 0x2a, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gFireSpinSpriteTemplate, ANIM_TARGET, 2, 6, 0x0, 0x1f, 0x190, 0x19, 0xb, 0xffd6, ANIM_TARGET 
+	createspriteontargets gFireSpinSpriteTemplate, ANIM_TARGET, 2, 6, 0x0, 0x1f, 0x190, 0x19, 0xb, 0xffd6, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gFireSpinSpriteTemplate, ANIM_TARGET, 2, 6, 0x0, 0x1c, 0x200, 0x19, 0x10, 0x2e, ANIM_TARGET 
+	createspriteontargets gFireSpinSpriteTemplate, ANIM_TARGET, 2, 6, 0x0, 0x1c, 0x200, 0x19, 0x10, 0x2e, ANIM_TARGET
 	delay 0x2
-	createspriteontargets gFireSpinSpriteTemplate, ANIM_TARGET, 2, 6, 0x0, 0x21, 0x1d0, 0x1e, 0xf, 0xffce, ANIM_TARGET 
+	createspriteontargets gFireSpinSpriteTemplate, ANIM_TARGET, 2, 6, 0x0, 0x21, 0x1d0, 0x1e, 0xf, 0xffce, ANIM_TARGET
 	return
 
 
