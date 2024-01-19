@@ -47,7 +47,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_CONCAVE_ARC_SMALL,
         PALETTES(Rowlet),
         ICON(Rowlet, 0),
-        .footprint = gMonFootprint_Rowlet,
         LEARNSETS(Rowlet),
         .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_DARTRIX}),
     },
@@ -96,7 +95,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_V_STRETCH,
         PALETTES(Dartrix),
         ICON(Dartrix, 1),
-        .footprint = gMonFootprint_Dartrix,
         LEARNSETS(Dartrix),
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_DECIDUEYE},
                                 {EVO_NONE, 0, SPECIES_DECIDUEYE_HISUIAN}),
@@ -121,7 +119,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .pokemonOffset = 1,                                     \
         .trainerScale = 296,                                    \
         .trainerOffset = 1,                                     \
-        .footprint = gMonFootprint_Decidueye,                   \
         .formSpeciesIdTable = sDecidueyeFormSpeciesIdTable
 
     [SPECIES_DECIDUEYE] =
@@ -230,7 +227,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Litten),
         ICON(Litten, 0),
-        .footprint = gMonFootprint_Litten,
         LEARNSETS(Litten),
         .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_TORRACAT}),
     },
@@ -278,7 +274,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Torracat),
         ICON(Torracat, 0),
-        .footprint = gMonFootprint_Torracat,
         LEARNSETS(Torracat),
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_INCINEROAR}),
     },
@@ -326,7 +321,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Incineroar),
         ICON(Incineroar, 0),
-        .footprint = gMonFootprint_Incineroar,
         LEARNSETS(Incineroar),
     },
 #endif //P_FAMILY_LITTEN
@@ -375,7 +369,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Popplio),
         ICON(Popplio, 0),
-        .footprint = gMonFootprint_Popplio,
         LEARNSETS(Popplio),
         .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_BRIONNE}),
     },
@@ -423,7 +416,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Brionne),
         ICON(Brionne, 0),
-        .footprint = gMonFootprint_Brionne,
         LEARNSETS(Brionne),
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_PRIMARINA}),
     },
@@ -471,7 +463,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Primarina),
         ICON(Primarina, 0),
-        .footprint = gMonFootprint_Primarina,
         LEARNSETS(Primarina),
     },
 #endif //P_FAMILY_POPPLIO
@@ -521,7 +512,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW,
         PALETTES(Pikipek),
         ICON(Pikipek, 2),
-        .footprint = gMonFootprint_Pikipek,
         LEARNSETS(Pikipek),
         .evolutions = EVOLUTION({EVO_LEVEL, 14, SPECIES_TRUMBEAK}),
     },
@@ -570,7 +560,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_H_STRETCH,
         PALETTES(Trumbeak),
         ICON(Trumbeak, 0),
-        .footprint = gMonFootprint_Trumbeak,
         LEARNSETS(Trumbeak),
         .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_TOUCANNON}),
     },
@@ -619,7 +608,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         PALETTES(Toucannon),
         ICON(Toucannon, 0),
-        .footprint = gMonFootprint_Toucannon,
         LEARNSETS(Toucannon),
     },
 #endif //P_FAMILY_PIKIPEK
@@ -669,7 +657,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Yungoos),
         ICON(Yungoos, 2),
-        .footprint = gMonFootprint_Yungoos,
         LEARNSETS(Yungoos),
         .evolutions = EVOLUTION({EVO_LEVEL_DAY, 20, SPECIES_GUMSHOOS}),
     },
@@ -718,7 +705,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Gumshoos),
         ICON(Gumshoos, 2),
-        .footprint = gMonFootprint_Gumshoos,
         LEARNSETS(Gumshoos),
     },
 #endif //P_FAMILY_YUNGOOS
@@ -767,7 +753,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Grubbin),
         ICON(Grubbin, 0),
-        .footprint = gMonFootprint_Grubbin,
         LEARNSETS(Grubbin),
         .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_CHARJABUG}),
     },
@@ -816,7 +801,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Charjabug),
         ICON(Charjabug, 1),
-        .footprint = gMonFootprint_Charjabug,
         LEARNSETS(Charjabug),
         .evolutions = EVOLUTION({EVO_MAPSEC, MAPSEC_NEW_MAUVILLE, SPECIES_VIKAVOLT},
                                 {EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_VIKAVOLT}),
@@ -866,7 +850,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Vikavolt),
         ICON(Vikavolt, 0),
-        .footprint = gMonFootprint_Vikavolt,
         LEARNSETS(Vikavolt),
     },
 #endif //P_FAMILY_GRUBBIN
@@ -916,7 +899,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Crabrawler),
         ICON(Crabrawler, 2),
-        .footprint = gMonFootprint_Crabrawler,
         LEARNSETS(Crabrawler),
         .evolutions = EVOLUTION({EVO_SPECIFIC_MAP, MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM, SPECIES_CRABOMINABLE},
                                 {EVO_ITEM, ITEM_ICE_STONE, SPECIES_CRABOMINABLE}),
@@ -966,7 +948,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Crabominable),
         ICON(Crabominable, 2),
-        .footprint = gMonFootprint_Crabominable,
         LEARNSETS(Crabominable),
     },
 #endif //P_FAMILY_CRABRAWLER
@@ -1000,7 +981,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .trainerOffset = 0,                                     \
         .frontAnimFrames = sAnims_Oricorio,                     \
         .backPicYOffset = 0,                                    \
-        .footprint = gMonFootprint_Oricorio,                    \
         LEARNSETS(Oricorio),                                    \
         .formSpeciesIdTable = sOricorioFormSpeciesIdTable,      \
         .formChangeTable = sOricorioFormChangeTable
@@ -1133,7 +1113,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,
         PALETTES(Cutiefly),
         ICON(Cutiefly, 2),
-        .footprint = gMonFootprint_Cutiefly,
         LEARNSETS(Cutiefly),
         .evolutions = EVOLUTION({EVO_LEVEL, 25, SPECIES_RIBOMBEE}),
     },
@@ -1183,7 +1162,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
         PALETTES(Ribombee),
         ICON(Ribombee, 2),
-        .footprint = gMonFootprint_Ribombee,
         LEARNSETS(Ribombee),
     },
 #endif //P_FAMILY_CUTIEFLY
@@ -1223,7 +1201,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backPicYOffset = 7,                                    \
         PALETTES(Rockruff),                                     \
         ICON(Rockruff, 2),                                      \
-        .footprint = gMonFootprint_Rockruff,                    \
         LEARNSETS(Rockruff),                                    \
         .formSpeciesIdTable = sRockruffFormSpeciesIdTable
 
@@ -1267,7 +1244,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .trainerScale = 257,                                \
         .trainerOffset = 0,                                 \
         BACK_PIC(LycanrocMidday, 64, 56),                   \
-        .footprint = gMonFootprint_Lycanroc,                \
         .formSpeciesIdTable = sLycanrocFormSpeciesIdTable
 
     [SPECIES_LYCANROC_MIDDAY] =
@@ -1378,7 +1354,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .pokemonOffset = 24,                                    \
         .trainerScale = 256,                                    \
         .trainerOffset = 0,                                     \
-        .footprint = gMonFootprint_Wishiwashi,                  \
         LEARNSETS(Wishiwashi),                                  \
         .formSpeciesIdTable = sWishiwashiFormSpeciesIdTable,    \
         .formChangeTable = sWishiwashiFormChangeTable
@@ -1486,7 +1461,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Mareanie),
         ICON(Mareanie, 2),
-        .footprint = gMonFootprint_Mareanie,
         LEARNSETS(Mareanie),
         .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_TOXAPEX}),
     },
@@ -1535,7 +1509,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Toxapex),
         ICON(Toxapex, 0),
-        .footprint = gMonFootprint_Toxapex,
         LEARNSETS(Toxapex),
     },
 #endif //P_FAMILY_MAREANIE
@@ -1585,7 +1558,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Mudbray),
         ICON(Mudbray, 2),
-        .footprint = gMonFootprint_Mudbray,
         LEARNSETS(Mudbray),
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_MUDSDALE}),
     },
@@ -1634,7 +1606,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Mudsdale),
         ICON(Mudsdale, 0),
-        .footprint = gMonFootprint_Mudsdale,
         LEARNSETS(Mudsdale),
     },
 #endif //P_FAMILY_MUDBRAY
@@ -1684,7 +1655,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Dewpider),
         ICON(Dewpider, 0),
-        .footprint = gMonFootprint_Dewpider,
         LEARNSETS(Dewpider),
         .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_ARAQUANID}),
     },
@@ -1733,7 +1703,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Araquanid),
         ICON(Araquanid, 2),
-        .footprint = gMonFootprint_Araquanid,
         LEARNSETS(Araquanid),
     },
 #endif //P_FAMILY_DEWPIDER
@@ -1783,7 +1752,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Fomantis),
         ICON(Fomantis, 1),
-        .footprint = gMonFootprint_Fomantis,
         LEARNSETS(Fomantis),
         .evolutions = EVOLUTION({EVO_LEVEL_DAY, 34, SPECIES_LURANTIS}),
     },
@@ -1832,7 +1800,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Lurantis),
         ICON(Lurantis, 1),
-        .footprint = gMonFootprint_Lurantis,
         LEARNSETS(Lurantis),
     },
 #endif //P_FAMILY_FOMANTIS
@@ -1883,7 +1850,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Morelull),
         ICON(Morelull, 0),
-        .footprint = gMonFootprint_Morelull,
         LEARNSETS(Morelull),
         .evolutions = EVOLUTION({EVO_LEVEL, 24, SPECIES_SHIINOTIC}),
     },
@@ -1933,7 +1899,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Shiinotic),
         ICON(Shiinotic, 1),
-        .footprint = gMonFootprint_Shiinotic,
         LEARNSETS(Shiinotic),
     },
 #endif //P_FAMILY_MORELULL
@@ -1983,7 +1948,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Salandit),
         ICON(Salandit, 2),
-        .footprint = gMonFootprint_Salandit,
         LEARNSETS(Salandit),
         .evolutions = EVOLUTION({EVO_LEVEL_FEMALE, 33, SPECIES_SALAZZLE}),
     },
@@ -2032,7 +1996,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Salazzle),
         ICON(Salazzle, 0),
-        .footprint = gMonFootprint_Salazzle,
         LEARNSETS(Salazzle),
     },
 #endif //P_FAMILY_SALANDIT
@@ -2081,7 +2044,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Stufful),
         ICON(Stufful, 0),
-        .footprint = gMonFootprint_Stufful,
         LEARNSETS(Stufful),
         .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_BEWEAR}),
     },
@@ -2129,7 +2091,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Bewear),
         ICON(Bewear, 0),
-        .footprint = gMonFootprint_Bewear,
         LEARNSETS(Bewear),
     },
 #endif //P_FAMILY_STUFFUL
@@ -2179,7 +2140,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Bounsweet),
         ICON(Bounsweet, 1),
-        .footprint = gMonFootprint_Bounsweet,
         LEARNSETS(Bounsweet),
         .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_STEENEE}),
     },
@@ -2229,7 +2189,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Steenee),
         ICON(Steenee, 1),
-        .footprint = gMonFootprint_Steenee,
         LEARNSETS(Steenee),
         .evolutions = EVOLUTION({EVO_MOVE, MOVE_STOMP, SPECIES_TSAREENA}),
     },
@@ -2279,7 +2238,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Tsareena),
         ICON(Tsareena, 1),
-        .footprint = gMonFootprint_Tsareena,
         LEARNSETS(Tsareena),
     },
 #endif //P_FAMILY_BOUNSWEET
@@ -2331,7 +2289,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Comfey),
         ICON(Comfey, 1),
-        .footprint = gMonFootprint_Comfey,
         LEARNSETS(Comfey),
     },
 #endif //P_FAMILY_COMFEY
@@ -2380,7 +2337,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_H_SLIDE,
         PALETTES(Oranguru),
         ICON(Oranguru, 0),
-        .footprint = gMonFootprint_Oranguru,
         LEARNSETS(Oranguru),
     },
 #endif //P_FAMILY_ORANGURU
@@ -2429,7 +2385,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_H_SHAKE,
         PALETTES(Passimian),
         ICON(Passimian, 1),
-        .footprint = gMonFootprint_Passimian,
         LEARNSETS(Passimian),
     },
 #endif //P_FAMILY_PASSIMIAN
@@ -2478,7 +2433,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Wimpod),
         ICON(Wimpod, 2),
-        .footprint = gMonFootprint_Wimpod,
         LEARNSETS(Wimpod),
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_GOLISOPOD}),
     },
@@ -2526,7 +2480,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Golisopod),
         ICON(Golisopod, 2),
-        .footprint = gMonFootprint_Golisopod,
         LEARNSETS(Golisopod),
     },
 #endif //P_FAMILY_WIMPOD
@@ -2576,7 +2529,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Sandygast),
         ICON(Sandygast, 1),
-        .footprint = gMonFootprint_Sandygast,
         LEARNSETS(Sandygast),
         .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_PALOSSAND}),
     },
@@ -2625,7 +2577,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Palossand),
         ICON(Palossand, 2),
-        .footprint = gMonFootprint_Palossand,
         LEARNSETS(Palossand),
     },
 #endif //P_FAMILY_SANDYGAST
@@ -2674,7 +2625,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Pyukumuku),
         ICON(Pyukumuku, 0),
-        .footprint = gMonFootprint_Pyukumuku,
         LEARNSETS(Pyukumuku),
     },
 #endif //P_FAMILY_PYUKUMUKU
@@ -2724,7 +2674,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(TypeNull),
         ICON(TypeNull, 0),
-        .footprint = gMonFootprint_Type_Null,
         LEARNSETS(TypeNull),
         .evolutions = EVOLUTION({EVO_FRIENDSHIP, 0, SPECIES_SILVALLY_NORMAL}),
     },
@@ -2770,7 +2719,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backPicYOffset = 0,                                                            \
         PALETTES(palette),                                                              \
         ICON(Silvally, 0),                                                              \
-        .footprint = gMonFootprint_Silvally,                                            \
         LEARNSETS(Silvally),                                                            \
         .formSpeciesIdTable = sSilvallyFormSpeciesIdTable,                              \
         .formChangeTable = sSilvallyFormChangeTable,                                    \
@@ -2822,7 +2770,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .pokemonOffset = 13,                                    \
         .trainerScale = 256,                                    \
         .trainerOffset = 0,                                     \
-        .footprint = gMonFootprint_Minior,                      \
         LEARNSETS(Minior),                                      \
         .formSpeciesIdTable = sMiniorFormSpeciesIdTable
 
@@ -2934,7 +2881,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Komala),
         ICON(Komala, 2),
-        .footprint = gMonFootprint_Komala,
         LEARNSETS(Komala),
     },
 #endif //P_FAMILY_KOMALA
@@ -2984,7 +2930,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Turtonator),
         ICON(Turtonator, 0),
-        .footprint = gMonFootprint_Turtonator,
         LEARNSETS(Turtonator),
     },
 #endif //P_FAMILY_TURTONATOR
@@ -3034,7 +2979,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_GROW_STUTTER,
         PALETTES(Togedemaru),
         ICON(Togedemaru, 2),
-        .footprint = gMonFootprint_Togedemaru,
         LEARNSETS(Togedemaru),
     },
 #endif //P_FAMILY_TOGEDEMARU
@@ -3069,7 +3013,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .pokemonOffset = 24,                                        \
         .trainerScale = 256,                                        \
         .trainerOffset = 0,                                         \
-        .footprint = gMonFootprint_Mimikyu,                         \
         LEARNSETS(Mimikyu),                                         \
         .formSpeciesIdTable = sMimikyuFormSpeciesIdTable,           \
         .formChangeTable = sMimikyuFormChangeTable
@@ -3158,7 +3101,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Bruxish),
         ICON(Bruxish, 0),
-        .footprint = gMonFootprint_Bruxish,
         LEARNSETS(Bruxish),
     },
 #endif //P_FAMILY_BRUXISH
@@ -3208,7 +3150,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_H_SLIDE,
         PALETTES(Drampa),
         ICON(Drampa, 0),
-        .footprint = gMonFootprint_Drampa,
         LEARNSETS(Drampa),
     },
 #endif //P_FAMILY_DRAMPA
@@ -3259,7 +3200,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Dhelmise),
         ICON(Dhelmise, 1),
-        .footprint = gMonFootprint_Dhelmise,
         LEARNSETS(Dhelmise),
     },
 #endif //P_FAMILY_DHELMISE
@@ -3309,7 +3249,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_GROW_STUTTER,
         PALETTES(JangmoO),
         ICON(JangmoO, 2),
-        .footprint = gMonFootprint_JangmoO,
         LEARNSETS(JangmoO),
         .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_HAKAMO_O}),
     },
@@ -3358,7 +3297,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_H_STRETCH,
         PALETTES(HakamoO),
         ICON(HakamoO, 2),
-        .footprint = gMonFootprint_HakamoO,
         LEARNSETS(HakamoO),
         .evolutions = EVOLUTION({EVO_LEVEL, 45, SPECIES_KOMMO_O}),
     },
@@ -3407,7 +3345,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         PALETTES(KommoO),
         ICON(KommoO, 2),
-        .footprint = gMonFootprint_KommoO,
         LEARNSETS(KommoO),
     },
 #endif //P_FAMILY_JANGMO_O
@@ -3458,7 +3395,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(TapuKoko),
         ICON(TapuKoko, 0),
-        .footprint = gMonFootprint_Tapu_Koko,
         LEARNSETS(TapuKoko),
     },
 #endif //P_FAMILY_TAPU_KOKO
@@ -3509,7 +3445,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(TapuLele),
         ICON(TapuLele, 0),
-        .footprint = gMonFootprint_Tapu_Lele,
         LEARNSETS(TapuLele),
     },
 #endif //P_FAMILY_TAPU_LELE
@@ -3560,7 +3495,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(TapuBulu),
         ICON(TapuBulu, 2),
-        .footprint = gMonFootprint_Tapu_Bulu,
         LEARNSETS(TapuBulu),
     },
 #endif //P_FAMILY_TAPU_BULU
@@ -3612,7 +3546,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(TapuFini),
         ICON(TapuFini, 0),
-        .footprint = gMonFootprint_Tapu_Fini,
         LEARNSETS(TapuFini),
     },
 #endif //P_FAMILY_TAPU_FINI
@@ -3663,7 +3596,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Cosmog),
         ICON(Cosmog, 2),
-        .footprint = gMonFootprint_Cosmog,
         LEARNSETS(Cosmog),
         .evolutions = EVOLUTION({EVO_LEVEL, 43, SPECIES_COSMOEM}),
     },
@@ -3714,7 +3646,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Cosmoem),
         ICON(Cosmoem, 0),
-        .footprint = gMonFootprint_Cosmoem,
         LEARNSETS(Cosmoem),
         .evolutions = EVOLUTION({EVO_LEVEL_DAY, 53, SPECIES_SOLGALEO},
                                 {EVO_LEVEL_NIGHT, 53, SPECIES_LUNALA}),
@@ -3764,7 +3695,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Solgaleo),
         ICON(Solgaleo, 0),
-        .footprint = gMonFootprint_Solgaleo,
         LEARNSETS(Solgaleo),
     },
 
@@ -3813,7 +3743,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Lunala),
         ICON(Lunala, 2),
-        .footprint = gMonFootprint_Lunala,
         LEARNSETS(Lunala),
     },
 #endif //P_FAMILY_COSMOG
@@ -3864,7 +3793,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Nihilego),
         ICON(Nihilego, 0),
-        .footprint = gMonFootprint_Nihilego,
         LEARNSETS(Nihilego),
     },
 #endif //P_FAMILY_NIHILEGO
@@ -3915,7 +3843,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Buzzwole),
         ICON(Buzzwole, 0),
-        .footprint = gMonFootprint_Buzzwole,
         LEARNSETS(Buzzwole),
     },
 #endif //P_FAMILY_BUZZWOLE
@@ -3965,7 +3892,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Pheromosa),
         ICON(Pheromosa, 2),
-        .footprint = gMonFootprint_Pheromosa,
         LEARNSETS(Pheromosa),
     },
 #endif //P_FAMILY_PHEROMOSA
@@ -4015,7 +3941,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Xurkitree),
         ICON(Xurkitree, 0),
-        .footprint = gMonFootprint_Xurkitree,
         LEARNSETS(Xurkitree),
     },
 #endif //P_FAMILY_XURKITREE
@@ -4067,7 +3992,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Celesteela),
         ICON(Celesteela, 0),
-        .footprint = gMonFootprint_Celesteela,
         LEARNSETS(Celesteela),
     },
 #endif //P_FAMILY_CELESTEELA
@@ -4118,7 +4042,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Kartana),
         ICON(Kartana, 0),
-        .footprint = gMonFootprint_Kartana,
         LEARNSETS(Kartana),
     },
 #endif //P_FAMILY_KARTANA
@@ -4168,7 +4091,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Guzzlord),
         ICON(Guzzlord, 0),
-        .footprint = gMonFootprint_Guzzlord,
         LEARNSETS(Guzzlord),
     },
 #endif //P_FAMILY_GUZZLORD
@@ -4188,7 +4110,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .pokemonOffset = 3,                                                             \
         .trainerScale = 369,                                                            \
         .trainerOffset = 7,                                                             \
-        .footprint = gMonFootprint_Necrozma,                                            \
         LEARNSETS(Necrozma),                                                            \
         .formSpeciesIdTable = sNecrozmaFormSpeciesIdTable,                              \
         .isLegendary = TRUE
@@ -4382,7 +4303,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .backPicYOffset = 4,                                                            \
         PALETTES(Form),                                                                 \
         ICON(Form, 0),                                                                  \
-        .footprint = gMonFootprint_Magearna,                                            \
         LEARNSETS(Magearna),                                                            \
         .formSpeciesIdTable = sMagearnaFormSpeciesIdTable,                              \
         .isMythical = TRUE
@@ -4456,7 +4376,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Marshadow),
         ICON(Marshadow, 0),
-        .footprint = gMonFootprint_Marshadow,
         LEARNSETS(Marshadow),
         .isMythical = TRUE,
     },
@@ -4507,7 +4426,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Poipole),
         ICON(Poipole, 0),
-        .footprint = gMonFootprint_Poipole,
         LEARNSETS(Poipole),
         .evolutions = EVOLUTION({EVO_MOVE, MOVE_DRAGON_PULSE, SPECIES_NAGANADEL}),
     },
@@ -4556,7 +4474,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Naganadel),
         ICON(Naganadel, 0),
-        .footprint = gMonFootprint_Naganadel,
         LEARNSETS(Naganadel),
     },
 #endif //P_FAMILY_POIPOLE
@@ -4606,7 +4523,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Stakataka),
         ICON(Stakataka, 0),
-        .footprint = gMonFootprint_Stakataka,
         LEARNSETS(Stakataka),
     },
 #endif //P_FAMILY_STAKATAKA
@@ -4656,7 +4572,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Blacephalon),
         ICON(Blacephalon, 0),
-        .footprint = gMonFootprint_Blacephalon,
         LEARNSETS(Blacephalon),
     },
 #endif //P_FAMILY_BLACEPHALON
@@ -4705,7 +4620,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Zeraora),
         ICON(Zeraora, 0),
-        .footprint = gMonFootprint_Zeraora,
         LEARNSETS(Zeraora),
     },
 #endif //P_FAMILY_ZERAORA
@@ -4754,7 +4668,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Meltan),
         ICON(Meltan, 2),
-        .footprint = gMonFootprint_Meltan,
         LEARNSETS(Meltan),
     },
 
@@ -4784,7 +4697,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .pokemonOffset = 10,                                                            \
         .trainerScale = 423,                                                            \
         .trainerOffset = 8,                                                             \
-        .footprint = gMonFootprint_Melmetal,                                            \
         LEARNSETS(Melmetal),                                                            \
         .formSpeciesIdTable = sMelmetalFormSpeciesIdTable,                              \
         .formChangeTable = sMelmetalFormChangeTable,                                    \
