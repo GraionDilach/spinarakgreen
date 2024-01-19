@@ -6733,8 +6733,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 78,
         .baseSpDefense = 93,
         .types = { TYPE_FIGHTING, TYPE_FLYING },
-        .catchRate = 45,
-        .expYield = 177,
+        .catchRate = 37,
+        .expYield = 312,
         .evYield_Attack = 2,
         .itemRare = ITEM_LEEK,
         .genderRatio = PERCENT_FEMALE(50),
@@ -6778,14 +6778,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_DODUO] =
     {
         .baseHP        = 35,
-        .baseAttack    = 85,
+        .baseAttack    = 90,
         .baseDefense   = 45,
-        .baseSpeed     = 75,
+        .baseSpeed     = 80,
         .baseSpAttack  = 35,
         .baseSpDefense = 35,
-        .types = { TYPE_NORMAL, TYPE_FLYING },
-        .catchRate = 190,
-        .expYield = 62,
+        .types = { TYPE_GROUND, TYPE_FLYING },
+        .catchRate = 144,
+        .expYield = 128,
         .evYield_Attack = 1,
         .itemRare = ITEM_SHARP_BEAK,
         .genderRatio = PERCENT_FEMALE(50),
@@ -6828,15 +6828,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_DODRIO] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 110,
+        .baseHP        = 80,
+        .baseAttack    = 120,
         .baseDefense   = 70,
-        .baseSpeed     = P_UPDATED_STATS >= GEN_7 ? 110 : 100,
+        .baseSpeed     = 110,
         .baseSpAttack  = 60,
         .baseSpDefense = 60,
-        .types = { TYPE_NORMAL, TYPE_FLYING },
-        .catchRate = 45,
-        .expYield = 165,
+        .types = { TYPE_GROUND, TYPE_FLYING },
+        .catchRate = 64,
+        .expYield = 242,
         .evYield_Attack = 2,
         .itemRare = ITEM_SHARP_BEAK,
         .genderRatio = PERCENT_FEMALE(50),
@@ -6881,14 +6881,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_SEEL] =
     {
         .baseHP        = 65,
-        .baseAttack    = 45,
+        .baseAttack    = 50,
         .baseDefense   = 55,
         .baseSpeed     = 45,
         .baseSpAttack  = 45,
-        .baseSpDefense = 70,
-        .types = { TYPE_WATER, TYPE_WATER },
-        .catchRate = 190,
-        .expYield = 65,
+        .baseSpDefense = 75,
+        .types = { TYPE_WATER, TYPE_ICE },
+        .catchRate = 137,
+        .expYield = 134,
         .evYield_SpDefense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -6928,15 +6928,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_DEWGONG] =
     {
-        .baseHP        = 90,
-        .baseAttack    = 70,
-        .baseDefense   = 80,
-        .baseSpeed     = 70,
-        .baseSpAttack  = 70,
-        .baseSpDefense = 95,
+        .baseHP        = 95,
+        .baseAttack    = 80,
+        .baseDefense   = 85,
+        .baseSpeed     = 90,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 100,
         .types = { TYPE_WATER, TYPE_ICE },
-        .catchRate = 75,
-        .expYield = 166,
+        .catchRate = 54,
+        .expYield = 256,
         .evYield_SpDefense = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -6989,39 +6989,32 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseDefense   = 50,                            \
         .baseSpeed     = 25,                            \
         .baseSpAttack  = 40,                            \
-        .baseSpDefense = 50,                            \
-        .catchRate = 190,                               \
-        .expYield = 65,                                 \
+        .baseSpDefense = 65,                            \
+        .catchRate = 134,                               \
+        .expYield = 136,                                \
         .evYield_HP = 1,                                \
-        .speciesName = _("Grimer"),                     \
         .cryId = CRY_GRIMER,                            \
-        .natDexNum = NATIONAL_DEX_GRIMER,               \
         .categoryName = _("Sludge"),                    \
         .footprint = gMonFootprint_Grimer,              \
-        .formSpeciesIdTable = sGrimerFormSpeciesIdTable,\
         GRIMER_FAMILY_MISC_INFO
 
 #define MUK_MISC_INFO                                   \
-        .baseHP        = 105,                           \
-        .baseAttack    = 105,                           \
+        .baseHP        = 135,                           \
+        .baseAttack    = 125,                           \
         .baseDefense   = 75,                            \
         .baseSpeed     = 50,                            \
         .baseSpAttack  = 65,                            \
         .baseSpDefense = 100,                           \
-        .catchRate = 75,                                \
-        .expYield = 175,                                \
+        .catchRate = 134,                               \
+        .expYield = 136,                                \
         .evYield_HP = 1,                                \
         .evYield_Attack = 1,                            \
-        .speciesName = _("Muk"),                        \
         .cryId = CRY_MUK,                               \
-        .natDexNum = NATIONAL_DEX_MUK,                  \
         .categoryName = _("Sludge"),                    \
         .footprint = gMonFootprint_Muk,                 \
-        .formSpeciesIdTable = sMukFormSpeciesIdTable,   \
         GRIMER_FAMILY_MISC_INFO
 
 #define KANTONIAN_GRIMER_FAMILY_INFO                                                \
-        .types = { TYPE_POISON, TYPE_POISON },                                      \
         .abilities = { ABILITY_STENCH, ABILITY_STICKY_HOLD, ABILITY_POISON_TOUCH }, \
         .bodyColor = BODY_COLOR_PURPLE
 
@@ -7031,6 +7024,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         GRIMER_MISC_INFO,
         .height = 9,
         .weight = 300,
+        .types = { TYPE_POISON, TYPE_POISON },
+        .speciesName = _("Grimer"),
+        .natDexNum = NATIONAL_DEX_GRIMER,
         .description = COMPOUND_STRING(
             "Born from polluted sludge in the sea,\n"
             "Grimer's favorite food is anything filthy.\n"
@@ -7057,6 +7053,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         KANTONIAN_GRIMER_FAMILY_INFO,
         MUK_MISC_INFO,
+        .types = { TYPE_POISON, TYPE_GHOST },
+        .speciesName = _("Muk"),
+        .natDexNum = NATIONAL_DEX_MUK,
         .height = 12,
         .weight = 300,
         .description = COMPOUND_STRING(
@@ -7085,8 +7084,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #define ALOLAN_GRIMER_FAMILY_INFO                                                           \
         .types = { TYPE_POISON, TYPE_DARK },                                                \
         .abilities = { ABILITY_POISON_TOUCH, ABILITY_GLUTTONY, ABILITY_POWER_OF_ALCHEMY },  \
-        .bodyColor = BODY_COLOR_GREEN,                                                      \
-        .isAlolanForm = TRUE
+        .bodyColor = BODY_COLOR_GREEN
 
     [SPECIES_GRIMER_ALOLAN] =
     {
@@ -7094,6 +7092,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         GRIMER_MISC_INFO,
         .height = 7,
         .weight = 420,
+        .speciesName = _("Slimer"),
+        .natDexNum = NATIONAL_DEX_GRIMER_ALOLAN,
         .description = COMPOUND_STRING(
             "There are a hundred or so of them living\n"
             "in Alola's waste-disposal site. They're all\n"
@@ -7123,9 +7123,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .noFlip = TRUE,
         .height = 10,
         .weight = 520,
+        .speciesName = _("Snot"),
+        .natDexNum = NATIONAL_DEX_MUK_ALOLAN,
         .description = COMPOUND_STRING(
             "While it's unexpectedly quiet and friendly,\n"
-            "if it's not fed any trash for a while,,\n"
+            "if it's not fed any trash for a while,\n"
             "it will smash its Trainer's furnishings,\n"
             "and eat up the fragments."),
         .pokemonScale = 256,
@@ -7153,11 +7155,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseAttack    = 65,
         .baseDefense   = 100,
         .baseSpeed     = 40,
-        .baseSpAttack  = 45,
+        .baseSpAttack  = 65,
         .baseSpDefense = 25,
         .types = { TYPE_WATER, TYPE_WATER },
-        .catchRate = 190,
-        .expYield = 61,
+        .catchRate = 142,
+        .expYield = 130,
         .evYield_Defense = 1,
         .itemCommon = ITEM_PEARL,
         .itemRare = ITEM_BIG_PEARL,
@@ -7204,11 +7206,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseAttack    = 95,
         .baseDefense   = 180,
         .baseSpeed     = 70,
-        .baseSpAttack  = 85,
+        .baseSpAttack  = 95,
         .baseSpDefense = 45,
         .types = { TYPE_WATER, TYPE_ICE },
-        .catchRate = 60,
-        .expYield = 184,
+        .catchRate = 52,
+        .expYield = 259,
         .evYield_Defense = 2,
         .itemCommon = ITEM_PEARL,
         .itemRare = ITEM_BIG_PEARL,
