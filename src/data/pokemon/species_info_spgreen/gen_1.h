@@ -7256,19 +7256,19 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseHP        = 30,
         .baseAttack    = 35,
         .baseDefense   = 30,
-        .baseSpeed     = 80,
+        .baseSpeed     = 100,
         .baseSpAttack  = 100,
         .baseSpDefense = 35,
         .types = { TYPE_GHOST, TYPE_POISON },
-        .catchRate = 190,
-        .expYield = 62,
+        .catchRate = 139,
+        .expYield = 132,
         .evYield_SpAttack = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
-        .abilities = { ABILITY_LEVITATE, ABILITY_NONE },
+        .abilities = { ABILITY_LEVITATE, ABILITY_CURSED_BODY },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Gastly"),
         .cryId = CRY_GASTLY,
@@ -7305,19 +7305,19 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseHP        = 45,
         .baseAttack    = 50,
         .baseDefense   = 45,
-        .baseSpeed     = 95,
+        .baseSpeed     = 120,
         .baseSpAttack  = 115,
         .baseSpDefense = 55,
         .types = { TYPE_GHOST, TYPE_POISON },
-        .catchRate = 90,
-        .expYield = 142,
+        .catchRate = 92,
+        .expYield = 189,
         .evYield_SpAttack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
-        .abilities = { ABILITY_LEVITATE, ABILITY_NONE },
+        .abilities = { ABILITY_LEVITATE, ABILITY_CURSED_BODY },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Haunter"),
         .cryId = CRY_HAUNTER,
@@ -7348,18 +7348,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .footprint = gMonFootprint_Haunter,
         LEARNSETS(Haunter),
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_GENGAR},
-                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GENGAR}),
+                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GENGAR},
+                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_GENGAR_MEGA},
+                                {EVO_ITEM, ITEM_MOON_STONE, SPECIES_GENGAR_GIGANTAMAX}),
     },
 
-#if P_UPDATED_ABILITIES >= GEN_7
-#define GENGAR_ABILITIES {ABILITY_CURSED_BODY, ABILITY_NONE}
-#else
-#define GENGAR_ABILITIES {ABILITY_LEVITATE, ABILITY_NONE}
-#endif
-
 #define GENGAR_MISC_INFO                                            \
-        .types = { TYPE_GHOST, TYPE_POISON },                       \
-        .catchRate = 45,                                            \
+        .catchRate = 31,                                            \
         .evYield_SpAttack = 3,                                      \
         .genderRatio = PERCENT_FEMALE(50),                          \
         .eggCycles = 20,                                            \
@@ -7367,25 +7362,24 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_SLOW,                           \
         .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },  \
         .bodyColor = BODY_COLOR_PURPLE,                             \
-        .speciesName = _("Gengar"),                                 \
-        .natDexNum = NATIONAL_DEX_GENGAR,                           \
         .categoryName = _("Shadow"),                                \
         .footprint = gMonFootprint_Gengar,                          \
-        LEARNSETS(Gengar),                                          \
-        .formSpeciesIdTable = sGengarFormSpeciesIdTable,            \
-        .formChangeTable = sGengarFormChangeTable
+        LEARNSETS(Gengar)
 
     [SPECIES_GENGAR] =
     {
         GENGAR_MISC_INFO,
-        .baseHP        = 60,
-        .baseAttack    = 65,
-        .baseDefense   = 60,
-        .baseSpeed     = 110,
+        .types = { TYPE_GHOST, TYPE_POISON },
+        .baseHP        = 80,
+        .baseAttack    = 85,
+        .baseDefense   = 90,
+        .baseSpeed     = 130,
         .baseSpAttack  = 130,
-        .baseSpDefense = 75,
-        .expYield = 225,
-        .abilities = GENGAR_ABILITIES,
+        .baseSpDefense = 95,
+        .expYield = 325,
+        .abilities = {ABILITY_LEVITATE, ABILITY_CURSED_BODY},
+        .speciesName = _("Gengar"),
+        .natDexNum = NATIONAL_DEX_GENGAR,
         .height = 15,
         .weight = 405,
         .description = COMPOUND_STRING(
@@ -7412,15 +7406,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_GENGAR_MEGA] =
     {
         GENGAR_MISC_INFO,
+        .types = { TYPE_GHOST, TYPE_POISON },
         .baseHP        = 60,
         .baseAttack    = 65,
         .baseDefense   = 80,
         .baseSpeed     = 130,
-        .baseSpAttack  = 170,
+        .baseSpAttack  = 180,
         .baseSpDefense = 95,
-        .expYield = 270,
+        .expYield = 325,
         .abilities = { ABILITY_SHADOW_TAG, ABILITY_SHADOW_TAG, ABILITY_SHADOW_TAG },
-        .isMegaEvolution = TRUE,
+        .speciesName = _("Megengar"),
+        .natDexNum = NATIONAL_DEX_GENGAR_MEGA,
         .height = 14,
         .weight = 405,
         .description = COMPOUND_STRING(
@@ -7448,15 +7444,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_GENGAR_GIGANTAMAX] =
     {
         GENGAR_MISC_INFO,
-        .baseHP        = 60,
+        .types = { TYPE_GHOST, TYPE_GHOST },
+        .baseHP        = 90,
         .baseAttack    = 65,
-        .baseDefense   = 60,
-        .baseSpeed     = 110,
-        .baseSpAttack  = 130,
-        .baseSpDefense = 75,
-        .expYield = 225,
-        .abilities = GENGAR_ABILITIES,
-        .isGigantamax = TRUE,
+        .baseDefense   = 110,
+        .baseSpeed     = 120,
+        .baseSpAttack  = 115,
+        .baseSpDefense = 110,
+        .expYield = 325,
+        .abilities = {ABILITY_LEVITATE, ABILITY_CURSED_BODY},
+        .speciesName = _("Gigengar"),
+        .natDexNum = NATIONAL_DEX_GENGAR_GIGANTAMAX,
         .height = 200,
         .weight = 0,
         .description = COMPOUND_STRING(
@@ -7490,9 +7488,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 70,
         .baseSpAttack  = 30,
         .baseSpDefense = 45,
-        .types = { TYPE_ROCK, TYPE_GROUND },
-        .catchRate = 45,
-        .expYield = 77,
+        .types = { TYPE_ROCK, TYPE_DRAGON },
+        .catchRate = 113,
+        .expYield = 169,
         .evYield_Defense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 25,
@@ -7527,14 +7525,61 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Onix, 2),
         .footprint = gMonFootprint_Onix,
         LEARNSETS(Onix),
-        .evolutions = EVOLUTION({EVO_TRADE_ITEM, ITEM_METAL_COAT, SPECIES_STEELIX},
+        .evolutions = EVOLUTION({EVO_LEVEL, 60, SPECIES_CRYSTALIX},
+                                {EVO_TRADE_ITEM, ITEM_METAL_COAT, SPECIES_STEELIX},
                                 {EVO_ITEM, ITEM_METAL_COAT, SPECIES_STEELIX}),
+    },
+
+    [SPECIES_CRYSTALIX] =
+    {
+        .baseHP        = 80,
+        .baseAttack    = 90,
+        .baseDefense   = 220,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 65,
+        .baseSpDefense = 90,
+        .types = { TYPE_ROCK, TYPE_DRAGON },
+        .catchRate = 24,
+        .expYield = 343,
+        .evYield_Defense = 1,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 25,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },
+        .abilities = { ABILITY_ROCK_HEAD, ABILITY_STURDY, ABILITY_WEAK_ARMOR },
+        .bodyColor = BODY_COLOR_GRAY,
+        .speciesName = _("Crystalix"),
+        .cryId = CRY_ONIX,
+        .natDexNum = NATIONAL_DEX_CRYSTALIX,
+        .categoryName = _("Rock Snake"),
+        .height = 88,
+        .weight = 2100,
+        .description = COMPOUND_STRING(
+            "There is a magnet in its brain that\n"
+            "prevents an Onix from losing direction\n"
+            "while tunneling. As it grows older, its body\n"
+            "becomes steadily rounder and smoother."),
+        .pokemonScale = 256,
+        .pokemonOffset = 1,
+        .trainerScale = 515,
+        .trainerOffset = 14,
+        FRONT_PIC(Onix, 64, 64),
+        .frontPicYOffset = 3,
+        .frontAnimFrames = sAnims_Onix,
+        .frontAnimId = ANIM_H_SHAKE,
+        BACK_PIC(Onix, 64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_V_SHAKE,
+        PALETTES(Onix),
+        ICON(Onix, 2),
+        .footprint = gMonFootprint_Onix,
+        LEARNSETS(Onix)
     },
 
 #if P_GEN_2_CROSS_EVOS
 #define STEELIX_MISC_INFO                                       \
-        .types = { TYPE_STEEL, TYPE_GROUND },                   \
-        .catchRate = 25,                                        \
+        .types = { TYPE_STEEL, TYPE_DRAGON },                   \
         .evYield_Defense = 2,                                   \
         .itemRare = ITEM_METAL_COAT,                            \
         .genderRatio = PERCENT_FEMALE(50),                      \
@@ -7543,26 +7588,25 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_FAST,                       \
         .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },  \
         .bodyColor = BODY_COLOR_GRAY,                           \
-        .speciesName = _("Steelix"),                            \
-        .natDexNum = NATIONAL_DEX_STEELIX,                      \
-        .categoryName = _("Iron Snake"),                        \
         .footprint = gMonFootprint_Steelix,                     \
-        LEARNSETS(Steelix),                                     \
-        .formSpeciesIdTable = sSteelixFormSpeciesIdTable,       \
-        .formChangeTable = sSteelixFormChangeTable
+        LEARNSETS(Steelix)
 
     [SPECIES_STEELIX] =
     {
         STEELIX_MISC_INFO,
-        .baseHP        = 75,
+        .baseHP        = 55,
         .baseAttack    = 85,
         .baseDefense   = 200,
-        .baseSpeed     = 30,
+        .baseSpeed     = 85,
         .baseSpAttack  = 55,
         .baseSpDefense = 65,
-        .expYield = 179,
+        .catchRate = 49,
+        .expYield = 264,
         .abilities = { ABILITY_ROCK_HEAD, ABILITY_STURDY, ABILITY_SHEER_FORCE },
         .cryId = CRY_STEELIX,
+        .speciesName = _("Steelix"),
+        .natDexNum = NATIONAL_DEX_STEELIX,
+        .categoryName = _("Iron Snake"),
         .height = 92,
         .weight = 4000,
         .description = COMPOUND_STRING(
@@ -7593,14 +7637,18 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         STEELIX_MISC_INFO,
         .baseHP        = 75,
-        .baseAttack    = 125,
+        .baseAttack    = 95,
         .baseDefense   = 230,
         .baseSpeed     = 30,
-        .baseSpAttack  = 55,
+        .baseSpAttack  = 95,
         .baseSpDefense = 95,
-        .expYield = 214,
+        .catchRate = 24,
+        .expYield = 343,
         .abilities = { ABILITY_SAND_FORCE, ABILITY_SAND_FORCE, ABILITY_SAND_FORCE },
         .cryId = CRY_STEELIX_MEGA,
+        .speciesName = _("Adamantix"),
+        .natDexNum = NATIONAL_DEX_STEELIX_MEGA,
+        .categoryName = _("Iron Snake"),
         .height = 105,
         .weight = 7400,
         .description = COMPOUND_STRING(
@@ -7620,8 +7668,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_V_SHAKE,
         PALETTES(SteelixMega),
-        ICON(SteelixMega, 0),
-        .isMegaEvolution = TRUE,
+        ICON(SteelixMega, 0)
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_GEN_2_CROSS_EVOS
