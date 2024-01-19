@@ -6584,11 +6584,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #endif //P_FAMILY_MAGNEMITE
 
 #if P_FAMILY_FARFETCHD
-#define FARFETCHD_ATTACK (P_UPDATED_STATS >= GEN_7 ? 90 : 65)
-
 #define FARFETCHD_MISC_INFO                                 \
-        .catchRate = 45,                                    \
-        .expYield = 132,                                    \
+        .catchRate = 116,                                   \
+        .expYield = 166,                                    \
         .evYield_Attack = 1,                                \
         .genderRatio = PERCENT_FEMALE(50),                  \
         .eggCycles = 20,                                    \
@@ -6596,25 +6594,24 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_FAST,                   \
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FIELD }, \
         .bodyColor = BODY_COLOR_BROWN,                      \
-        .speciesName = _("Farfetch'd"),                     \
         .cryId = CRY_FARFETCHD,                             \
-        .natDexNum = NATIONAL_DEX_FARFETCHD,                \
         .categoryName = _("Wild Duck"),                     \
-        .footprint = gMonFootprint_Farfetchd,               \
-        .formSpeciesIdTable = sFarfetchdFormSpeciesIdTable
+        .footprint = gMonFootprint_Farfetchd
 
     [SPECIES_FARFETCHD] =
     {
         FARFETCHD_MISC_INFO,
+        .baseAttack    = 90,
         .baseHP        = 52,
         .baseDefense   = 55,
         .baseSpeed     = 60,
         .baseSpAttack  = 58,
         .baseSpDefense = 62,
-        .baseAttack    = FARFETCHD_ATTACK,
         .types = { TYPE_NORMAL, TYPE_FLYING },
         .itemRare = ITEM_LEEK,
         .abilities = { ABILITY_KEEN_EYE, ABILITY_INNER_FOCUS, ABILITY_DEFIANT },
+        .speciesName = _("Farfetch'd"),
+        .natDexNum = NATIONAL_DEX_FARFETCHD,
         .height = 8,
         .weight = 150,
         .description = COMPOUND_STRING(
@@ -6636,6 +6633,55 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Farfetchd),
         ICON(Farfetchd, 1),
         LEARNSETS(Farfetchd),
+        .evolutions = EVOLUTION({EVO_CRITICAL_HITS, 3, SPECIES_SIRFETCHD}),
+    },
+
+    [SPECIES_NINFETCHD] =
+    {
+        .baseHP        = 125,
+        .baseAttack    = 130,
+        .baseDefense   = 75,
+        .baseSpeed     = 121,
+        .baseSpAttack  = 63,
+        .baseSpDefense = 72,
+        .types = { TYPE_NORMAL, TYPE_FLYING },
+        .catchRate = 37,
+        .expYield = 312,
+        .evYield_Attack = 2,
+        .itemRare = ITEM_LEEK,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FIELD },
+        .abilities = { ABILITY_KEEN_EYE, ABILITY_INNER_FOCUS, ABILITY_DEFIANT },
+        .bodyColor = BODY_COLOR_WHITE,
+        .speciesName = _("Ninfetch'd"),
+        .cryId = CRY_SIRFETCHD,
+        .natDexNum = NATIONAL_DEX_NINFETCHD,
+        .categoryName = _("Wild Duck"),
+        .height = 8,
+        .weight = 1170,
+        .description = COMPOUND_STRING(
+            "Only Farfetch'd that have survived many\n"
+            "battles can attain this evolution. When\n"
+            "this Pokémon's leek withers, it will\n"
+            "retire from combat."),
+        .pokemonScale = 366,
+        .pokemonOffset = 7,
+        .trainerScale = 257,
+        .trainerOffset = 0,
+        FRONT_PIC(Sirfetchd, 64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_Sirfetchd,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        BACK_PIC(Sirfetchd, 64, 48),
+        .backPicYOffset = 8,
+        //.backAnimId = BACK_ANIM_NONE,
+        PALETTES(Sirfetchd),
+        ICON(Sirfetchd, 1),
+        .footprint = gMonFootprint_Sirfetchd,
+        LEARNSETS(Sirfetchd),
     },
 
 #if P_GALARIAN_FORMS
@@ -6643,14 +6689,16 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         FARFETCHD_MISC_INFO,
         .baseHP        = 52,
-        .baseAttack    = FARFETCHD_ATTACK + 5,
+        .baseAttack    = 95,
         .baseDefense   = 55,
         .baseSpeed     = 55,
         .baseSpAttack  = 58,
         .baseSpDefense = 62,
-        .types = { TYPE_FIGHTING, TYPE_FIGHTING },
+        .types = { TYPE_FIGHTING, TYPE_FLYING },
         .itemCommon = ITEM_LEEK,
         .abilities = { ABILITY_STEADFAST, ABILITY_NONE, ABILITY_SCRAPPY },
+        .speciesName = _("Lorfetch'd"),
+        .natDexNum = NATIONAL_DEX_FARFETCHD_GALARIAN,
         .height = 8,
         .weight = 420,
         .description = COMPOUND_STRING(
@@ -6678,13 +6726,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_SIRFETCHD] =
     {
-        .baseHP        = 62,
-        .baseAttack    = 135,
-        .baseDefense   = 95,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 68,
-        .baseSpDefense = 82,
-        .types = { TYPE_FIGHTING, TYPE_FIGHTING },
+        .baseHP        = 84,
+        .baseAttack    = 145,
+        .baseDefense   = 105,
+        .baseSpeed     = 81,
+        .baseSpAttack  = 78,
+        .baseSpDefense = 93,
+        .types = { TYPE_FIGHTING, TYPE_FLYING },
         .catchRate = 45,
         .expYield = 177,
         .evYield_Attack = 2,
