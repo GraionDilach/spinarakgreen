@@ -1778,8 +1778,9 @@
 #define SPECIES_PITCHTREEBEL                            SPGREEN_START + 3
 #define SPECIES_NINFETCHD                               SPGREEN_START + 4
 #define SPECIES_CRYSTALIX                               SPGREEN_START + 5
+#define SPECIES_LICKITOLD                               SPGREEN_START + 6
 
-#define SPGREEN_END                                     SPGREEN_START + 6
+#define SPGREEN_END                                     SPGREEN_START + 7
 
 #define SPECIES_EGG SPGREEN_END
 
