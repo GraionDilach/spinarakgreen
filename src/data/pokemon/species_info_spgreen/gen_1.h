@@ -9307,7 +9307,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 34,
         .expYield = 319,
         .abilities = { ABILITY_PARENTAL_BOND, ABILITY_PARENTAL_BOND, ABILITY_PARENTAL_BOND },
-        .speciesName = _("Kangasultan"),
+        .speciesName = _("Kangasultn"), //Kangasultan
         .natDexNum = NATIONAL_DEX_KANGASKHAN_MEGA,
         .cryId = CRY_KANGASKHAN_MEGA,
         .weight = 1000,
@@ -10607,33 +10607,32 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
 #if P_FAMILY_TAUROS
 #define TAUROS_MISC_INFO                                    \
-        .baseHP        = 75,                                \
-        .baseAttack    = 100,                               \
-        .baseDefense   = 95,                                \
-        .baseSpeed     = 110,                               \
-        .baseSpAttack  = 40,                                \
-        .baseSpDefense = 70,                                \
-        .catchRate = 45,                                    \
-        .expYield = 172,                                    \
+        .catchRate = 48,                                    \
+        .expYield = 293,                                    \
         .genderRatio = MON_MALE,                            \
         .eggCycles = 20,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_SLOW,                          \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },  \
-        .speciesName = _("Tauros"),                         \
         .cryId = CRY_TAUROS,                                \
-        .natDexNum = NATIONAL_DEX_TAUROS,                   \
         .categoryName = _("Wild Bull"),                     \
         .height = 14,                                       \
         .pokemonScale = 256,                                \
         .pokemonOffset = 0,                                 \
         .trainerScale = 256,                                \
-        .trainerOffset = 0,                                 \
-        .formSpeciesIdTable = sTaurosFormSpeciesIdTable
+        .trainerOffset = 0
 
     [SPECIES_TAUROS] =
     {
         TAUROS_MISC_INFO,
+        .baseHP        = 75,
+        .baseAttack    = 120,
+        .baseDefense   = 95,
+        .baseSpeed     = 120,
+        .baseSpAttack  = 70,
+        .baseSpDefense = 70,
+        .speciesName = _("Tauros"),
+        .natDexNum = NATIONAL_DEX_TAUROS,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
         .evYield_Attack = 1,
         .evYield_Speed = 1,
@@ -10659,9 +10658,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     },
 
 #if P_PALDEAN_FORMS
+#define PALDEAN_TAUROS_BASE_STATS                       \
+    .baseHP        = 75,                                \
+    .baseAttack    = 120,                               \
+    .baseDefense   = 120,                               \
+    .baseSpeed     = 120,                               \
+    .baseSpAttack  = 30,                                \
+    .baseSpDefense = 85
+
     [SPECIES_TAUROS_PALDEAN_COMBAT_BREED] =
     {
         TAUROS_MISC_INFO,
+        PALDEAN_TAUROS_BASE_STATS,
+        .speciesName = _("Taucombat"),
+        .natDexNum = NATIONAL_DEX_TAUROS_PALDEAN_COMBAT,
         .types = { TYPE_FIGHTING, TYPE_FIGHTING },
         .evYield_Attack = 2,
         .abilities = { ABILITY_INTIMIDATE, ABILITY_ANGER_POINT, ABILITY_CUD_CHEW },
@@ -10682,12 +10692,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(TaurosPaldeanCombatBreed),
         ICON(TaurosPaldeanCombatBreed, 0),
         LEARNSETS(TaurosPaldeanCombatBreed),
-        .isPaldeanForm = TRUE,
     },
 
     [SPECIES_TAUROS_PALDEAN_BLAZE_BREED] =
     {
         TAUROS_MISC_INFO,
+        PALDEAN_TAUROS_BASE_STATS,
+        .speciesName = _("Taublaze"),
+        .natDexNum = NATIONAL_DEX_TAUROS_PALDEAN_BLAZE,
         .types = { TYPE_FIGHTING, TYPE_FIRE },
         .evYield_Attack = 2,
         .abilities = { ABILITY_INTIMIDATE, ABILITY_ANGER_POINT, ABILITY_CUD_CHEW },
@@ -10708,12 +10720,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(TaurosPaldeanBlazeBreed),
         ICON(TaurosPaldeanBlazeBreed, 0),
         LEARNSETS(TaurosPaldeanBlazeBreed),
-        .isPaldeanForm = TRUE,
     },
 
     [SPECIES_TAUROS_PALDEAN_AQUA_BREED] =
     {
         TAUROS_MISC_INFO,
+        PALDEAN_TAUROS_BASE_STATS,
+        .speciesName = _("Tauqua"),
+        .natDexNum = NATIONAL_DEX_TAUROS_PALDEAN_AQUA,
         .types = { TYPE_FIGHTING, TYPE_WATER },
         .evYield_Attack = 2,
         .abilities = { ABILITY_INTIMIDATE, ABILITY_ANGER_POINT, ABILITY_CUD_CHEW },
@@ -10723,7 +10737,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "This Pokémon blasts water from holes on\n"
             "the tips of its horns--the high-pressure\n"
             "jets pierce right through\n"
-            "Tauros’s enemies."),
+            "Tauqua’s enemies."),
         FRONT_PIC(TaurosPaldeanAquaBreed, 64, 64),
         .frontPicYOffset = 5,
         .frontAnimFrames = sAnims_TaurosPaldean,
@@ -10734,7 +10748,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(TaurosPaldeanAquaBreed),
         ICON(TaurosPaldeanAquaBreed, 0),
         LEARNSETS(TaurosPaldeanAquaBreed),
-        .isPaldeanForm = TRUE,
     },
 #endif //P_PALDEAN_FORMS
 #endif //P_FAMILY_TAUROS
