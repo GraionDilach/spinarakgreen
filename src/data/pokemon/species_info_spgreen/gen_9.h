@@ -3715,53 +3715,6 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_TATSUGIRI
 
 #if P_FAMILY_GREAT_TUSK
-    [SPECIES_GREAT_TUSK] =
-    {
-        .baseHP        = 115,
-        .baseAttack    = 131,
-        .baseDefense   = 131,
-        .baseSpeed     = 87,
-        .baseSpAttack  = 53,
-        .baseSpDefense = 53,
-        .types = { TYPE_GROUND, TYPE_FIGHTING },
-        .catchRate = 30,
-        .expYield = 285,
-        .evYield_Attack = 3,
-        .genderRatio = MON_GENDERLESS,
-        .eggCycles = 50,
-        .friendship = 0,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
-        .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_PURPLE,
-        .isParadoxForm = TRUE,
-        .speciesName = _("Great Tusk"),
-        .cryId = CRY_GREAT_TUSK,
-        .natDexNum = NATIONAL_DEX_GREAT_TUSK,
-        .categoryName = _("Paradox"),
-        .height = 22,
-        .weight = 3200,
-        .description = COMPOUND_STRING(
-            "Sightings of this Pokémon have\n"
-            "occurred in recent years. The name\n"
-            "Great Tusk was taken from a creature\n"
-            "listed in a certain book."),
-        .pokemonScale = 356,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        FRONT_PIC(GreatTusk, 64, 64),
-        .frontPicYOffset = 5,
-        .frontAnimFrames = sAnims_GreatTusk,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        BACK_PIC(GreatTusk, 64, 64),
-        .backPicYOffset = 4,
-        //.backAnimId = BACK_ANIM_NONE,
-        PALETTES(GreatTusk),
-        ICON(GreatTusk, 0),
-        //.footprint = gMonFootprint_GreatTusk,
-        LEARNSETS(GreatTusk),
-    },
 #endif //P_FAMILY_GREAT_TUSK
 
 #if P_FAMILY_SCREAM_TAIL
@@ -3873,103 +3826,9 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_SANDY_SHOCKS
 
 #if P_FAMILY_IRON_TREADS
-    [SPECIES_IRON_TREADS] =
-    {
-        .baseHP        = 90,
-        .baseAttack    = 112,
-        .baseDefense   = 120,
-        .baseSpeed     = 106,
-        .baseSpAttack  = 72,
-        .baseSpDefense = 70,
-        .types = { TYPE_GROUND, TYPE_STEEL },
-        .catchRate = 30,
-        .expYield = 285,
-        .evYield_Defense = 3,
-        .genderRatio = MON_GENDERLESS,
-        .eggCycles = 50,
-        .friendship = 0,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
-        .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_GRAY,
-        .isParadoxForm = TRUE,
-        .speciesName = _("IronTreads"),
-        .cryId = CRY_IRON_TREADS,
-        .natDexNum = NATIONAL_DEX_IRON_TREADS,
-        .categoryName = _("Paradox"),
-        .height = 9,
-        .weight = 2400,
-        .description = COMPOUND_STRING(
-            "Sightings of this Pokémon have\n"
-            "occurred in recent years. It resembles\n"
-            "a mysterious object described in an\n"
-            "old expedition journal."),
-        .pokemonScale = 356,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        FRONT_PIC(IronTreads, 64, 64),
-        .frontPicYOffset = 1,
-        .frontAnimFrames = sAnims_IronTreads,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        BACK_PIC(IronTreads, 64, 64),
-        .backPicYOffset = 4,
-        //.backAnimId = BACK_ANIM_NONE,
-        PALETTES(IronTreads),
-        ICON(IronTreads, 0),
-        //.footprint = gMonFootprint_IronTreads,
-        LEARNSETS(IronTreads),
-    },
 #endif //P_FAMILY_IRON_TREADS
 
 #if P_FAMILY_IRON_BUNDLE
-    [SPECIES_IRON_BUNDLE] =
-    {
-        .baseHP        = 56,
-        .baseAttack    = 80,
-        .baseDefense   = 114,
-        .baseSpeed     = 136,
-        .baseSpAttack  = 124,
-        .baseSpDefense = 60,
-        .types = { TYPE_ICE, TYPE_WATER },
-        .catchRate = 50,
-        .expYield = 285,
-        .evYield_Speed = 3,
-        .genderRatio = MON_GENDERLESS,
-        .eggCycles = 50,
-        .friendship = 0,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
-        .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_RED,
-        .isParadoxForm = TRUE,
-        .speciesName = _("IronBundle"),
-        .cryId = CRY_IRON_BUNDLE,
-        .natDexNum = NATIONAL_DEX_IRON_BUNDLE,
-        .categoryName = _("Paradox"),
-        .height = 6,
-        .weight = 110,
-        .description = COMPOUND_STRING(
-            "Its shape is similar to a robot\n"
-            "featured in a paranormal magazine\n"
-            "article. The robot was said to have been\n"
-            "created by an ancient civilization."),
-        .pokemonScale = 356,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        FRONT_PIC(IronBundle, 64, 64),
-        .frontPicYOffset = 4,
-        .frontAnimFrames = sAnims_IronBundle,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        BACK_PIC(IronBundle, 64, 64),
-        .backPicYOffset = 9,
-        //.backAnimId = BACK_ANIM_NONE,
-        PALETTES(IronBundle),
-        ICON(IronBundle, 0),
-        //.footprint = gMonFootprint_IronBundle,
-        LEARNSETS(IronBundle),
-    },
 #endif //P_FAMILY_IRON_BUNDLE
 
 #if P_FAMILY_IRON_HANDS
@@ -4125,53 +3984,6 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_IRON_MOTH
 
 #if P_FAMILY_IRON_THORNS
-    [SPECIES_IRON_THORNS] =
-    {
-        .baseHP        = 100,
-        .baseAttack    = 134,
-        .baseDefense   = 110,
-        .baseSpeed     = 72,
-        .baseSpAttack  = 70,
-        .baseSpDefense = 84,
-        .types = { TYPE_ROCK, TYPE_ELECTRIC },
-        .catchRate = 30,
-        .expYield = 285,
-        .evYield_Attack = 3,
-        .genderRatio = MON_GENDERLESS,
-        .eggCycles = 50,
-        .friendship = 0,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
-        .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_GREEN,
-        .isParadoxForm = TRUE,
-        .speciesName = _("IronThorns"),
-        .cryId = CRY_IRON_THORNS,
-        .natDexNum = NATIONAL_DEX_IRON_THORNS,
-        .categoryName = _("Paradox"),
-        .height = 16,
-        .weight = 3030,
-        .description = COMPOUND_STRING(
-            "It has some similarities to a\n"
-            "Pokémon introduced in a dubious magazine\n"
-            "as a Tyranitar from one billion\n"
-            "years into the future."),
-        .pokemonScale = 356,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        FRONT_PIC(IronThorns, 64, 64),
-        .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_IronThorns,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        BACK_PIC(IronThorns, 64, 64),
-        .backPicYOffset = 0,
-        //.backAnimId = BACK_ANIM_NONE,
-        PALETTES(IronThorns),
-        ICON(IronThorns, 1),
-        //.footprint = gMonFootprint_IronThorns,
-        LEARNSETS(IronThorns),
-    },
 #endif //P_FAMILY_IRON_THORNS
 
 #if P_FAMILY_FRIGIBAX
