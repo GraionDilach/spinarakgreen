@@ -3818,56 +3818,6 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_BRUTE_BONNET
 
 #if P_FAMILY_FLUTTER_MANE
-    [SPECIES_FLUTTER_MANE] =
-    {
-        .baseHP        = 55,
-        .baseAttack    = 55,
-        .baseDefense   = 55,
-        .baseSpeed     = 135,
-        .baseSpAttack  = 135,
-        .baseSpDefense = 135,
-        .types = { TYPE_GHOST, TYPE_FAIRY },
-        .catchRate = 30,
-        .expYield = 285,
-        .evYield_Speed = 1,
-        .evYield_SpAttack = 1,
-        .evYield_SpDefense = 1,
-        .genderRatio = MON_GENDERLESS,
-        .eggCycles = 50,
-        .friendship = 0,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
-        .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_GRAY,
-        .isParadoxForm = TRUE,
-        .speciesName = _("FluttrMane"),
-        .cryId = CRY_FLUTTER_MANE,
-        .natDexNum = NATIONAL_DEX_FLUTTER_MANE,
-        .categoryName = _("Paradox"),
-        .height = 14,
-        .weight = 40,
-        .description = COMPOUND_STRING(
-            "It has similar features to a\n"
-            "ghostly pterosaur that was covered in a\n"
-            "paranormal magazine, but the two\n"
-            "have little else in common."),
-        .pokemonScale = 356,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        FRONT_PIC(FlutterMane, 64, 64),
-        .frontPicYOffset = 5,
-        .frontAnimFrames = sAnims_FlutterMane,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .enemyMonElevation = 5,
-        BACK_PIC(FlutterMane, 64, 64),
-        .backPicYOffset = 10,
-        //.backAnimId = BACK_ANIM_NONE,
-        PALETTES(FlutterMane),
-        ICON(FlutterMane, 4),
-        //.footprint = gMonFootprint_FlutterMane,
-        LEARNSETS(FlutterMane),
-    },
 #endif //P_FAMILY_FLUTTER_MANE
 
 #if P_FAMILY_SLITHER_WING

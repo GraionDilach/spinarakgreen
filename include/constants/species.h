@@ -1786,8 +1786,9 @@
 #define SPECIES_WATCHTOWL                               SPGREEN_START + 11
 #define SPECIES_LEDYSTAR                                SPGREEN_START + 12
 #define SPECIES_SATU                                    SPGREEN_START + 13
+#define SPECIES_QUILSPARK                               SPGREEN_START + 14
 
-#define SPGREEN_END                                     SPGREEN_START + 14
+#define SPGREEN_END                                     SPGREEN_START + 15
 
 #define SPECIES_EGG SPGREEN_END
 

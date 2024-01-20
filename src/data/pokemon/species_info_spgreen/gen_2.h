@@ -1279,7 +1279,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Satu"),
         .cryId = CRY_XATU,
-        .natDexNum = NATIONAL_DEX_XATU,
+        .natDexNum = NATIONAL_DEX_SATU,
         .categoryName = _("Mystic"),
         .height = 15,
         .weight = 150,
@@ -1689,9 +1689,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 10,
         .baseSpAttack  = 10,
         .baseSpDefense = 45,
-        .types = { TYPE_ROCK, TYPE_ROCK },
-        .catchRate = 255,
-        .expYield = 58,
+        .types = { TYPE_ROCK, TYPE_GRASS },
+        .catchRate = 159,
+        .expYield = 116,
         .evYield_Defense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -1731,15 +1731,15 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_SUDOWOODO] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 100,
-        .baseDefense   = 115,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 30,
-        .baseSpDefense = 65,
-        .types = { TYPE_ROCK, TYPE_ROCK },
-        .catchRate = 65,
-        .expYield = 144,
+        .baseHP        = 85,
+        .baseAttack    = 115,
+        .baseDefense   = 130,
+        .baseSpeed     = 60,
+        .baseSpAttack  = 55,
+        .baseSpDefense = 80,
+        .types = { TYPE_ROCK, TYPE_GRASS },
+        .catchRate = 56,
+        .expYield = 254,
         .evYield_Defense = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -1782,14 +1782,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_HOPPIP] =
     {
         .baseHP        = 35,
-        .baseAttack    = 35,
+        .baseAttack    = 50,
         .baseDefense   = 40,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 35,
-        .baseSpDefense = 55,
+        .baseSpeed     = 55,
+        .baseSpAttack  = 50,
+        .baseSpDefense = 60,
         .types = { TYPE_GRASS, TYPE_FLYING },
-        .catchRate = 255,
-        .expYield = 50,
+        .catchRate = 159,
+        .expYield = 116,
         .evYield_SpDefense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -1830,14 +1830,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_SKIPLOOM] =
     {
         .baseHP        = 55,
-        .baseAttack    = 45,
+        .baseAttack    = 65,
         .baseDefense   = 50,
         .baseSpeed     = 80,
-        .baseSpAttack  = 45,
-        .baseSpDefense = 65,
+        .baseSpAttack  = 65,
+        .baseSpDefense = 75,
         .types = { TYPE_GRASS, TYPE_FLYING },
-        .catchRate = 120,
-        .expYield = 119,
+        .catchRate = 110,
+        .expYield = 171,
         .evYield_Speed = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -1878,14 +1878,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_JUMPLUFF] =
     {
         .baseHP        = 75,
-        .baseAttack    = 55,
+        .baseAttack    = 75,
         .baseDefense   = 70,
-        .baseSpeed     = 110,
-        .baseSpAttack  = 55,
-        .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 95 : 85,
+        .baseSpeed     = 130,
+        .baseSpAttack  = 75,
+        .baseSpDefense = 95,
         .types = { TYPE_GRASS, TYPE_FLYING },
-        .catchRate = 45,
-        .expYield = 207,
+        .catchRate = 57,
+        .expYield = 251,
         .evYield_Speed = 3,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -1927,14 +1927,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_AIPOM] =
     {
         .baseHP        = 55,
-        .baseAttack    = 70,
+        .baseAttack    = 75,
         .baseDefense   = 55,
         .baseSpeed     = 85,
-        .baseSpAttack  = 40,
+        .baseSpAttack  = 45,
         .baseSpDefense = 55,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
-        .catchRate = 45,
-        .expYield = 72,
+        .catchRate = 120,
+        .expYield = 163,
         .evYield_Speed = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -1983,8 +1983,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpAttack  = 60,
         .baseSpDefense = 66,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
-        .catchRate = 45,
-        .expYield = 169,
+        .catchRate = 71,
+        .expYield = 233,
         .evYield_Speed = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -2027,15 +2027,15 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 #if P_FAMILY_SUNKERN
     [SPECIES_SUNKERN] =
     {
-        .baseHP        = 30,
-        .baseAttack    = 30,
-        .baseDefense   = 30,
+        .baseHP        = 55,
+        .baseAttack    = 45,
+        .baseDefense   = 45,
         .baseSpeed     = 30,
-        .baseSpAttack  = 30,
-        .baseSpDefense = 30,
+        .baseSpAttack  = 65,
+        .baseSpDefense = 65,
         .types = { TYPE_GRASS, TYPE_GRASS },
-        .catchRate = 235,
-        .expYield = 36,
+        .catchRate = 151,
+        .expYield = 122,
         .evYield_SpAttack = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -2074,15 +2074,15 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_SUNFLORA] =
     {
-        .baseHP        = 75,
+        .baseHP        = 95,
         .baseAttack    = 75,
-        .baseDefense   = 55,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 105,
-        .baseSpDefense = 85,
-        .types = { TYPE_GRASS, TYPE_GRASS },
-        .catchRate = 120,
-        .expYield = 149,
+        .baseDefense   = 95,
+        .baseSpeed     = 50,
+        .baseSpAttack  = 125,
+        .baseSpDefense = 105,
+        .types = { TYPE_GRASS, TYPE_PSYCHIC },
+        .catchRate = 49,
+        .expYield = 264,
         .evYield_SpAttack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -2128,9 +2128,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 95,
         .baseSpAttack  = 75,
         .baseSpDefense = 45,
-        .types = { TYPE_BUG, TYPE_FLYING },
-        .catchRate = 75,
-        .expYield = 78,
+        .types = { TYPE_BUG, TYPE_DRAGON },
+        .catchRate = 110,
+        .expYield = 171,
         .evYield_Speed = 1,
         .itemRare = ITEM_WIDE_LENS,
         .genderRatio = PERCENT_FEMALE(50),
@@ -2178,9 +2178,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 95,
         .baseSpAttack  = 116,
         .baseSpDefense = 56,
-        .types = { TYPE_BUG, TYPE_FLYING },
-        .catchRate = 30,
-        .expYield = 180,
+        .types = { TYPE_BUG, TYPE_DRAGON },
+        .catchRate = 59,
+        .expYield = 249,
         .evYield_Attack = 2,
         .itemRare = ITEM_WIDE_LENS,
         .genderRatio = PERCENT_FEMALE(50),
@@ -2223,34 +2223,33 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 #if P_FAMILY_WOOPER
 #define WOOPER_MISC_INFO                                                        \
         .baseHP        = 55,                                                    \
-        .baseAttack    = 45,                                                    \
-        .baseDefense   = 45,                                                    \
+        .baseAttack    = 55,                                                    \
+        .baseDefense   = 55,                                                    \
         .baseSpeed     = 15,                                                    \
         .baseSpAttack  = 25,                                                    \
         .baseSpDefense = 25,                                                    \
-        .catchRate = 255,                                                       \
-        .expYield = 42,                                                         \
+        .catchRate = 188,                                                       \
+        .expYield = 84,                                                         \
         .evYield_HP = 1,                                                        \
         .genderRatio = PERCENT_FEMALE(50),                                      \
         .eggCycles = 20,                                                        \
         .friendship = STANDARD_FRIENDSHIP,                                      \
         .growthRate = GROWTH_MEDIUM_FAST,                                       \
         .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FIELD },                    \
-        .speciesName = _("Wooper"),                                             \
         .cryId = CRY_WOOPER,                                                    \
-        .natDexNum = NATIONAL_DEX_WOOPER,                                       \
         .height = 4,                                                            \
         .pokemonScale = 479,                                                    \
         .pokemonOffset = 21,                                                    \
         .trainerScale = 256,                                                    \
-        .trainerOffset = 0,                                                     \
-        .formSpeciesIdTable = sWooperFormSpeciesIdTable
+        .trainerOffset = 0
 
     [SPECIES_WOOPER] =
     {
         WOOPER_MISC_INFO,
         .types = { TYPE_WATER, TYPE_GROUND },
         .abilities = { ABILITY_DAMP, ABILITY_WATER_ABSORB, ABILITY_UNAWARE },
+        .speciesName = _("Wooper"),
+        .natDexNum = NATIONAL_DEX_WOOPER,
         .bodyColor = BODY_COLOR_BLUE,
         .categoryName = _("Water Fish"),
         .weight = 85,
@@ -2277,14 +2276,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_QUAGSIRE] =
     {
         .baseHP        = 95,
-        .baseAttack    = 85,
-        .baseDefense   = 85,
+        .baseAttack    = 95,
+        .baseDefense   = 95,
         .baseSpeed     = 35,
         .baseSpAttack  = 65,
         .baseSpDefense = 65,
         .types = { TYPE_WATER, TYPE_GROUND },
-        .catchRate = 90,
-        .expYield = 151,
+        .catchRate = 84,
+        .expYield = 218,
         .evYield_HP = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -2328,13 +2327,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         WOOPER_MISC_INFO,
         .types = { TYPE_POISON, TYPE_GROUND },
         .abilities = { ABILITY_POISON_POINT, ABILITY_WATER_ABSORB, ABILITY_UNAWARE },
+        .speciesName = _("Grooper"),
+        .natDexNum = NATIONAL_DEX_WOOPER_PALDEAN,
         .bodyColor = BODY_COLOR_BROWN,
-        .isPaldeanForm = TRUE,
         .categoryName = _("Poison Fish"),
         .weight = 110,
         .description = COMPOUND_STRING(
             "After losing a territorial struggle,\n"
-            "Wooper began living on land.\n"
+            "Grooper began living on land.\n"
             "The Pokémon changed over time, developing\n"
             "a poisonous film to protect its body."),
         FRONT_PIC(WooperPaldean, 40, 32),
@@ -2353,14 +2353,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_CLODSIRE] =
     {
         .baseHP        = 130,
-        .baseAttack    = 75,
-        .baseDefense   = 60,
+        .baseAttack    = 85,
+        .baseDefense   = 70,
         .baseSpeed     = 20,
         .baseSpAttack  = 45,
         .baseSpDefense = 100,
         .types = { TYPE_POISON, TYPE_GROUND },
-        .catchRate = 90,
-        .expYield = 151,
+        .catchRate = 84,
+        .expYield = 218,
         .evYield_HP = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -2404,13 +2404,13 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     {
         .baseHP        = 60,
         .baseAttack    = 85,
-        .baseDefense   = 42,
+        .baseDefense   = 50,
         .baseSpeed     = 91,
         .baseSpAttack  = 85,
-        .baseSpDefense = 42,
+        .baseSpDefense = 50,
         .types = { TYPE_DARK, TYPE_FLYING },
-        .catchRate = 30,
-        .expYield = 81,
+        .catchRate = 96,
+        .expYield = 185,
         .evYield_Speed = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -2453,15 +2453,15 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 #if P_GEN_4_CROSS_EVOS
     [SPECIES_HONCHKROW] =
     {
-        .baseHP        = 100,
+        .baseHP        = 105,
         .baseAttack    = 125,
         .baseDefense   = 52,
-        .baseSpeed     = 71,
+        .baseSpeed     = 91,
         .baseSpAttack  = 105,
         .baseSpDefense = 52,
         .types = { TYPE_DARK, TYPE_FLYING },
-        .catchRate = 30,
-        .expYield = 177,
+        .catchRate = 54,
+        .expYield = 256,
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -2509,8 +2509,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpAttack  = 85,
         .baseSpDefense = 85,
         .types = { TYPE_GHOST, TYPE_GHOST },
-        .catchRate = 45,
-        .expYield = 87,
+        .catchRate = 90,
+        .expYield = 191,
         .evYield_SpDefense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 25,
@@ -2545,7 +2545,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Misdreavus),
         ICON(Misdreavus, 0),
         LEARNSETS(Misdreavus),
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_DUSK_STONE, SPECIES_MISMAGIUS}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_DUSK_STONE, SPECIES_MISMAGIUS},
+                                {EVO_ITEM, ITEM_SHINY_STONE, SPECIES_FLUTTER_MANE}),
     },
 
 #if P_GEN_4_CROSS_EVOS
@@ -2554,12 +2555,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseHP        = 60,
         .baseAttack    = 60,
         .baseDefense   = 60,
-        .baseSpeed     = 105,
-        .baseSpAttack  = 105,
-        .baseSpDefense = 105,
+        .baseSpeed     = 130,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 130,
         .types = { TYPE_GHOST, TYPE_GHOST },
-        .catchRate = 45,
-        .expYield = 173,
+        .catchRate = 42,
+        .expYield = 303,
         .evYield_SpAttack = 1,
         .evYield_SpDefense = 1,
         .genderRatio = PERCENT_FEMALE(50),
@@ -2597,19 +2598,70 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         LEARNSETS(Mismagius),
     },
 #endif //P_GEN_4_CROSS_EVOS
+
+    [SPECIES_FLUTTER_MANE] =
+    {
+        .baseHP        = 55,
+        .baseAttack    = 55,
+        .baseDefense   = 55,
+        .baseSpeed     = 135,
+        .baseSpAttack  = 135,
+        .baseSpDefense = 135,
+        .types = { TYPE_GHOST, TYPE_FAIRY },
+        .catchRate = 42,
+        .expYield = 303,
+        .evYield_Speed = 1,
+        .evYield_SpAttack = 1,
+        .evYield_SpDefense = 1,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 50,
+        .friendship = 35,
+        .growthRate = GROWTH_FAST,
+        .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
+        .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_GRAY,
+        .isParadoxForm = TRUE,
+        .speciesName = _("Missleepus"),
+        .cryId = CRY_FLUTTER_MANE,
+        .natDexNum = NATIONAL_DEX_FLUTTER_MANE,
+        .categoryName = _("Magical"),
+        .height = 14,
+        .weight = 40,
+        .description = COMPOUND_STRING(
+            "It has similar features to a\n"
+            "ghostly pterosaur that was covered in a\n"
+            "paranormal magazine, but the two\n"
+            "have little else in common."),
+        .pokemonScale = 356,
+        .pokemonOffset = 17,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        FRONT_PIC(FlutterMane, 64, 64),
+        .frontPicYOffset = 5,
+        .frontAnimFrames = sAnims_FlutterMane,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .enemyMonElevation = 5,
+        BACK_PIC(FlutterMane, 64, 64),
+        .backPicYOffset = 10,
+        //.backAnimId = BACK_ANIM_NONE,
+        PALETTES(FlutterMane),
+        ICON(FlutterMane, 4),
+        //.footprint = gMonFootprint_FlutterMane,
+        LEARNSETS(FlutterMane),
+    },
 #endif //P_FAMILY_MISDREAVUS
 
 #if P_FAMILY_UNOWN
 #define UNOWN_MISC_INFO(letter)                                         \
-        .baseHP        = 48,                                            \
-        .baseAttack    = 72,                                            \
-        .baseDefense   = 48,                                            \
-        .baseSpeed     = 48,                                            \
-        .baseSpAttack  = 72,                                            \
-        .baseSpDefense = 48,                                            \
+        .baseHP        = 68,                                            \
+        .baseAttack    = 150,                                           \
+        .baseDefense   = 68,                                            \
+        .baseSpeed     = 68,                                            \
+        .baseSpAttack  = 150,                                           \
+        .baseSpDefense = 68,                                            \
         .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },                        \
-        .catchRate = 225,                                               \
-        .expYield = 118,                                                \
+        .catchRate = 41,                                                \
+        .expYield = 304,                                                \
         .evYield_Attack = 1,                                            \
         .evYield_SpAttack = 1,                                          \
         .genderRatio = MON_GENDERLESS,                                  \
@@ -2894,8 +2946,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpAttack  = 23,
         .baseSpDefense = 48,
         .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },
-        .catchRate = 125,
-        .expYield = 52,
+        .catchRate = 174,
+        .expYield = 104,
         .evYield_HP = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -2936,15 +2988,15 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_WOBBUFFET] =
     {
-        .baseHP        = 190,
+        .baseHP        = 240,
         .baseAttack    = 33,
-        .baseDefense   = 58,
+        .baseDefense   = 60,
         .baseSpeed     = 33,
         .baseSpAttack  = 33,
-        .baseSpDefense = 58,
+        .baseSpDefense = 60,
         .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },
-        .catchRate = 45,
-        .expYield = 142,
+        .catchRate = 80,
+        .expYield = 222,
         .evYield_HP = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -2996,8 +3048,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpAttack  = 90,
         .baseSpDefense = 65,
         .types = { TYPE_NORMAL, TYPE_PSYCHIC },
-        .catchRate = 60,
-        .expYield = 159,
+        .catchRate = 82,
+        .expYield = 220,
         .evYield_SpAttack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -3042,12 +3094,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseHP        = 120,
         .baseAttack    = 90,
         .baseDefense   = 70,
-        .baseSpeed     = 60,
+        .baseSpeed     = 105,
         .baseSpAttack  = 110,
-        .baseSpDefense = 70,
+        .baseSpDefense = 120,
         .types = { TYPE_NORMAL, TYPE_PSYCHIC },
-        .catchRate = 45,
-        .expYield = 260,
+        .catchRate = 30,
+        .expYield = 327,
         .evYield_HP = 3,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -3096,8 +3148,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpAttack  = 35,
         .baseSpDefense = 35,
         .types = { TYPE_BUG, TYPE_BUG },
-        .catchRate = 190,
-        .expYield = 58,
+        .catchRate = 159,
+        .expYield = 116,
         .evYield_Defense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -3143,8 +3195,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpAttack  = 60,
         .baseSpDefense = 60,
         .types = { TYPE_BUG, TYPE_STEEL },
-        .catchRate = 75,
-        .expYield = 163,
+        .catchRate = 78,
+        .expYield = 225,
         .evYield_Defense = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -3190,7 +3242,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 45,
         .baseSpAttack  = 65,
         .baseSpDefense = 65,
-        .types = { TYPE_NORMAL, TYPE_NORMAL },
+        .types = { TYPE_NORMAL, TYPE_FAIRY },
         .catchRate = 190,
         .expYield = 145,
         .evYield_HP = 1,
@@ -3239,9 +3291,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 55,                                                        \
         .baseSpAttack  = 85,                                                        \
         .baseSpDefense = 75,                                                        \
-        .types = { TYPE_NORMAL, TYPE_NORMAL },                                      \
-        .catchRate = 45,                                                            \
-        .expYield = 182,                                                            \
+        .types = { TYPE_NORMAL, TYPE_FAIRY },                                       \
+        .catchRate = 57,                                                            \
+        .expYield = 251,                                                            \
         .evYield_HP = 2,                                                            \
         .genderRatio = PERCENT_FEMALE(50),                                          \
         .eggCycles = 20,                                                            \
@@ -3301,14 +3353,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_GLIGAR] =
     {
         .baseHP        = 65,
-        .baseAttack    = 75,
+        .baseAttack    = 95,
         .baseDefense   = 105,
         .baseSpeed     = 85,
         .baseSpAttack  = 35,
-        .baseSpDefense = 65,
+        .baseSpDefense = 75,
         .types = { TYPE_GROUND, TYPE_FLYING },
-        .catchRate = 60,
-        .expYield = 86,
+        .catchRate = 82,
+        .expYield = 220,
         .evYield_Defense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -3353,14 +3405,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_GLISCOR] =
     {
         .baseHP        = 75,
-        .baseAttack    = 95,
+        .baseAttack    = 115,
         .baseDefense   = 125,
         .baseSpeed     = 95,
         .baseSpAttack  = 45,
         .baseSpDefense = 75,
         .types = { TYPE_GROUND, TYPE_FLYING },
-        .catchRate = 30,
-        .expYield = 179,
+        .catchRate = 54,
+        .expYield = 256,
         .evYield_Defense = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -3402,19 +3454,15 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 #if P_FAMILY_SNUBBULL
     [SPECIES_SNUBBULL] =
     {
-        .baseHP        = 60,
+        .baseHP        = 65,
         .baseAttack    = 80,
-        .baseDefense   = 50,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 40,
-        .baseSpDefense = 40,
-        #if P_UPDATED_TYPES >= GEN_6
-            .types = { TYPE_FAIRY, TYPE_FAIRY },
-        #else
-            .types = { TYPE_NORMAL, TYPE_NORMAL },
-        #endif
-        .catchRate = 190,
-        .expYield = 60,
+        .baseDefense   = 60,
+        .baseSpeed     = 50,
+        .baseSpAttack  = 50,
+        .baseSpDefense = 70,
+        .types = { TYPE_FAIRY, TYPE_FAIRY },
+        .catchRate = 117,
+        .expYield = 165,
         .evYield_Attack = 1,
         .genderRatio = PERCENT_FEMALE(75),
         .eggCycles = 20,
@@ -3456,16 +3504,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseHP        = 90,
         .baseAttack    = 120,
         .baseDefense   = 75,
-        .baseSpeed     = 45,
+        .baseSpeed     = 55,
         .baseSpAttack  = 60,
-        .baseSpDefense = 60,
-        #if P_UPDATED_TYPES >= GEN_6
-            .types = { TYPE_FAIRY, TYPE_FAIRY },
-        #else
-            .types = { TYPE_NORMAL, TYPE_NORMAL },
-        #endif
-        .catchRate = 75,
-        .expYield = 158,
+        .baseSpDefense = 75,
+        .types = { TYPE_FAIRY, TYPE_FAIRY },
+        .catchRate = 74,
+        .expYield = 230,
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(75),
         .eggCycles = 20,
@@ -3506,12 +3550,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 #define QWILFISH_MISC_INFO                                                              \
         .baseHP        = 65,                                                            \
         .baseAttack    = 95,                                                            \
-        .baseDefense   = P_UPDATED_STATS >= GEN_7 ? 85 : 75,                            \
+        .baseDefense   = 85,                                                            \
         .baseSpeed     = 85,                                                            \
         .baseSpAttack  = 55,                                                            \
         .baseSpDefense = 55,                                                            \
-        .catchRate = 45,                                                                \
-        .expYield = 88,                                                                 \
+        .catchRate = 88,                                                                \
+        .expYield = 193,                                                                \
         .evYield_Attack = 1,                                                            \
         .itemRare = ITEM_POISON_BARB,                                                   \
         .genderRatio = PERCENT_FEMALE(50),                                              \
@@ -3520,22 +3564,21 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .growthRate = GROWTH_MEDIUM_FAST,                                               \
         .eggGroups = { EGG_GROUP_WATER_2, EGG_GROUP_WATER_2 },                          \
         .abilities = { ABILITY_POISON_POINT, ABILITY_SWIFT_SWIM, ABILITY_INTIMIDATE },  \
-        .speciesName = _("Qwilfish"),                                                   \
         .cryId = CRY_QWILFISH,                                                          \
-        .natDexNum = NATIONAL_DEX_QWILFISH,                                             \
         .categoryName = _("Balloon"),                                                   \
         .height = 5,                                                                    \
         .weight = 39,                                                                   \
         .pokemonScale = 430,                                                            \
         .pokemonOffset = 0,                                                             \
         .trainerScale = 256,                                                            \
-        .trainerOffset = 0,                                                             \
-        .formSpeciesIdTable = sQwilfishFormSpeciesIdTable
+        .trainerOffset = 0
 
     [SPECIES_QWILFISH] =
     {
         QWILFISH_MISC_INFO,
         .types = { TYPE_WATER, TYPE_POISON },
+        .speciesName = _("Qwilfish"),
+        .natDexNum = NATIONAL_DEX_QWILFISH,
         .bodyColor = BODY_COLOR_GRAY,
         .description = COMPOUND_STRING(
             "A Qwilfish uses the pressure of water\n"
@@ -3555,14 +3598,62 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         LEARNSETS(Qwilfish),
     },
 
+    [SPECIES_QUILSPARK] =
+    {
+        .baseHP        = 75,
+        .baseAttack    = 100,
+        .baseDefense   = 85,
+        .baseSpeed     = 90,
+        .baseSpAttack  = 85,
+        .baseSpDefense = 60,
+        .types = { TYPE_WATER, TYPE_POISON },
+        .catchRate = 66,
+        .expYield = 239,
+        .evYield_Attack = 2,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = { EGG_GROUP_WATER_2, EGG_GROUP_WATER_2 },
+        .abilities = { ABILITY_POISON_POINT, ABILITY_SWIFT_SWIM, ABILITY_INTIMIDATE },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Overqwil"),
+        .cryId = CRY_OVERQWIL,
+        .natDexNum = NATIONAL_DEX_OVERQWIL,
+        .categoryName = _("Pin Cluster"),
+        .height = 25,
+        .weight = 605,
+        .description = COMPOUND_STRING(
+            "Its lancelike spikes and savage\n"
+            "temperament have earned it the\n"
+            "nickname “Sea Fiend”.\n"
+            "It slurps up poison to nourish itself."),
+        .pokemonScale = 257,
+        .pokemonOffset = 10,
+        .trainerScale = 423,
+        .trainerOffset = 8,
+        FRONT_PIC(Overqwil, 64, 64),
+        .frontPicYOffset = 2,
+        .frontAnimFrames = sAnims_Overqwil,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        BACK_PIC(Overqwil, 64, 56),
+        .backPicYOffset = 7,
+        //.backAnimId = BACK_ANIM_NONE,
+        PALETTES(Overqwil),
+        ICON(Overqwil, 2),
+        //.footprint = gMonFootprint_Overqwil,
+        LEARNSETS(Overqwil),
+    },
+
 #if P_HISUIAN_FORMS
     [SPECIES_QWILFISH_HISUIAN] =
     {
         QWILFISH_MISC_INFO,
         .types = { TYPE_DARK, TYPE_POISON },
+        .speciesName = _("Qwilpin"),
+        .natDexNum = NATIONAL_DEX_QWILFISH_HISUIAN,
         .bodyColor = BODY_COLOR_BLACK,
         .description = COMPOUND_STRING(
-            "A form of Qwilfish from the distant past.\n"
             "Fishers detest this troublesome Pokémon\n"
             "because it sprays poison from its spines,\n"
             "getting it everywhere."),
@@ -3577,7 +3668,6 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(QwilfishHisuian),
         ICON(QwilfishHisuian, 0),
         LEARNSETS(QwilfishHisuian),
-        .isHisuianForm = TRUE,
         .evolutions = EVOLUTION({EVO_MOVE, MOVE_BARB_BARRAGE, SPECIES_OVERQWIL}),
     },
 
@@ -3590,8 +3680,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpAttack  = 65,
         .baseSpDefense = 65,
         .types = { TYPE_DARK, TYPE_POISON },
-        .catchRate = 45,
-        .expYield = 179,
+        .catchRate = 61,
+        .expYield = 239,
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,

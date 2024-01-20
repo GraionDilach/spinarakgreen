@@ -28,6 +28,8 @@
 #define P_GIGANTAMAX_FORMS               TRUE
 #define P_TERA_FORMS                     TRUE
 
+#define P_MEWTWO_MEGA_EVOLUTIONS         FALSE // Disable Mewtwo Megas
+
 // Fusion forms
 #define P_FUSION_FORMS                   FALSE
 
