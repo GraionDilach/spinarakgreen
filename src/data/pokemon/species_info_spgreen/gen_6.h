@@ -724,8 +724,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpAttack  = 27,
         .baseSpDefense = 25,
         .types = { TYPE_BUG, TYPE_BUG },
-        .catchRate = 255,
-        .expYield = 40,
+        .catchRate = 202,
+        .expYield = 73,
         .evYield_Defense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -771,8 +771,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpAttack  = 27,
         .baseSpDefense = 30,
         .types = { TYPE_BUG, TYPE_BUG },
-        .catchRate = 120,
-        .expYield = 75,
+        .catchRate = 196,
+        .expYield = 77,
         .evYield_Defense = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -806,19 +806,20 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Spewpa),
         ICON(Spewpa, 1),
         LEARNSETS(Spewpa),
-        .evolutions = EVOLUTION({EVO_LEVEL, 12, SPECIES_VIVILLON_ICY_SNOW}),
+        .evolutions = EVOLUTION({EVO_LEVEL_DAY, 12, SPECIES_VIVILLON_OCEAN},
+                                {EVO_LEVEL_NIGHT, 12, SPECIES_VIVILLON_ELEGANT}),
     },
 
 #define VIVILLON_MISC_INFO(form, color, iconPal)                                            \
         .baseHP        = 80,                                                                \
         .baseAttack    = 52,                                                                \
-        .baseDefense   = 50,                                                                \
-        .baseSpeed     = 89,                                                                \
-        .baseSpAttack  = 90,                                                                \
-        .baseSpDefense = 50,                                                                \
+        .baseDefense   = 55,                                                                \
+        .baseSpeed     = 100,                                                                \
+        .baseSpAttack  = 115,                                                                \
+        .baseSpDefense = 55,                                                                \
         .types = { TYPE_BUG, TYPE_FLYING },                                                 \
-        .catchRate = 45,                                                                    \
-        .expYield = 185,                                                                    \
+        .catchRate = 81,                                                                    \
+        .expYield = 221,                                                                    \
         .evYield_HP = 1,                                                                    \
         .evYield_Speed = 1,                                                                 \
         .evYield_SpAttack = 1,                                                              \

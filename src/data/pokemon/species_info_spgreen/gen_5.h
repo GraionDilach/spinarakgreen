@@ -2710,9 +2710,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpeed     = 30,
         .baseSpAttack  = 70,
         .baseSpDefense = 50,
-        .types = { TYPE_GRASS, TYPE_GRASS },
-        .catchRate = 190,
-        .expYield = 56,
+        .types = { TYPE_GRASS, TYPE_FAIRY },
+        .catchRate = 164,
+        .expYield = 112,
         .evYield_SpAttack = 1,
         .itemRare = ITEM_ABSORB_BULB,
         .genderRatio = MON_FEMALE,
@@ -2753,8 +2753,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     },
 
 #define LILLIGANT_MISC_INFO                                 \
-        .catchRate = 75,                                    \
-        .expYield = 168,                                    \
+        .catchRate = 72,                                    \
+        .expYield = 232,                                    \
         .itemRare = ITEM_ABSORB_BULB,                       \
         .genderRatio = MON_FEMALE,                          \
         .eggCycles = 20,                                    \
@@ -2763,10 +2763,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .eggGroups = { EGG_GROUP_GRASS, EGG_GROUP_GRASS },  \
         .bodyColor = BODY_COLOR_GREEN,                      \
         .noFlip = TRUE,                                     \
-        .speciesName = _("Lilligant"),                      \
-        .cryId = CRY_LILLIGANT,                             \
-        .natDexNum = NATIONAL_DEX_LILLIGANT,                \
-        .formSpeciesIdTable = sLilligantFormSpeciesIdTable
+        .cryId = CRY_LILLIGANT
 
     [SPECIES_LILLIGANT] =
     {
@@ -2777,9 +2774,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpeed     = 90,
         .baseSpAttack  = 110,
         .baseSpDefense = 75,
-        .types = { TYPE_GRASS, TYPE_GRASS },
+        .types = { TYPE_GRASS, TYPE_FAIRY },
         .evYield_SpAttack = 2,
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_OWN_TEMPO, ABILITY_LEAF_GUARD },
+        .speciesName = _("Lilligant"),
+        .natDexNum = NATIONAL_DEX_LILLIGANT,
         .categoryName = _("Flowering"),
         .height = 11,
         .weight = 163,
@@ -2818,6 +2817,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .evYield_Attack = 1,
         .evYield_Speed = 1,
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_HUSTLE, ABILITY_LEAF_GUARD },
+        .speciesName = _("Lillidress"),
+        .natDexNum = NATIONAL_DEX_LILLIGANT_HISUIAN,
         .categoryName = _("Spinning"),
         .height = 12,
         .weight = 192,
@@ -2840,7 +2841,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         PALETTES(LilligantHisuian),
         ICON(LilligantHisuian, 1),
         LEARNSETS(LilligantHisuian),
-        .isHisuianForm = TRUE,
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_PETILIL
@@ -4375,8 +4375,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 40,
         .baseSpDefense = 40,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
-        .catchRate = 255,
-        .expYield = 60,
+        .catchRate = 154,
+        .expYield = 120,
         .evYield_Speed = 1,
         .genderRatio = PERCENT_FEMALE(75),
         .eggCycles = 15,
@@ -4415,15 +4415,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 
     [SPECIES_CINCCINO] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 95,
+        .baseHP        = 80,
+        .baseAttack    = 115,
         .baseDefense   = 60,
         .baseSpeed     = 115,
         .baseSpAttack  = 65,
         .baseSpDefense = 60,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
-        .catchRate = 60,
-        .expYield = 165,
+        .catchRate = 66,
+        .expYield = 239,
         .evYield_Speed = 2,
         .genderRatio = PERCENT_FEMALE(75),
         .eggCycles = 15,
