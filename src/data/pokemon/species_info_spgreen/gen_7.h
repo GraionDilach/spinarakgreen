@@ -335,8 +335,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpAttack  = 66,
         .baseSpDefense = 56,
         .types = { TYPE_WATER, TYPE_WATER },
-        .catchRate = 45,
-        .expYield = 64,
+        .catchRate = 144,
+        .expYield = 128,
         .evYield_SpAttack = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 15,
@@ -382,8 +382,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpAttack  = 91,
         .baseSpDefense = 81,
         .types = { TYPE_WATER, TYPE_WATER },
-        .catchRate = 45,
-        .expYield = 147,
+        .catchRate = 97,
+        .expYield = 185,
         .evYield_SpAttack = 2,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 15,
@@ -429,8 +429,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpAttack  = 126,
         .baseSpDefense = 116,
         .types = { TYPE_WATER, TYPE_FAIRY },
-        .catchRate = 45,
-        .expYield = 239,
+        .catchRate = 54,
+        .expYield = 256,
         .evYield_SpAttack = 3,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 15,
@@ -1426,8 +1426,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpAttack  = 43,
         .baseSpDefense = 52,
         .types = { TYPE_POISON, TYPE_WATER },
-        .catchRate = 190,
-        .expYield = 61,
+        .catchRate = 151,
+        .expYield = 122,
         .evYield_Defense = 1,
         .itemRare = ITEM_POISON_BARB,
         .genderRatio = PERCENT_FEMALE(50),
@@ -1474,8 +1474,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpAttack  = 53,
         .baseSpDefense = 142,
         .types = { TYPE_POISON, TYPE_WATER },
-        .catchRate = 75,
-        .expYield = 173,
+        .catchRate = 66,
+        .expYield = 239,
         .evYield_Defense = 2,
         .itemRare = ITEM_POISON_BARB,
         .genderRatio = PERCENT_FEMALE(50),
@@ -2847,8 +2847,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpAttack  = 75,
         .baseSpDefense = 95,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
-        .catchRate = 45,
-        .expYield = 168,
+        .catchRate = 72,
+        .expYield = 232,
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -4634,8 +4634,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpAttack  = 55,
         .baseSpDefense = 35,
         .types = { TYPE_STEEL, TYPE_STEEL },
-        .catchRate = 3,
-        .expYield = 135,
+        .catchRate = 154,
+        .expYield = 120,
         .evYield_Attack = 1,
         .genderRatio = MON_GENDERLESS,
         .eggCycles = 120,
@@ -4669,18 +4669,11 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         PALETTES(Meltan),
         ICON(Meltan, 2),
         LEARNSETS(Meltan),
+        .evolutions = EVOLUTION({EVO_LEVEL, 33, SPECIES_MELMETAL}),
     },
 
 #define MELMETAL_MISC_INFO                                                              \
-        .baseHP        = 135,                                                           \
-        .baseAttack    = 143,                                                           \
-        .baseDefense   = 143,                                                           \
-        .baseSpeed     = 34,                                                            \
-        .baseSpAttack  = 80,                                                            \
-        .baseSpDefense = 65,                                                            \
         .types = { TYPE_STEEL, TYPE_STEEL },                                            \
-        .catchRate = 3,                                                                 \
-        .expYield = 270,                                                                \
         .evYield_Attack = 3,                                                            \
         .genderRatio = MON_GENDERLESS,                                                  \
         .eggCycles = 120,                                                               \
@@ -4689,22 +4682,27 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },    \
         .abilities = { ABILITY_IRON_FIST, ABILITY_NONE },                               \
         .bodyColor = BODY_COLOR_GRAY,                                                   \
-        .speciesName = _("Melmetal"),                                                   \
         .cryId = CRY_MELMETAL,                                                          \
-        .natDexNum = NATIONAL_DEX_MELMETAL,                                             \
         .categoryName = _("Hex Nut"),                                                   \
         .pokemonScale = 257,                                                            \
         .pokemonOffset = 10,                                                            \
         .trainerScale = 423,                                                            \
         .trainerOffset = 8,                                                             \
-        LEARNSETS(Melmetal),                                                            \
-        .formSpeciesIdTable = sMelmetalFormSpeciesIdTable,                              \
-        .formChangeTable = sMelmetalFormChangeTable,                                    \
-        .isMythical = TRUE
+        LEARNSETS(Melmetal)
 
     [SPECIES_MELMETAL] =
     {
         MELMETAL_MISC_INFO,
+        .baseHP        = 90,
+        .baseAttack    = 104,
+        .baseDefense   = 104,
+        .baseSpeed     = 34,
+        .baseSpAttack  = 68,
+        .baseSpDefense = 50,
+        .catchRate = 84,
+        .expYield = 218,
+        .speciesName = _("Melmetal"),
+        .natDexNum = NATIONAL_DEX_MELMETAL,
         .height = 25,
         .weight = 800,
         .description = COMPOUND_STRING(
@@ -4720,19 +4718,29 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Melmetal),
         ICON(Melmetal, 2),
+        .evolutions = EVOLUTION({EVO_LEVEL, 52, SPECIES_MELMETAL_GIGANTAMAX}),
     },
 
 #if P_GIGANTAMAX_FORMS
     [SPECIES_MELMETAL_GIGANTAMAX] =
     {
         MELMETAL_MISC_INFO,
-        .isGigantamax = TRUE,
+        .baseHP        = 135,
+        .baseAttack    = 143,
+        .baseDefense   = 143,
+        .baseSpeed     = 34,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 65,
+        .catchRate = 34,
+        .expYield = 319,
+        .speciesName = _("Melmithril"),
+        .natDexNum = NATIONAL_DEX_MELMETAL_GIGANTAMAX,
         .height = 250,
-        .weight = 0,
+        .weight = 1600,
         .description = COMPOUND_STRING(
             "In a distant land, there are\n"
             "legends about a cyclopean giant. In fact,\n"
-            "the giant was a Melmetal that was\n"
+            "the giant was a Melmithril that was\n"
             "flooded with Gigantamax energy."),
         FRONT_PIC(MelmetalGigantamax, 64, 64),
         .frontPicYOffset = 1,

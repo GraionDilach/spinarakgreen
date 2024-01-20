@@ -806,8 +806,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 25,
         .baseSpDefense = 45,
         .types = { TYPE_BUG, TYPE_BUG },
-        .catchRate = 255,
-        .expYield = 36,
+        .catchRate = 210,
+        .expYield = 65,
         .evYield_SpDefense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -852,8 +852,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 50,
         .baseSpDefense = 90,
         .types = { TYPE_BUG, TYPE_PSYCHIC },
-        .catchRate = 120,
-        .expYield = 117,
+        .catchRate = 137,
+        .expYield = 134,
         .evYield_SpDefense = 2,
         .itemRare = ITEM_PSYCHIC_SEED,
         .genderRatio = PERCENT_FEMALE(50),
@@ -888,7 +888,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         PALETTES(Dottler),
         ICON(Dottler, 2),
         LEARNSETS(Dottler),
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_ORBEETLE}),
+        .evolutions = EVOLUTION({EVO_LEVEL_DAY, 30, SPECIES_ORBEETLE},
+                                {EVO_LEVEL_NIGHT, 30, SPECIES_ORBEETLE_GIGANTAMAX}),
     },
 
 #define ORBEETLE_MISC_INFO                                                  \
@@ -898,9 +899,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpeed     = 90,                                                \
         .baseSpAttack  = 80,                                                \
         .baseSpDefense = 120,                                               \
-        .types = { TYPE_BUG, TYPE_PSYCHIC },                                \
-        .catchRate = 45,                                                    \
-        .expYield = 253,                                                    \
+        .catchRate = 62,                                                    \
+        .expYield = 244,                                                    \
         .evYield_SpDefense = 3,                                             \
         .itemRare = ITEM_PSYCHIC_SEED,                                      \
         .genderRatio = PERCENT_FEMALE(50),                                  \
@@ -910,17 +910,16 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },                      \
         .abilities = { ABILITY_SWARM, ABILITY_FRISK, ABILITY_TELEPATHY },   \
         .bodyColor = BODY_COLOR_RED,                                        \
-        .speciesName = _("Orbeetle"),                                       \
         .cryId = CRY_ORBEETLE,                                              \
-        .natDexNum = NATIONAL_DEX_ORBEETLE,                                 \
         .categoryName = _("Seven Spot"),                                    \
-        LEARNSETS(Orbeetle),                                                \
-        .formSpeciesIdTable = sOrbeetleFormSpeciesIdTable,                  \
-        .formChangeTable = sOrbeetleFormChangeTable
+        LEARNSETS(Orbeetle)
 
     [SPECIES_ORBEETLE] =
     {
         ORBEETLE_MISC_INFO,
+        .types = { TYPE_BUG, TYPE_PSYCHIC },
+        .speciesName = _("Orbeetle"),
+        .natDexNum = NATIONAL_DEX_ORBEETLE,
         .height = 4,
         .weight = 408,
         .description = COMPOUND_STRING(
@@ -948,8 +947,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
     [SPECIES_ORBEETLE_GIGANTAMAX] =
     {
         ORBEETLE_MISC_INFO,
+        .types = { TYPE_DARK, TYPE_PSYCHIC },
+        .speciesName = _("Orbidisc"),
+        .natDexNum = NATIONAL_DEX_ORBEETLE_GIGANTAMAX,
         .height = 140,
-        .weight = 0,
+        .weight = 408,
         .description = COMPOUND_STRING(
             "Its brain has grown to a\n"
             "gargantuan size, as has the rest of its body.\n"

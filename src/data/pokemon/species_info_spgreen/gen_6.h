@@ -155,8 +155,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpAttack  = 62,
         .baseSpDefense = 60,
         .types = { TYPE_FIRE, TYPE_FIRE },
-        .catchRate = 45,
-        .expYield = 61,
+        .catchRate = 150,
+        .expYield = 123,
         .evYield_SpAttack = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
@@ -202,8 +202,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpAttack  = 90,
         .baseSpDefense = 70,
         .types = { TYPE_FIRE, TYPE_FIRE },
-        .catchRate = 45,
-        .expYield = 143,
+        .catchRate = 102,
+        .expYield = 180,
         .evYield_SpAttack = 2,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
@@ -249,8 +249,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpAttack  = 114,
         .baseSpDefense = 100,
         .types = { TYPE_FIRE, TYPE_PSYCHIC },
-        .catchRate = 45,
-        .expYield = 240,
+        .catchRate = 53,
+        .expYield = 258,
         .evYield_SpAttack = 3,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
@@ -1141,8 +1141,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpAttack  = 61,                                                    \
         .baseSpDefense = 79,                                                    \
         .types = { TYPE_FAIRY, TYPE_FAIRY },                                    \
-        .catchRate = 225,                                                       \
-        .expYield = 61,                                                         \
+        .catchRate = 152,                                                       \
+        .expYield = 121,                                                        \
         .evYield_SpDefense = 1,                                                 \
         .genderRatio = MON_FEMALE,                                              \
         .eggCycles = 20,                                                        \
@@ -1223,7 +1223,6 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 
 #define FLOETTE_MISC_INFO(form, FORM, iconPal)                                  \
         .types = { TYPE_FAIRY, TYPE_FAIRY },                                    \
-        .catchRate = 120,                                                       \
         .evYield_SpDefense = 2,                                                 \
         .genderRatio = MON_FEMALE,                                              \
         .eggCycles = 20,                                                        \
@@ -1231,8 +1230,6 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .growthRate = GROWTH_MEDIUM_FAST,                                       \
         .abilities = { ABILITY_FLOWER_VEIL, ABILITY_NONE, ABILITY_SYMBIOSIS },  \
         .bodyColor = BODY_COLOR_WHITE,                                          \
-        .speciesName = _("Floette"),                                            \
-        .natDexNum = NATIONAL_DEX_FLOETTE,                                      \
         .categoryName = _("Single Bloom"),                                      \
         .height = 2,                                                            \
         .weight = 9,                                                            \
@@ -1244,8 +1241,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,                                     \
         .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,                              \
         PALETTES(Floette ##form##Flower),                                        \
-        ICON(Floette##form##Flower, iconPal),                                   \
-        .formSpeciesIdTable = sFloetteFormSpeciesIdTable
+        ICON(Floette##form##Flower, iconPal)
 
 #define FLOETTE_NORMAL_INFO(form, FORM, iconPal)                                                \
         .baseHP        = 54,                                                                    \
@@ -1254,8 +1250,11 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpeed     = 52,                                                                    \
         .baseSpAttack  = 75,                                                                    \
         .baseSpDefense = 98,                                                                    \
-        .expYield = 130,                                                                        \
+        .catchRate = 119,                                                                       \
+        .expYield = 163,                                                                        \
         .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_FAIRY },                                      \
+        .speciesName = _("Floette"),                                                            \
+        .natDexNum = NATIONAL_DEX_FLOETTE,                                                      \
         .cryId = CRY_FLOETTE,                                                                   \
         FRONT_PIC(Floette, 48, 64),                                                             \
         .frontPicYOffset = 3,                                                                   \
@@ -1264,7 +1263,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .backPicYOffset = 2,                                                                    \
         LEARNSETS(Floette),                                                                     \
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_SHINY_STONE, SPECIES_FLORGES_ ##FORM##_FLOWER}),\
-        FLOETTE_MISC_INFO(form, FORM, iconPal)
+        FLOETTE_MISC_INFO(form, FORM, iconPal),                                                 \
+        .formSpeciesIdTable = sFloetteFormSpeciesIdTable
 
     [SPECIES_FLOETTE_RED_FLOWER] =
     {
@@ -1314,14 +1314,17 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
     [SPECIES_FLOETTE_ETERNAL_FLOWER] =
     {
         FLOETTE_MISC_INFO(Eternal, ETERNAL, 0),
-        .baseHP        = 74,
+        .baseHP        = 75,
         .baseAttack    = 65,
         .baseDefense   = 67,
         .baseSpeed     = 92,
         .baseSpAttack  = 125,
         .baseSpDefense = 128,
-        .expYield = 243,
+        .catchRate = 47,
+        .expYield = 294,
         .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
+        .speciesName = _("Floternal"),
+        .natDexNum = NATIONAL_DEX_FLOETTE_ETERNAL,
         .description = COMPOUND_STRING(
             "The flower it's holding can no\n"
             "longer be found blooming anywhere. It's\n"
@@ -1344,8 +1347,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpAttack  = 112,                                                   \
         .baseSpDefense = 154,                                                   \
         .types = { TYPE_FAIRY, TYPE_FAIRY },                                    \
-        .catchRate = 45,                                                        \
-        .expYield = 248,                                                        \
+        .catchRate = 47,                                                        \
+        .expYield = 294,                                                        \
         .evYield_SpDefense = 3,                                                 \
         .genderRatio = MON_FEMALE,                                              \
         .eggCycles = 20,                                                        \
@@ -2256,8 +2259,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpAttack  = 37,
         .baseSpDefense = 46,
         .types = { TYPE_DARK, TYPE_PSYCHIC },
-        .catchRate = 190,
-        .expYield = 58,
+        .catchRate = 160,
+        .expYield = 115,
         .evYield_Attack = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -2304,8 +2307,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpAttack  = 68,
         .baseSpDefense = 75,
         .types = { TYPE_DARK, TYPE_PSYCHIC },
-        .catchRate = 80,
-        .expYield = 169,
+        .catchRate = 71,
+        .expYield = 233,
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,

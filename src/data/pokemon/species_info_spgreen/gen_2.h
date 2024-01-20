@@ -3596,10 +3596,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Qwilfish),
         ICON(Qwilfish, 0),
         LEARNSETS(Qwilfish),
-        .evolutions = EVOLUTION({EVO_LEVEL, 33, SPECIES_QUILSPARK}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 33, SPECIES_QWILSPARK}),
     },
 
-    [SPECIES_QUILSPARK] =
+    [SPECIES_QWILSPARK] =
     {
         .baseHP        = 75,
         .baseAttack    = 100,
@@ -3618,9 +3618,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggGroups = { EGG_GROUP_WATER_2, EGG_GROUP_WATER_2 },
         .abilities = { ABILITY_POISON_POINT, ABILITY_SWIFT_SWIM, ABILITY_INTIMIDATE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Overqwil"),
+        .speciesName = _("Qwilspark"),
         .cryId = CRY_OVERQWIL,
-        .natDexNum = NATIONAL_DEX_OVERQWIL,
+        .natDexNum = NATIONAL_DEX_QWILSPARK,
         .categoryName = _("Pin Cluster"),
         .height = 25,
         .weight = 605,

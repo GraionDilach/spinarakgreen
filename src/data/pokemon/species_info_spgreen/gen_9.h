@@ -2816,6 +2816,55 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_WIGLETT
 
 #if P_FAMILY_BOMBIRDIER
+    [SPECIES_BOMBIRA] =
+    {
+        .baseHP        = 45,
+        .baseAttack    = 78,
+        .baseDefense   = 60,
+        .baseSpeed     = 57,
+        .baseSpAttack  = 35,
+        .baseSpDefense = 60,
+        .types = { TYPE_FLYING, TYPE_DARK },
+        .catchRate = 137,
+        .expYield = 134,
+        .evYield_Attack = 2,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 35,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
+        .abilities = { ABILITY_BIG_PECKS, ABILITY_KEEN_EYE, ABILITY_ROCKY_PAYLOAD },
+        .bodyColor = BODY_COLOR_WHITE,
+        .speciesName = _("Bombira"),
+        .cryId = CRY_BOMBIRDIER,
+        .natDexNum = NATIONAL_DEX_BOMBIRA,
+        .categoryName = _("Item Drop"),
+        .height = 15,
+        .weight = 429,
+        .description = COMPOUND_STRING(
+            "Bombirdier uses the apron on its\n"
+            "chest to bundle up food, which it\n"
+            "carries back to its nest. It enjoys\n"
+            "dropping things that make loud noises."),
+        .pokemonScale = 356,
+        .pokemonOffset = 17,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        FRONT_PIC(Bombirdier, 64, 64),
+        .frontPicYOffset = 1,
+        .frontAnimFrames = sAnims_Bombirdier,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .enemyMonElevation = 8,
+        BACK_PIC(Bombirdier, 64, 64),
+        .backPicYOffset = 4,
+        //.backAnimId = BACK_ANIM_NONE,
+        PALETTES(Bombirdier),
+        ICON(Bombirdier, 0),
+        //.footprint = gMonFootprint_Bombirdier,
+        LEARNSETS(Bombirdier),
+        .evolutions = EVOLUTION({EVO_LEVEL, 26, SPECIES_BOMBIRDIER}),
+    },
+
     [SPECIES_BOMBIRDIER] =
     {
         .baseHP        = 70,
@@ -2825,8 +2874,8 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .baseSpAttack  = 60,
         .baseSpDefense = 85,
         .types = { TYPE_FLYING, TYPE_DARK },
-        .catchRate = 25,
-        .expYield = 243,
+        .catchRate = 70,
+        .expYield = 235,
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 35,
