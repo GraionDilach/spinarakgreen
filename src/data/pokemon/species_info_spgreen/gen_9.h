@@ -3881,53 +3881,6 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_IRON_BUNDLE
 
 #if P_FAMILY_IRON_HANDS
-    [SPECIES_IRON_HANDS] =
-    {
-        .baseHP        = 154,
-        .baseAttack    = 140,
-        .baseDefense   = 108,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 50,
-        .baseSpDefense = 68,
-        .types = { TYPE_FIGHTING, TYPE_ELECTRIC },
-        .catchRate = 50,
-        .expYield = 285,
-        .evYield_Attack = 3,
-        .genderRatio = MON_GENDERLESS,
-        .eggCycles = 50,
-        .friendship = 0,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
-        .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_GRAY,
-        .isParadoxForm = TRUE,
-        .speciesName = _("Iron Hands"),
-        .cryId = CRY_IRON_HANDS,
-        .natDexNum = NATIONAL_DEX_IRON_HANDS,
-        .categoryName = _("Paradox"),
-        .height = 18,
-        .weight = 3807,
-        .description = COMPOUND_STRING(
-            "It is very similar to a cyborg\n"
-            "covered exclusively by a paranormal\n"
-            "magazine. The cyborg was said to be the\n"
-            "modified form of a certain athlete."),
-        .pokemonScale = 356,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        FRONT_PIC(IronHands, 64, 64),
-        .frontPicYOffset = 3,
-        .frontAnimFrames = sAnims_IronHands,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        BACK_PIC(IronHands, 64, 64),
-        .backPicYOffset = 10,
-        //.backAnimId = BACK_ANIM_NONE,
-        PALETTES(IronHands),
-        ICON(IronHands, 0),
-        //.footprint = gMonFootprint_IronHands,
-        LEARNSETS(IronHands),
-    },
 #endif //P_FAMILY_IRON_HANDS
 
 #if P_FAMILY_IRON_JUGULIS
