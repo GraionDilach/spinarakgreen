@@ -1819,7 +1819,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 #endif //P_FAMILY_DRILBUR
 
 #define AUDINO_MISC_INFO                                    \
-        .catchRate = 255,                                   \
         .evYield_HP = 2,                                    \
         .itemCommon = ITEM_ORAN_BERRY,                      \
         .itemRare = ITEM_SITRUS_BERRY,                      \
@@ -1828,12 +1827,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_FAST,                          \
         .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_FAIRY },  \
-        .speciesName = _("Audino"),                         \
-        .natDexNum = NATIONAL_DEX_AUDINO,                   \
         .categoryName = _("Hearing"),                       \
-        LEARNSETS(Audino),                                  \
-        .formSpeciesIdTable = sAudinoFormSpeciesIdTable,    \
-        .formChangeTable = sAudinoFormChangeTable
+        LEARNSETS(Audino)
 
 #if P_FAMILY_AUDINO
     [SPECIES_AUDINO] =
@@ -1841,15 +1836,18 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         AUDINO_MISC_INFO,
         .baseHP        = 103,
         .baseAttack    = 60,
-        .baseDefense   = 86,
+        .baseDefense   = 96,
         .baseSpeed     = 50,
-        .baseSpAttack  = 60,
-        .baseSpDefense = 86,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 96,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
-        .expYield = 390,
+        .catchRate = 70,
+        .expYield = 235,
         .abilities = { ABILITY_HEALER, ABILITY_REGENERATOR, ABILITY_KLUTZ },
         .bodyColor = BODY_COLOR_PINK,
         .cryId = CRY_AUDINO,
+        .speciesName = _("Audino"),
+        .natDexNum = NATIONAL_DEX_AUDINO,
         .height = 11,
         .weight = 310,
         .description = COMPOUND_STRING(
@@ -1870,27 +1868,31 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW,
         PALETTES(Audino),
         ICON(Audino, 1),
+        .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_AUDINO_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
     [SPECIES_AUDINO_MEGA] =
     {
         AUDINO_MISC_INFO,
-        .baseHP        = 103,
+        .baseHP        = 118,
         .baseAttack    = 60,
         .baseDefense   = 126,
         .baseSpeed     = 50,
-        .baseSpAttack  = 80,
+        .baseSpAttack  = 120,
         .baseSpDefense = 126,
         .types = { TYPE_NORMAL, TYPE_FAIRY },
-        .expYield = 425,
+        .catchRate = 34,
+        .expYield = 319,
         .abilities = { ABILITY_HEALER, ABILITY_HEALER, ABILITY_HEALER },
         .bodyColor = BODY_COLOR_WHITE,
         .cryId = CRY_AUDINO_MEGA,
+        .speciesName = _("Auyuno"),
+        .natDexNum = NATIONAL_DEX_AUDINO_MEGA,
         .height = 15,
         .weight = 320,
         .description = COMPOUND_STRING(
-            "Mega Audino emits a soothing pulse from\n"
+            "Auyuno emits a soothing pulse from\n"
             "its body that reduces hostility in others.\n"
             "Anything that comes into contact with its\n"
             "second feelers will fall into a deep sleep."),
@@ -1907,7 +1909,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(AudinoMega),
         ICON(AudinoMega, 1),
-        .isMegaEvolution = TRUE,
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_AUDINO
@@ -4078,8 +4079,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 40,
         .baseSpDefense = 62,
         .types = { TYPE_POISON, TYPE_POISON },
-        .catchRate = 190,
-        .expYield = 66,
+        .catchRate = 140,
+        .expYield = 132,
         .evYield_Speed = 1,
         .itemRare = ITEM_SILK_SCARF,
         .genderRatio = PERCENT_FEMALE(50),
@@ -4118,15 +4119,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     },
 
 #define GARBODOR_MISC_INFO                                                      \
-        .baseHP        = 80,                                                    \
-        .baseAttack    = 95,                                                    \
-        .baseDefense   = 82,                                                    \
-        .baseSpeed     = 75,                                                    \
-        .baseSpAttack  = 60,                                                    \
-        .baseSpDefense = 82,                                                    \
-        .types = { TYPE_POISON, TYPE_POISON },                                  \
-        .catchRate = 60,                                                        \
-        .expYield = 166,                                                        \
         .evYield_Attack = 2,                                                    \
         .itemCommon = ITEM_SILK_SCARF,                                          \
         .itemRare = ITEM_BLACK_SLUDGE,                                          \
@@ -4138,17 +4130,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .abilities = { ABILITY_STENCH, ABILITY_WEAK_ARMOR, ABILITY_AFTERMATH }, \
         .bodyColor = BODY_COLOR_GREEN,                                          \
         .noFlip = TRUE,                                                         \
-        .speciesName = _("Garbodor"),                                           \
         .cryId = CRY_GARBODOR,                                                  \
-        .natDexNum = NATIONAL_DEX_GARBODOR,                                     \
         .categoryName = _("Trash Heap"),                                        \
-        LEARNSETS(Garbodor),                                                    \
-        .formSpeciesIdTable = sGarbodorFormSpeciesIdTable,                      \
-        .formChangeTable = sGarbodorFormChangeTable
+        LEARNSETS(Garbodor)
 
     [SPECIES_GARBODOR] =
     {
         GARBODOR_MISC_INFO,
+        .baseHP        = 80,
+        .baseAttack    = 95,
+        .baseDefense   = 82,
+        .baseSpeed     = 75,
+        .baseSpAttack  = 60,
+        .baseSpDefense = 82,
+        .types = { TYPE_POISON, TYPE_POISON },
+        .catchRate = 74,
+        .expYield = 229,
+        .speciesName = _("Garbodor"),
+        .natDexNum = NATIONAL_DEX_GARBODOR,
         .height = 19,
         .weight = 1073,
         .description = COMPOUND_STRING(
@@ -4169,14 +4168,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .backAnimId = BACK_ANIM_H_STRETCH,
         PALETTES(Garbodor),
         ICON(Garbodor, 1),
+        .evolutions = EVOLUTION({EVO_LEVEL, 53, SPECIES_GARBODOR_GIGANTAMAX}),
     },
 
 #if P_GIGANTAMAX_FORMS
     [SPECIES_GARBODOR_GIGANTAMAX] =
     {
         GARBODOR_MISC_INFO,
+        .baseHP        = 100,
+        .baseAttack    = 110,
+        .baseDefense   = 97,
+        .baseSpeed     = 90,
+        .baseSpAttack  = 75,
+        .baseSpDefense = 97,
+        .types = { TYPE_POISON, TYPE_STEEL },
+        .catchRate = 42,
+        .expYield = 303,
+        .speciesName = _("Wasgust"),
+        .natDexNum = NATIONAL_DEX_GARBODOR_GIGANTAMAX,
         .height = 210,
-        .weight = 0,
+        .weight = 3592,
         .description = COMPOUND_STRING(
             "It sprays toxic gas from its mouth\n"
             "and fingers. If the gas engulfs you,\n"
@@ -4195,7 +4206,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(GarbodorGigantamax),
         ICON(GarbodorGigantamax, 0),
-        .isGigantamax = TRUE,
     },
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_TRUBBISH
@@ -5428,8 +5438,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 65,
         .baseSpDefense = 85,
         .types = { TYPE_WATER, TYPE_GHOST },
-        .catchRate = 190,
-        .expYield = 67,
+        .catchRate = 137,
+        .expYield = 132,
         .evYield_SpDefense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -5479,8 +5489,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 85,
         .baseSpDefense = 105,
         .types = { TYPE_WATER, TYPE_GHOST },
-        .catchRate = 60,
-        .expYield = 168,
+        .catchRate = 72,
+        .expYield = 232,
         .evYield_SpDefense = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -5629,8 +5639,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 24,
         .baseSpDefense = 86,
         .types = { TYPE_GRASS, TYPE_STEEL },
-        .catchRate = 255,
-        .expYield = 61,
+        .catchRate = 151,
+        .expYield = 122,
         .evYield_Defense = 1,
         .itemRare = ITEM_STICKY_BARB,
         .genderRatio = PERCENT_FEMALE(50),
@@ -5677,8 +5687,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 54,
         .baseSpDefense = 116,
         .types = { TYPE_GRASS, TYPE_STEEL },
-        .catchRate = 90,
-        .expYield = 171,
+        .catchRate = 68,
+        .expYield = 236,
         .evYield_Defense = 2,
         .itemRare = ITEM_STICKY_BARB,
         .genderRatio = PERCENT_FEMALE(50),

@@ -4799,8 +4799,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 40,
         .baseSpDefense = 75,
         .types = { TYPE_NORMAL, TYPE_FLYING },
-        .catchRate = 255,
-        .expYield = 62,
+        .catchRate = 149,
+        .expYield = 124,
         .evYield_SpDefense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -4838,7 +4838,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     },
 
 #define ALTARIA_MISC_INFO                                   \
-        .catchRate = 45,                                    \
         .evYield_SpDefense = 2,                             \
         .genderRatio = PERCENT_FEMALE(50),                  \
         .eggCycles = 20,                                    \
@@ -4846,25 +4845,24 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_ERRATIC,                       \
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_DRAGON },\
         .bodyColor = BODY_COLOR_BLUE,                       \
-        .speciesName = _("Altaria"),                        \
-        .natDexNum = NATIONAL_DEX_ALTARIA,                  \
         .categoryName = _("Humming"),                       \
-        LEARNSETS(Altaria),                                 \
-        .formSpeciesIdTable = sAltariaFormSpeciesIdTable,   \
-        .formChangeTable = sAltariaFormChangeTable
+        LEARNSETS(Altaria)
 
     [SPECIES_ALTARIA] =
     {
         ALTARIA_MISC_INFO,
         .baseHP        = 75,
-        .baseAttack    = 70,
-        .baseDefense   = 90,
+        .baseAttack    = 90,
+        .baseDefense   = 100,
         .baseSpeed     = 80,
-        .baseSpAttack  = 70,
+        .baseSpAttack  = 90,
         .baseSpDefense = 105,
         .types = { TYPE_DRAGON, TYPE_FLYING },
-        .expYield = 172,
+        .catchRate = 51,
+        .expYield = 261,
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_NONE, ABILITY_CLOUD_NINE },
+        .speciesName = _("Altaria"),
+        .natDexNum = NATIONAL_DEX_ALTARIA,
         .cryId = CRY_ALTARIA,
         .height = 11,
         .weight = 206,
@@ -4886,6 +4884,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
         PALETTES(Altaria),
         ICON(Altaria, 0),
+        .evolutions = EVOLUTION({EVO_LEVEL, 53, SPECIES_ALTARIA_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -4899,8 +4898,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 110,
         .baseSpDefense = 105,
         .types = { TYPE_DRAGON, TYPE_FAIRY },
-        .expYield = 207,
+        .catchRate = 36,
+        .expYield = 314,
         .abilities = { ABILITY_PIXILATE, ABILITY_PIXILATE, ABILITY_PIXILATE },
+        .speciesName = _("Almetaria"),
+        .natDexNum = NATIONAL_DEX_ALTARIA_MEGA,
         .cryId = CRY_ALTARIA_MEGA,
         .height = 15,
         .weight = 206,
@@ -4923,7 +4925,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
         PALETTES(AltariaMega),
         ICON(AltariaMega, 0),
-        .isMegaEvolution = TRUE,
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_SWABLU
@@ -4933,13 +4934,13 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     {
         .baseHP        = 73,
         .baseAttack    = 115,
-        .baseDefense   = 60,
-        .baseSpeed     = 90,
+        .baseDefense   = 70,
+        .baseSpeed     = 105,
         .baseSpAttack  = 60,
-        .baseSpDefense = 60,
-        .types = { TYPE_NORMAL, TYPE_NORMAL },
-        .catchRate = 90,
-        .expYield = 160,
+        .baseSpDefense = 70,
+        .types = { TYPE_NORMAL, TYPE_FIGHTING },
+        .catchRate = 67,
+        .expYield = 238,
         .evYield_Attack = 2,
         .itemRare = ITEM_QUICK_CLAW,
         .genderRatio = PERCENT_FEMALE(50),
@@ -4984,12 +4985,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseHP        = 73,
         .baseAttack    = 100,
         .baseDefense   = 60,
-        .baseSpeed     = 65,
+        .baseSpeed     = 100,
         .baseSpAttack  = 100,
         .baseSpDefense = 60,
-        .types = { TYPE_POISON, TYPE_POISON },
-        .catchRate = 90,
-        .expYield = 160,
+        .types = { TYPE_POISON, TYPE_DARK },
+        .catchRate = 67,
+        .expYield = 268,
         .evYield_Attack = 1,
         .evYield_SpAttack = 1,
         .itemRare = ITEM_SHED_SHELL,
@@ -5032,15 +5033,15 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_LUNATONE
     [SPECIES_LUNATONE] =
     {
-        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 90 : 70,
+        .baseHP        = 90,
         .baseAttack    = 55,
-        .baseDefense   = 65,
+        .baseDefense   = 80,
         .baseSpeed     = 70,
-        .baseSpAttack  = 95,
-        .baseSpDefense = 85,
+        .baseSpAttack  = 125,
+        .baseSpDefense = 115,
         .types = { TYPE_ROCK, TYPE_PSYCHIC },
-        .catchRate = 45,
-        .expYield = 161,
+        .catchRate = 52,
+        .expYield = 259,
         .evYield_SpAttack = 2,
         .itemCommon = ITEM_STARDUST,
         .itemRare = ITEM_MOON_STONE,
@@ -5083,15 +5084,15 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_SOLROCK
     [SPECIES_SOLROCK] =
     {
-        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 90 : 70,
-        .baseAttack    = 95,
-        .baseDefense   = 85,
+        .baseHP        = 90,
+        .baseAttack    = 125,
+        .baseDefense   = 115,
         .baseSpeed     = 70,
         .baseSpAttack  = 55,
-        .baseSpDefense = 65,
+        .baseSpDefense = 80,
         .types = { TYPE_ROCK, TYPE_PSYCHIC },
-        .catchRate = 45,
-        .expYield = 161,
+        .catchRate = 52,
+        .expYield = 259,
         .evYield_Attack = 2,
         .itemCommon = ITEM_STARDUST,
         .itemRare = ITEM_SUN_STONE,
@@ -5237,8 +5238,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 50,
         .baseSpDefense = 35,
         .types = { TYPE_WATER, TYPE_WATER },
-        .catchRate = 205,
-        .expYield = 62,
+        .catchRate = 150,
+        .expYield = 123,
         .evYield_Attack = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -5284,8 +5285,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 90,
         .baseSpDefense = 55,
         .types = { TYPE_WATER, TYPE_DARK },
-        .catchRate = 155,
-        .expYield = 164,
+        .catchRate = 76,
+        .expYield = 226,
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
