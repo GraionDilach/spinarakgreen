@@ -3770,53 +3770,6 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_SCREAM_TAIL
 
 #if P_FAMILY_BRUTE_BONNET
-    [SPECIES_BRUTE_BONNET] =
-    {
-        .baseHP        = 111,
-        .baseAttack    = 127,
-        .baseDefense   = 99,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 79,
-        .baseSpDefense = 99,
-        .types = { TYPE_GRASS, TYPE_DARK },
-        .catchRate = 50,
-        .expYield = 285,
-        .evYield_Attack = 3,
-        .genderRatio = MON_GENDERLESS,
-        .eggCycles = 50,
-        .friendship = 0,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
-        .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_GRAY,
-        .isParadoxForm = TRUE,
-        .speciesName = _("BruteBonet"),
-        .cryId = CRY_BRUTE_BONNET,
-        .natDexNum = NATIONAL_DEX_BRUTE_BONNET,
-        .categoryName = _("Paradox"),
-        .height = 12,
-        .weight = 210,
-        .description = COMPOUND_STRING(
-            "It bears a slight resemblance to a\n"
-            "Pokémon described in a dubious\n"
-            "magazine as a cross between a dinosaur\n"
-            "and a mushroom."),
-        .pokemonScale = 356,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        FRONT_PIC(BruteBonnet, 64, 64),
-        .frontPicYOffset = 5,
-        .frontAnimFrames = sAnims_BruteBonnet,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        BACK_PIC(BruteBonnet, 64, 64),
-        .backPicYOffset = 12,
-        //.backAnimId = BACK_ANIM_NONE,
-        PALETTES(BruteBonnet),
-        ICON(BruteBonnet, 1),
-        //.footprint = gMonFootprint_BruteBonnet,
-        LEARNSETS(BruteBonnet),
-    },
 #endif //P_FAMILY_BRUTE_BONNET
 
 #if P_FAMILY_FLUTTER_MANE
