@@ -6036,8 +6036,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 30,
         .baseSpDefense = 90,
         .types = { TYPE_GHOST, TYPE_GHOST },
-        .catchRate = 190,
-        .expYield = 59,
+        .catchRate = 156,
+        .expYield = 118,
         .evYield_SpDefense = 1,
         .itemRare = ITEM_SPELL_TAG,
         .genderRatio = PERCENT_FEMALE(50),
@@ -6085,8 +6085,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 60,
         .baseSpDefense = 130,
         .types = { TYPE_GHOST, TYPE_GHOST },
-        .catchRate = 90,
-        .expYield = 159,
+        .catchRate = 82,
+        .expYield = 220,
         .evYield_Defense = 1,
         .evYield_SpDefense = 1,
         .itemRare = ITEM_SPELL_TAG,
@@ -6137,8 +6137,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 65,
         .baseSpDefense = 135,
         .types = { TYPE_GHOST, TYPE_GHOST },
-        .catchRate = 45,
-        .expYield = 236,
+        .catchRate = 56,
+        .expYield = 254,
         .evYield_Defense = 1,
         .evYield_SpDefense = 2,
         .itemRare = ITEM_SPELL_TAG,
@@ -6182,15 +6182,15 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_TROPIUS
     [SPECIES_TROPIUS] =
     {
-        .baseHP        = 99,
-        .baseAttack    = 68,
-        .baseDefense   = 83,
-        .baseSpeed     = 51,
-        .baseSpAttack  = 72,
-        .baseSpDefense = 87,
+        .baseHP        = 110,
+        .baseAttack    = 90,
+        .baseDefense   = 105,
+        .baseSpeed     = 65,
+        .baseSpAttack  = 90,
+        .baseSpDefense = 105,
         .types = { TYPE_GRASS, TYPE_FLYING },
-        .catchRate = 200,
-        .expYield = 161,
+        .catchRate = 43,
+        .expYield = 301,
         .evYield_HP = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 25,
@@ -6238,8 +6238,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 65,
         .baseSpDefense = 50,
         .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },
-        .catchRate = 120,
-        .expYield = 57,
+        .catchRate = 161,
+        .expYield = 114,
         .evYield_SpAttack = 1,
         .itemRare = ITEM_CLEANSE_TAG,
         .genderRatio = PERCENT_FEMALE(50),
@@ -6280,21 +6280,15 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 
     [SPECIES_CHIMECHO] =
     {
+        .baseHP        = 80,
         .baseAttack    = 50,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 95,
-        #if P_UPDATED_STATS >= GEN_7
-            .baseHP        = 75,
-            .baseDefense   = 80,
-            .baseSpDefense = 90,
-        #else
-            .baseHP        = 65,
-            .baseDefense   = 70,
-            .baseSpDefense = 80,
-        #endif
+        .baseDefense   = 85,
+        .baseSpeed     = 90,
+        .baseSpAttack  = 110,
+        .baseSpDefense = 100,
         .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },
-        .catchRate = 45,
-        .expYield = 159,
+        .catchRate = 59,
+        .expYield = 249,
         .evYield_SpAttack = 1,
         .evYield_SpDefense = 1,
         .itemRare = ITEM_CLEANSE_TAG,
@@ -6337,7 +6331,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_ABSOL
 #define ABSOL_MISC_INFO                                     \
         .types = { TYPE_DARK, TYPE_DARK },                  \
-        .catchRate = 30,                                    \
         .evYield_Attack = 2,                                \
         .genderRatio = PERCENT_FEMALE(50),                  \
         .eggCycles = 25,                                    \
@@ -6346,17 +6339,13 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },  \
         .bodyColor = BODY_COLOR_WHITE,                      \
         .noFlip = TRUE,                                     \
-        .speciesName = _("Absol"),                          \
-        .natDexNum = NATIONAL_DEX_ABSOL,                    \
         .categoryName = _("Disaster"),                      \
         .height = 12,                                       \
         .pokemonScale = 301,                                \
         .pokemonOffset = 3,                                 \
         .trainerScale = 256,                                \
         .trainerOffset = 0,                                 \
-        LEARNSETS(Absol),                                   \
-        .formSpeciesIdTable = sAbsolFormSpeciesIdTable,     \
-        .formChangeTable = sAbsolFormChangeTable
+        LEARNSETS(Absol)
 
     [SPECIES_ABSOL] =
     {
@@ -6367,8 +6356,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpeed     = 75,
         .baseSpAttack  = 75,
         .baseSpDefense = 60,
-        .expYield = 163,
+        .catchRate = 78,
+        .expYield = 225,
         .abilities = { ABILITY_PRESSURE, ABILITY_SUPER_LUCK, ABILITY_JUSTIFIED },
+        .speciesName = _("Absol"),
+        .natDexNum = NATIONAL_DEX_ABSOL,
         .cryId = CRY_ABSOL,
         .weight = 470,
         .description = COMPOUND_STRING(
@@ -6386,6 +6378,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         PALETTES(Absol),
         ICON(Absol, 0),
+        .evolutions = EVOLUTION({EVO_FRIENDSHIP_NIGHT, 0, SPECIES_ABSOL_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -6398,8 +6391,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpeed     = 115,
         .baseSpAttack  = 115,
         .baseSpDefense = 60,
-        .expYield = 198,
+        .catchRate = 43,
+        .expYield = 301,
         .abilities = { ABILITY_MAGIC_BOUNCE, ABILITY_MAGIC_BOUNCE, ABILITY_MAGIC_BOUNCE },
+        .speciesName = _("Absolut"),
+        .natDexNum = NATIONAL_DEX_ABSOL_MEGA,
         .cryId = CRY_ABSOL_MEGA,
         .weight = 490,
         .description = COMPOUND_STRING(
@@ -6416,7 +6412,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         PALETTES(AbsolMega),
         ICON(AbsolMega, 0),
-        .isMegaEvolution = TRUE,
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_ABSOL
@@ -6622,8 +6617,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 55,
         .baseSpDefense = 50,
         .types = { TYPE_ICE, TYPE_WATER },
-        .catchRate = 255,
-        .expYield = 58,
+        .catchRate = 159,
+        .expYield = 116,
         .evYield_HP = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -6670,8 +6665,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 75,
         .baseSpDefense = 70,
         .types = { TYPE_ICE, TYPE_WATER },
-        .catchRate = 120,
-        .expYield = 144,
+        .catchRate = 101,
+        .expYield = 180,
         .evYield_HP = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -6717,8 +6712,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 95,
         .baseSpDefense = 90,
         .types = { TYPE_ICE, TYPE_WATER },
-        .catchRate = 45,
-        .expYield = 239,
+        .catchRate = 54,
+        .expYield = 256,
         .evYield_HP = 3,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -6963,8 +6958,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 45,
         .baseSpDefense = 65,
         .types = { TYPE_WATER, TYPE_ROCK },
-        .catchRate = 25,
-        .expYield = 170,
+        .catchRate = 70,
+        .expYield = 235,
         .evYield_HP = 1,
         .evYield_Defense = 1,
         .itemRare = ITEM_DEEP_SEA_SCALE,

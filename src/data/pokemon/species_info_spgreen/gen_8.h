@@ -2755,14 +2755,14 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
     [SPECIES_HATENNA] =
     {
         .baseHP        = 42,
-        .baseAttack    = 30,
+        .baseAttack    = 35,
         .baseDefense   = 45,
-        .baseSpeed     = 39,
-        .baseSpAttack  = 56,
-        .baseSpDefense = 53,
+        .baseSpeed     = 44,
+        .baseSpAttack  = 66,
+        .baseSpDefense = 58,
         .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },
-        .catchRate = 235,
-        .expYield = 53,
+        .catchRate = 159,
+        .expYield = 116,
         .evYield_SpAttack = 1,
         .genderRatio = MON_FEMALE,
         .eggCycles = 20,
@@ -2802,14 +2802,14 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
     [SPECIES_HATTREM] =
     {
         .baseHP        = 57,
-        .baseAttack    = 40,
+        .baseAttack    = 45,
         .baseDefense   = 65,
-        .baseSpeed     = 49,
-        .baseSpAttack  = 86,
-        .baseSpDefense = 73,
+        .baseSpeed     = 54,
+        .baseSpAttack  = 91,
+        .baseSpDefense = 78,
         .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },
-        .catchRate = 120,
-        .expYield = 130,
+        .catchRate = 110,
+        .expYield = 171,
         .evYield_SpAttack = 2,
         .genderRatio = MON_FEMALE,
         .eggCycles = 20,
@@ -2852,9 +2852,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpeed     = 29,                                                            \
         .baseSpAttack  = 136,                                                           \
         .baseSpDefense = 103,                                                           \
-        .types = { TYPE_PSYCHIC, TYPE_FAIRY },                                          \
-        .catchRate = 45,                                                                \
-        .expYield = 255,                                                                \
+        .catchRate = 61,                                                                \
+        .expYield = 247,                                                                \
         .evYield_SpAttack = 3,                                                          \
         .genderRatio = MON_FEMALE,                                                      \
         .eggCycles = 20,                                                                \
@@ -2863,19 +2862,18 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_FAIRY },                              \
         .abilities = { ABILITY_HEALER, ABILITY_ANTICIPATION, ABILITY_MAGIC_BOUNCE },    \
         .bodyColor = BODY_COLOR_PINK,                                                   \
-        .speciesName = _("Hatterene"),                                                  \
         .cryId = CRY_HATTERENE,                                                         \
-        .natDexNum = NATIONAL_DEX_HATTERENE,                                            \
         .categoryName = _("Silent"),                                                    \
-        LEARNSETS(Hatterene),                                                           \
-        .formSpeciesIdTable = sHattereneFormSpeciesIdTable,                             \
-        .formChangeTable = sHattereneFormChangeTable
+        LEARNSETS(Hatterene)
 
     [SPECIES_HATTERENE] =
     {
         HATTERENE_MISC_INFO,
+        .types = { TYPE_PSYCHIC, TYPE_FAIRY },
         .height = 21,
         .weight = 51,
+        .speciesName = _("Hatterene"),
+        .natDexNum = NATIONAL_DEX_HATTERENE,
         .description = COMPOUND_STRING(
             "It emits psychic power strong enough to\n"
             "cause headaches as a deterrent to the\n"
@@ -2899,8 +2897,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
     [SPECIES_HATTERENE_GIGANTAMAX] =
     {
         HATTERENE_MISC_INFO,
-        .height = 260,
-        .weight = 0,
+        .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },
+        .height = 26,
+        .weight = 77,
+        .speciesName = _("Hattenace"),
+        .natDexNum = NATIONAL_DEX_HATTERENE_GIGANTAMAX,
         .description = COMPOUND_STRING(
             "This Pokémon can read the\n"
             "emotions of creatures over 30 miles away.\n"

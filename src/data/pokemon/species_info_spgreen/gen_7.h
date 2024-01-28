@@ -4276,12 +4276,11 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpAttack  = 130,                                                           \
         .baseSpDefense = 115,                                                           \
         .types = { TYPE_STEEL, TYPE_FAIRY },                                            \
-        .catchRate = 3,                                                                 \
-        .expYield = 270,                                                                \
+        .catchRate = 34,                                                                \
+        .expYield = 319,                                                                \
         .evYield_SpAttack = 3,                                                          \
         .genderRatio = MON_GENDERLESS,                                                  \
         .eggCycles = 120,                                                               \
-        .friendship = 0,                                                                \
         .growthRate = GROWTH_SLOW,                                                      \
         .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },    \
         .abilities = { ABILITY_SOUL_HEART, ABILITY_NONE },                              \
@@ -4304,8 +4303,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         PALETTES(Form),                                                                 \
         ICON(Form, 0),                                                                  \
         LEARNSETS(Magearna),                                                            \
-        .formSpeciesIdTable = sMagearnaFormSpeciesIdTable,                              \
-        .isMythical = TRUE
+        .formSpeciesIdTable = sMagearnaFormSpeciesIdTable
     //.backAnimId = BACK_ANIM_NONE,
 
     [SPECIES_MAGEARNA] =
