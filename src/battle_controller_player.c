@@ -1802,8 +1802,8 @@ u8 TypeEffectiveness(struct ChooseMoveStruct *moveInfo, u32 battler, u8 targetId
 {
     bool8 isInverse = (B_FLAG_INVERSE_BATTLE != 0 && FlagGet(B_FLAG_INVERSE_BATTLE)) ? TRUE : FALSE;
     u16 mod = 1.0;
-    
-    if (gBattleMoves[moveInfo->moves[gMoveSelectionCursor[battler]]].power == 0)
+
+    if (gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].power == 0)
         return B_WIN_MOVE_TYPE;
     else
     {
@@ -1830,36 +1830,36 @@ u8 TypeEffectiveness(struct ChooseMoveStruct *moveInfo, u32 battler, u8 targetId
         }
         else
         {
-            mod = sTypeEffectivenessTable[gBattleMoves[moveID].type][gBattleMons[targetId].type1];
+            mod = sTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].type1];
 
             if (gBattleMons[targetId].type2 != gBattleMons[targetId].type1)
             {
-                u16 mod2 = sTypeEffectivenessTable[gBattleMoves[moveID].type][gBattleMons[targetId].type2];
+                u16 mod2 = sTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].type2];
                 MulModifier(&mod, mod2);
             }
 
             if (gBattleMons[targetId].type3 != TYPE_MYSTERY)
             {
-                u16 mod3 = sTypeEffectivenessTable[gBattleMoves[moveID].type][gBattleMons[targetId].type3];
+                u16 mod3 = sTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].type3];
                 MulModifier(&mod, mod3);
             }
 
         }
 
-        if (gBattleMoves[moveID].effect == EFFECT_TWO_TYPED_MOVE)
+        if (gMovesInfo[moveID].effect == EFFECT_TWO_TYPED_MOVE)
         {
-            u16 mod4 = sTypeEffectivenessTable[gBattleMoves[moveID].argument][gBattleMons[targetId].type1];
+            u16 mod4 = sTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].type1];
             MulModifier(&mod, mod4);
 
             if (gBattleMons[targetId].type2 != gBattleMons[targetId].type1)
             {
-                u16 mod5 = sTypeEffectivenessTable[gBattleMoves[moveID].argument][gBattleMons[targetId].type2];
+                u16 mod5 = sTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].type2];
                 MulModifier(&mod, mod5);
             }
 
             if (gBattleMons[targetId].type3 != TYPE_MYSTERY)
             {
-                u16 mod6 = sTypeEffectivenessTable[gBattleMoves[moveID].argument][gBattleMons[targetId].type3];
+                u16 mod6 = sTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].type3];
                 MulModifier(&mod, mod6);
             }
         }
@@ -1914,7 +1914,7 @@ static void MoveSelectionDisplayMoveTypeDoubles(u32 battler, u8 targetId)
     }
     else
     {
-        StringCopy(txtPtr, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[battler]]].type]);
+        StringCopy(txtPtr, gTypeNames[gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type]);
     }
 
     BattlePutTextOnWindow(gDisplayedStringBattle, TypeEffectiveness(moveInfo, battler, targetId, type));
@@ -1963,7 +1963,7 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     }
     else
     {
-    StringCopy(txtPtr, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[battler]]].type]);
+    StringCopy(txtPtr, gTypeNames[gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type]);
     }
 
     BattlePutTextOnWindow(gDisplayedStringBattle, TypeEffectiveness(moveInfo, battler, 1, type));

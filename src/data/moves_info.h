@@ -20260,6 +20260,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     //SpinarakGreen moves
     [MOVE_PSYRIPPLE] =
     {
+        .name = COMPOUND_STRING("Psyripple"),
+        .description = COMPOUND_STRING(
+            "A weak psychic attack\n"
+            "that may lower Sp. Def."),
         .effect = EFFECT_HIT,
         .power = 30,
         .type = TYPE_PSYCHIC,
@@ -20267,7 +20271,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .pp = 25,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = BATTLE_CATEGORY_SPECIAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .sheerForceBoost = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SP_DEF_MINUS_1,
@@ -20277,6 +20281,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_COMET_CRASH] =
     {
+        .name = COMPOUND_STRING("Comet Crash"),
+        .description = COMPOUND_STRING(
+            "Casts comets onto the foe.\n"
+            "Harshly lowers the Sp. Atk."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA != GEN_SPGRN && B_UPDATED_MOVE_DATA >= GEN_6 ? 130 : 140,
         .type = TYPE_ROCK,
@@ -20284,7 +20292,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .pp = 5,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = BATTLE_CATEGORY_SPECIAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SP_ATK_TWO_DOWN,
             .self = TRUE,
