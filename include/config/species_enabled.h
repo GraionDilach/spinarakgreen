@@ -474,7 +474,7 @@
 #define P_FAMILY_KARTANA                 TRUE
 #define P_FAMILY_GUZZLORD                TRUE
 #define P_FAMILY_NECROZMA                FALSE
-#define P_FAMILY_MAGEARNA                FALSE
+#define P_FAMILY_MAGEARNA                TRUE
 #define P_FAMILY_MARSHADOW               FALSE
 #define P_FAMILY_POIPOLE                 FALSE
 #define P_FAMILY_STAKATAKA               FALSE
