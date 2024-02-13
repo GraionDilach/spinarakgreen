@@ -9443,7 +9443,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Wring Out"),
         .description = sWringOutDescription,
-        .effect = EFFECT_WRING_OUT,
+        .effect = EFFECT_VARY_POWER_BASED_ON_HP,
         .power = 1,
         .type = TYPE_NORMAL,
         .accuracy = 100,
@@ -9451,6 +9451,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = 120,
         .makesContact = TRUE,
         .contestEffect = CONTEST_EFFECT_STARTLE_PREV_MON,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -11452,7 +11453,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Crush Grip"),
         .description = sWringOutDescription,
-        .effect = EFFECT_WRING_OUT,
+        .effect = EFFECT_VARY_POWER_BASED_ON_HP,
         .power = 1,
         .type = TYPE_NORMAL,
         .accuracy = 100,
@@ -11460,6 +11461,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
+        .argument = 120,
         .makesContact = TRUE,
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -20140,7 +20142,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Hard Press"),
         .description = sWringOutDescription,
-        .effect = EFFECT_WRING_OUT,
+        .effect = EFFECT_VARY_POWER_BASED_ON_HP,
         .power = 1,
         .type = TYPE_STEEL,
         .accuracy = 100,
@@ -20148,6 +20150,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
+        .argument = 100,
         .makesContact = TRUE,
     },
 
