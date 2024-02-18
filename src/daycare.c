@@ -42,7 +42,11 @@ EWRAM_DATA static u16 sHatchedEggFinalMoves[MAX_MON_MOVES] = {0};
 EWRAM_DATA static u16 sHatchedEggEggMoves[EGG_MOVES_ARRAY_COUNT] = {0};
 EWRAM_DATA static u16 sHatchedEggMotherMoves[MAX_MON_MOVES] = {0};
 
+#if P_UPDATED_STATS == GEN_SPGRN
+#include "data/pokemon/egg_moves_spgreen.h"
+#else
 #include "data/pokemon/egg_moves.h"
+#endif
 
 static const struct WindowTemplate sDaycareLevelMenuWindowTemplate =
 {
@@ -1589,4 +1593,3 @@ static u8 ModifyBreedingScoreForOvalCharm(u8 score)
 
     return score;
 }
-
