@@ -3776,52 +3776,6 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_FLUTTER_MANE
 
 #if P_FAMILY_SLITHER_WING
-    [SPECIES_SLITHER_WING] =
-    {
-        .baseHP        = 85,
-        .baseAttack    = 135,
-        .baseDefense   = 79,
-        .baseSpeed     = 81,
-        .baseSpAttack  = 85,
-        .baseSpDefense = 105,
-        .types = { TYPE_BUG, TYPE_FIGHTING },
-        .catchRate = 30,
-        .expYield = 285,
-        .evYield_Attack = 3,
-        .genderRatio = MON_GENDERLESS,
-        .eggCycles = 50,
-        .friendship = 0,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
-        .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_RED,
-        .isParadoxForm = TRUE,
-        .speciesName = _("SlithrWing"),
-        .cryId = CRY_SLITHER_WING,
-        .natDexNum = NATIONAL_DEX_SLITHER_WING,
-        .categoryName = _("Paradox"),
-        .height = 32,
-        .weight = 920,
-        .description = COMPOUND_STRING(
-            "This mysterious Pokémon has some\n"
-            "similarities to a creature that an\n"
-            "old book introduced as Slither Wing."),
-        .pokemonScale = 356,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        FRONT_PIC(SlitherWing, 64, 64),
-        .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_SlitherWing,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        BACK_PIC(SlitherWing, 64, 64),
-        .backPicYOffset = 0,
-        //.backAnimId = BACK_ANIM_NONE,
-        PALETTES(SlitherWing),
-        ICON(SlitherWing, 3),
-        //.footprint = gMonFootprint_SlitherWing,
-        LEARNSETS(SlitherWing),
-    },
 #endif //P_FAMILY_SLITHER_WING
 
 #if P_FAMILY_SANDY_SHOCKS
@@ -3888,54 +3842,6 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_IRON_JUGULIS
 
 #if P_FAMILY_IRON_MOTH
-    [SPECIES_IRON_MOTH] =
-    {
-        .baseHP        = 80,
-        .baseAttack    = 70,
-        .baseDefense   = 60,
-        .baseSpeed     = 110,
-        .baseSpAttack  = 140,
-        .baseSpDefense = 110,
-        .types = { TYPE_FIRE, TYPE_POISON },
-        .catchRate = 30,
-        .expYield = 285,
-        .evYield_SpAttack = 3,
-        .genderRatio = MON_GENDERLESS,
-        .eggCycles = 50,
-        .friendship = 0,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
-        .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_YELLOW,
-        .isParadoxForm = TRUE,
-        .speciesName = _("Iron Moth"),
-        .cryId = CRY_IRON_MOTH,
-        .natDexNum = NATIONAL_DEX_IRON_MOTH,
-        .categoryName = _("Paradox"),
-        .height = 12,
-        .weight = 360,
-        .description = COMPOUND_STRING(
-            "No records exist of this species\n"
-            "being caught. Data is lacking, but\n"
-            "the Pokémon's traits match up with an\n"
-            "object described in an old book."),
-        .pokemonScale = 356,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        FRONT_PIC(IronMoth, 64, 64),
-        .frontPicYOffset = 7,
-        .frontAnimFrames = sAnims_IronMoth,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .enemyMonElevation = 8,
-        BACK_PIC(IronMoth, 64, 64),
-        .backPicYOffset = 4,
-        //.backAnimId = BACK_ANIM_NONE,
-        PALETTES(IronMoth),
-        ICON(IronMoth, 3),
-        //.footprint = gMonFootprint_IronMoth,
-        LEARNSETS(IronMoth),
-    },
 #endif //P_FAMILY_IRON_MOTH
 
 #if P_FAMILY_IRON_THORNS
