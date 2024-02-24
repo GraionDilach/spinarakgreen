@@ -3957,15 +3957,15 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_REGIGIGAS
     [SPECIES_REGIGIGAS] =
     {
-        .baseHP        = 110,
-        .baseAttack    = 160,
-        .baseDefense   = 110,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 80,
-        .baseSpDefense = 110,
+        .baseHP        = 135,
+        .baseAttack    = 185,
+        .baseDefense   = 135,
+        .baseSpeed     = 125,
+        .baseSpAttack  = 105,
+        .baseSpDefense = 135,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
-        .catchRate = 3,
-        .expYield = 302,
+        .catchRate = 4,
+        .expYield = 528,
         .evYield_Attack = 3,
         .genderRatio = MON_GENDERLESS,
         .eggCycles = 120,
