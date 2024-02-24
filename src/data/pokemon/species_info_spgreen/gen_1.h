@@ -2789,10 +2789,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseDefense   = 78,
         .baseSpeed     = 61,
         .baseSpAttack  = 110,
-        .baseSpDefense = 90,
+        .baseSpDefense = 95,
         .types = { TYPE_FAIRY, TYPE_FAIRY },
-        .catchRate = 53,
-        .expYield = 258,
+        .catchRate = 51,
+        .expYield = 261,
         .evYield_HP = 3,
         .itemRare = ITEM_MOON_STONE,
         .genderRatio = PERCENT_FEMALE(75),
@@ -2860,8 +2860,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         VULPIX_FAMILY_MISC_INFO
 
 #define NINETALES_MISC_INFO                                 \
-        .catchRate = 59,                                    \
-        .expYield = 249,                                    \
+        .catchRate = 54,                                    \
+        .expYield = 256,                                    \
         .evYield_Speed = 1,                                 \
         .evYield_SpDefense = 1,                             \
         .cryId = CRY_NINETALES,                             \
@@ -2904,11 +2904,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_NINETALES] =
     {
         NINETALES_MISC_INFO,
-        .baseHP        = 73,
+        .baseHP        = 78,
         .baseAttack    = 76,
-        .baseDefense   = 75,
+        .baseDefense   = 80,
         .baseSpeed     = 109,
-        .baseSpAttack  = 81,
+        .baseSpAttack  = 86,
         .baseSpDefense = 100,
         .types = { TYPE_FIRE, TYPE_GHOST },
         .itemRare = ITEM_CHARCOAL,
@@ -2964,11 +2964,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_NINETALES_ALOLAN] =
     {
         NINETALES_MISC_INFO,
-        .baseHP        = 73,
-        .baseAttack    = 67,
-        .baseDefense   = 76,
+        .baseHP        = 78,
+        .baseAttack    = 76,
+        .baseDefense   = 80,
         .baseSpeed     = 109,
-        .baseSpAttack  = 81,
+        .baseSpAttack  = 86,
         .baseSpDefense = 100,
         .types = { TYPE_ICE, TYPE_FAIRY },
         .itemRare = ITEM_SNOWBALL,
@@ -6905,10 +6905,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseAttack    = 125,                           \
         .baseDefense   = 75,                            \
         .baseSpeed     = 50,                            \
-        .baseSpAttack  = 65,                            \
+        .baseSpAttack  = 85,                            \
         .baseSpDefense = 100,                           \
-        .catchRate = 134,                               \
-        .expYield = 136,                                \
+        .catchRate = 42,                                \
+        .expYield = 303,                                \
         .evYield_HP = 1,                                \
         .evYield_Attack = 1,                            \
         .cryId = CRY_MUK,                               \
@@ -8324,8 +8324,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         .baseHP        = 80,
         .baseAttack    = 115,
-        .baseDefense   = 139,
-        .baseSpeed     = 76,
+        .baseDefense   = 134,
+        .baseSpeed     = 81,
         .baseSpAttack  = 35,
         .baseSpDefense = 110,
         .types = { TYPE_FIGHTING, TYPE_FIGHTING },
