@@ -7670,19 +7670,14 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_LATIAS
 #define LATIAS_MISC_INFO                                                \
         .types = { TYPE_DRAGON, TYPE_PSYCHIC },                         \
-        .catchRate = 3,                                                 \
         .evYield_SpDefense = 3,                                         \
         .genderRatio = MON_FEMALE,                                      \
         .eggCycles = 120,                                               \
         .friendship = 90,                                               \
         .growthRate = GROWTH_SLOW,                                      \
         .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },\
-        .speciesName = _("Latias"),                                     \
-        .natDexNum = NATIONAL_DEX_LATIAS,                               \
         .categoryName = _("Eon"),                                       \
         LEARNSETS(Latias),                                              \
-        .formSpeciesIdTable = sLatiasFormSpeciesIdTable,                \
-        .formChangeTable = sLatiasFormChangeTable,                      \
         .isLegendary = TRUE
 
     [SPECIES_LATIAS] =
@@ -7694,9 +7689,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpeed     = 110,
         .baseSpAttack  = 110,
         .baseSpDefense = 130,
-        .expYield = 270,
+        .catchRate = 34,
+        .expYield = 319,
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
+        .speciesName = _("Latias"),
+        .natDexNum = NATIONAL_DEX_LATIAS,
         .cryId = CRY_LATIAS,
         .height = 14,
         .weight = 400,
@@ -7719,28 +7717,32 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_H_VIBRATE,
         PALETTES(Latias),
         ICON(Latias, 0),
+        .evolutions = EVOLUTION({EVO_LEVEL, 65, SPECIES_LATIAS_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
     [SPECIES_LATIAS_MEGA] =
     {
         LATIAS_MISC_INFO,
-        .baseHP        = 80,
+        .baseHP        = 121,
         .baseAttack    = 100,
         .baseDefense   = 120,
         .baseSpeed     = 110,
         .baseSpAttack  = 140,
         .baseSpDefense = 150,
-        .expYield = 315,
+        .catchRate = 10,
+        .expYield = 434,
         .abilities = { ABILITY_LEVITATE, ABILITY_LEVITATE, ABILITY_LEVITATE },
         .bodyColor = BODY_COLOR_PURPLE,
+        .speciesName = _("Latimegas"),
+        .natDexNum = NATIONAL_DEX_LATIAS_MEGA,
         .cryId = CRY_LATIAS_MEGA,
         .height = 18,
         .weight = 520,
         .description = COMPOUND_STRING(
-            "Its body is smaller than Mega Latios's\n"
+            "Its body is smaller than Latmegios's\n"
             "body. It is more agile and can make very\n"
-            "sharp turns. When it Mega Evolves, its\n"
+            "sharp turns. When it evolves, its\n"
             "defensive strength grows substantially."),
         .pokemonScale = 304,
         .pokemonOffset = 3,
@@ -7756,7 +7758,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_H_VIBRATE,
         PALETTES(LatiasMega),
         ICON(LatiasMega, 2),
-        .isMegaEvolution = TRUE,
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_LATIAS
@@ -7764,7 +7765,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_LATIOS
 #define LATIOS_MISC_INFO                                                \
         .types = { TYPE_DRAGON, TYPE_PSYCHIC },                         \
-        .catchRate = 3,                                                 \
         .evYield_SpAttack = 3,                                          \
         .genderRatio = MON_MALE,                                        \
         .eggCycles = 120,                                               \
@@ -7772,12 +7772,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_SLOW,                                      \
         .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },\
         .isLegendary = TRUE,                                            \
-        .speciesName = _("Latios"),                                     \
-        .natDexNum = NATIONAL_DEX_LATIOS,                               \
         .categoryName = _("Eon"),                                       \
-        LEARNSETS(Latios),                                              \
-        .formSpeciesIdTable = sLatiosFormSpeciesIdTable,                \
-        .formChangeTable = sLatiosFormChangeTable
+        LEARNSETS(Latios)
 
     [SPECIES_LATIOS] =
     {
@@ -7788,9 +7784,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpeed     = 110,
         .baseSpAttack  = 130,
         .baseSpDefense = 110,
-        .expYield = 270,
+        .catchRate = 34,
+        .expYield = 319,
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Latios"),
+        .natDexNum = NATIONAL_DEX_LATIOS,
         .cryId = CRY_LATIOS,
         .height = 20,
         .weight = 600,
@@ -7813,26 +7812,30 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_H_VIBRATE,
         PALETTES(Latios),
         ICON(Latios, 0),
+        .evolutions = EVOLUTION({EVO_LEVEL, 65, SPECIES_LATIOS_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
     [SPECIES_LATIOS_MEGA] =
     {
         LATIOS_MISC_INFO,
-        .baseHP        = 80,
+        .baseHP        = 121,
         .baseAttack    = 130,
         .baseDefense   = 100,
         .baseSpeed     = 110,
         .baseSpAttack  = 160,
         .baseSpDefense = 120,
-        .expYield = 315,
+        .catchRate = 10,
+        .expYield = 434,
         .abilities = { ABILITY_LEVITATE, ABILITY_LEVITATE, ABILITY_LEVITATE },
         .bodyColor = BODY_COLOR_PURPLE,
+        .speciesName = _("Latimegos"),
+        .natDexNum = NATIONAL_DEX_LATIOS_MEGA,
         .cryId = CRY_LATIOS_MEGA,
         .height = 23,
         .weight = 700,
         .description = COMPOUND_STRING(
-            "It's larger than Mega Latias, and can\n"
+            "It's larger than Latimegas, and can\n"
             "achieve higher speeds in flight.\n"
             "This Pokémon can use its speed in battle\n"
             "to unleash a flurry of attacks."),
@@ -7858,8 +7861,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_KYOGRE
 #define KYOGRE_MISC_INFO                                                \
         .types = { TYPE_WATER, TYPE_WATER },                            \
-        .catchRate = 3,                                                 \
-        .expYield = 302,                                                \
         .evYield_SpAttack = 3,                                          \
         .genderRatio = MON_GENDERLESS,                                  \
         .eggCycles = 120,                                               \
@@ -7868,12 +7869,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },\
         .bodyColor = BODY_COLOR_BLUE,                                   \
         .isLegendary = TRUE,                                            \
-        .speciesName = _("Kyogre"),                                     \
-        .natDexNum = NATIONAL_DEX_KYOGRE,                               \
         .categoryName = _("Sea Basin"),                                 \
-        LEARNSETS(Kyogre),                                              \
-        .formSpeciesIdTable = sKyogreFormSpeciesIdTable,                \
-        .formChangeTable = sKyogreFormChangeTable
+        LEARNSETS(Kyogre)
 
     [SPECIES_KYOGRE] =
     {
@@ -7884,7 +7881,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpeed     = 90,
         .baseSpAttack  = 150,
         .baseSpDefense = 140,
+        .catchRate = 19,
+        .expYield = 392,
         .abilities = { ABILITY_DRIZZLE, ABILITY_NONE },
+        .speciesName = _("Kyogre"),
+        .natDexNum = NATIONAL_DEX_KYOGRE,
         .cryId = CRY_KYOGRE,
         .height = 45,
         .weight = 3520,
@@ -7907,24 +7908,29 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
         PALETTES(Kyogre),
         ICON(Kyogre, 2),
+        .evolutions = EVOLUTION({EVO_LEVEL, 65, SPECIES_KYOGRE_PRIMAL}),
     },
 #if P_PRIMAL_REVERSIONS
     [SPECIES_KYOGRE_PRIMAL] =
     {
         KYOGRE_MISC_INFO,
-        .baseHP        = 100,
+        .baseHP        = 133,
         .baseAttack    = 150,
         .baseDefense   = 90,
         .baseSpeed     = 90,
         .baseSpAttack  = 180,
         .baseSpDefense = 160,
+        .catchRate = 5,
+        .expYield = 517,
         .abilities = { ABILITY_PRIMORDIAL_SEA, ABILITY_PRIMORDIAL_SEA },
+        .speciesName = _("Prikyogre"),
+        .natDexNum = NATIONAL_DEX_KYOGRE_PRIMAL,
         .cryId = CRY_KYOGRE_PRIMAL,
         .height = 98,
         .weight = 4300,
         .description = COMPOUND_STRING(
-            "When Kyogre roared, water poured forth\n"
-            "and the seas spread outward.\n"
+            "When Prikyogre roared, water poured\n"
+            "forth and the seas spread outward.\n"
             "Dark clouds enshrouded the world,\n"
             "and the deluge fell upon all…"),
         .pokemonScale = 256,
@@ -7940,15 +7946,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
         PALETTES(KyogrePrimal),
         ICON(KyogrePrimal, 0),
-        .isPrimalReversion = TRUE,
     },
 #endif //P_PRIMAL_REVERSIONS
 #endif //P_FAMILY_KYOGRE
 
 #if P_FAMILY_GROUDON
 #define GROUDON_MISC_INFO                                               \
-        .catchRate = 3,                                                 \
-        .expYield = 302,                                                \
         .evYield_Attack = 3,                                            \
         .genderRatio = MON_GENDERLESS,                                  \
         .eggCycles = 120,                                               \
@@ -7957,13 +7960,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },\
         .bodyColor = BODY_COLOR_RED,                                    \
         .isLegendary = TRUE,                                            \
-        .speciesName = _("Groudon"),                                    \
-        .cryId = CRY_GROUDON,                                           \
-        .natDexNum = NATIONAL_DEX_GROUDON,                              \
         .categoryName = _("Continent"),                                 \
-        LEARNSETS(Groudon),                                             \
-        .formSpeciesIdTable = sGroudonFormSpeciesIdTable,               \
-        .formChangeTable = sGroudonFormChangeTable
+        LEARNSETS(Groudon)
 
     [SPECIES_GROUDON] =
     {
@@ -7974,8 +7972,13 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpeed     = 90,
         .baseSpAttack  = 100,
         .baseSpDefense = 90,
-        .types = { TYPE_GROUND, TYPE_GROUND },
+        .types = { TYPE_GROUND, TYPE_FIRE },
+        .catchRate = 19,
+        .expYield = 392,
         .abilities = { ABILITY_DROUGHT, ABILITY_NONE },
+        .speciesName = _("Groudon"),
+        .cryId = CRY_GROUDON,
+        .natDexNum = NATIONAL_DEX_GROUDON,
         .height = 35,
         .weight = 9500,
         .description = COMPOUND_STRING(
@@ -8002,14 +8005,19 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_GROUDON_PRIMAL] =
     {
         GROUDON_MISC_INFO,
-        .baseHP        = 100,
+        .baseHP        = 133,
         .baseAttack    = 180,
         .baseDefense   = 160,
         .baseSpeed     = 90,
         .baseSpAttack  = 150,
         .baseSpDefense = 90,
+        .catchRate = 5,
+        .expYield = 517,
         .types = { TYPE_GROUND, TYPE_FIRE },
         .abilities = { ABILITY_DESOLATE_LAND, ABILITY_DESOLATE_LAND },
+        .speciesName = _("Prigroudon"),
+        .cryId = CRY_GROUDON,
+        .natDexNum = NATIONAL_DEX_GROUDON_PRIMAL,
         .height = 50,
         .weight = 9997,
         .description = COMPOUND_STRING(
@@ -8031,7 +8039,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_RED,
         PALETTES(GroudonPrimal),
         ICON(GroudonPrimal, 0),
-        .isPrimalReversion = TRUE,
     },
 #endif //P_PRIMAL_REVERSIONS
 #endif //P_FAMILY_GROUDON
@@ -8039,8 +8046,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_RAYQUAZA
 #define RAYQUAZA_MISC_INFO                                              \
         .types = { TYPE_DRAGON, TYPE_FLYING },                          \
-        .catchRate = 45,                                                \
-        .expYield = 306,                                                \
         .evYield_Attack = 2,                                            \
         .evYield_SpAttack = 1,                                          \
         .genderRatio = MON_GENDERLESS,                                  \
@@ -8049,13 +8054,9 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_SLOW,                                      \
         .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },\
         .bodyColor = BODY_COLOR_GREEN,                                  \
-        .speciesName = _("Rayquaza"),                                   \
         .cryId = CRY_RAYQUAZA,                                          \
-        .natDexNum = NATIONAL_DEX_RAYQUAZA,                             \
         .categoryName = _("Sky High"),                                  \
         LEARNSETS(Rayquaza),                                            \
-        .formSpeciesIdTable = sRayquazaFormSpeciesIdTable,              \
-        .formChangeTable = sRayquazaFormChangeTable,                    \
         .isLegendary = TRUE
 
     [SPECIES_RAYQUAZA] =
@@ -8067,7 +8068,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpeed     = 95,
         .baseSpAttack  = 150,
         .baseSpDefense = 90,
+        .catchRate = 18,
+        .expYield = 398,
         .abilities = { ABILITY_AIR_LOCK, ABILITY_NONE },
+        .speciesName = _("Rayquaza"),
+        .natDexNum = NATIONAL_DEX_RAYQUAZA,
         .height = 70,
         .weight = 2065,
         .description = COMPOUND_STRING(
@@ -8096,13 +8101,17 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_RAYQUAZA_MEGA] =
     {
         RAYQUAZA_MISC_INFO,
-        .baseHP        = 105,
+        .baseHP        = 155,
         .baseAttack    = 180,
         .baseDefense   = 100,
         .baseSpeed     = 115,
         .baseSpAttack  = 180,
         .baseSpDefense = 100,
+        .catchRate = 5,
+        .expYield = 534,
         .abilities = { ABILITY_DELTA_STREAM, ABILITY_DELTA_STREAM, ABILITY_DELTA_STREAM },
+        .speciesName = _("Raymequaza"),
+        .natDexNum = NATIONAL_DEX_RAYQUAZA_MEGA,
         .height = 108,
         .weight = 3920,
         .description = COMPOUND_STRING(
@@ -8124,7 +8133,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_GREEN,
         PALETTES(RayquazaMega),
         ICON(RayquazaMega, 1),
-        .isMegaEvolution = TRUE,
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_RAYQUAZA
@@ -8132,15 +8140,15 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_JIRACHI
     [SPECIES_JIRACHI] =
     {
-        .baseHP        = 100,
-        .baseAttack    = 100,
-        .baseDefense   = 100,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 100,
-        .baseSpDefense = 100,
+        .baseHP        = 111,
+        .baseAttack    = 111,
+        .baseDefense   = 111,
+        .baseSpeed     = 111,
+        .baseSpAttack  = 111,
+        .baseSpDefense = 111,
         .types = { TYPE_STEEL, TYPE_PSYCHIC },
-        .catchRate = 3,
-        .expYield = 270,
+        .catchRate = 20,
+        .expYield = 390,
         .evYield_HP = 3,
         .itemCommon = ITEM_STAR_PIECE,
         .itemRare = ITEM_STAR_PIECE,
@@ -8183,9 +8191,9 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 
 #if P_FAMILY_DEOXYS
 #define DEOXYS_MISC_INFO                                                \
-        .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },                        \
-        .catchRate = 3,                                                 \
-        .expYield = 270,                                                \
+        .types = { TYPE_PSYCHIC, TYPE_ELECTRIC },                        \
+        .catchRate = 9,                                                 \
+        .expYield = 483,                                                \
         .genderRatio = MON_GENDERLESS,                                  \
         .eggCycles = 120,                                               \
         .friendship = 0,                                                \
@@ -8210,12 +8218,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_DEOXYS_NORMAL] =
     {
         DEOXYS_MISC_INFO,
-        .baseHP        = 50,
-        .baseAttack    = 150,
-        .baseDefense   = 50,
-        .baseSpeed     = 150,
-        .baseSpAttack  = 150,
-        .baseSpDefense = 50,
+        .baseHP        = 75,
+        .baseAttack    = 175,
+        .baseDefense   = 75,
+        .baseSpeed     = 175,
+        .baseSpAttack  = 175,
+        .baseSpDefense = 75,
         .evYield_Attack = 1,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
@@ -8234,12 +8242,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_DEOXYS_ATTACK] =
     {
         DEOXYS_MISC_INFO,
-        .baseHP        = 50,
-        .baseAttack    = 180,
-        .baseDefense   = 20,
-        .baseSpeed     = 150,
-        .baseSpAttack  = 180,
-        .baseSpDefense = 20,
+        .baseHP        = 75,
+        .baseAttack    = 205,
+        .baseDefense   = 45,
+        .baseSpeed     = 175,
+        .baseSpAttack  = 205,
+        .baseSpDefense = 45,
         .evYield_Attack = 2,
         .evYield_SpAttack = 1,
         FRONT_PIC(DeoxysAttack, 64, 64),
@@ -8257,12 +8265,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_DEOXYS_DEFENSE] =
     {
         DEOXYS_MISC_INFO,
-        .baseHP        = 50,
-        .baseAttack    = 70,
-        .baseDefense   = 160,
-        .baseSpeed     = 90,
-        .baseSpAttack  = 70,
-        .baseSpDefense = 160,
+        .baseHP        = 75,
+        .baseAttack    = 95,
+        .baseDefense   = 185,
+        .baseSpeed     = 115,
+        .baseSpAttack  = 95,
+        .baseSpDefense = 185,
         .evYield_Defense = 2,
         .evYield_SpDefense = 1,
         FRONT_PIC(DeoxysDefense, 56, 64),
@@ -8280,12 +8288,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_DEOXYS_SPEED] =
     {
         DEOXYS_MISC_INFO,
-        .baseHP        = 50,
-        .baseAttack    = 95,
-        .baseDefense   = 90,
-        .baseSpeed     = 180,
-        .baseSpAttack  = 95,
-        .baseSpDefense = 90,
+        .baseHP        = 75,
+        .baseAttack    = 120,
+        .baseDefense   = 115,
+        .baseSpeed     = 205,
+        .baseSpAttack  = 120,
+        .baseSpDefense = 115,
         .evYield_Speed = 3,
         .noFlip = TRUE,
         FRONT_PIC(DeoxysSpeed, 64, 64),
