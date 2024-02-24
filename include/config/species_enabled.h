@@ -323,7 +323,7 @@
 #define P_FAMILY_DRILBUR                 FALSE
 #define P_FAMILY_AUDINO                  TRUE
 #define P_FAMILY_TIMBURR                 FALSE
-#define P_FAMILY_TYMPOLE                 FALSE
+#define P_FAMILY_TYMPOLE                 TRUE
 #define P_FAMILY_THROH                   FALSE
 #define P_FAMILY_SAWK                    FALSE
 #define P_FAMILY_SEWADDLE                FALSE
