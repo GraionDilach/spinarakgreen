@@ -12635,15 +12635,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_FAMILY_MEW
     [SPECIES_MEW] =
     {
-        .baseHP        = 111,
-        .baseAttack    = 111,
-        .baseDefense   = 111,
-        .baseSpeed     = 111,
-        .baseSpAttack  = 111,
-        .baseSpDefense = 111,
+        .baseHP        = 133,
+        .baseAttack    = 133,
+        .baseDefense   = 133,
+        .baseSpeed     = 133,
+        .baseSpAttack  = 133,
+        .baseSpDefense = 133,
         .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },
-        .catchRate = 20,
-        .expYield = 390,
+        .catchRate = 5,
+        .expYield = 514,
         .evYield_HP = 3,
         .itemCommon = ITEM_LUM_BERRY,
         .itemRare = ITEM_LUM_BERRY,
