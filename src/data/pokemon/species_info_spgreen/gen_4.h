@@ -2502,15 +2502,15 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpAttack  = 40,
         .baseSpDefense = 45,
         .types = { TYPE_DRAGON, TYPE_GROUND },
-        .catchRate = 45,
-        .expYield = 60,
+        .catchRate = 154,
+        .expYield = 120,
         .evYield_Attack = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 40,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_DRAGON },
-        .abilities = { ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_ROUGH_SKIN },
+        .abilities = { ABILITY_SAND_VEIL, ABILITY_SAND_VEIL, ABILITY_ROUGH_SKIN },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Gible"),
         .cryId = CRY_GIBLE,
@@ -2551,15 +2551,15 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpAttack  = 50,
         .baseSpDefense = 55,
         .types = { TYPE_DRAGON, TYPE_GROUND },
-        .catchRate = 45,
-        .expYield = 144,
+        .catchRate = 101,
+        .expYield = 180,
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 40,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_DRAGON },
-        .abilities = { ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_ROUGH_SKIN },
+        .abilities = { ABILITY_SAND_VEIL, ABILITY_SAND_VEIL, ABILITY_ROUGH_SKIN },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Gabite"),
         .cryId = CRY_GABITE,
@@ -2593,7 +2593,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
 #define GARCHOMP_MISC_INFO                                      \
         .types = { TYPE_DRAGON, TYPE_GROUND },                  \
-        .catchRate = 45,                                        \
+        .catchRate = 23,                                        \
         .evYield_Attack = 3,                                    \
         .genderRatio = PERCENT_FEMALE(50),                      \
         .eggCycles = 40,                                        \
@@ -2610,21 +2610,19 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .pokemonOffset = 1,                                     \
         .trainerScale = 326,                                    \
         .trainerOffset = 4,                                     \
-        LEARNSETS(Garchomp),                                    \
-        .formSpeciesIdTable = sGarchompFormSpeciesIdTable,      \
-        .formChangeTable = sGarchompFormChangeTable
+        LEARNSETS(Garchomp)
 
     [SPECIES_GARCHOMP] =
     {
         GARCHOMP_MISC_INFO,
         .baseHP        = 108,
-        .baseAttack    = 130,
-        .baseDefense   = 95,
-        .baseSpeed     = 102,
-        .baseSpAttack  = 80,
-        .baseSpDefense = 85,
-        .expYield = 270,
-        .abilities = { ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_ROUGH_SKIN },
+        .baseAttack    = 150,
+        .baseDefense   = 105,
+        .baseSpeed     = 97,
+        .baseSpAttack  = 100,
+        .baseSpDefense = 90,
+        .expYield = 380,
+        .abilities = { ABILITY_SAND_VEIL, ABILITY_SAND_FORCE, ABILITY_ROUGH_SKIN },
         .cryId = CRY_GARCHOMP,
         .description = COMPOUND_STRING(
             "When it folds up its body and extends its\n"
@@ -2685,8 +2683,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpAttack  = 35,
         .baseSpDefense = 40,
         .types = { TYPE_FIGHTING, TYPE_FIGHTING },
-        .catchRate = 75,
-        .expYield = 57,
+        .catchRate = 161,
+        .expYield = 114,
         .evYield_Attack = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 25,
@@ -2725,7 +2723,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
 #define LUCARIO_MISC_INFO                                       \
         .types = { TYPE_FIGHTING, TYPE_STEEL },                 \
-        .catchRate = 45,                                        \
         .evYield_Attack = 1,                                    \
         .evYield_SpAttack = 1,                                  \
         .genderRatio = PERCENT_FEMALE(12.5),                    \
@@ -2734,12 +2731,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .growthRate = GROWTH_MEDIUM_SLOW,                       \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE }, \
         .bodyColor = BODY_COLOR_BLUE,                           \
-        .speciesName = _("Lucario"),                            \
-        .natDexNum = NATIONAL_DEX_LUCARIO,                      \
         .categoryName = _("Aura"),                              \
-        LEARNSETS(Lucario),                                     \
-        .formSpeciesIdTable = sLucarioFormSpeciesIdTable,       \
-        .formChangeTable = sLucarioFormChangeTable
+        LEARNSETS(Lucario)
 
     [SPECIES_LUCARIO] =
     {
@@ -2750,8 +2743,11 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 90,
         .baseSpAttack  = 115,
         .baseSpDefense = 70,
-        .expYield = 184,
+        .catchRate = 56,
+        .expYield = 254,
         .abilities = { ABILITY_STEADFAST, ABILITY_INNER_FOCUS, ABILITY_JUSTIFIED },
+        .speciesName = _("Lucario"),
+        .natDexNum = NATIONAL_DEX_LUCARIO,
         .cryId = CRY_LUCARIO,
         .height = 12,
         .weight = 540,
@@ -2773,20 +2769,24 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_V_SHAKE_H_SLIDE,
         PALETTES(Lucario),
         ICON(Lucario, 2),
+        .evolutions = EVOLUTION({EVO_LEVEL, 52, SPECIES_LUCARIO_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
     [SPECIES_LUCARIO_MEGA] =
     {
         LUCARIO_MISC_INFO,
-        .baseHP        = 70,
+        .baseHP        = 95,
         .baseAttack    = 145,
         .baseDefense   = 88,
         .baseSpeed     = 112,
         .baseSpAttack  = 140,
         .baseSpDefense = 70,
-        .expYield = 219,
-        .abilities = { ABILITY_ADAPTABILITY, ABILITY_ADAPTABILITY, ABILITY_ADAPTABILITY },
+        .catchRate = 23,
+        .expYield = 380,
+        .abilities = { ABILITY_STEADFAST, ABILITY_ADAPTABILITY, ABILITY_JUSTIFIED },
+        .speciesName = _("Lumegario"),
+        .natDexNum = NATIONAL_DEX_LUCARIO_MEGA,
         .cryId = CRY_LUCARIO_MEGA,
         .height = 13,
         .weight = 575,
@@ -2808,7 +2808,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,
         PALETTES(LucarioMega),
         ICON(LucarioMega, 2),
-        .isMegaEvolution = TRUE,
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_RIOLU
@@ -3272,8 +3271,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpAttack  = 62,
         .baseSpDefense = 60,
         .types = { TYPE_GRASS, TYPE_ICE },
-        .catchRate = 120,
-        .expYield = 67,
+        .catchRate = 137,
+        .expYield = 133,
         .evYield_Attack = 1,
         .itemRare = ITEM_NEVER_MELT_ICE,
         .genderRatio = PERCENT_FEMALE(50),
@@ -3315,7 +3314,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
 #define ABOMASNOW_MISC_INFO                                 \
         .types = { TYPE_GRASS, TYPE_ICE },                  \
-        .catchRate = 60,                                    \
         .evYield_Attack = 1,                                \
         .evYield_SpAttack = 1,                              \
         .itemRare = ITEM_NEVER_MELT_ICE,                    \
@@ -3325,12 +3323,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .growthRate = GROWTH_SLOW,                          \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_GRASS },\
         .bodyColor = BODY_COLOR_WHITE,                      \
-        .speciesName = _("Abomasnow"),                      \
-        .natDexNum = NATIONAL_DEX_ABOMASNOW,                \
         .categoryName = _("Frost Tree"),                    \
-        LEARNSETS(Abomasnow),                               \
-        .formSpeciesIdTable = sAbomasnowFormSpeciesIdTable, \
-        .formChangeTable = sAbomasnowFormChangeTable
+        LEARNSETS(Abomasnow)
 
     [SPECIES_ABOMASNOW] =
     {
@@ -3341,8 +3335,11 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 60,
         .baseSpAttack  = 92,
         .baseSpDefense = 85,
-        .expYield = 173,
+        .catchRate = 66,
+        .expYield = 239,
         .abilities = { ABILITY_SNOW_WARNING, ABILITY_NONE, ABILITY_SOUNDPROOF },
+        .speciesName = _("Abomasnow"),
+        .natDexNum = NATIONAL_DEX_ABOMASNOW,
         .cryId = CRY_ABOMASNOW,
         .height = 22,
         .weight = 1355,
@@ -3365,26 +3362,30 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_V_SHAKE_LOW,
         PALETTES(Abomasnow),
         ICON(Abomasnow, 1),
+        .evolutions = EVOLUTION({EVO_LEVEL, 53, SPECIES_ABOMASNOW_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
     [SPECIES_ABOMASNOW_MEGA] =
     {
         ABOMASNOW_MISC_INFO,
-        .baseHP        = 90,
+        .baseHP        = 100,
         .baseAttack    = 132,
         .baseDefense   = 105,
-        .baseSpeed     = 30,
+        .baseSpeed     = 77,
         .baseSpAttack  = 132,
         .baseSpDefense = 105,
-        .expYield = 208,
+        .catchRate = 23,
+        .expYield = 381,
         .abilities = { ABILITY_SNOW_WARNING, ABILITY_SNOW_WARNING, ABILITY_SNOW_WARNING },
+        .speciesName = _("Monstrasno"),
+        .natDexNum = NATIONAL_DEX_ABOMASNOW_MEGA,
         .cryId = CRY_ABOMASNOW_MEGA,
         .height = 27,
         .weight = 1850,
         .description = COMPOUND_STRING(
-            "The sprouts on Abomasnow's back grow into\n"
-            "great shafts of ice when it Mega Evolves.\n"
+            "The sprouts on Mostrasnow's back grow into\n"
+            "great shafts of ice on the final form.\n"
             "Dislikes associating with others and\n"
             "chooses to live quietly deep in mountains."),
         .pokemonScale = 256,
@@ -3400,7 +3401,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_V_SHAKE_LOW,
         PALETTES(AbomasnowMega),
         ICON(AbomasnowMega, 1),
-        .isMegaEvolution = TRUE,
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_SNOVER

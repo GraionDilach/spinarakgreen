@@ -4326,54 +4326,6 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_CHI_YU
 
 #if P_FAMILY_ROARING_MOON
-    [SPECIES_ROARING_MOON] =
-    {
-        .baseHP        = 105,
-        .baseAttack    = 139,
-        .baseDefense   = 71,
-        .baseSpeed     = 119,
-        .baseSpAttack  = 55,
-        .baseSpDefense = 101,
-        .types = { TYPE_DRAGON, TYPE_DARK },
-        .catchRate = 10,
-        .expYield = 295,
-        .evYield_Attack = 3,
-        .genderRatio = MON_GENDERLESS,
-        .eggCycles = 50,
-        .friendship = 0,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
-        .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_GREEN,
-        .isParadoxForm = TRUE,
-        .speciesName = _("RoarngMoon"),
-        .cryId = CRY_ROARING_MOON,
-        .natDexNum = NATIONAL_DEX_ROARING_MOON,
-        .categoryName = _("Paradox"),
-        .height = 20,
-        .weight = 3800,
-        .description = COMPOUND_STRING(
-            "According to an article in a\n"
-            "dubious magazine, this Pokémon has some\n"
-            "connection to Mega Evolution that\n"
-            "occurs in Hoenn."),
-        .pokemonScale = 356,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        FRONT_PIC(RoaringMoon, 64, 64),
-        .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_RoaringMoon,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .enemyMonElevation = 6,
-        BACK_PIC(RoaringMoon, 64, 64),
-        .backPicYOffset = 7,
-        //.backAnimId = BACK_ANIM_NONE,
-        PALETTES(RoaringMoon),
-        ICON(RoaringMoon, 3),
-        //.footprint = gMonFootprint_RoaringMoon,
-        LEARNSETS(RoaringMoon),
-    },
 #endif //P_FAMILY_ROARING_MOON
 
 #if P_FAMILY_IRON_VALIANT

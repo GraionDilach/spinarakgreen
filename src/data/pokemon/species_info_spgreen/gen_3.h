@@ -7106,8 +7106,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 40,
         .baseSpDefense = 30,
         .types = { TYPE_DRAGON, TYPE_DRAGON },
-        .catchRate = 45,
-        .expYield = 60,
+        .catchRate = 154,
+        .expYield = 120,
         .evYield_Attack = 1,
         .itemRare = ITEM_DRAGON_FANG,
         .genderRatio = PERCENT_FEMALE(50),
@@ -7115,7 +7115,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
         .eggGroups = { EGG_GROUP_DRAGON, EGG_GROUP_DRAGON },
-        .abilities = { ABILITY_ROCK_HEAD, ABILITY_NONE, ABILITY_SHEER_FORCE },
+        .abilities = { ABILITY_ROCK_HEAD, ABILITY_ROCK_HEAD, ABILITY_SHEER_FORCE },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Bagon"),
         .cryId = CRY_BAGON,
@@ -7154,8 +7154,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 60,
         .baseSpDefense = 50,
         .types = { TYPE_DRAGON, TYPE_DRAGON },
-        .catchRate = 45,
-        .expYield = 147,
+        .catchRate = 97,
+        .expYield = 185,
         .evYield_Defense = 2,
         .itemRare = ITEM_DRAGON_FANG,
         .genderRatio = PERCENT_FEMALE(50),
@@ -7163,7 +7163,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
         .eggGroups = { EGG_GROUP_DRAGON, EGG_GROUP_DRAGON },
-        .abilities = { ABILITY_ROCK_HEAD, ABILITY_NONE, ABILITY_OVERCOAT },
+        .abilities = { ABILITY_ROCK_HEAD, ABILITY_ROCK_HEAD, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Shelgon"),
         .cryId = CRY_SHELGON,
@@ -7190,12 +7190,13 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         PALETTES(Shelgon),
         ICON(Shelgon, 2),
         LEARNSETS(Shelgon),
-        .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_SALAMENCE}),
+        .evolutions = EVOLUTION({EVO_LEVEL_DAY, 50, SPECIES_SALAMENCE},
+                                {EVO_LEVEL_NIGHT, 50, SPECIES_ROARING_MOON}),
     },
 
 #define SALAMENCE_MISC_INFO                                 \
         .types = { TYPE_DRAGON, TYPE_FLYING },              \
-        .catchRate = 45,                                    \
+        .catchRate = 23,                                    \
         .evYield_Attack = 3,                                \
         .itemRare = ITEM_DRAGON_FANG,                       \
         .genderRatio = PERCENT_FEMALE(50),                  \
@@ -7207,21 +7208,19 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .speciesName = _("Salamence"),                      \
         .natDexNum = NATIONAL_DEX_SALAMENCE,                \
         .categoryName = _("Dragon"),                        \
-        LEARNSETS(Salamence),                               \
-        .formSpeciesIdTable = sSalamenceFormSpeciesIdTable, \
-        .formChangeTable = sSalamenceFormChangeTable
+        LEARNSETS(Salamence)
 
     [SPECIES_SALAMENCE] =
     {
         SALAMENCE_MISC_INFO,
         .baseHP        = 95,
-        .baseAttack    = 135,
-        .baseDefense   = 80,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 110,
-        .baseSpDefense = 80,
-        .expYield = 270,
-        .abilities = { ABILITY_INTIMIDATE, ABILITY_NONE, ABILITY_MOXIE },
+        .baseAttack    = 140,
+        .baseDefense   = 105,
+        .baseSpeed     = 110,
+        .baseSpAttack  = 115,
+        .baseSpDefense = 85,
+        .expYield = 380,
+        .abilities = { ABILITY_INTIMIDATE, ABILITY_AERILATE, ABILITY_MOXIE },
         .cryId = CRY_SALAMENCE,
         .height = 15,
         .weight = 1026,
@@ -7282,6 +7281,55 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .isMegaEvolution = TRUE,
     },
 #endif //P_MEGA_EVOLUTIONS
+
+    [SPECIES_ROARING_MOON] =
+    {
+        .baseHP        = 115,
+        .baseAttack    = 149,
+        .baseDefense   = 81,
+        .baseSpeed     = 129,
+        .baseSpAttack  = 65,
+        .baseSpDefense = 111,
+        .types = { TYPE_DRAGON, TYPE_DARK },
+        .catchRate = 23,
+        .expYield = 380,
+        .evYield_Attack = 3,
+        .itemRare = ITEM_DRAGON_FANG,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 40,
+        .friendship = 35,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = { EGG_GROUP_DRAGON, EGG_GROUP_DRAGON },
+        .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_PROTOSYNTHESIS, ABILITY_PROTOSYNTHESIS },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Teramence"),
+        .cryId = CRY_ROARING_MOON,
+        .natDexNum = NATIONAL_DEX_ROARING_MOON,
+        .categoryName = _("Dragon"),
+        .height = 20,
+        .weight = 3800,
+        .description = COMPOUND_STRING(
+            "According to an article in a\n"
+            "dubious magazine, this Pokémon has some\n"
+            "connection to Mega Evolution that\n"
+            "occurs in Hoenn."),
+        .pokemonScale = 356,
+        .pokemonOffset = 17,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        FRONT_PIC(RoaringMoon, 64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_RoaringMoon,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .enemyMonElevation = 6,
+        BACK_PIC(RoaringMoon, 64, 64),
+        .backPicYOffset = 7,
+        //.backAnimId = BACK_ANIM_NONE,
+        PALETTES(RoaringMoon),
+        ICON(RoaringMoon, 3),
+        //.footprint = gMonFootprint_RoaringMoon,
+        LEARNSETS(RoaringMoon),
+    },
 #endif //P_FAMILY_BAGON
 
 #if P_FAMILY_BELDUM
@@ -7294,8 +7342,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 35,
         .baseSpDefense = 60,
         .types = { TYPE_STEEL, TYPE_PSYCHIC },
-        .catchRate = 3,
-        .expYield = 60,
+        .catchRate = 154,
+        .expYield = 120,
         .evYield_Defense = 1,
         .itemRare = ITEM_METAL_COAT,
         .genderRatio = MON_GENDERLESS,
@@ -7303,7 +7351,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
         .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },
-        .abilities = { ABILITY_CLEAR_BODY, ABILITY_NONE, ABILITY_LIGHT_METAL },
+        .abilities = { ABILITY_CLEAR_BODY, ABILITY_CLEAR_BODY, ABILITY_LIGHT_METAL },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Beldum"),
         .cryId = CRY_BELDUM,
@@ -7343,8 +7391,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 55,
         .baseSpDefense = 80,
         .types = { TYPE_STEEL, TYPE_PSYCHIC },
-        .catchRate = 3,
-        .expYield = 147,
+        .catchRate = 97,
+        .expYield = 185,
         .evYield_Defense = 2,
         .itemRare = ITEM_METAL_COAT,
         .genderRatio = MON_GENDERLESS,
@@ -7352,7 +7400,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
         .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },
-        .abilities = { ABILITY_CLEAR_BODY, ABILITY_NONE, ABILITY_LIGHT_METAL },
+        .abilities = { ABILITY_CLEAR_BODY, ABILITY_CLEAR_BODY, ABILITY_LIGHT_METAL },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Metang"),
         .cryId = CRY_METANG,
@@ -7384,7 +7432,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 
 #define METAGROSS_MISC_INFO                                     \
         .types = { TYPE_STEEL, TYPE_PSYCHIC },                  \
-        .catchRate = 3,                                         \
+        .catchRate = 23,                                         \
         .evYield_Defense = 3,                                   \
         .itemRare = ITEM_METAL_COAT,                            \
         .genderRatio = MON_GENDERLESS,                          \
@@ -7396,21 +7444,19 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .speciesName = _("Metagross"),                          \
         .natDexNum = NATIONAL_DEX_METAGROSS,                    \
         .categoryName = _("Iron Leg"),                          \
-        LEARNSETS(Metagross),                                   \
-        .formSpeciesIdTable = sMetagrossFormSpeciesIdTable,     \
-        .formChangeTable = sMetagrossFormChangeTable
+        LEARNSETS(Metagross)
 
     [SPECIES_METAGROSS] =
     {
         METAGROSS_MISC_INFO,
         .baseHP        = 80,
-        .baseAttack    = 135,
-        .baseDefense   = 130,
-        .baseSpeed     = 70,
-        .baseSpAttack  = 95,
-        .baseSpDefense = 90,
-        .expYield = 270,
-        .abilities = { ABILITY_CLEAR_BODY, ABILITY_NONE, ABILITY_LIGHT_METAL },
+        .baseAttack    = 140,
+        .baseDefense   = 140,
+        .baseSpeed     = 90,
+        .baseSpAttack  = 100,
+        .baseSpDefense = 100,
+        .expYield = 380,
+        .abilities = { ABILITY_CLEAR_BODY, ABILITY_TOUGH_CLAWS, ABILITY_LIGHT_METAL },
         .cryId = CRY_METAGROSS,
         .height = 16,
         .weight = 5500,
