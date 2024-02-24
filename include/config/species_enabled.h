@@ -373,7 +373,7 @@
 #define P_FAMILY_VULLABY                 FALSE
 #define P_FAMILY_HEATMOR                 FALSE
 #define P_FAMILY_DURANT                  FALSE
-#define P_FAMILY_DEINO                   FALSE
+#define P_FAMILY_DEINO                   TRUE
 #define P_FAMILY_LARVESTA                TRUE
 #define P_FAMILY_COBALION                FALSE
 #define P_FAMILY_TERRAKION               FALSE
@@ -577,7 +577,7 @@
 #define P_FAMILY_IRON_TREADS             TRUE
 #define P_FAMILY_IRON_BUNDLE             TRUE
 #define P_FAMILY_IRON_HANDS              TRUE
-#define P_FAMILY_IRON_JUGULIS            FALSE
+#define P_FAMILY_IRON_JUGULIS            TRUE
 #define P_FAMILY_IRON_MOTH               TRUE
 #define P_FAMILY_IRON_THORNS             TRUE
 #define P_FAMILY_FRIGIBAX                FALSE

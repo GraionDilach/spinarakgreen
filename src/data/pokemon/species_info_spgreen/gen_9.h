@@ -3791,54 +3791,6 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_IRON_HANDS
 
 #if P_FAMILY_IRON_JUGULIS
-    [SPECIES_IRON_JUGULIS] =
-    {
-        .baseHP        = 94,
-        .baseAttack    = 80,
-        .baseDefense   = 86,
-        .baseSpeed     = 108,
-        .baseSpAttack  = 122,
-        .baseSpDefense = 80,
-        .types = { TYPE_DARK, TYPE_FLYING },
-        .catchRate = 30,
-        .expYield = 285,
-        .evYield_SpAttack = 3,
-        .genderRatio = MON_GENDERLESS,
-        .eggCycles = 50,
-        .friendship = 0,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
-        .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_BLUE,
-        .isParadoxForm = TRUE,
-        .speciesName = _("IronJuguls"),
-        .cryId = CRY_IRON_JUGULIS,
-        .natDexNum = NATIONAL_DEX_IRON_JUGULIS,
-        .categoryName = _("Paradox"),
-        .height = 13,
-        .weight = 1110,
-        .description = COMPOUND_STRING(
-            "It resembles a certain Pokémon\n"
-            "introduced in a paranormal magazine,\n"
-            "described as the offspring of a\n"
-            "Hydreigon that fell in love with a robot."),
-        .pokemonScale = 356,
-        .pokemonOffset = 17,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        FRONT_PIC(IronJugulis, 64, 64),
-        .frontPicYOffset = 2,
-        .frontAnimFrames = sAnims_IronJugulis,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .enemyMonElevation = 7,
-        BACK_PIC(IronJugulis, 64, 64),
-        .backPicYOffset = 0,
-        //.backAnimId = BACK_ANIM_NONE,
-        PALETTES(IronJugulis),
-        ICON(IronJugulis, 2),
-        //.footprint = gMonFootprint_IronJugulis,
-        LEARNSETS(IronJugulis),
-    },
 #endif //P_FAMILY_IRON_JUGULIS
 
 #if P_FAMILY_IRON_MOTH
