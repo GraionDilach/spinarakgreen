@@ -367,7 +367,7 @@
 #define P_FAMILY_MIENFOO                 FALSE
 #define P_FAMILY_DRUDDIGON               FALSE
 #define P_FAMILY_GOLETT                  TRUE
-#define P_FAMILY_PAWNIARD                FALSE
+#define P_FAMILY_PAWNIARD                TRUE
 #define P_FAMILY_BOUFFALANT              FALSE
 #define P_FAMILY_RUFFLET                 FALSE
 #define P_FAMILY_VULLABY                 FALSE
