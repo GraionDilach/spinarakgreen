@@ -54,7 +54,12 @@
     F(OVERHEAT) \
     F(HEADBUTT) \
     F(DAZZLING_GLEAM) \
-    F(TRI_ATTACK)
+    F(TRI_ATTACK) \
+    F(U_TURN) \
+    F(DARK_PULSE) \
+    F(FOUL_PLAY) \
+    F(X_SCISSOR) \
+    F(POISON_JAB)
 
 #define FOREACH_HM(F) \
     F(CUT) \
