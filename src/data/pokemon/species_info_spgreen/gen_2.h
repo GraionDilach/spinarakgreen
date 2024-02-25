@@ -622,10 +622,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Hoothoot),
         ICON(Hoothoot, 2),
         LEARNSETS(Hoothoot),
-        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_WATCHTOWL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_WATCHOWL}),
     },
 
-    [SPECIES_WATCHTOWL] =
+    [SPECIES_WATCHOWL] =
     {
         .baseHP        = 100,
         .baseAttack    = 50,
@@ -644,15 +644,15 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
         .abilities = { ABILITY_INSOMNIA, ABILITY_KEEN_EYE, ABILITY_TINTED_LENS },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Watchtowl"),
+        .speciesName = _("Watchowl"),
         .cryId = CRY_NOCTOWL,
-        .natDexNum = NATIONAL_DEX_WATCHTOWL,
+        .natDexNum = NATIONAL_DEX_WATCHOWL,
         .categoryName = _("Owl"),
         .height = 16,
         .weight = 408,
         .description = COMPOUND_STRING(
             "It unfailingly catches prey in darkness.\n"
-            "Noctowl owe their success to superior\n"
+            "Watchowl owe their success to superior\n"
             "vision that allows them to see in minimal\n"
             "light, and to their supple and silent wings."),
         .pokemonScale = 278,
