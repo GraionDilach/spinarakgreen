@@ -11085,6 +11085,7 @@ static const u16 sMoltresGalarianTeachableLearnset[] = {
     MOVE_TERA_BLAST,
     MOVE_THIEF,
     MOVE_U_TURN,
+    MOVE_WILL_O_WISP,
     MOVE_UNAVAILABLE,
 };
 
