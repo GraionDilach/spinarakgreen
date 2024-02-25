@@ -59,7 +59,18 @@
     F(DARK_PULSE) \
     F(FOUL_PLAY) \
     F(X_SCISSOR) \
-    F(POISON_JAB)
+    F(POISON_JAB) \
+    F(SCALD) \
+    F(DRAGON_PULSE) \
+    F(OUTRAGE) \
+    F(SELF_DESTRUCT) \
+    F(MISTY_EXPLOSION) \
+    F(PLAY_ROUGH) \
+    F(SUPERPOWER) \
+    F(ROOST) \
+    F(MEGA_DRAIN) \
+    F(FLASH_CANNON) \
+    F(DRILL_RUN)
 
 #define FOREACH_HM(F) \
     F(CUT) \
