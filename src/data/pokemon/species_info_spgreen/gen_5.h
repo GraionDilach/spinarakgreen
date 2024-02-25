@@ -8651,20 +8651,19 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 
 #if P_FAMILY_MELOETTA
 #define MELOETTA_MISC_INFO                                                              \
-        .catchRate = 3,                                                                 \
-        .expYield = 270,                                                                \
+        .catchRate = 34,                                                                \
+        .expYield = 319,                                                                \
         .evYield_Speed = 1,                                                             \
         .itemCommon = ITEM_STAR_PIECE,                                                  \
         .itemRare = ITEM_STAR_PIECE,                                                    \
-        .genderRatio = MON_GENDERLESS,                                                  \
+        .genderRatio = MON_FEMALE,                                                      \
         .eggCycles = 120,                                                               \
         .friendship = 100,                                                              \
         .growthRate = GROWTH_SLOW,                                                      \
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },    \
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FAIRY },                         \
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_NONE },                            \
         .bodyColor = BODY_COLOR_WHITE,                                                  \
         .noFlip = TRUE,                                                                 \
-        .isMythical = TRUE,                                                             \
         .speciesName = _("Meloetta"),                                                   \
         .cryId = CRY_MELOETTA,                                                          \
         .natDexNum = NATIONAL_DEX_MELOETTA,                                             \

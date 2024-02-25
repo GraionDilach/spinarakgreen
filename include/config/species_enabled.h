@@ -385,7 +385,7 @@
 #define P_FAMILY_LANDORUS                FALSE
 #define P_FAMILY_KYUREM                  FALSE
 #define P_FAMILY_KELDEO                  FALSE
-#define P_FAMILY_MELOETTA                FALSE
+#define P_FAMILY_MELOETTA                TRUE
 #define P_FAMILY_GENESECT                FALSE
 
 #define P_FAMILY_CHESPIN                 FALSE
