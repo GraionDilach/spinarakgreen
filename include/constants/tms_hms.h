@@ -70,7 +70,15 @@
     F(ROOST) \
     F(MEGA_DRAIN) \
     F(FLASH_CANNON) \
-    F(DRILL_RUN)
+    F(DRILL_RUN) \
+    F(FOCUS_BLAST) \
+    F(ENERGY_BALL) \
+    F(FALSE_SWIPE) \
+    F(BRINE) \
+    F(FLING) \
+    F(CHARGE_BEAM) \
+    F(DRAIN_PUNCH) \
+    F(WILL_O_WISP)
 
 #define FOREACH_HM(F) \
     F(CUT) \
