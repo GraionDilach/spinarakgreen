@@ -2375,10 +2375,12 @@ const u16 gEggMoves[] = {
     egg_moves(TANGELICA,
               MOVE_AMNESIA,
               MOVE_CONFUSION,
+              MOVE_CURSE,
               MOVE_FLAIL,
               MOVE_LEECH_SEED,
               MOVE_NATURE_POWER,
               MOVE_SKULL_BASH,
+              MOVE_SWEET_SCENT,
               MOVE_TAKE_DOWN),
 
     egg_moves(TANGELA,
@@ -3388,6 +3390,11 @@ const u16 gEggMoves[] = {
               MOVE_WING_ATTACK,
               MOVE_WORK_UP,
               MOVE_ZEN_HEADBUTT),
+
+    egg_moves(LEDYSTAR,
+              MOVE_CURSE,
+              MOVE_PSYBEAM,
+              MOVE_SWEET_SCENT),
 
     egg_moves(LEDYBA,
               MOVE_ACROBATICS,
