@@ -720,7 +720,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 #endif //P_FAMILY_HOOTHOOT
 
 #if P_FAMILY_LEDYBA
-    [SPECIES_LEDYBA] =
+    [SPECIES_LEDYSTAR] =
     {
         .baseHP        = 40,
         .baseAttack    = 40,
@@ -731,6 +731,55 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .types = { TYPE_BUG, TYPE_FLYING },
         .catchRate = 161,
         .expYield = 114,
+        .evYield_SpDefense = 1,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_FAST,
+        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
+        .abilities = { ABILITY_SWARM, ABILITY_EARLY_BIRD, ABILITY_RATTLED },
+        .bodyColor = BODY_COLOR_RED,
+        .speciesName = _("Ledystar"),
+        .cryId = CRY_LEDYBA,
+        .natDexNum = NATIONAL_DEX_LEDYSTAR,
+        .categoryName = _("Five Star"),
+        .height = 10,
+        .weight = 108,
+        .description = COMPOUND_STRING(
+            "Ledyba communicate using a fluid that\n"
+            "they secrete from where the legs join the\n"
+            "body. They are said to convey feelings to\n"
+            "others by altering the fluid's scent."),
+        .pokemonScale = 256,
+        .pokemonOffset = 4,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        FRONT_PIC(Ledyba, 48, 48),
+        FRONT_PIC_FEMALE(Ledyba, 48, 48),
+        .frontPicYOffset = 10,
+        .frontAnimFrames = sAnims_Ledyba,
+        .frontAnimId = ANIM_V_JUMPS_SMALL,
+        BACK_PIC(Ledyba, 56, 48),
+        BACK_PIC_FEMALE(Ledyba, 56, 48),
+        .backPicYOffset = 8,
+        .backAnimId = BACK_ANIM_V_SHAKE_H_SLIDE,
+        PALETTES(Ledyba),
+        ICON(Ledyba, 0),
+        LEARNSETS(Ledyba),
+        .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_LEDYBA}),
+    },
+
+    [SPECIES_LEDYBA] =
+    {
+        .baseHP        = 55,
+        .baseAttack    = 50,
+        .baseDefense   = 50,
+        .baseSpeed     = 85,
+        .baseSpAttack  = 50,
+        .baseSpDefense = 95,
+        .types = { TYPE_BUG, TYPE_FLYING },
+        .catchRate = 113,
+        .expYield = 169,
         .evYield_SpDefense = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
@@ -766,56 +815,6 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Ledyba),
         ICON(Ledyba, 0),
         LEARNSETS(Ledyba),
-        .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_LEDYSTAR}),
-    },
-
-    [SPECIES_LEDYSTAR] =
-    {
-        .baseHP        = 55,
-        .baseAttack    = 50,
-        .baseDefense   = 50,
-        .baseSpeed     = 85,
-        .baseSpAttack  = 50,
-        .baseSpDefense = 95,
-        .types = { TYPE_BUG, TYPE_FLYING },
-        .catchRate = 113,
-        .expYield = 169,
-        .evYield_SpDefense = 2,
-        .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 15,
-        .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
-        .abilities = { ABILITY_SWARM, ABILITY_EARLY_BIRD, ABILITY_IRON_FIST },
-        .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("Ledystar"),
-        .cryId = CRY_LEDIAN,
-        .natDexNum = NATIONAL_DEX_LEDYSTAR,
-        .categoryName = _("Five Star"),
-        .height = 14,
-        .weight = 356,
-        .description = COMPOUND_STRING(
-            "It is said that in lands with clean air,\n"
-            "where the stars fill the sky, there live\n"
-            "many Ledystars. For good reason, they use\n"
-            "the light of the stars as energy."),
-        .pokemonScale = 256,
-        .pokemonOffset = 2,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        FRONT_PIC(Ledian, 48, 56),
-        FRONT_PIC_FEMALE(Ledian, 48, 56),
-        .frontPicYOffset = 6,
-        .frontAnimFrames = sAnims_Ledian,
-        .frontAnimId = ANIM_V_SLIDE_WOBBLE,
-        .enemyMonElevation = 10,
-        BACK_PIC(Ledian, 64, 64),
-        BACK_PIC_FEMALE(Ledian, 64, 64),
-        .backPicYOffset = 3,
-        .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
-        PALETTES(Ledian),
-        ICON(Ledian, 0),
-        LEARNSETS(Ledian),
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_LEDIAN}),
     },
 
