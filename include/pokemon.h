@@ -175,10 +175,10 @@ struct PokemonSubstruct3
 {
     u8 pokerus;
     u8 metLocation;
-    u16 metLevel:7;
+    u16 metLevel:8;
     u16 metGame:4;
     u16 dynamaxLevel:4;
-    u16 otGender:1;
+    //u16 otGender:1;
     u32 hpIV:5;
     u32 attackIV:5;
     u32 defenseIV:5;
@@ -205,7 +205,8 @@ struct PokemonSubstruct3
     u32 earthRibbon:1;    // Given to teams that have beaten Mt. Battle's 100-battle challenge in Colosseum/XD.
     u32 worldRibbon:1;    // Distributed during Pokémon Festa '04 and '05 to tournament winners.
     u32 isShadow:1;
-    u32 unused_0B:1;
+    //u32 unused_0B:1;
+    u32 otGender:1;
     u32 abilityNum:2;
 
     // The functionality of this bit changed in FRLG:
