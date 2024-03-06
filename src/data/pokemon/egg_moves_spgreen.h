@@ -2373,6 +2373,11 @@ const u16 gEggMoves[] = {
               MOVE_ZEN_HEADBUTT),
 
     egg_moves(TANGELICA,
+              MOVE_AMNESIA,
+              MOVE_CONFUSION,
+              MOVE_FLAIL,
+              MOVE_LEECH_SEED,
+              MOVE_NATURE_POWER,
               MOVE_SKULL_BASH,
               MOVE_TAKE_DOWN),
 
