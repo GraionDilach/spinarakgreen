@@ -7994,6 +7994,7 @@ static const struct LevelUpMove sMisdreavusLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sMismagiusLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 0, MOVE_LAST_RESPECTS),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 1, MOVE_SPITE),
     LEVEL_UP_MOVE( 1, MOVE_ASTONISH),
@@ -8020,6 +8021,7 @@ static const struct LevelUpMove sMismagiusLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sFlutterManeLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 0, MOVE_LAST_RESPECTS),
     LEVEL_UP_MOVE( 1, MOVE_SUNNY_DAY),
     LEVEL_UP_MOVE( 1, MOVE_ASTONISH),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
