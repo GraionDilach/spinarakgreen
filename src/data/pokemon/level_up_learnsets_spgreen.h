@@ -8349,6 +8349,7 @@ static const struct LevelUpMove sQwilfishLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sQwilsparkLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_SPIKES),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_POISON_STING),
     LEVEL_UP_MOVE(10, MOVE_HARDEN),
