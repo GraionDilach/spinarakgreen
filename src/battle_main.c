@@ -1993,10 +1993,10 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 SetMonData(&party[i], MON_DATA_SPATK_EV, &(partyData[i].ev[3]));
                 SetMonData(&party[i], MON_DATA_SPDEF_EV, &(partyData[i].ev[4]));
                 SetMonData(&party[i], MON_DATA_SPEED_EV, &(partyData[i].ev[5]));
-            } 
+            }
             else
             {
-                u8 ev = partyData[i].lvl * 5 / 2;
+                u8 ev = ((partyData[i].lvl * 5 / 2) < 255) ? (partyData[i].lvl * 5 / 2) : 255;
                 SetMonData(&party[i], MON_DATA_HP_EV, &ev);
                 SetMonData(&party[i], MON_DATA_ATK_EV, &ev);
                 SetMonData(&party[i], MON_DATA_DEF_EV, &ev);
@@ -5519,7 +5519,7 @@ static void FreeResetData_ReturnToOvOrDoEvolutions(void)
             IncrementDexNavChain();
         else
             gSaveBlock1Ptr->dexNavChain = 0;
-        
+
         gDexnavBattle = FALSE;
         ResetSpriteData();
         if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK
