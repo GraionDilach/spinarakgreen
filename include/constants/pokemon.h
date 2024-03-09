@@ -221,12 +221,32 @@
 #define DAMAGE_CATEGORY_STATUS      2
 
 // Growth rates
+#if (P_UPDATED_STATS == GEN_SPGRN)
+#define GROWTH_50           0
+#define GROWTH_150          1
+#define GROWTH_250          2
+#define GROWTH_350          3
+#define GROWTH_450          4
+#define GROWTH_550          5
+#define GROWTH_650          6
+#define GROWTH_750          7
+#define GROWTH_850          8
+#define GROWTH_950          9
+#define GROWTH_1050         10
+#define GROWTH_MEDIUM_FAST  6
+#define GROWTH_ERRATIC      6
+#define GROWTH_FLUCTUATING  6
+#define GROWTH_MEDIUM_SLOW  6
+#define GROWTH_FAST         6
+#define GROWTH_SLOW         6
+#else
 #define GROWTH_MEDIUM_FAST  0
 #define GROWTH_ERRATIC      1
 #define GROWTH_FLUCTUATING  2
 #define GROWTH_MEDIUM_SLOW  3
 #define GROWTH_FAST         4
 #define GROWTH_SLOW         5
+#endif
 
 // Body colors for Pokédex search
 #define BODY_COLOR_RED      0

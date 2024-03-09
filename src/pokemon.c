@@ -422,11 +422,12 @@ const s8 gNatureStatTable[NUM_NATURES][NUM_NATURE_STATS] =
 #include "data/pokemon_graphics/front_pic_anims.h"
 
 #include "data/pokemon/trainer_class_lookups.h"
-#include "data/pokemon/experience_tables.h"
 #if P_UPDATED_STATS == GEN_SPGRN
+#include "data/pokemon/experience_tables_spgreen.h"
 #include "data/pokemon/level_up_learnsets_spgreen.h"
 #include "data/pokemon/teachable_learnsets_spgreen.h"
 #else
+#include "data/pokemon/experience_tables.h"
 
 #if P_LVL_UP_LEARNSETS >= GEN_9
 #include "data/pokemon/level_up_learnsets/gen_9.h"

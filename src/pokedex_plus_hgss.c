@@ -168,12 +168,26 @@ static const u8 sText_Stats_Friendship_BigAnger[] = _("{EMOJI_BIGANGER}");
 static const u8 sText_Stats_Friendship_Neutral[] = _("{EMOJI_NEUTRAL}");
 static const u8 sText_Stats_Friendship_Happy[] = _("{EMOJI_HAPPY}");
 static const u8 sText_Stats_Friendship_BigSmile[] = _("{EMOJI_BIGSMILE}");
+#if (P_UPDATED_STATS == GEN_SPGRN)
+static const u8 sText_Stats_EXP50[] = _("EXP. 50");
+static const u8 sText_Stats_EXP150[] = _("EXP. 150");
+static const u8 sText_Stats_EXP250[] = _("EXP. 250");
+static const u8 sText_Stats_EXP350[] = _("EXP. 350");
+static const u8 sText_Stats_EXP450[] = _("EXP. 450");
+static const u8 sText_Stats_EXP550[] = _("EXP. 550");
+static const u8 sText_Stats_EXP650[] = _("EXP. 650");
+static const u8 sText_Stats_EXP750[] = _("EXP. 750");
+static const u8 sText_Stats_EXP850[] = _("EXP. 850");
+static const u8 sText_Stats_EXP950[] = _("EXP. 950");
+static const u8 sText_Stats_EXP1050[] = _("EXP. 1050");
+#else
 static const u8 sText_Stats_MEDIUM_FAST[] = _("MED. FAST");
 static const u8 sText_Stats_ERRATIC[] = _("ERRATIC");
 static const u8 sText_Stats_FLUCTUATING[] = _("FLUCTUATING");
 static const u8 sText_Stats_MEDIUM_SLOW[] = _("MED. SLOW");
 static const u8 sText_Stats_FAST[] = _("FAST");
 static const u8 sText_Stats_SLOW[] = _("SLOW");
+#endif
 static const u8 sText_Stats_ContestHeart[] = _("H");
 static const u8 sText_Stats_Minus[] = _("-");
 static const u8 sText_Stats_eggGroup[] = _("EGG G1:");
@@ -5684,6 +5698,41 @@ static void PrintStatsScreen_Left(u8 taskId)
         PrintStatsScreenTextSmall(WIN_STATS_LEFT, sText_Stats_Growthrate, base_x, base_y + base_y_offset*base_i);
         switch (growthRate)
         {
+        #if (P_UPDATED_STATS == GEN_SPGRN)
+        case GROWTH_50:
+            StringCopy(strEV, sText_Stats_EXP50);
+            break;
+        case GROWTH_150:
+            StringCopy(strEV, sText_Stats_EXP150);
+            break;
+        case GROWTH_250:
+            StringCopy(strEV, sText_Stats_EXP250);
+            break;
+        case GROWTH_350:
+            StringCopy(strEV, sText_Stats_EXP350);
+            break;
+        case GROWTH_450:
+            StringCopy(strEV, sText_Stats_EXP450);
+            break;
+        case GROWTH_550:
+            StringCopy(strEV, sText_Stats_EXP550);
+            break;
+        case GROWTH_650:
+            StringCopy(strEV, sText_Stats_EXP650);
+            break;
+        case GROWTH_750:
+            StringCopy(strEV, sText_Stats_EXP750);
+            break;
+        case GROWTH_850:
+            StringCopy(strEV, sText_Stats_EXP850);
+            break;
+        case GROWTH_950:
+            StringCopy(strEV, sText_Stats_EXP950);
+            break;
+        case GROWTH_1050:
+            StringCopy(strEV, sText_Stats_EXP1050);
+            break;
+        #else
         case GROWTH_MEDIUM_FAST:
             StringCopy(strEV, sText_Stats_MEDIUM_FAST);
             break;
@@ -5702,6 +5751,7 @@ static void PrintStatsScreen_Left(u8 taskId)
         case GROWTH_SLOW:
             StringCopy(strEV, sText_Stats_SLOW);
             break;
+        #endif
         default:
             break;
         }
