@@ -233,12 +233,6 @@
 #define GROWTH_850          8
 #define GROWTH_950          9
 #define GROWTH_1050         10
-#define GROWTH_MEDIUM_FAST  6
-#define GROWTH_ERRATIC      6
-#define GROWTH_FLUCTUATING  6
-#define GROWTH_MEDIUM_SLOW  6
-#define GROWTH_FAST         6
-#define GROWTH_SLOW         6
 #else
 #define GROWTH_MEDIUM_FAST  0
 #define GROWTH_ERRATIC      1
