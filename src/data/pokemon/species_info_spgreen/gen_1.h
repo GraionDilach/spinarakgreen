@@ -102,7 +102,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     },
 
 #define VENUSAUR_MISC_INFO                                                  \
-        .catchRate = 48,                                                    \
+        .catchRate = 26,                                                    \
         .evYield_SpAttack = 2,                                              \
         .evYield_SpDefense = 1,                                             \
         .genderRatio = PERCENT_FEMALE(12.5),                                \
@@ -118,13 +118,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         VENUSAUR_MISC_INFO,
         .baseHP        = 80,
-        .baseAttack    = 85,
-        .baseDefense   = 85,
+        .baseAttack    = 132,
+        .baseDefense   = 132,
         .baseSpeed     = 80,
-        .baseSpAttack  = 110,
-        .baseSpDefense = 110,
+        .baseSpAttack  = 105,
+        .baseSpDefense = 105,
         .types = { TYPE_GRASS, TYPE_POISON },
-        .expYield = 293,
+        .expYield = 337,
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_CHLOROPHYLL },
         .speciesName = _("Venusaur"),
         .cryId = CRY_VENUSAUR,
@@ -156,14 +156,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_VENUSAUR_MEGA] =
     {
         VENUSAUR_MISC_INFO,
-        .baseHP        = 80,
+        .baseHP        = 89,
         .baseAttack    = 100,
         .baseDefense   = 123,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 91,
-        .baseSpDefense = 91,
+        .baseSpeed     = 80,
+        .baseSpAttack  = 122,
+        .baseSpDefense = 120,
         .types = { TYPE_GRASS, TYPE_POISON },
-        .expYield = 293,
+        .expYield = 337,
         .abilities = { ABILITY_THICK_FAT, ABILITY_THICK_FAT, ABILITY_THICK_FAT },
         .speciesName = _("Megasaur"),
         .cryId = CRY_VENUSAUR_MEGA,
@@ -192,14 +192,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_VENUSAUR_GIGANTAMAX] =
     {
         VENUSAUR_MISC_INFO,
-        .baseHP        = 88,
-        .baseAttack    = 70,
-        .baseDefense   = 70,
-        .baseSpeed     = 80,
-        .baseSpAttack  = 122,
+        .baseHP        = 100,
+        .baseAttack    = 102,
+        .baseDefense   = 103,
+        .baseSpeed     = 89,
+        .baseSpAttack  = 120,
         .baseSpDefense = 120,
         .types = { TYPE_GRASS, TYPE_GRASS },
-        .expYield = 293,
+        .expYield = 337,
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_CHLOROPHYLL },
         .speciesName = _("Flowosaur"),
         .cryId = CRY_VENUSAUR,
@@ -326,7 +326,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     },
 
 #define CHARIZARD_MISC_INFO                                             \
-        .catchRate = 48,                                                \
+        .catchRate = 26,                                                \
         .evYield_SpAttack = 3,                                          \
         .genderRatio = PERCENT_FEMALE(12.5),                            \
         .eggCycles = 20,                                                \
@@ -339,14 +339,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_CHARIZARD] =
     {
         CHARIZARD_MISC_INFO,
-        .baseHP        = 78,
-        .baseAttack    = 84,
-        .baseDefense   = 78,
-        .baseSpeed     = 110,
-        .baseSpAttack  = 115,
-        .baseSpDefense = 85,
+        .baseHP        = 93,
+        .baseAttack    = 99,
+        .baseDefense   = 93,
+        .baseSpeed     = 125,
+        .baseSpAttack  = 124,
+        .baseSpDefense = 100,
         .types = { TYPE_FIRE, TYPE_FLYING },
-        .expYield = 293,
+        .expYield = 337,
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_SOLAR_POWER },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Charizard"),
@@ -378,14 +378,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_CHARIZARD_MEGA_X] =
     {
         CHARIZARD_MISC_INFO,
-        .baseHP        = 62,
+        .baseHP        = 78,
         .baseAttack    = 130,
         .baseDefense   = 111,
-        .baseSpeed     = 70,
-        .baseSpAttack  = 105,
-        .baseSpDefense = 72,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 85,
         .types = { TYPE_FIRE, TYPE_DRAGON },
-        .expYield = 293,
+        .expYield = 337,
         .abilities = { ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Charistyle"),
@@ -454,15 +454,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_CHARIZARD_GIGANTAMAX] =
     {
         CHARIZARD_MISC_INFO,
-        .baseHP        = 60,
-        .baseAttack    = 70,
-        .baseDefense   = 60,
-        .baseSpeed     = 86,
+        .baseHP        = 78,
+        .baseAttack    = 104,
+        .baseDefense   = 78,
+        .baseSpeed     = 100,
         .baseSpAttack  = 159,
         .baseSpDefense = 115,
         .types = { TYPE_FIRE, TYPE_FIRE },
-        .expYield = 240,
-        .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_SOLAR_POWER },
+        .expYield = 337,
+        .abilities = { ABILITY_DROUGHT, ABILITY_NONE, ABILITY_SOLAR_POWER },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Charizilla"),
         .cryId = CRY_CHARIZARD,
@@ -590,7 +590,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     },
 
 #define BLASTOISE_MISC_INFO                                             \
-        .catchRate = 48,                                                \
+        .catchRate = 26,                                                \
         .evYield_SpDefense = 3,                                         \
         .genderRatio = PERCENT_FEMALE(12.5),                            \
         .eggCycles = 20,                                                \
@@ -605,13 +605,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         BLASTOISE_MISC_INFO,
         .baseHP        = 84,
-        .baseAttack    = 83,
-        .baseDefense   = 110,
-        .baseSpeed     = 78,
-        .baseSpAttack  = 85,
-        .baseSpDefense = 110,
+        .baseAttack    = 91,
+        .baseDefense   = 141,
+        .baseSpeed     = 86,
+        .baseSpAttack  = 91,
+        .baseSpDefense = 141,
         .types = { TYPE_WATER, TYPE_WATER },
-        .expYield = 293,
+        .expYield = 337,
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_RAIN_DISH },
         .speciesName = _("Blastoise"),
         .cryId = CRY_BLASTOISE,
@@ -643,14 +643,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_BLASTOISE_MEGA] =
     {
         BLASTOISE_MISC_INFO,
-        .baseHP        = 79,
-        .baseAttack    = 68,
-        .baseDefense   = 105,
-        .baseSpeed     = 63,
+        .baseHP        = 83,
+        .baseAttack    = 103,
+        .baseDefense   = 120,
+        .baseSpeed     = 78,
         .baseSpAttack  = 135,
-        .baseSpDefense = 100,
+        .baseSpDefense = 115,
         .types = { TYPE_WATER, TYPE_STEEL },
-        .expYield = 293,
+        .expYield = 337,
         .abilities = { ABILITY_MEGA_LAUNCHER, ABILITY_MEGA_LAUNCHER, ABILITY_MEGA_LAUNCHER },
         .speciesName = _("Mortoise"),
         .cryId = CRY_BLASTOISE_MEGA,
@@ -682,14 +682,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_BLASTOISE_GIGANTAMAX] =
     {
         BLASTOISE_MISC_INFO,
-        .baseHP        = 84,
-        .baseAttack    = 103,
-        .baseDefense   = 110,
-        .baseSpeed     = 68,
-        .baseSpAttack  = 75,
-        .baseSpDefense = 110,
+        .baseHP        = 94,
+        .baseAttack    = 98,
+        .baseDefense   = 122,
+        .baseSpeed     = 93,
+        .baseSpAttack  = 100,
+        .baseSpDefense = 127,
         .types = { TYPE_WATER, TYPE_DARK },
-        .expYield = 239,
+        .expYield = 337,
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_RAIN_DISH },
         .speciesName = _("Tantortle"),
         .cryId = CRY_BLASTOISE,
