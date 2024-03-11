@@ -1777,7 +1777,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     #if P_CUSTOM_GENDER_DIFF_ICONS == TRUE
         ICON_FEMALE(Pikachu, 2),
     #endif
-        .formChangeTable = sPikachuFormChangeTable,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_RAICHU},
                                 {EVO_ITEM, ITEM_SUN_STONE, SPECIES_RAICHU_ALOLAN},
                                 {EVO_ITEM, ITEM_SHINY_STONE, SPECIES_PIKACHU_GIGANTAMAX},
@@ -4222,7 +4221,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(MeowthGigantamax, 1),
         LEARNSETS(Meowth),
         .isGigantamax = TRUE,
-        .formChangeTable = sMeowthFormChangeTable,
     },
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_MEOWTH
