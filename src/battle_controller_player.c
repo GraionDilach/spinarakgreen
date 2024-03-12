@@ -1910,11 +1910,11 @@ static void MoveSelectionDisplayMoveTypeDoubles(u32 battler, u8 targetId)
         type = ((NUMBER_OF_MON_TYPES - 3) * typeBits) / 63 + 1;
         if (type >= TYPE_MYSTERY)
             type++;
-        StringCopy(txtPtr, gTypeNames[type]);
+        StringCopy(txtPtr, gTypesInfo[type].name);
     }
     else
     {
-        StringCopy(txtPtr, gTypeNames[gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type]);
+        StringCopy(txtPtr, gTypesInfo[gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type].name);
     }
 
     BattlePutTextOnWindow(gDisplayedStringBattle, TypeEffectiveness(moveInfo, battler, targetId, type));
@@ -1963,7 +1963,7 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     }
     else
     {
-    StringCopy(txtPtr, gTypeNames[gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type]);
+    StringCopy(txtPtr, gTypesInfo[gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type].name);
     }
 
     BattlePutTextOnWindow(gDisplayedStringBattle, TypeEffectiveness(moveInfo, battler, 1, type));
