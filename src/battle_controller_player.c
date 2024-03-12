@@ -1945,7 +1945,7 @@ static void MoveSelectionDisplayMoveType(u32 battler)
         type = ((NUMBER_OF_MON_TYPES - 3) * typeBits) / 63 + 1;
         if (type >= TYPE_MYSTERY)
             type++;
-        StringCopy(txtPtr, gTypeNames[type]);
+        StringCopy(txtPtr, gTypesInfo[type].name);
     }
     else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_IVY_CUDGEL)
     {
@@ -1959,7 +1959,7 @@ static void MoveSelectionDisplayMoveType(u32 battler)
         else
             type = gMovesInfo[MOVE_IVY_CUDGEL].type;
 
-        StringCopy(txtPtr, gTypeNames[type]);
+        StringCopy(txtPtr, gTypesInfo[type].name);
     }
     else
     {
