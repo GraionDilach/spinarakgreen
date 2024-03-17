@@ -67,6 +67,10 @@ TEST("Hyper Training increases stats without affecting IVs")
     struct Pokemon mon;
     CreateMon(&mon, SPECIES_WOBBUFFET, 100, 3, TRUE, 0, OT_ID_PRESET, 0);
 
+    data = 0;
+    SetMonData(&mon, MON_DATA_FRIENDSHIP, &data);
+    CalculateMonStats(&mon);
+
     hp = GetMonData(&mon, MON_DATA_HP);
     atk = GetMonData(&mon, MON_DATA_ATK);
     def = GetMonData(&mon, MON_DATA_DEF);
@@ -125,6 +129,11 @@ TEST("canhypertrain/hypertrain affect MON_DATA_HYPER_TRAINED_* and recalculate s
 {
     u32 atk;
     CreateMon(&gPlayerParty[0], SPECIES_WOBBUFFET, 100, 0, FALSE, 0, OT_ID_PRESET, 0);
+
+    u32 data = 0;
+    SetMonData(&gPlayerParty[0], MON_DATA_FRIENDSHIP, &data);
+    CalculateMonStats(&gPlayerParty[0]);
+
     atk = GetMonData(&gPlayerParty[0], MON_DATA_ATK);
 
     RUN_OVERWORLD_SCRIPT(
