@@ -1566,6 +1566,11 @@ void OpenPokemon(u32 sourceLine, u32 side, u32 species)
     (*partySize)++;
 
     CreateMon(DATA.currentMon, species, 100, 0, TRUE, 0, OT_ID_PRESET, 0);
+
+    data = 0;
+    SetMonData(DATA.currentMon, MON_DATA_FRIENDSHIP, &data);
+    CalculateMonStats(DATA.currentMon);
+
     data = MOVE_NONE;
     for (i = 0; i < MAX_MON_MOVES; i++)
         SetMonData(DATA.currentMon, MON_DATA_MOVE1 + i, &data);
