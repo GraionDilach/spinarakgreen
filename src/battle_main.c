@@ -2311,13 +2311,16 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             SetMonData(&party[i], MON_DATA_ABILITY_NUM, &ability);
 
             friendship = GetMonData(&party[i], MON_DATA_FRIENDSHIP);
-            if (partyData[i].friendship > friendship)
+            if (partyData[i].friendship > 0)
             {
                 friendship = partyData[i].friendship;
             }
-            if (gTrainerClasses[trainer->trainerClass].friendship > friendship)
+            else
             {
-                friendship = partyData[i].friendship;
+                if (gTrainerClasses[trainer->trainerClass].friendship > friendship)
+                {
+                    friendship = partyData[i].friendship;
+                }
             }
             SetMonData(&party[i], MON_DATA_FRIENDSHIP, &friendship);
 
