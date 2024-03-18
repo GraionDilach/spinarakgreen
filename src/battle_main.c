@@ -607,6 +607,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         .name = _(trainerName),                         \
         .money = DEFAULT(5, __VA_ARGS__),               \
         .ball = DEFAULT_2(ITEM_POKE_BALL, __VA_ARGS__), \
+        .friendship = DEFAULT_3(0, __VA_ARGS__),        \
     }
 
 const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
@@ -2242,6 +2243,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             u32 otIdType = OT_ID_RANDOM_NO_SHINY;
             u32 fixedOtId = 0;
             u32 ability = 0;
+            u8 friendship;
 
             if (trainer->doubleBattle == TRUE)
                 personalityValue = 0x80;
@@ -2307,7 +2309,18 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 }
             }
             SetMonData(&party[i], MON_DATA_ABILITY_NUM, &ability);
-            SetMonData(&party[i], MON_DATA_FRIENDSHIP, &(partyData[i].friendship));
+
+            friendship = GetMonData(&party[i], MON_DATA_FRIENDSHIP);
+            if (partyData[i].friendship > friendship)
+            {
+                friendship = partyData[i].friendship;
+            }
+            if (gTrainerClasses[trainer->trainerClass].friendship > friendship)
+            {
+                friendship = partyData[i].friendship;
+            }
+            SetMonData(&party[i], MON_DATA_FRIENDSHIP, &friendship);
+
             if (partyData[i].ball != ITEM_NONE)
             {
                 ball = partyData[i].ball;

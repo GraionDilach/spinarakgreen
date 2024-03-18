@@ -97,6 +97,7 @@ struct TrainerClass
     u8 name[13];
     u8 money;
     u16 ball;
+    u8 friendship;
 };
 
 struct TypeInfo
