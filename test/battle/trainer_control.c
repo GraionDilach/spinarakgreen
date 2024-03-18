@@ -66,7 +66,7 @@ TEST("CreateNPCTrainerPartyForTrainer generates customized Pokémon")
     EXPECT(GetMonAbility(&testParty[2]) == ABILITY_SHADOW_TAG);
 
     EXPECT(GetMonData(&testParty[0], MON_DATA_FRIENDSHIP, 0) == 42);
-    EXPECT(GetMonData(&testParty[1], MON_DATA_FRIENDSHIP, 0) == 0);
+    EXPECT(GetMonData(&testParty[1], MON_DATA_FRIENDSHIP, 0) == 50); // edited from 0 due to fallback friendship
 
     EXPECT(GetMonData(&testParty[0], MON_DATA_HELD_ITEM, 0) == ITEM_ASSAULT_VEST);
     EXPECT(GetMonData(&testParty[1], MON_DATA_HELD_ITEM, 0) == ITEM_NONE);
@@ -92,12 +92,12 @@ TEST("CreateNPCTrainerPartyForTrainer generates customized Pokémon")
     EXPECT(GetMonData(&testParty[0], MON_DATA_SPATK_EV, 0) == 4);
     EXPECT(GetMonData(&testParty[0], MON_DATA_SPDEF_EV, 0) == 0);
 
-    EXPECT(GetMonData(&testParty[1], MON_DATA_HP_EV, 0) == 0);
-    EXPECT(GetMonData(&testParty[1], MON_DATA_ATK_EV, 0) == 0);
-    EXPECT(GetMonData(&testParty[1], MON_DATA_DEF_EV, 0) == 0);
-    EXPECT(GetMonData(&testParty[1], MON_DATA_SPEED_EV, 0) == 0);
-    EXPECT(GetMonData(&testParty[1], MON_DATA_SPATK_EV, 0) == 0);
-    EXPECT(GetMonData(&testParty[1], MON_DATA_SPDEF_EV, 0) == 0);
+    EXPECT(GetMonData(&testParty[1], MON_DATA_HP_EV, 0) == 12);     // updated from 0 due to fallback EVs
+    EXPECT(GetMonData(&testParty[1], MON_DATA_ATK_EV, 0) == 12);    // updated from 0 due to fallback EVs
+    EXPECT(GetMonData(&testParty[1], MON_DATA_DEF_EV, 0) == 12);    // updated from 0 due to fallback EVs
+    EXPECT(GetMonData(&testParty[1], MON_DATA_SPEED_EV, 0) == 12);  // updated from 0 due to fallback EVs
+    EXPECT(GetMonData(&testParty[1], MON_DATA_SPATK_EV, 0) == 12);  // updated from 0 due to fallback EVs
+    EXPECT(GetMonData(&testParty[1], MON_DATA_SPDEF_EV, 0) == 12);  // updated from 0 due to fallback EVs
 
     EXPECT(GetMonData(&testParty[0], MON_DATA_LEVEL, 0) == 67);
     EXPECT(GetMonData(&testParty[1], MON_DATA_LEVEL, 0) == 5);
