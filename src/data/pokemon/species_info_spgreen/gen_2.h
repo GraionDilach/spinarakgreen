@@ -3035,6 +3035,57 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     #endif
         LEARNSETS(Wobbuffet),
     },
+
+    [SPECIES_WOBBUFFET_TEST] =
+    {
+        .baseHP        = 240,
+        .baseAttack    = 33,
+        .baseDefense   = 60,
+        .baseSpeed     = 33,
+        .baseSpAttack  = 33,
+        .baseSpDefense = 60,
+        .types = { TYPE_MYSTERY, TYPE_MYSTERY },
+        .catchRate = 80,
+        .expYield = 222,
+        .evYield_HP = 2,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_550,
+        .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
+        .abilities = { ABILITY_SHADOW_TAG, ABILITY_NONE, ABILITY_TELEPATHY },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Wobbutest"),
+        .cryId = CRY_WOBBUFFET,
+        .natDexNum = NATIONAL_DEX_WOBBUFFET,
+        .categoryName = _("Patient"),
+        .height = 13,
+        .weight = 285,
+        .description = COMPOUND_STRING(
+            "Usually docile, a Wobbuffet strikes back\n"
+            "ferociously if its black tail is attacked.\n"
+            "It makes its lair in caves where it waits\n"
+            "for nightfall."),
+        .pokemonScale = 274,
+        .pokemonOffset = 4,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        FRONT_PIC(Wobbuffet, 64, 56),
+        FRONT_PIC_FEMALE(Wobbuffet, 64, 56),
+        .frontPicYOffset = 5,
+        .frontAnimFrames = sAnims_Wobbuffet,
+        .frontAnimId = ANIM_GROW_VIBRATE,
+        BACK_PIC(Wobbuffet, 56, 56),
+        BACK_PIC_FEMALE(Wobbuffet, 56, 56),
+        .backPicYOffset = 10,
+        .backAnimId = BACK_ANIM_V_STRETCH,
+        PALETTES(Wobbuffet),
+        ICON(Wobbuffet, 0),
+    #if P_CUSTOM_GENDER_DIFF_ICONS == TRUE
+        ICON_FEMALE(Wobbuffet, 0),
+    #endif
+        LEARNSETS(Wobbuffet),
+    },
 #endif //P_FAMILY_WOBBUFFET
 
 #if P_FAMILY_GIRAFARIG
