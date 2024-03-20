@@ -402,6 +402,10 @@ static bool8 MapHasSpecies(const struct WildPokemonHeader *info, u16 species)
         return TRUE;
     if (MonListHasSpecies(info->rockSmashMonsInfo, species, ROCK_WILD_COUNT))
         return TRUE;
+    if (MonListHasSpecies(info->headbuttMonsInfo, species, HEADBUTT_WILD_COUNT))
+        return TRUE;
+    if (FlagGet(FLAG_SYS_DETECTOR_MODE) && MonListHasSpecies(info->hiddenMonsInfo, species, HIDDEN_WILD_COUNT))
+        return TRUE;
     return FALSE;
 }
 
