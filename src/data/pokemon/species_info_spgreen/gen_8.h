@@ -630,13 +630,13 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 33,
         .baseSpDefense = 35,
         .types = { TYPE_FLYING, TYPE_FLYING },
-        .catchRate = 255,
-        .expYield = 49,
+        .catchRate = 181,
+        .expYield = 89,
         .evYield_Speed = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_SLOW,
+        .growthRate = GROWTH_250,
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
         .abilities = { ABILITY_KEEN_EYE, ABILITY_UNNERVE, ABILITY_BIG_PECKS },
         .bodyColor = BODY_COLOR_BLUE,
@@ -677,13 +677,13 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 43,
         .baseSpDefense = 55,
         .types = { TYPE_FLYING, TYPE_FLYING },
-        .catchRate = 120,
-        .expYield = 128,
+        .catchRate = 122,
+        .expYield = 160,
         .evYield_Speed = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_SLOW,
+        .growthRate = GROWTH_450,
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
         .abilities = { ABILITY_KEEN_EYE, ABILITY_UNNERVE, ABILITY_BIG_PECKS },
         .bodyColor = BODY_COLOR_BLUE,
@@ -713,7 +713,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         PALETTES(Corvisquire),
         ICON(Corvisquire, 0),
         LEARNSETS(Corvisquire),
-        .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_CORVIKNIGHT}),
+        .evolutions = EVOLUTION({EVO_LEVEL_DAY, 38, SPECIES_CORVIKNIGHT},
+                                {EVO_LEVEL_NIGHT, 38, SPECIES_CORVIKNIGHT_GIGANTAMAX}),
     },
 
 #define CORVIKNIGHT_MISC_INFO                                                       \
@@ -723,28 +724,26 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpeed     = 67,                                                        \
         .baseSpAttack  = 53,                                                        \
         .baseSpDefense = 85,                                                        \
-        .types = { TYPE_FLYING, TYPE_STEEL },                                       \
-        .catchRate = 45,                                                            \
-        .expYield = 248,                                                            \
+        .catchRate = 66,                                                            \
+        .expYield = 239,                                                            \
         .evYield_Defense = 3,                                                       \
         .genderRatio = PERCENT_FEMALE(50),                                          \
         .eggCycles = 15,                                                            \
         .friendship = STANDARD_FRIENDSHIP,                                          \
-        .growthRate = GROWTH_MEDIUM_SLOW,                                           \
+        .growthRate = GROWTH_550,                                                   \
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },                        \
         .abilities = { ABILITY_PRESSURE, ABILITY_UNNERVE, ABILITY_MIRROR_ARMOR },   \
         .bodyColor = BODY_COLOR_PURPLE,                                             \
-        .speciesName = _("Corviknigh"),                                             \
         .cryId = CRY_CORVIKNIGHT,                                                   \
-        .natDexNum = NATIONAL_DEX_CORVIKNIGHT,                                      \
         .categoryName = _("Raven"),                                                 \
-        LEARNSETS(Corviknight),                                                     \
-        .formSpeciesIdTable = sCorviknightFormSpeciesIdTable,                       \
-        .formChangeTable = sCorviknightFormChangeTable
+        LEARNSETS(Corviknight)
 
     [SPECIES_CORVIKNIGHT] =
     {
         CORVIKNIGHT_MISC_INFO,
+        .types = { TYPE_FLYING, TYPE_STEEL },
+        .speciesName = _("Corviknigh"),
+        .natDexNum = NATIONAL_DEX_CORVIKNIGHT,
         .height = 22,
         .weight = 750,
         .description = COMPOUND_STRING(
@@ -771,8 +770,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
     [SPECIES_CORVIKNIGHT_GIGANTAMAX] =
     {
         CORVIKNIGHT_MISC_INFO,
+        .types = { TYPE_FLYING, TYPE_DARK },
+        .speciesName = _("Corbishop"),
+        .natDexNum = NATIONAL_DEX_CORVIKNIGHT_GIGANTAMAX,
         .height = 140,
-        .weight = 0,
+        .weight = 950,
         .description = COMPOUND_STRING(
             "Imbued with Gigantamax energy, its\n"
             "wings can whip up winds more\n"
@@ -791,7 +793,6 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(CorviknightGigantamax),
         ICON(CorviknightGigantamax, 0),
-        .isGigantamax = TRUE,
     },
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_ROOKIDEE

@@ -392,7 +392,7 @@
 #define P_FAMILY_FENNEKIN                TRUE
 #define P_FAMILY_FROAKIE                 FALSE
 #define P_FAMILY_BUNNELBY                FALSE
-#define P_FAMILY_FLETCHLING              FALSE
+#define P_FAMILY_FLETCHLING              TRUE
 #define P_FAMILY_SCATTERBUG              TRUE
 #define P_FAMILY_LITLEO                  FALSE
 #define P_FAMILY_FLABEBE                 TRUE
@@ -486,7 +486,7 @@
 #define P_FAMILY_SCORBUNNY               FALSE
 #define P_FAMILY_SOBBLE                  FALSE
 #define P_FAMILY_SKWOVET                 TRUE
-#define P_FAMILY_ROOKIDEE                FALSE
+#define P_FAMILY_ROOKIDEE                TRUE
 #define P_FAMILY_BLIPBUG                 TRUE
 #define P_FAMILY_NICKIT                  FALSE
 #define P_FAMILY_GOSSIFLEUR              FALSE
@@ -544,8 +544,8 @@
 #define P_FAMILY_SQUAWKABILLY            FALSE
 #define P_FAMILY_NACLI                   FALSE
 #define P_FAMILY_CHARCADET               FALSE
-#define P_FAMILY_TADBULB                 FALSE
-#define P_FAMILY_WATTREL                 FALSE
+#define P_FAMILY_TADBULB                 TRUE
+#define P_FAMILY_WATTREL                 TRUE
 #define P_FAMILY_MASCHIFF                TRUE
 #define P_FAMILY_SHROODLE                FALSE
 #define P_FAMILY_BRAMBLIN                FALSE
