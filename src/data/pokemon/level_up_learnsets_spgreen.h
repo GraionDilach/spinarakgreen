@@ -4889,6 +4889,7 @@ static const struct LevelUpMove sBlisseyLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sHearteyLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 0, MOVE_REVIVAL_BLESSING),
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 1, MOVE_CHARM),
     LEVEL_UP_MOVE( 1, MOVE_COPYCAT),
@@ -11215,6 +11216,7 @@ static const struct LevelUpMove sFloetteEternalFlowerLevelUpLearnset[] = {
     LEVEL_UP_MOVE(38, MOVE_SYNTHESIS),
     LEVEL_UP_MOVE(39, MOVE_AROMATHERAPY),
     LEVEL_UP_MOVE(43, MOVE_MISTY_TERRAIN),
+    LEVEL_UP_MOVE(44, MOVE_REVIVAL_BLESSING),
     LEVEL_UP_MOVE(46, MOVE_MOONBLAST),
     LEVEL_UP_MOVE(50, MOVE_LIGHT_OF_RUIN),
     LEVEL_UP_MOVE(51, MOVE_PETAL_DANCE),
@@ -14353,6 +14355,7 @@ static const struct LevelUpMove sAudinoLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sAudinoMegaLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 0, MOVE_REVIVAL_BLESSING),
     LEVEL_UP_MOVE( 1, MOVE_MISTY_TERRAIN),
     LEVEL_UP_MOVE( 1, MOVE_PLAY_NICE),
     LEVEL_UP_MOVE( 1, MOVE_POUND),
