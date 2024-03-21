@@ -264,7 +264,7 @@
 #define P_FAMILY_CHIMCHAR                TRUE
 #define P_FAMILY_PIPLUP                  TRUE
 #define P_FAMILY_STARLY                  FALSE
-#define P_FAMILY_BIDOOF                  FALSE
+#define P_FAMILY_BIDOOF                  TRUE
 #define P_FAMILY_KRICKETOT               TRUE
 #define P_FAMILY_SHINX                   TRUE
 #define P_FAMILY_CRANIDOS                TRUE
