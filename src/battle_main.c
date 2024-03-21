@@ -2245,6 +2245,30 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             u32 ability = 0;
             u8 friendship;
 
+            u8 level = partyData[i].lvl;
+            if (trainer->dynamicLevelRatio > 0)
+            {
+                u16 partymax = 0;
+                u8 partydiff = 0;
+                u8 j;
+
+                for (j = 0; j < PARTY_SIZE; j++)
+                {
+                    if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&gPlayerParty[i], MON_DATA_SANITY_IS_EGG))
+                    {
+                        partymax = (partymax > GetMonData(&gPlayerParty[i], MON_DATA_LEVEL)) ? partymax : GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+                    }
+                }
+
+                for (j = 0; j < monsCount; j++)
+                {
+                    partydiff = (partydiff > partyData[j].lvl - level) ? partydiff : partyData[j].lvl - level;
+                }
+
+                partymax = partymax * trainer->dynamicLevelRatio / 100;
+                level = (level > partymax - partydiff) ? level : partymax - partydiff;
+            }
+
             if (trainer->doubleBattle == TRUE)
                 personalityValue = 0x80;
             else if (trainer->encounterMusic_gender & F_TRAINER_FEMALE)
@@ -2263,7 +2287,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 otIdType = OT_ID_PRESET;
                 fixedOtId = HIHALF(personalityValue) ^ LOHALF(personalityValue);
             }
-            CreateMon(&party[i], partyData[i].species, partyData[i].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
+            CreateMon(&party[i], partyData[i].species, level, 0, TRUE, personalityValue, otIdType, fixedOtId);
             SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
 
             CustomTrainerPartyAssignMoves(&party[i], &partyData[i]);
@@ -2279,7 +2303,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             }
             else
             {
-                u8 ev = ((partyData[i].lvl * 5 / 2) < 255) ? (partyData[i].lvl * 5 / 2) : 255;
+                u8 ev = ((level * 5 / 2) < 255) ? (level * 5 / 2) : 255;
                 SetMonData(&party[i], MON_DATA_HP_EV, &ev);
                 SetMonData(&party[i], MON_DATA_ATK_EV, &ev);
                 SetMonData(&party[i], MON_DATA_DEF_EV, &ev);
