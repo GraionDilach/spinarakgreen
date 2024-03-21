@@ -309,6 +309,8 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
     u8 max;
     u8 range;
     u8 rand;
+    u8 partymin = 150;
+    u8 partymax = 0;
 
     if (LURE_STEP_COUNT == 0)
     {
@@ -323,6 +325,98 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
             min = wildPokemon[wildMonIndex].maxLevel;
             max = wildPokemon[wildMonIndex].minLevel;
         }
+
+        // Scale the wild mons against the party mons
+        // PERF: don't use a var for iteration
+        if (GetMonData(&gPlayerParty[5], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&gPlayerParty[5], MON_DATA_SANITY_IS_EGG))
+        {
+            if (partymin > GetMonData(&gPlayerParty[5], MON_DATA_LEVEL))
+            {
+                partymin = GetMonData(&gPlayerParty[5], MON_DATA_LEVEL);
+            }
+
+            if (partymax < GetMonData(&gPlayerParty[5], MON_DATA_LEVEL))
+            {
+                partymax = GetMonData(&gPlayerParty[5], MON_DATA_LEVEL);
+            }
+        }
+        if (GetMonData(&gPlayerParty[4], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&gPlayerParty[4], MON_DATA_SANITY_IS_EGG))
+        {
+            if (partymin > GetMonData(&gPlayerParty[4], MON_DATA_LEVEL))
+            {
+                partymin = GetMonData(&gPlayerParty[4], MON_DATA_LEVEL);
+            }
+
+            if (partymax < GetMonData(&gPlayerParty[4], MON_DATA_LEVEL))
+            {
+                partymax = GetMonData(&gPlayerParty[4], MON_DATA_LEVEL);
+            }
+        }
+        if (GetMonData(&gPlayerParty[3], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&gPlayerParty[3], MON_DATA_SANITY_IS_EGG))
+        {
+            if (partymin > GetMonData(&gPlayerParty[3], MON_DATA_LEVEL))
+            {
+                partymin = GetMonData(&gPlayerParty[3], MON_DATA_LEVEL);
+            }
+
+            if (partymax < GetMonData(&gPlayerParty[3], MON_DATA_LEVEL))
+            {
+                partymax = GetMonData(&gPlayerParty[3], MON_DATA_LEVEL);
+            }
+        }
+        if (GetMonData(&gPlayerParty[2], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&gPlayerParty[2], MON_DATA_SANITY_IS_EGG))
+        {
+            if (partymin > GetMonData(&gPlayerParty[2], MON_DATA_LEVEL))
+            {
+                partymin = GetMonData(&gPlayerParty[2], MON_DATA_LEVEL);
+            }
+
+            if (partymax < GetMonData(&gPlayerParty[2], MON_DATA_LEVEL))
+            {
+                partymax = GetMonData(&gPlayerParty[2], MON_DATA_LEVEL);
+            }
+        }
+        if (GetMonData(&gPlayerParty[1], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&gPlayerParty[1], MON_DATA_SANITY_IS_EGG))
+        {
+            if (partymin > GetMonData(&gPlayerParty[1], MON_DATA_LEVEL))
+            {
+                partymin = GetMonData(&gPlayerParty[1], MON_DATA_LEVEL);
+            }
+
+            if (partymax < GetMonData(&gPlayerParty[1], MON_DATA_LEVEL))
+            {
+                partymax = GetMonData(&gPlayerParty[1], MON_DATA_LEVEL);
+            }
+        }
+        if (GetMonData(&gPlayerParty[0], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG))
+        {
+            if (partymin > GetMonData(&gPlayerParty[0], MON_DATA_LEVEL))
+            {
+                partymin = GetMonData(&gPlayerParty[0], MON_DATA_LEVEL);
+            }
+
+            if (partymax < GetMonData(&gPlayerParty[0], MON_DATA_LEVEL))
+            {
+                partymax = GetMonData(&gPlayerParty[0], MON_DATA_LEVEL);
+            }
+        }
+
+        range = partymax / 5;
+        if (range > (partymax - partymin))
+        {
+            partymin = partymax - range;
+        }
+
+        if (partymax > max)
+        {
+            max = partymax;
+        }
+
+        if (partymin > min)
+        {
+            min = partymin;
+        }
+
         range = max - min + 1;
         rand = Random() % range;
 
@@ -1167,4 +1261,3 @@ bool32 MapHasNoEncounterData(void)
 {
     return (GetCurrentMapWildMonHeaderId() == HEADER_NONE);
 }
-
