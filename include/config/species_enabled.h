@@ -457,7 +457,7 @@
 #define P_FAMILY_TURTONATOR              FALSE
 #define P_FAMILY_TOGEDEMARU              FALSE
 #define P_FAMILY_MIMIKYU                 FALSE
-#define P_FAMILY_BRUXISH                 FALSE
+#define P_FAMILY_BRUXISH                 TRUE
 #define P_FAMILY_DRAMPA                  FALSE
 #define P_FAMILY_DHELMISE                FALSE
 #define P_FAMILY_JANGMO_O                FALSE
