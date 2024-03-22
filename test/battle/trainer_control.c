@@ -63,7 +63,7 @@ TEST("CreateNPCTrainerPartyForTrainer generates customized Pokémon")
 
     EXPECT(GetMonAbility(&testParty[0]) == ABILITY_TELEPATHY);
     EXPECT(GetMonAbility(&testParty[1]) == ABILITY_SHADOW_TAG);
-    EXPECT(GetMonAbility(&testParty[2]) == ABILITY_SHADOW_TAG || GetMonAbility(&testParty[2]) == ABILITY_TELEPATHY);
+    EXPECT(GetMonAbility(&testParty[2]) == ABILITY_SHADOW_TAG || GetMonAbility(&testParty[2]) == ABILITY_TELEPATHY); // need to list all valid abilities when random abilities are allowed
 
     EXPECT(GetMonData(&testParty[0], MON_DATA_FRIENDSHIP, 0) == 42);
     EXPECT(GetMonData(&testParty[1], MON_DATA_FRIENDSHIP, 0) == 50); // edited from 0 due to fallback friendship
