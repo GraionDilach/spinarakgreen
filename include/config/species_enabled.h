@@ -288,7 +288,7 @@
 #define P_FAMILY_SKORUPI                 TRUE
 #define P_FAMILY_CROAGUNK                TRUE
 #define P_FAMILY_CARNIVINE               TRUE
-#define P_FAMILY_FINNEON                 FALSE
+#define P_FAMILY_FINNEON                 TRUE
 #define P_FAMILY_SNOVER                  TRUE
 #define P_FAMILY_ROTOM                   FALSE
 #define P_FAMILY_UXIE                    FALSE
