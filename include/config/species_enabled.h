@@ -333,7 +333,7 @@
 #define P_FAMILY_BASCULIN                FALSE
 #define P_FAMILY_SANDILE                 FALSE
 #define P_FAMILY_DARUMAKA                FALSE
-#define P_FAMILY_MARACTUS                FALSE
+#define P_FAMILY_MARACTUS                TRUE
 #define P_FAMILY_DWEBBLE                 FALSE
 #define P_FAMILY_SCRAGGY                 FALSE
 #define P_FAMILY_SIGILYPH                FALSE
@@ -510,7 +510,7 @@
 #define P_FAMILY_SNOM                    FALSE
 #define P_FAMILY_STONJOURNER             FALSE
 #define P_FAMILY_EISCUE                  FALSE
-#define P_FAMILY_INDEEDEE                FALSE
+#define P_FAMILY_INDEEDEE                TRUE
 #define P_FAMILY_MORPEKO                 FALSE
 #define P_FAMILY_CUFANT                  FALSE
 #define P_FAMILY_DRACOZOLT               FALSE

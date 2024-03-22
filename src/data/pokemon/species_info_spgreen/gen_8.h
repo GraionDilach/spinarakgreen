@@ -3625,11 +3625,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_FAMILY_INDEEDEE
 #define INDEEDEE_MISC_INFO                                  \
         .types = { TYPE_PSYCHIC, TYPE_NORMAL },             \
-        .catchRate = 30,                                    \
-        .expYield = 166,                                    \
+        .catchRate = 74,                                    \
+        .expYield = 230,                                    \
         .eggCycles = 40,                                    \
         .friendship = 140,                                  \
-        .growthRate = GROWTH_FAST,                          \
+        .growthRate = GROWTH_550,                           \
         .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_FAIRY },  \
         .bodyColor = BODY_COLOR_PURPLE,                     \
         .speciesName = _("Indeedee"),                       \
