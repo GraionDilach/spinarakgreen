@@ -2752,7 +2752,7 @@ static const struct LevelUpMove sVictreebelLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const struct LevelUpMove sPitchtrebelLevelUpLearnset[] = {
+static const struct LevelUpMove sPitchtreebelLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_CLEAR_SMOG),
     LEVEL_UP_MOVE( 1, MOVE_LEECH_LIFE),
     LEVEL_UP_MOVE( 1, MOVE_SWORDS_DANCE),

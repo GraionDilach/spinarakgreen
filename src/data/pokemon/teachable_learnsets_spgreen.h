@@ -5800,7 +5800,7 @@ static const u16 sVictreebelTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sPitchtrebelTeachableLearnset[] = {
+static const u16 sPitchtreebelTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BIDE,
     MOVE_BODY_SLAM,
