@@ -82,7 +82,11 @@
     F(SWEET_SCENT) \
     F(STOCKPILE) \
     F(SWALLOW) \
-    F(SPIT_UP)
+    F(SPIT_UP) \
+    F(ZAP_CANNON) \
+    F(DRAGON_BREATH) \
+    F(DETECT) \
+    F(NIGHTMARE)
 
 #define FOREACH_HM(F) \
     F(CUT) \
