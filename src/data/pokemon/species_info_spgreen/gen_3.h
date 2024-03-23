@@ -108,8 +108,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_550,                           \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_DRAGON },\
         .bodyColor = BODY_COLOR_GREEN,                      \
-        .categoryName = _("Forest"),                        \
-        LEARNSETS(Sceptile)
+        .categoryName = _("Forest")
 
     [SPECIES_SCEPTILE] =
     {
@@ -146,6 +145,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_V_SHAKE,
         PALETTES(Sceptile),
         ICON(Sceptile, 1),
+        LEARNSETS(Sceptile),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -184,6 +184,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_V_SHAKE,
         PALETTES(SceptileMega),
         ICON(SceptileMega, 1),
+        LEARNSETS(SceptileMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_TREECKO
@@ -304,8 +305,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .pokemonScale = 256,                                \
         .pokemonOffset = 0,                                 \
         .trainerScale = 301,                                \
-        .trainerOffset = 4,                                 \
-        LEARNSETS(Blaziken)
+        .trainerOffset = 4
 
     [SPECIES_BLAZIKEN] =
     {
@@ -337,6 +337,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_RED,
         PALETTES(Blaziken),
         ICON(Blaziken, 0),
+        LEARNSETS(Blaziken),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -368,6 +369,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_RED,
         PALETTES(BlazikenMega),
         ICON(BlazikenMega, 0),
+        LEARNSETS(BlazikenMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_TORCHIC
@@ -478,8 +480,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_550,                               \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_WATER_1 },  \
         .bodyColor = BODY_COLOR_BLUE,                           \
-        .categoryName = _("Mud Fish"),                          \
-        LEARNSETS(Swampert)
+        .categoryName = _("Mud Fish")
 
     [SPECIES_SWAMPERT] =
     {
@@ -515,6 +516,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
         PALETTES(Swampert),
         ICON(Swampert, 0),
+        LEARNSETS(Swampert),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -552,6 +554,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
         PALETTES(SwampertMega),
         ICON(SwampertMega, 0),
+        LEARNSETS(SwampertMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_MUDKIP
@@ -1703,8 +1706,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .pokemonScale = 256,                                        \
         .pokemonOffset = 0,                                         \
         .trainerScale = 256,                                        \
-        .trainerOffset = 0,                                         \
-        LEARNSETS(Gardevoir)
+        .trainerOffset = 0
 
     [SPECIES_GARDEVOIR] =
     {
@@ -1735,6 +1737,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         PALETTES(Gardevoir),
         ICON(Gardevoir, 1),
+        LEARNSETS(Gardevoir),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -1767,6 +1770,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_GREEN,
         PALETTES(GardevoirMega),
         ICON(GardevoirMega, 1),
+        LEARNSETS(GardevoirMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 
@@ -1784,8 +1788,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .pokemonScale = 259,                                        \
         .pokemonOffset = 1,                                         \
         .trainerScale = 296,                                        \
-        .trainerOffset = 1,                                         \
-        LEARNSETS(Gallade)
+        .trainerOffset = 1
 
     [SPECIES_GALLADE] =
     {
@@ -1818,6 +1821,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         PALETTES(Gallade),
         ICON(Gallade, 1),
+        LEARNSETS(Gallade),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -1852,6 +1856,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         PALETTES(GalladeMega),
         ICON(GalladeMega, 1),
+        LEARNSETS(GalladeMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_GEN_4_CROSS_EVOS
@@ -2884,8 +2889,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_HUMAN_LIKE },\
         .bodyColor = BODY_COLOR_PURPLE,                             \
         .categoryName = _("Darkness"),                              \
-        .height = 5,                                                \
-        LEARNSETS(Sableye)
+        .height = 5
 
     [SPECIES_SABLEYE] =
     {
@@ -2924,6 +2928,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         PALETTES(Sableye),
         ICON(Sableye, 2),
         .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_SABLEYE_MEGA}),
+        LEARNSETS(Sableye),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -2961,6 +2966,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_H_VIBRATE,
         PALETTES(SableyeMega),
         ICON(SableyeMega, 2),
+        LEARNSETS(SableyeMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_SABLEYE
@@ -2975,8 +2981,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,                  \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FAIRY },  \
         .bodyColor = BODY_COLOR_BLACK,                      \
-        .categoryName = _("Deceiver"),                      \
-        LEARNSETS(Mawile)
+        .categoryName = _("Deceiver")
 
     [SPECIES_MAWILE] =
     {
@@ -3016,6 +3021,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         PALETTES(Mawile),
         ICON(Mawile, 2),
         .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_MAWILE_MEGA}),
+        LEARNSETS(Mawile),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -3055,6 +3061,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_V_SHAKE,
         PALETTES(MawileMega),
         ICON(MawileMega, 0),
+        LEARNSETS(MawileMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_MAWILE
@@ -3167,8 +3174,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_650,                               \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_MONSTER },  \
         .bodyColor = BODY_COLOR_GRAY,                           \
-        .categoryName = _("Iron Armor"),                        \
-        LEARNSETS(Aggron)
+        .categoryName = _("Iron Armor")
 
     [SPECIES_AGGRON] =
     {
@@ -3205,6 +3211,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_V_SHAKE_LOW,
         PALETTES(Aggron),
         ICON(Aggron, 2),
+        LEARNSETS(Aggron),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -3243,6 +3250,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_V_SHAKE_LOW,
         PALETTES(AggronMega),
         ICON(AggronMega, 2),
+        LEARNSETS(AggronMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_ARON
@@ -3311,8 +3319,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .pokemonScale = 298,                                        \
         .pokemonOffset = 5,                                         \
         .trainerScale = 256,                                        \
-        .trainerOffset = 0,                                         \
-        LEARNSETS(Medicham)
+        .trainerOffset = 0
 
     [SPECIES_MEDICHAM] =
     {
@@ -3347,6 +3354,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         PALETTES(Medicham),
         ICON(Medicham, 0),
         .evolutions = EVOLUTION({EVO_LEVEL, 53, SPECIES_MEDICHAM_MEGA}),
+        LEARNSETS(Medicham),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -3380,6 +3388,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         PALETTES(MedichamMega),
         ICON(MedichamMega, 0),
+        LEARNSETS(MedichamMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_MEDITITE
@@ -3440,8 +3449,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,                  \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },  \
         .bodyColor = BODY_COLOR_YELLOW,                     \
-        .categoryName = _("Discharge"),                     \
-        LEARNSETS(Manectric)
+        .categoryName = _("Discharge")
 
     [SPECIES_MANECTRIC] =
     {
@@ -3480,6 +3488,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         PALETTES(Manectric),
         ICON(Manectric, 0),
         .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_MANECTRIC_MEGA}),
+        LEARNSETS(Manectric),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -3497,7 +3506,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_650,
         .abilities = { ABILITY_INTIMIDATE, ABILITY_INTIMIDATE, ABILITY_INTIMIDATE },
         .speciesName = _("Manectric"),
-        .natDexNum = NATIONAL_DEX_MANECTRIC,
+        .natDexNum = NATIONAL_DEX_MANECTRIC_MEGA,
         .cryId = CRY_MANECTRIC_MEGA,
         .height = 18,
         .weight = 440,
@@ -3518,6 +3527,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_FLASH_YELLOW,
         PALETTES(ManectricMega),
         ICON(ManectricMega, 0),
+        LEARNSETS(ManectricMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_ELECTRIKE
@@ -4033,8 +4043,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 35,                                       \
         .eggGroups = { EGG_GROUP_WATER_2, EGG_GROUP_WATER_2 },  \
         .bodyColor = BODY_COLOR_BLUE,                           \
-        .categoryName = _("Brutal"),                            \
-        LEARNSETS(Sharpedo)
+        .categoryName = _("Brutal")
 
     [SPECIES_SHARPEDO] =
     {
@@ -4073,6 +4082,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         PALETTES(Sharpedo),
         ICON(Sharpedo, 0),
         .evolutions = EVOLUTION({EVO_LEVEL, 52, SPECIES_SHARPEDO_MEGA}),
+        LEARNSETS(Sharpedo),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -4113,6 +4123,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_JOLT_RIGHT,
         PALETTES(SharpedoMega),
         ICON(SharpedoMega, 0),
+        LEARNSETS(SharpedoMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_CARVANHA
@@ -4272,8 +4283,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,                  \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },  \
         .bodyColor = BODY_COLOR_RED,                        \
-        .categoryName = _("Eruption"),                      \
-        LEARNSETS(Camerupt)
+        .categoryName = _("Eruption")
 
     [SPECIES_CAMERUPT] =
     {
@@ -4314,6 +4324,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         PALETTES(Camerupt),
         ICON(Camerupt, 0),
         .evolutions = EVOLUTION({EVO_LEVEL, 52, SPECIES_CAMERUPT_MEGA}),
+        LEARNSETS(Camerupt),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -4353,6 +4364,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_RED,
         PALETTES(CameruptMega),
         ICON(CameruptMega, 0),
+        LEARNSETS(CameruptMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_NUMEL
@@ -4851,8 +4863,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,                  \
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_DRAGON },\
         .bodyColor = BODY_COLOR_BLUE,                       \
-        .categoryName = _("Humming"),                       \
-        LEARNSETS(Altaria)
+        .categoryName = _("Humming")
 
     [SPECIES_ALTARIA] =
     {
@@ -4892,6 +4903,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         PALETTES(Altaria),
         ICON(Altaria, 0),
         .evolutions = EVOLUTION({EVO_LEVEL, 53, SPECIES_ALTARIA_MEGA}),
+        LEARNSETS(Altaria),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -4933,6 +4945,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
         PALETTES(AltariaMega),
         ICON(AltariaMega, 0),
+        LEARNSETS(AltariaMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_SWABLU
@@ -5952,8 +5965,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 35,                                           \
         .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },  \
         .bodyColor = BODY_COLOR_BLACK,                              \
-        .categoryName = _("Marionette"),                            \
-        LEARNSETS(Banette)
+        .categoryName = _("Marionette")
 
     [SPECIES_BANETTE] =
     {
@@ -5992,6 +6004,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         PALETTES(Banette),
         ICON(Banette, 0),
         .evolutions = EVOLUTION({EVO_LEVEL, 52, SPECIES_BANETTE_MEGA}),
+        LEARNSETS(Banette),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -6031,6 +6044,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_H_VIBRATE,
         PALETTES(BanetteMega),
         ICON(BanetteMega, 0),
+        LEARNSETS(BanetteMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_SHUPPET
@@ -6352,8 +6366,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .pokemonScale = 301,                                \
         .pokemonOffset = 3,                                 \
         .trainerScale = 256,                                \
-        .trainerOffset = 0,                                 \
-        LEARNSETS(Absol)
+        .trainerOffset = 0
 
     [SPECIES_ABSOL] =
     {
@@ -6388,6 +6401,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         PALETTES(Absol),
         ICON(Absol, 0),
         .evolutions = EVOLUTION({EVO_FRIENDSHIP_NIGHT, 0, SPECIES_ABSOL_MEGA}),
+        LEARNSETS(Absol),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -6422,6 +6436,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         PALETTES(AbsolMega),
         ICON(AbsolMega, 0),
+        LEARNSETS(AbsolMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_ABSOL
@@ -6487,8 +6502,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_550,                           \
         .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_MINERAL },\
         .bodyColor = BODY_COLOR_GRAY,                       \
-        .categoryName = _("Face"),                          \
-        LEARNSETS(Glalie)
+        .categoryName = _("Face")
 
     [SPECIES_GLALIE] =
     {
@@ -6526,6 +6540,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_TRIANGLE_DOWN,
         PALETTES(Glalie),
         ICON(Glalie, 0),
+        LEARNSETS(Glalie),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -6564,6 +6579,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_TRIANGLE_DOWN,
         PALETTES(GlalieMega),
         ICON(GlalieMega, 0),
+        LEARNSETS(GlalieMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 
@@ -6954,7 +6970,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
         PALETTES(Huntail),
         ICON(Huntail, 0),
-        LEARNSETS(Huntail),
+        LEARNSETS(Grotesque),
     },
 #endif //P_FAMILY_CLAMPERL
 
@@ -7685,8 +7701,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .eggCycles = 120,                                               \
         .friendship = 90,                                               \
         .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },\
-        .categoryName = _("Eon"),                                       \
-        LEARNSETS(Latias),                                              \
+        .categoryName = _("Eon"),                                        \
         .isLegendary = TRUE
 
     [SPECIES_LATIAS] =
@@ -7728,6 +7743,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         PALETTES(Latias),
         ICON(Latias, 0),
         .evolutions = EVOLUTION({EVO_LEVEL, 65, SPECIES_LATIAS_MEGA}),
+        LEARNSETS(Latias),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -7769,6 +7785,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_H_VIBRATE,
         PALETTES(LatiasMega),
         ICON(LatiasMega, 2),
+        LEARNSETS(LatiasMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_LATIAS
@@ -7782,8 +7799,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 90,                                               \
         .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },\
         .isLegendary = TRUE,                                            \
-        .categoryName = _("Eon"),                                       \
-        LEARNSETS(Latios)
+        .categoryName = _("Eon")
 
     [SPECIES_LATIOS] =
     {
@@ -7824,6 +7840,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         PALETTES(Latios),
         ICON(Latios, 0),
         .evolutions = EVOLUTION({EVO_LEVEL, 65, SPECIES_LATIOS_MEGA}),
+        LEARNSETS(Latios),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -7865,7 +7882,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_H_VIBRATE,
         PALETTES(LatiosMega),
         ICON(LatiosMega, 2),
-        .isMegaEvolution = TRUE,
+        LEARNSETS(LatiosMega)
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_LATIOS
@@ -7880,8 +7897,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },\
         .bodyColor = BODY_COLOR_BLUE,                                   \
         .isLegendary = TRUE,                                            \
-        .categoryName = _("Sea Basin"),                                 \
-        LEARNSETS(Kyogre)
+        .categoryName = _("Sea Basin")
 
     [SPECIES_KYOGRE] =
     {
@@ -7921,6 +7937,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         PALETTES(Kyogre),
         ICON(Kyogre, 2),
         .evolutions = EVOLUTION({EVO_LEVEL, 65, SPECIES_KYOGRE_PRIMAL}),
+        LEARNSETS(Kyogre),
     },
 #if P_PRIMAL_REVERSIONS
     [SPECIES_KYOGRE_PRIMAL] =
@@ -7959,6 +7976,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
         PALETTES(KyogrePrimal),
         ICON(KyogrePrimal, 0),
+        LEARNSETS(KyogrePrimal),
     },
 #endif //P_PRIMAL_REVERSIONS
 #endif //P_FAMILY_KYOGRE
@@ -7972,8 +7990,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },\
         .bodyColor = BODY_COLOR_RED,                                    \
         .isLegendary = TRUE,                                            \
-        .categoryName = _("Continent"),                                 \
-        LEARNSETS(Groudon)
+        .categoryName = _("Continent")
 
     [SPECIES_GROUDON] =
     {
@@ -8012,6 +8029,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_RED,
         PALETTES(Groudon),
         ICON(Groudon, 0),
+        LEARNSETS(Groudon),
     },
 
 #if P_PRIMAL_REVERSIONS
@@ -8053,6 +8071,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_RED,
         PALETTES(GroudonPrimal),
         ICON(GroudonPrimal, 0),
+        LEARNSETS(GroudonPrimal),
     },
 #endif //P_PRIMAL_REVERSIONS
 #endif //P_FAMILY_GROUDON
@@ -8069,7 +8088,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .bodyColor = BODY_COLOR_GREEN,                                  \
         .cryId = CRY_RAYQUAZA,                                          \
         .categoryName = _("Sky High"),                                  \
-        LEARNSETS(Rayquaza),                                            \
         .isLegendary = TRUE
 
     [SPECIES_RAYQUAZA] =
@@ -8109,6 +8127,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_GROW_STUTTER,
         PALETTES(Rayquaza),
         ICON(Rayquaza, 1),
+        LEARNSETS(Rayquaza),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -8148,6 +8167,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_GREEN,
         PALETTES(RayquazaMega),
         ICON(RayquazaMega, 1),
+        LEARNSETS(RayquazaMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_RAYQUAZA

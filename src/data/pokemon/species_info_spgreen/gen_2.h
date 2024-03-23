@@ -668,7 +668,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .backAnimId = BACK_ANIM_TRIANGLE_DOWN,
         PALETTES(Noctowl),
         ICON(Noctowl, 2),
-        LEARNSETS(Noctowl),
+        LEARNSETS(Watchowl),
         .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_NOCTOWL}),
     },
 
@@ -765,7 +765,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .backAnimId = BACK_ANIM_V_SHAKE_H_SLIDE,
         PALETTES(Ledyba),
         ICON(Ledyba, 0),
-        LEARNSETS(Ledyba),
+        LEARNSETS(Ledystar),
         .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_LEDYBA}),
     },
 
@@ -1301,7 +1301,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         PALETTES(Xatu),
         ICON(Xatu, 1),
-        LEARNSETS(Xatu),
+        LEARNSETS(Satu),
         .evolutions = EVOLUTION({EVO_LEVEL, 33, SPECIES_XATU}),
     },
 
@@ -1465,8 +1465,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .pokemonScale = 256,                                \
         .pokemonOffset = 4,                                 \
         .trainerScale = 256,                                \
-        .trainerOffset = 0,                                 \
-        LEARNSETS(Ampharos)
+        .trainerOffset = 0
 
     [SPECIES_AMPHAROS] =
     {
@@ -1498,6 +1497,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .backAnimId = BACK_ANIM_SHAKE_FLASH_YELLOW,
         PALETTES(Ampharos),
         ICON(Ampharos, 0),
+        LEARNSETS(Ampharos),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -1530,6 +1530,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .backAnimId = BACK_ANIM_SHAKE_FLASH_YELLOW,
         PALETTES(AmpharosMega),
         ICON(AmpharosMega, 0),
+        LEARNSETS(AmpharosMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_MAREEP
@@ -3693,7 +3694,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Overqwil),
         ICON(Overqwil, 2),
         //.footprint = gMonFootprint_Overqwil,
-        LEARNSETS(Overqwil),
+        LEARNSETS(Qwilspark),
     },
 
 #if P_HISUIAN_FORMS
@@ -3831,8 +3832,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,                  \
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },      \
         .bodyColor = BODY_COLOR_BLUE,                       \
-        .categoryName = _("Single Horn"),                   \
-        LEARNSETS(Heracross)
+        .categoryName = _("Single Horn")
 
     [SPECIES_HERACROSS] =
     {
@@ -3873,6 +3873,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Heracross),
         ICON(Heracross, 0),
         .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_HERACROSS_MEGA}),
+        LEARNSETS(Heracross),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -3912,6 +3913,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .backAnimId = BACK_ANIM_JOLT_RIGHT,
         PALETTES(HeracrossMega),
         ICON(HeracrossMega, 0),
+        LEARNSETS(HeracrossMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_HERACROSS
@@ -5073,8 +5075,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = 35,                                   \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },  \
         .bodyColor = BODY_COLOR_BLACK,                      \
-        .categoryName = _("Dark"),                          \
-        LEARNSETS(Houndoom)
+        .categoryName = _("Dark")
 
     [SPECIES_HOUNDOOM] =
     {
@@ -5115,6 +5116,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Houndoom),
         ICON(Houndoom, 0),
         .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_HOUNDOOM_MEGA}),
+        LEARNSETS(Houndoom),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -5152,7 +5154,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_V_SHAKE,
         PALETTES(HoundoomMega),
-        ICON(HoundoomMega, 0)
+        ICON(HoundoomMega, 0),
+        LEARNSETS(HoundoomMega)
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_HOUNDOUR
@@ -5804,8 +5807,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .growthRate = GROWTH_650,                               \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_MONSTER },  \
         .bodyColor = BODY_COLOR_GREEN,                          \
-        .categoryName = _("Armor"),                             \
-        LEARNSETS(Tyranitar)
+        .categoryName = _("Armor")
 
     [SPECIES_TYRANITAR] =
     {
@@ -5843,6 +5845,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .backAnimId = BACK_ANIM_V_SHAKE_LOW,
         PALETTES(Tyranitar),
         ICON(Tyranitar, 4),
+        LEARNSETS(Tyranitar),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -5881,6 +5884,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .backAnimId = BACK_ANIM_V_SHAKE_LOW,
         PALETTES(TyranitarMega),
         ICON(TyranitarMega, 1),
+        LEARNSETS(TyranitarMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 

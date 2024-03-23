@@ -2861,7 +2861,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         PALETTES(Bombirdier),
         ICON(Bombirdier, 0),
         //.footprint = gMonFootprint_Bombirdier,
-        LEARNSETS(Bombirdier),
+        LEARNSETS(Bombira),
         .evolutions = EVOLUTION({EVO_LEVEL, 26, SPECIES_BOMBIRDIER}),
     },
 

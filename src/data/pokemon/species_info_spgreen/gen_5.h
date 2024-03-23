@@ -1826,8 +1826,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .eggCycles = 20,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_FAIRY },  \
-        .categoryName = _("Hearing"),                       \
-        LEARNSETS(Audino)
+        .categoryName = _("Hearing")
 
 #if P_FAMILY_AUDINO
     [SPECIES_AUDINO] =
@@ -1869,6 +1868,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         PALETTES(Audino),
         ICON(Audino, 1),
         .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_AUDINO_MEGA}),
+        LEARNSETS(Audino),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -1888,12 +1888,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .abilities = { ABILITY_HEALER, ABILITY_HEALER, ABILITY_HEALER },
         .bodyColor = BODY_COLOR_WHITE,
         .cryId = CRY_AUDINO_MEGA,
-        .speciesName = _("Auyuno"),
+        .speciesName = _("Audihigh"),
         .natDexNum = NATIONAL_DEX_AUDINO_MEGA,
         .height = 15,
         .weight = 320,
         .description = COMPOUND_STRING(
-            "Auyuno emits a soothing pulse from\n"
+            "Audihigh emits a soothing pulse from\n"
             "its body that reduces hostility in others.\n"
             "Anything that comes into contact with its\n"
             "second feelers will fall into a deep sleep."),
@@ -1910,6 +1910,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(AudinoMega),
         ICON(AudinoMega, 1),
+        LEARNSETS(AudinoMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_AUDINO
@@ -2745,7 +2746,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Petilil, 1),
         LEARNSETS(Petilil),
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_SUN_STONE, SPECIES_LILLIGANT},
-                                {EVO_NONE, 0, SPECIES_LILLIGANT_HISUIAN}),
+                                {EVO_ITEM, ITEM_MOON_STONE, SPECIES_LILLIGANT_HISUIAN}),
     },
 
 #define LILLIGANT_MISC_INFO                                 \
@@ -4125,8 +4126,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .bodyColor = BODY_COLOR_GREEN,                                          \
         .noFlip = TRUE,                                                         \
         .cryId = CRY_GARBODOR,                                                  \
-        .categoryName = _("Trash Heap"),                                        \
-        LEARNSETS(Garbodor)
+        .categoryName = _("Trash Heap")
 
     [SPECIES_GARBODOR] =
     {
@@ -4164,6 +4164,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         PALETTES(Garbodor),
         ICON(Garbodor, 1),
         .evolutions = EVOLUTION({EVO_LEVEL, 53, SPECIES_GARBODOR_GIGANTAMAX}),
+        LEARNSETS(Garbodor),
     },
 
 #if P_GIGANTAMAX_FORMS
@@ -4202,6 +4203,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(GarbodorGigantamax),
         ICON(GarbodorGigantamax, 0),
+        LEARNSETS(GarbodorGigantamax),
     },
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_TRUBBISH
@@ -7784,8 +7786,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Larvesta, 0),
         LEARNSETS(Larvesta),
         .evolutions = EVOLUTION({EVO_LEVEL, 59, SPECIES_VOLCARONA},
-                                {EVO_FRIENDSHIP_DAY, 59, SPECIES_SLITHER_WING},
-                                {EVO_FRIENDSHIP_NIGHT, 59, SPECIES_IRON_MOTH}),
+                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_SLITHER_WING},
+                                {EVO_ITEM, ITEM_METAL_COAT, SPECIES_IRON_MOTH}),
     },
 
     [SPECIES_VOLCARONA] =

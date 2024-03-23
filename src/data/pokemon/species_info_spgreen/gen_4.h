@@ -2730,8 +2730,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,                      \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE }, \
         .bodyColor = BODY_COLOR_BLUE,                           \
-        .categoryName = _("Aura"),                              \
-        LEARNSETS(Lucario)
+        .categoryName = _("Aura")
 
     [SPECIES_LUCARIO] =
     {
@@ -2770,6 +2769,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         PALETTES(Lucario),
         ICON(Lucario, 2),
         .evolutions = EVOLUTION({EVO_LEVEL, 52, SPECIES_LUCARIO_MEGA}),
+        LEARNSETS(Lucario),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -2809,6 +2809,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,
         PALETTES(LucarioMega),
         ICON(LucarioMega, 2),
+        LEARNSETS(LucarioMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_RIOLU
@@ -3323,8 +3324,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,                  \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_GRASS },\
         .bodyColor = BODY_COLOR_WHITE,                      \
-        .categoryName = _("Frost Tree"),                    \
-        LEARNSETS(Abomasnow)
+        .categoryName = _("Frost Tree")
 
     [SPECIES_ABOMASNOW] =
     {
@@ -3364,6 +3364,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         PALETTES(Abomasnow),
         ICON(Abomasnow, 1),
         .evolutions = EVOLUTION({EVO_LEVEL, 53, SPECIES_ABOMASNOW_MEGA}),
+        LEARNSETS(Abomasnow),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -3403,6 +3404,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_V_SHAKE_LOW,
         PALETTES(AbomasnowMega),
         ICON(AbomasnowMega, 1),
+        LEARNSETS(AbomasnowMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_SNOVER

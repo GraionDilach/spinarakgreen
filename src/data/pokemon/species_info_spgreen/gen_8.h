@@ -735,8 +735,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_UNNERVE, ABILITY_MIRROR_ARMOR },   \
         .bodyColor = BODY_COLOR_PURPLE,                                             \
         .cryId = CRY_CORVIKNIGHT,                                                   \
-        .categoryName = _("Raven"),                                                 \
-        LEARNSETS(Corviknight)
+        .categoryName = _("Raven")
 
     [SPECIES_CORVIKNIGHT] =
     {
@@ -764,6 +763,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Corviknight),
         ICON(Corviknight, 0),
+        LEARNSETS(Corviknight),
     },
 
 #if P_GIGANTAMAX_FORMS
@@ -793,6 +793,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(CorviknightGigantamax),
         ICON(CorviknightGigantamax, 0),
+        LEARNSETS(CorviknightGigantamax),
     },
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_ROOKIDEE
@@ -912,8 +913,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .abilities = { ABILITY_SWARM, ABILITY_FRISK, ABILITY_TELEPATHY },   \
         .bodyColor = BODY_COLOR_RED,                                        \
         .cryId = CRY_ORBEETLE,                                              \
-        .categoryName = _("Seven Spot"),                                    \
-        LEARNSETS(Orbeetle)
+        .categoryName = _("Seven Spot")
 
     [SPECIES_ORBEETLE] =
     {
@@ -942,6 +942,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Orbeetle),
         ICON(Orbeetle, 0),
+        LEARNSETS(Orbeetle),
     },
 
 #if P_GIGANTAMAX_FORMS
@@ -971,7 +972,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(OrbeetleGigantamax),
         ICON(OrbeetleGigantamax, 0),
-        .isGigantamax = TRUE,
+        LEARNSETS(OrbeetleGigantamax)
     },
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_BLIPBUG
@@ -2864,8 +2865,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .abilities = { ABILITY_HEALER, ABILITY_ANTICIPATION, ABILITY_MAGIC_BOUNCE },    \
         .bodyColor = BODY_COLOR_PINK,                                                   \
         .cryId = CRY_HATTERENE,                                                         \
-        .categoryName = _("Silent"),                                                    \
-        LEARNSETS(Hatterene)
+        .categoryName = _("Silent")
 
     [SPECIES_HATTERENE] =
     {
@@ -2892,6 +2892,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Hatterene),
         ICON(Hatterene, 0),
+        LEARNSETS(Hatterene),
     },
 
 #if P_GIGANTAMAX_FORMS
@@ -2921,7 +2922,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(HattereneGigantamax),
         ICON(HattereneGigantamax, 0),
-        .isGigantamax = TRUE,
+        LEARNSETS(HattereneGigantamax)
     },
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_HATENNA
