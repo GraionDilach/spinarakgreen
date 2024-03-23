@@ -444,7 +444,7 @@
 #define P_FAMILY_MORELULL                FALSE
 #define P_FAMILY_SALANDIT                FALSE
 #define P_FAMILY_STUFFUL                 FALSE
-#define P_FAMILY_BOUNSWEET               FALSE
+#define P_FAMILY_BOUNSWEET               TRUE
 #define P_FAMILY_COMFEY                  FALSE
 #define P_FAMILY_ORANGURU                FALSE
 #define P_FAMILY_PASSIMIAN               FALSE

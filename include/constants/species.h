@@ -1632,6 +1632,7 @@
 // SpGreen
 #define SPGREEN_START                                   SPECIES_MIMIKYU_TOTEM_BUSTED
 
+// beta evolutions
 #define SPECIES_GOROCHU                                 SPGREEN_START + 1
 #define SPECIES_POLIFROG                                SPGREEN_START + 2
 #define SPECIES_PITCHTREEBEL                            SPGREEN_START + 3
@@ -1649,9 +1650,53 @@
 #define SPECIES_GROTESQUE                               SPGREEN_START + 15
 #define SPECIES_BOMBIRA                                 SPGREEN_START + 16
 
-#define SPECIES_WOBBUFFET_TEST                          SPGREEN_START + 17
+// full beta lines
+#define SPECIES_FLABEAR                                 SPGREEN_START + 17
+#define SPECIES_VOLBEAR                                 SPGREEN_START + 18
+#define SPECIES_DYNABEAR                                SPGREEN_START + 19
+#define SPECIES_CRUISEAL                                SPGREEN_START + 20
+#define SPECIES_MARICE                                  SPGREEN_START + 21
+#define SPECIES_LAKENESS                                SPGREEN_START + 22
+#define SPECIES_KOTORA                                  SPGREEN_START + 23
+#define SPECIES_RAITORA                                 SPGREEN_START + 24
+#define SPECIES_VOONAIL                                 SPGREEN_START + 25
+#define SPECIES_KYONPAN                                 SPGREEN_START + 26
+#define SPECIES_LIONBOMB                                SPGREEN_START + 27
+#define SPECIES_RINRING                                 SPGREEN_START + 28
+#define SPECIES_BELLRUN                                 SPGREEN_START + 29
+#define SPECIES_WOLFMAN                                 SPGREEN_START + 30
+#define SPECIES_WARWOLF                                 SPGREEN_START + 31
+#define SPECIES_KAZUFROG                                SPGREEN_START + 32
+#define SPECIES_TOADRYU                                 SPGREEN_START + 33
+#define SPECIES_SICKLEASEL                              SPGREEN_START + 34
+#define SPECIES_NOKOCHI                                 SPGREEN_START + 35
+#define SPECIES_ANKOCHI                                 SPGREEN_START + 36
+#define SPECIES_MODELION                                SPGREEN_START + 37
+#define SPECIES_SHADRAKE                                SPGREEN_START + 38
+#define SPECIES_JAGG                                    SPGREEN_START + 39
+#define SPECIES_IKARI                                   SPGREEN_START + 40
+#define SPECIES_HANAMOGURA                              SPGREEN_START + 41
+#define SPECIES_LEVIRAY                                 SPGREEN_START + 42
+#define SPECIES_TUSKRUSH                                SPGREEN_START + 43
+#define SPECIES_BUU                                     SPGREEN_START + 44
+#define SPECIES_CACTORMUS                               SPGREEN_START + 45
+#define SPECIES_BLOTTLE                                 SPGREEN_START + 46
+#define SPECIES_PENDRAKEN                               SPGREEN_START + 47
+#define SPECIES_CHEEP                                   SPGREEN_START + 48
+#define SPECIES_JABETTA                                 SPGREEN_START + 49
+#define SPECIES_GAVILLAIN                               SPGREEN_START + 50
+#define SPECIES_BALUMBA                                 SPGREEN_START + 51
+#define SPECIES_RAMOOSE                                 SPGREEN_START + 52
+#define SPECIES_GORILLAIMO                              SPGREEN_START + 53
+#define SPECIES_FLAMEPAW                                SPGREEN_START + 54
+#define SPECIES_RUFFMIST                                SPGREEN_START + 55
+#define SPECIES_SPARKMANE                               SPGREEN_START + 56
+#define SPECIES_PETALOUND                               SPGREEN_START + 57
 
-#define SPGREEN_END                                     SPGREEN_START + 18
+// mystery wobbuffet for testing
+#define SPECIES_WOBBUFFET_TEST                          SPGREEN_START + 58
+
+#define SPGREEN_END                                     SPGREEN_START + 59
 
 #define SPECIES_EGG SPGREEN_END
 
