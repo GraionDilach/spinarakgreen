@@ -22,6 +22,7 @@
 #include "constants/item.h"
 #include "constants/items.h"
 #include "constants/layouts.h"
+#include "constants/songs.h"
 #include "constants/weather.h"
 
 extern const u8 EventScript_SprayWoreOff[];
@@ -42,6 +43,7 @@ enum {
     WILD_AREA_WATER,
     WILD_AREA_ROCKS,
     WILD_AREA_FISHING,
+    WILD_AREA_HIDDEN,
 };
 
 #define WILD_CHECK_REPEL    (1 << 0)
@@ -593,6 +595,9 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 ar
     case WILD_AREA_ROCKS:
         wildMonIndex = ChooseWildMonIndex_WaterRock();
         break;
+    case WILD_AREA_HIDDEN:
+        wildMonIndex = ChooseHiddenMonIndex();
+        break;
     }
 
     level = ChooseWildMonLevel(wildMonInfo->wildPokemon, wildMonIndex, area);
@@ -921,7 +926,20 @@ bool8 SweetScentWildEncounter(void)
             if (DoMassOutbreakEncounterTest() == TRUE)
                 SetUpMassOutbreakEncounter(0);
             else
-                TryGenerateWildMon(gWildMonHeaders[headerId].landMonsInfo, WILD_AREA_LAND, 0);
+            {
+                if (gWildMonHeaders[headerId].hiddenMonsInfo != NULL
+                   && gWildMonHeaders[headerId].hiddenMonsInfo->encounterRate == 0
+                   && Random() % 3 == 0)
+                {
+                    FlagSet(FLAG_SYS_SET_BATTLE_BGM);
+                    VarSet(VAR_BATTLE_BGM, MUS_DP_VS_WILD);
+                    TryGenerateWildMon(gWildMonHeaders[headerId].hiddenMonsInfo, WILD_AREA_HIDDEN, 0);
+                }
+                else
+                {
+                    TryGenerateWildMon(gWildMonHeaders[headerId].landMonsInfo, WILD_AREA_LAND, 0);
+                }
+            }
 
             BattleSetup_StartWildBattle();
             return TRUE;
@@ -939,7 +957,19 @@ bool8 SweetScentWildEncounter(void)
                 return TRUE;
             }
 
-            TryGenerateWildMon(gWildMonHeaders[headerId].waterMonsInfo, WILD_AREA_WATER, 0);
+            if (gWildMonHeaders[headerId].hiddenMonsInfo != NULL
+               && gWildMonHeaders[headerId].hiddenMonsInfo->encounterRate == 1
+               && Random() % 3 == 0)
+            {
+                FlagSet(FLAG_SYS_SET_BATTLE_BGM);
+                VarSet(VAR_BATTLE_BGM, MUS_DP_VS_WILD);
+                TryGenerateWildMon(gWildMonHeaders[headerId].hiddenMonsInfo, WILD_AREA_HIDDEN, 0);
+            }
+            else
+            {
+                TryGenerateWildMon(gWildMonHeaders[headerId].waterMonsInfo, WILD_AREA_WATER, 0);
+            }
+
             BattleSetup_StartWildBattle();
             return TRUE;
         }
