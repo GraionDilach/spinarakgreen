@@ -4549,7 +4549,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_VENONAT"
+                "species": "SPECIES_BOUNSWEET"
               },
               {
                 "min_level": 5,
@@ -4567,9 +4567,9 @@
                 "species": "SPECIES_ODDISH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_KECLEON"
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_TSAREENA"
               }
             ]
           },
@@ -4916,7 +4916,7 @@
               {
                 "min_level": 26,
                 "max_level": 26,
-                "species": "SPECIES_MIGHTYENA"
+                "species": "SPECIES_STEENEE"
               },
               {
                 "min_level": 26,
@@ -5076,7 +5076,7 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_SKWOVET"
+                "species": "SPECIES_BOUNSWEET"
               },
               {
                 "min_level": 5,
