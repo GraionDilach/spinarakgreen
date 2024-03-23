@@ -10361,52 +10361,61 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_WILL_O_WISP,
     },
 
-    [ITEM_TM78] =
+    [ITEM_TM_SWEET_SCENT] =
     {
         .name = _("TM78"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "Allures the foe to reduce\n"
+            "evasiveness. May lure in\n"
+            "Pokémon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_SWEET_SCENT,
     },
 
-    [ITEM_TM79] =
+    [ITEM_TM_STOCKPILE] =
     {
         .name = _("TM79"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "Charges up power for up to\n"
+            "3 turns."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_STOCKPILE,
     },
 
-    [ITEM_TM80] =
+    [ITEM_TM_SWALLOW] =
     {
         .name = _("TM80"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "Absorbs stockpiled power\n"
+            "and restores HP."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_SWALLOW,
     },
 
-    [ITEM_TM81] =
+    [ITEM_TM_SPIT_UP] =
     {
         .name = _("TM81"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "Releases stockpiled power\n"
+            "(the more the better)."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_SPIT_UP,
     },
 
     [ITEM_TM82] =

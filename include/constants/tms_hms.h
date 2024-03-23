@@ -78,7 +78,11 @@
     F(FLING) \
     F(CHARGE_BEAM) \
     F(DRAIN_PUNCH) \
-    F(WILL_O_WISP)
+    F(WILL_O_WISP) \
+    F(SWEET_SCENT) \
+    F(STOCKPILE) \
+    F(SWALLOW) \
+    F(SPIT_UP)
 
 #define FOREACH_HM(F) \
     F(CUT) \

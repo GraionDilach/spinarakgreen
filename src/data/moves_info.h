@@ -5799,7 +5799,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .name = COMPOUND_STRING("Sweet Scent"),
         .description = COMPOUND_STRING(
             "Allures the foe to reduce\n"
-            "evasiveness."),
+            "evasiveness. May lure in\n"
+            "Pokémon."),
         .effect = B_UPDATED_MOVE_DATA >= GEN_6 ? EFFECT_EVASION_DOWN_2 : EFFECT_EVASION_DOWN,
         .power = 0,
         #if B_UPDATED_MOVE_TYPES == GEN_SPGRN
