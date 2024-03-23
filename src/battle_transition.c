@@ -61,8 +61,8 @@ struct TransitionData
     u16 WINOUT;
     u16 WIN0H;
     u16 WIN0V;
-    u16 unused1;
-    u16 unused2;
+    u16 WIN1H;
+    u16 WIN1V;
     u16 BLDCNT;
     u16 BLDALPHA;
     u16 BLDY;
@@ -284,6 +284,11 @@ static bool8 MugshotTrainerPic_Slide(struct Sprite *);
 static bool8 MugshotTrainerPic_SlideSlow(struct Sprite *);
 static bool8 MugshotTrainerPic_SlideOffscreen(struct Sprite *);
 
+static void BT_Phase2AntiClockwiseSpiral(u8 taskId);
+static bool8 BT_Phase2AntiClockwiseSpiral_Init(struct Task *task);
+static bool8 BT_Phase2AntiClockwiseSpiral_Update(struct Task *task);
+static void VBCB_BT_Phase2AntiClockwiseBlackFade(void);
+
 static s16 sDebug_RectangularSpiralData;
 static u8 sTestingTransitionId;
 static u8 sTestingTransitionState;
@@ -380,6 +385,7 @@ static const TaskFunc sTasks_Main[B_TRANSITION_COUNT] =
     [B_TRANSITION_FRONTIER_CIRCLES_CROSS_IN_SEQ] = Task_FrontierCirclesCrossInSeq,
     [B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL_IN_SEQ] = Task_FrontierCirclesAsymmetricSpiralInSeq,
     [B_TRANSITION_FRONTIER_CIRCLES_SYMMETRIC_SPIRAL_IN_SEQ] = Task_FrontierCirclesSymmetricSpiralInSeq,
+    [B_TRANSITION_ANTI_CLOCKWISE_SPIRAL] = BT_Phase2AntiClockwiseSpiral,
 };
 
 static const TransitionStateFunc sTaskHandlers[] =
@@ -492,7 +498,7 @@ static const TransitionStateFunc sPokeballsTrail_Funcs[] =
 
 #define NUM_POKEBALL_TRAILS 5
 static const s16 sPokeballsTrail_StartXCoords[2] = { -16, DISPLAY_WIDTH + 16 };
-static const s16 sPokeballsTrail_Delays[NUM_POKEBALL_TRAILS] = {0, 32, 64, 18, 48};
+static const s16 sPokeballsTrail_Delays[NUM_POKEBALL_TRAILS] = {0, 16, 32, 8, 24};
 static const s16 sPokeballsTrail_Speeds[2] = {8, -8};
 
 static const TransitionStateFunc sClockwiseWipe_Funcs[] =
@@ -703,7 +709,7 @@ static const TransitionStateFunc sWhiteBarsFade_Funcs[] =
 };
 
 #define NUM_WHITE_BARS 8
-static const s16 sWhiteBarsFade_StartDelays[NUM_WHITE_BARS] = {0, 20, 15, 40, 10, 25, 35, 5};
+static const s16 sWhiteBarsFade_StartDelays[NUM_WHITE_BARS] = {0, 21, 9, 15, 6, 12, 18, 3};
 
 static const TransitionStateFunc sGridSquares_Funcs[] =
 {
@@ -735,7 +741,7 @@ static const s16 sAngledWipes_MoveData[NUM_ANGLED_WIPES][5] =
     {168,           DISPLAY_HEIGHT, 48,             0,              1},
 };
 
-static const s16 sAngledWipes_EndDelays[NUM_ANGLED_WIPES] = {8, 4, 2, 1, 1, 1, 0};
+static const s16 sAngledWipes_EndDelays[NUM_ANGLED_WIPES] = {1, 1, 1, 1, 1, 1, 0};
 
 static const TransitionStateFunc sTransitionIntroFuncs[] =
 {
@@ -1084,7 +1090,7 @@ static void Task_Intro(u8 taskId)
     if (gTasks[taskId].tState == 0)
     {
         gTasks[taskId].tState++;
-        CreateIntroTask(0, 0, 3, 2, 2);
+        CreateIntroTask(0, 0, 2, 2, 2);
     }
     else if (IsIntroTaskDone())
     {
@@ -1581,13 +1587,13 @@ static bool8 PatternWeave_Blend1(struct Task *task)
     if (task->tBlendDelay == 0 || --task->tBlendDelay == 0)
     {
         task->tBlendTarget2++;
-        task->tBlendDelay = 2;
+        task->tBlendDelay = 1;
     }
     sTransitionData->BLDALPHA = BLDALPHA_BLEND(task->tBlendTarget2, task->tBlendTarget1);
     if (task->tBlendTarget2 > 15)
         task->tState++;
-    task->tSinIndex += 8;
-    task->tAmplitude -= 256;
+    task->tSinIndex += 12;
+    task->tAmplitude -= 384;
 
     SetSinWave((s16*)gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude >> 8, DISPLAY_HEIGHT);
 
@@ -1606,8 +1612,16 @@ static bool8 PatternWeave_Blend2(struct Task *task)
     sTransitionData->BLDALPHA = BLDALPHA_BLEND(task->tBlendTarget2, task->tBlendTarget1);
     if (task->tBlendTarget1 == 0)
         task->tState++;
-    task->tSinIndex += 8;
-    task->tAmplitude -= 256;
+
+    if (task->tAmplitude > 0)
+    {
+       task->tSinIndex += 12;
+       task->tAmplitude -= 384;
+    }
+    else
+    {
+        task->tAmplitude = 0;
+    }
 
     SetSinWave((s16*)gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude >> 8, DISPLAY_HEIGHT);
 
@@ -1618,8 +1632,15 @@ static bool8 PatternWeave_Blend2(struct Task *task)
 static bool8 PatternWeave_FinishAppear(struct Task *task)
 {
     sTransitionData->VBlank_DMA = FALSE;
-    task->tSinIndex += 8;
-    task->tAmplitude -= 256;
+    if (task->tAmplitude > 0)
+    {
+       task->tSinIndex += 12;
+       task->tAmplitude -= 384;
+    }
+    else
+    {
+        task->tAmplitude = 0;
+    }
 
     SetSinWave((s16*)gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude >> 8, DISPLAY_HEIGHT);
 
@@ -1660,7 +1681,7 @@ static bool8 WeatherTrio_WaitFade(struct Task *task)
 static bool8 PatternWeave_CircularMask(struct Task *task)
 {
     sTransitionData->VBlank_DMA = FALSE;
-    if (task->tRadiusDelta < (4 << 8))
+    if (task->tRadiusDelta < (8 << 8))
         task->tRadiusDelta += 128; // 256 is 1 unit of speed. Speed up every other frame (128 / 256)
     if (task->tRadius != 0)
     {
@@ -1879,7 +1900,8 @@ static bool8 ClockwiseWipe_TopRight(struct Task *task)
         gScanlineEffectRegBuffers[0][sTransitionData->tWipeCurrY] = (sTransitionData->tWipeCurrX + 1) | ((DISPLAY_WIDTH / 2) << 8);
     } while (!UpdateBlackWipe(sTransitionData->data, TRUE, TRUE));
 
-    sTransitionData->tWipeEndX += 16;
+    // sTransitionData->tWipeEndX += 16;
+    sTransitionData->tWipeEndX += 32;
     if (sTransitionData->tWipeEndX >= DISPLAY_WIDTH)
     {
         sTransitionData->tWipeEndY = 0;
@@ -1910,7 +1932,8 @@ static bool8 ClockwiseWipe_Right(struct Task *task)
         finished = UpdateBlackWipe(sTransitionData->data, TRUE, TRUE);
     }
 
-    sTransitionData->tWipeEndY += 8;
+    // sTransitionData->tWipeEndY += 8;
+    sTransitionData->tWipeEndY += 16;
     if (sTransitionData->tWipeEndY >= DISPLAY_HEIGHT)
     {
         sTransitionData->tWipeEndX = DISPLAY_WIDTH;
@@ -1936,7 +1959,8 @@ static bool8 ClockwiseWipe_Bottom(struct Task *task)
         gScanlineEffectRegBuffers[0][sTransitionData->tWipeCurrY] = (sTransitionData->tWipeCurrX << 8) | DISPLAY_WIDTH;
     } while (!UpdateBlackWipe(sTransitionData->data, TRUE, TRUE));
 
-    sTransitionData->tWipeEndX -= 16;
+    // sTransitionData->tWipeEndX -= 16;
+    sTransitionData->tWipeEndX -= 32;
     if (sTransitionData->tWipeEndX <= 0)
     {
         sTransitionData->tWipeEndY = DISPLAY_HEIGHT;
@@ -1969,7 +1993,8 @@ static bool8 ClockwiseWipe_Left(struct Task *task)
         finished = UpdateBlackWipe(sTransitionData->data, TRUE, TRUE);
     }
 
-    sTransitionData->tWipeEndY -= 8;
+    // sTransitionData->tWipeEndY -= 8;
+    sTransitionData->tWipeEndY -= 16;
     if (sTransitionData->tWipeEndY <= 0)
     {
         sTransitionData->tWipeEndX = 0;
@@ -1999,7 +2024,8 @@ static bool8 ClockwiseWipe_TopLeft(struct Task *task)
         gScanlineEffectRegBuffers[0][sTransitionData->tWipeCurrY] = end | (start << 8);
     } while (!UpdateBlackWipe(sTransitionData->data, TRUE, TRUE));
 
-    sTransitionData->tWipeEndX += 16;
+    // sTransitionData->tWipeEndX += 16;
+    sTransitionData->tWipeEndX += 32;
     if (sTransitionData->tWipeCurrX > DISPLAY_WIDTH / 2)
         task->tState++;
 
@@ -2082,10 +2108,10 @@ static bool8 Ripple_Main(struct Task *task)
         gScanlineEffectRegBuffers[0][i] = sTransitionData->cameraY + Sin(sinIndex & 0xffff, amplitude);
     }
 
-    if (++task->tTimer == 81)
+    if (++task->tTimer == 41)
     {
         task->tFadeStarted++;
-        BeginNormalPaletteFade(PALETTES_ALL, -2, 0, 16, RGB_BLACK);
+        BeginNormalPaletteFade(PALETTES_ALL, -8, 0, 16, RGB_BLACK);
     }
 
     if (task->tFadeStarted && !gPaletteFade.active)
@@ -3584,7 +3610,7 @@ static bool8 WhiteBarsFade_StartBars(struct Task *task)
 static bool8 WhiteBarsFade_WaitBars(struct Task *task)
 {
     sTransitionData->VBlank_DMA = 0;
-    if (sTransitionData->counter >= NUM_WHITE_BARS)
+    if (sTransitionData->counter >= NUM_WHITE_BARS - 1)
     {
         BlendPalettes(PALETTES_ALL, 16, RGB_WHITE);
         task->tState++;
@@ -3604,6 +3630,7 @@ static bool8 WhiteBarsFade_BlendToBlack(struct Task *task)
     sTransitionData->BLDY = 0;
     sTransitionData->BLDCNT = 0xFF;
     sTransitionData->WININ = WININ_WIN0_ALL;
+    sTransitionData->counter = 0;
 
     SetVBlankCallback(VBlankCB_WhiteBarsFade_Blend);
 
@@ -3613,6 +3640,9 @@ static bool8 WhiteBarsFade_BlendToBlack(struct Task *task)
 
 static bool8 WhiteBarsFade_End(struct Task *task)
 {
+   sTransitionData->counter += 480;
+   sTransitionData->BLDY = sTransitionData->counter >> 8;
+
    if (++sTransitionData->BLDY > 16)
    {
        FadeScreenBlack();
@@ -4716,3 +4746,282 @@ static bool8 FrontierSquaresScroll_End(struct Task *task)
 #undef tScrollYDir
 #undef tScrollUpdateFlag
 #undef tSquareNum
+
+static const TransitionStateFunc sBT_Phase2AntiClockwiseSpiralFuncs[] =
+{
+    BT_Phase2AntiClockwiseSpiral_Init,
+    BT_Phase2AntiClockwiseSpiral_Update,
+};
+
+static const s16 sAnitClockAngles[] =
+{
+    0x0, 0x26E,
+    0x100, 0x69,
+    0x0, -0x69,
+    -0x100, -0x266E,
+    0x0, 0x26E,
+    0x100, 0x69,
+    0x0, -0x69,
+    -0x100, -0x266E,
+};
+
+static void BT_Phase2AntiClockwiseSpiral(u8 taskId)
+{
+    while (sBT_Phase2AntiClockwiseSpiralFuncs[gTasks[taskId].tState](&gTasks[taskId]));
+}
+
+static void BT_AntiClockwiseSpiral_DoUpdateFrame(s16 initRadius, s16 deltaAngleMax, u8 offsetMaybe)
+{
+    u8 theta = 0;
+    s16 i, amplitude1, amplitude2;
+    s16 y1, x1, y2, x2;
+
+    for (i = 320; i < 960; ++i)
+        gScanlineEffectRegBuffers[1][i] = 120;
+
+    for (i = 0; i < (deltaAngleMax * 16); ++i, ++theta)
+    {
+        amplitude1 = initRadius + (theta >> 3);
+        if ((theta >> 3) != ((theta + 1) >> 3))
+        {
+            amplitude2 = amplitude1 + 1;
+        }
+        else
+        {
+            amplitude2 = amplitude1;
+        }
+
+        y1 = 80 - Sin(theta, amplitude1);
+        x1 = Cos(theta, amplitude1) + 120;
+        y2 = 80 - Sin(theta + 1, amplitude2);
+        x2 = Cos(theta + 1, amplitude2) + 120;
+
+        if (y1 < 0 && y2 < 0)
+            continue;
+        if (y1 > 159 && y2 > 159)
+            continue;
+
+        if (y1 < 0)
+            y1 = 0;
+        if (y1 > 159)
+            y1 = 159;
+        if (x1 < 0)
+            x1 = 0;
+        if (x1 > 255)
+            x1 = 255;
+        if (y2 < 0)
+            y2 = 0;
+        if (y2 > 159)
+            y2 = 159;
+        if (x2 < 0)
+            x2 = 0;
+        if (x2 > 255)
+            x2 = 255;
+
+        y2 -= y1;
+
+        if (theta >= 64 && theta < 192)
+        {
+            gScanlineEffectRegBuffers[1][y1 + 320] = x1;
+
+            if (y2 == 0)
+                continue;
+
+            x2 -= x1;
+            if (x2 < -1 && x1 > 1)
+                --x1;
+            else if (x2 > 1 && x1 < 255)
+                ++x1;
+
+            if (y2 < 0)
+                for (; y2 < 0; y2++)
+                    gScanlineEffectRegBuffers[1][y1 + y2 + 320] = x1;
+            else
+                for (; y2 > 0; y2--)
+                    gScanlineEffectRegBuffers[1][y1 + y2 + 320] = x1;
+        }
+        else
+        {
+            gScanlineEffectRegBuffers[1][y1 + 480] = x1;
+
+            if (y2 == 0)
+                continue;
+
+            x2 -= x1;
+            if (x2 < -1 && x1 > 1)
+                --x1;
+            else if (x2 > 1 && x1 < 255)
+                ++x1;
+
+            if (y2 < 0)
+                for (; y2 < 0; y2++)
+                    gScanlineEffectRegBuffers[1][y1 + y2 + 480] = x1;
+            else
+                for (; y2 > 0; y2--)
+                    gScanlineEffectRegBuffers[1][y1 + y2 + 480] = x1;
+        }
+    }
+
+    if (offsetMaybe == 0 || deltaAngleMax % 4 == 0)
+    {
+        for (i = 0; i < 160; i++)
+        {
+            gScanlineEffectRegBuffers[1][i * 2 + offsetMaybe] = gScanlineEffectRegBuffers[1][i + 320] << 8 | gScanlineEffectRegBuffers[1][i + 480];
+        }
+        return;
+    }
+
+    y1 = Sin(deltaAngleMax * 16, initRadius + (deltaAngleMax << 1));
+
+    switch (deltaAngleMax / 4)
+    {
+    case 0:
+        if (y1 > 80)
+            y1 = 80;
+        for (i = y1; i > 0; i--)
+        {
+            sTransitionData->data[2] = x1 = ((i * sAnitClockAngles[deltaAngleMax]) >> 8) + 120;
+            if (x1 < 0 || x1 > 255)
+                continue;
+            sTransitionData->cameraX = 400 - i;
+            sTransitionData->data[10] = gScanlineEffectRegBuffers[1][400 - i];
+            if (gScanlineEffectRegBuffers[1][560 - i] < x1)
+                gScanlineEffectRegBuffers[1][560 - i] = 120;
+            else if (gScanlineEffectRegBuffers[1][400 - i] < x1)
+                gScanlineEffectRegBuffers[1][400 - i] = x1;
+        }
+        break;
+    case 1:
+        if (y1 > 80)
+            y1 = 80;
+        for (i = y1; i > 0; i--)
+        {
+            sTransitionData->data[2] = x1 = ((i * sAnitClockAngles[deltaAngleMax]) >> 8) + 120;
+            if (x1 < 0 || x1 > 255)
+                continue;
+            sTransitionData->cameraX = 400 - i;
+            sTransitionData->data[10] = gScanlineEffectRegBuffers[1][400 - i];
+            if (gScanlineEffectRegBuffers[1][400 - i] < x1)
+                gScanlineEffectRegBuffers[1][400 - i] = x1;
+        }
+        break;
+    case 2:
+        if (y1 < -79)
+            y1 = -79;
+        for (i = y1; i <= 0; i++)
+        {
+            sTransitionData->data[2] = x1 = ((i * sAnitClockAngles[deltaAngleMax]) >> 8) + 120;
+            if (x1 < 0 || x1 > 255)
+                continue;
+            sTransitionData->cameraX = 560 - i;
+            sTransitionData->data[10] = gScanlineEffectRegBuffers[1][560 - i];
+            if (gScanlineEffectRegBuffers[1][400 - i] >= x1)
+                gScanlineEffectRegBuffers[1][400 - i] = 120;
+            else if (gScanlineEffectRegBuffers[1][560 - i] > x1)
+                gScanlineEffectRegBuffers[1][560 - i] = x1;
+        }
+        break;
+    case 3:
+        if (y1 < -79)
+            y1 = -79;
+        for (i = y1; i <= 0; i++)
+        {
+            sTransitionData->data[2] = x1 = ((i * sAnitClockAngles[deltaAngleMax]) >> 8) + 120;
+            if (x1 < 0 || x1 > 255)
+                continue;
+            sTransitionData->cameraX = 560 - i;
+            sTransitionData->data[10] = gScanlineEffectRegBuffers[1][560 - i];
+            if (gScanlineEffectRegBuffers[1][560 - i] > x1)
+                gScanlineEffectRegBuffers[1][560 - i] = x1;
+        }
+        break;
+    default:
+        break;
+    }
+
+    for (i = 0; i < 160; i++)
+    {
+        gScanlineEffectRegBuffers[1][i * 2 + offsetMaybe] = (gScanlineEffectRegBuffers[1][i + 320] << 8) | gScanlineEffectRegBuffers[1][i + 480];
+    }
+}
+
+static bool8 BT_Phase2AntiClockwiseSpiral_Init(struct Task *task)
+{
+    InitTransitionData();
+    ScanlineEffect_Clear();
+    sTransitionData->WININ = 0;
+    sTransitionData->WINOUT = WININ_WIN0_BG_ALL | WININ_WIN0_OBJ | WININ_WIN0_CLR;
+    sTransitionData->WIN0H = WIN_RANGE(0x78, 0x78);
+    sTransitionData->WIN0V = WIN_RANGE(0x30, 0x70);
+    sTransitionData->WIN1V = WIN_RANGE(0x10, 0x90);
+    sTransitionData->counter = 0;
+    BT_AntiClockwiseSpiral_DoUpdateFrame(0, 0, 0);
+    BT_AntiClockwiseSpiral_DoUpdateFrame(0, 0, 1);
+    DmaCopy16(3, gScanlineEffectRegBuffers[1], gScanlineEffectRegBuffers[0], 640);
+    SetVBlankCallback(VBCB_BT_Phase2AntiClockwiseBlackFade);
+    ++task->tState;
+    task->data[1] = 0;
+    task->data[2] = 0;
+    return FALSE;
+}
+
+static bool8 BT_Phase2AntiClockwiseSpiral_Update(struct Task *task)
+{
+    s16 win_top, win_bottom;
+
+    BT_AntiClockwiseSpiral_DoUpdateFrame(task->data[2], task->data[1], 1);
+    sTransitionData->VBlank_DMA |= TRUE;
+    if (++task->data[1] == 17)
+    {
+        BT_AntiClockwiseSpiral_DoUpdateFrame(task->data[2], 16, 0);
+        win_top = 48 - task->data[2];
+        if (win_top < 0)
+            win_top = 0;
+        win_bottom = task->data[2] + 112;
+        if (win_bottom > 255)
+            win_bottom = 255;
+        sTransitionData->WIN0V = win_top | win_bottom;
+        task->data[2] += 32;
+        task->data[1] = 0;
+        BT_AntiClockwiseSpiral_DoUpdateFrame(task->data[2], 0, 1);
+        win_top = 48 - task->data[2];
+        if (win_top < 0)
+            win_top = 0;
+        win_bottom = task->data[2] + 112;
+        if (win_bottom > 255)
+            win_bottom = 255;
+        sTransitionData->WIN1V = win_top | win_bottom;
+        sTransitionData->VBlank_DMA |= TRUE;
+        if (task->data[2] > 159)
+        {
+            sTransitionData->counter = 1;
+            FadeScreenBlack();
+        }
+    }
+    return FALSE;
+}
+
+static void VBCB_BT_Phase2AntiClockwiseBlackFade(void)
+{
+    DmaStop(0);
+    VBlankCB_BattleTransition();
+    if (sTransitionData->counter)
+    {
+        DestroyTask(FindTaskIdByFunc(BT_Phase2AntiClockwiseSpiral));
+    }
+    else
+    {
+        if (sTransitionData->VBlank_DMA)
+        {
+            DmaCopy16(3, gScanlineEffectRegBuffers[1], gScanlineEffectRegBuffers[0], 640);
+            sTransitionData->VBlank_DMA = FALSE;
+        }
+        SetGpuReg(REG_OFFSET_WININ, sTransitionData->WININ);
+        SetGpuReg(REG_OFFSET_WINOUT, sTransitionData->WINOUT);
+        SetGpuReg(REG_OFFSET_WIN0V, sTransitionData->WIN0V);
+        SetGpuReg(REG_OFFSET_WIN1V, sTransitionData->WIN1V);
+        SetGpuReg(REG_OFFSET_WIN0H, gScanlineEffectRegBuffers[0][0]);
+        SetGpuReg(REG_OFFSET_WIN1H, gScanlineEffectRegBuffers[0][1]);
+        DmaSet(0, gScanlineEffectRegBuffers[0], &REG_WIN0H, B_TRANS_DMA_FLAGS);
+    }
+}

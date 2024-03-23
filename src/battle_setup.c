@@ -118,7 +118,7 @@ EWRAM_DATA static u8 sNoOfPossibleTrainerRetScripts = 0;
 static const u8 sBattleTransitionTable_Wild[][2] =
 {
     [TRANSITION_TYPE_NORMAL] = {B_TRANSITION_SLICE,          B_TRANSITION_WHITE_BARS_FADE},
-    [TRANSITION_TYPE_CAVE]   = {B_TRANSITION_CLOCKWISE_WIPE, B_TRANSITION_GRID_SQUARES},
+    [TRANSITION_TYPE_CAVE]   = {B_TRANSITION_CLOCKWISE_WIPE, B_TRANSITION_ANTI_CLOCKWISE_SPIRAL},
     [TRANSITION_TYPE_FLASH]  = {B_TRANSITION_BLUR,           B_TRANSITION_GRID_SQUARES},
     [TRANSITION_TYPE_WATER]  = {B_TRANSITION_WAVE,           B_TRANSITION_RIPPLE},
 };
@@ -612,14 +612,14 @@ void BattleSetup_StartLegendaryBattle(void)
     case SPECIES_DEOXYS_ATTACK:
     case SPECIES_DEOXYS_DEFENSE:
     case SPECIES_DEOXYS_SPEED:
-        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_DEOXYS);
+        CreateBattleStartTask(B_TRANSITION_SHRED_SPLIT, MUS_RG_VS_DEOXYS);
         break;
     case SPECIES_LUGIA:
     case SPECIES_HO_OH:
-        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_LEGEND);
+        CreateBattleStartTask(B_TRANSITION_SHRED_SPLIT, MUS_RG_VS_LEGEND);
         break;
     case SPECIES_MEW:
-        CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
+        CreateBattleStartTask(B_TRANSITION_SHRED_SPLIT, MUS_VS_MEW);
         break;
     }
 
