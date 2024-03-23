@@ -8624,6 +8624,24 @@ static const struct LevelUpMove sHeracrossLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
+static const struct LevelUpMove sHeracrossMegaLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_NIGHT_SLASH),
+    LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOVE( 1, MOVE_LEER),
+    LEVEL_UP_MOVE( 6, MOVE_HORN_ATTACK),
+    LEVEL_UP_MOVE(12, MOVE_ENDURE),
+    LEVEL_UP_MOVE(13, MOVE_AERIAL_ACE),
+    LEVEL_UP_MOVE(19, MOVE_FURY_ATTACK),
+    LEVEL_UP_MOVE(20, MOVE_BRICK_BREAK),
+    LEVEL_UP_MOVE(27, MOVE_COUNTER),
+    LEVEL_UP_MOVE(35, MOVE_TAKE_DOWN),
+    LEVEL_UP_MOVE(37, MOVE_CLOSE_COMBAT),
+    LEVEL_UP_MOVE(44, MOVE_REVERSAL),
+    LEVEL_UP_MOVE(49, MOVE_FEINT),
+    LEVEL_UP_MOVE(55, MOVE_MEGAHORN),
+    LEVEL_UP_END
+};
+
 static const struct LevelUpMove sSneaselLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
@@ -9716,6 +9734,211 @@ static const struct LevelUpMove sCelebiLevelUpLearnset[] = {
     LEVEL_UP_MOVE(80, MOVE_HEALING_WISH),
     LEVEL_UP_MOVE(90, MOVE_LEAF_STORM),
     LEVEL_UP_MOVE(100, MOVE_PERISH_SONG),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sFlabearLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sVolbearLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sDynabearLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sCruisealLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sMariceLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sLakenessLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sKotoraLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sRaitoraLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sVoonailLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sKyonpanLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sLionbombLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sRinringLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sBellrunLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sWolfmanLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sWarwolfLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sKazufrogLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sToadryuLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sSickleaselLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sNokochiLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sAnkochiLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sModelionLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sShadrakeLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sJaggLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sIkariLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sHanamoguraLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sLevirayLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sTuskrushLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sBuuLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sCactormusLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sBlottleLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sPendrakenLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sCheepLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sJabettaLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sGavillainLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sBalumbaLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sRamooseLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sGorillaimoLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sFlamepawLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sRuffmistLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sSparkmaneLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sPetaloundLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_END
 };
 
