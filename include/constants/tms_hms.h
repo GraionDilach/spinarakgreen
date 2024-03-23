@@ -86,7 +86,13 @@
     F(ZAP_CANNON) \
     F(DRAGON_BREATH) \
     F(DETECT) \
-    F(NIGHTMARE)
+    F(NIGHTMARE) \
+    F(RAZOR_WIND) \
+    F(WHIRLWIND) \
+    F(HORN_DRILL) \
+    F(TAKE_DOWN) \
+    F(BUBBLE_BEAM) \
+    F(PAY_DAY)
 
 #define FOREACH_HM(F) \
     F(CUT) \
