@@ -475,7 +475,7 @@
 #define P_FAMILY_GUZZLORD                TRUE
 #define P_FAMILY_NECROZMA                FALSE
 #define P_FAMILY_MAGEARNA                TRUE
-#define P_FAMILY_MARSHADOW               FALSE
+#define P_FAMILY_MARSHADOW               TRUE
 #define P_FAMILY_POIPOLE                 FALSE
 #define P_FAMILY_STAKATAKA               FALSE
 #define P_FAMILY_BLACEPHALON             FALSE
