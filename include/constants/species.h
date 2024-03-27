@@ -1669,34 +1669,36 @@
 #define SPECIES_KAZUFROG                                SPGREEN_START + 32
 #define SPECIES_TOADRYU                                 SPGREEN_START + 33
 #define SPECIES_SICKLEASEL                              SPGREEN_START + 34
-#define SPECIES_NOKOCHI                                 SPGREEN_START + 35
-#define SPECIES_ANKOCHI                                 SPGREEN_START + 36
-#define SPECIES_MODELION                                SPGREEN_START + 37
-#define SPECIES_SHADRAKE                                SPGREEN_START + 38
-#define SPECIES_JAGG                                    SPGREEN_START + 39
-#define SPECIES_IKARI                                   SPGREEN_START + 40
-#define SPECIES_HANAMOGURA                              SPGREEN_START + 41
-#define SPECIES_LEVIRAY                                 SPGREEN_START + 42
-#define SPECIES_TUSKRUSH                                SPGREEN_START + 43
-#define SPECIES_BUU                                     SPGREEN_START + 44
-#define SPECIES_CACTORMUS                               SPGREEN_START + 45
-#define SPECIES_BLOTTLE                                 SPGREEN_START + 46
-#define SPECIES_PENDRAKEN                               SPGREEN_START + 47
-#define SPECIES_CHEEP                                   SPGREEN_START + 48
-#define SPECIES_JABETTA                                 SPGREEN_START + 49
-#define SPECIES_GAVILLAIN                               SPGREEN_START + 50
-#define SPECIES_BALUMBA                                 SPGREEN_START + 51
-#define SPECIES_RAMOOSE                                 SPGREEN_START + 52
-#define SPECIES_GORILLAIMO                              SPGREEN_START + 53
-#define SPECIES_FLAMEPAW                                SPGREEN_START + 54
-#define SPECIES_RUFFMIST                                SPGREEN_START + 55
-#define SPECIES_SPARKMANE                               SPGREEN_START + 56
-#define SPECIES_PETALOUND                               SPGREEN_START + 57
+#define SPECIES_LIMANBO                                 SPGREEN_START + 35
+#define SPECIES_BIMANBO                                 SPGREEN_START + 36
+#define SPECIES_NOKOCHI                                 SPGREEN_START + 37
+#define SPECIES_ANKOCHI                                 SPGREEN_START + 38
+#define SPECIES_MODELION                                SPGREEN_START + 39
+#define SPECIES_SHADRAKE                                SPGREEN_START + 40
+#define SPECIES_JAGG                                    SPGREEN_START + 41
+#define SPECIES_IKARI                                   SPGREEN_START + 42
+#define SPECIES_HANAMOGURA                              SPGREEN_START + 43
+#define SPECIES_LEVIRAY                                 SPGREEN_START + 44
+#define SPECIES_TUSKRUSH                                SPGREEN_START + 45
+#define SPECIES_BUU                                     SPGREEN_START + 46
+#define SPECIES_CACTORMUS                               SPGREEN_START + 47
+#define SPECIES_BLOTTLE                                 SPGREEN_START + 48
+#define SPECIES_PENDRAKEN                               SPGREEN_START + 49
+#define SPECIES_CHEEP                                   SPGREEN_START + 50
+#define SPECIES_JABETTA                                 SPGREEN_START + 51
+#define SPECIES_GAVILLAIN                               SPGREEN_START + 52
+#define SPECIES_BALUMBA                                 SPGREEN_START + 53
+#define SPECIES_RAMOOSE                                 SPGREEN_START + 54
+#define SPECIES_GORILLAIMO                              SPGREEN_START + 55
+#define SPECIES_FLAMEPAW                                SPGREEN_START + 56
+#define SPECIES_RUFFMIST                                SPGREEN_START + 57
+#define SPECIES_SPARKMANE                               SPGREEN_START + 58
+#define SPECIES_PETALOUND                               SPGREEN_START + 59
 
 // mystery wobbuffet for testing
-#define SPECIES_WOBBUFFET_TEST                          SPGREEN_START + 58
+#define SPECIES_WOBBUFFET_TEST                          SPGREEN_START + 60
 
-#define SPGREEN_END                                     SPGREEN_START + 59
+#define SPGREEN_END                                     SPGREEN_START + 61
 
 #define SPECIES_EGG SPGREEN_END
 
