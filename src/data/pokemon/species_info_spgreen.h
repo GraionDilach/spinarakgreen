@@ -264,6 +264,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     #include "species_info_spgreen/gen_7.h"
     #include "species_info_spgreen/gen_8.h"
     #include "species_info_spgreen/gen_9.h"
+    #include "species_info_spgreen/gen_spgrn.h"
 
     [SPECIES_EGG] =
     {
@@ -336,7 +337,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
         //.formSpeciesIdTable = sNoneFormSpeciesIdTable,
         //.formChangeTable = sNoneFormChangeTable,
-        .allPerfectIVs = TRUE,
+        //.allPerfectIVs = TRUE,
     },
     */
 };
