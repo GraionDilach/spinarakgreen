@@ -3031,14 +3031,14 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpAttack  = 50,
         .baseSpDefense = 150,
         .types = { TYPE_ROCK, TYPE_FAIRY },
-        .catchRate = 60,
-        .expYield = 100,
+        .catchRate = 64,
+        .expYield = 242,
         .evYield_Defense = 1,
         .evYield_SpDefense = 1,
         .genderRatio = MON_GENDERLESS,
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_SLOW,
+        .growthRate = GROWTH_550,
         .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_MINERAL },
         .abilities = { ABILITY_CLEAR_BODY, ABILITY_NONE, ABILITY_STURDY },
         .bodyColor = BODY_COLOR_GRAY,
@@ -3068,6 +3068,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Carbink),
         ICON(Carbink, 2),
         LEARNSETS(Carbink),
+        .evolutions = EVOLUTION({EVO_MOVE, MOVE_POWER_GEM, SPECIES_DIANCIE}),
     },
 #endif //P_FAMILY_CARBINK
 
@@ -4200,22 +4201,14 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 #if P_FAMILY_DIANCIE
 #define DIANCE_MISC_INFO                                                                \
         .types = { TYPE_ROCK, TYPE_FAIRY },                                             \
-        .catchRate = 3,                                                                 \
         .evYield_Defense = 1,                                                           \
         .evYield_SpDefense = 2,                                                         \
         .genderRatio = MON_GENDERLESS,                                                  \
         .eggCycles = 25,                                                                \
+        .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_MINERAL },                            \
         .friendship = STANDARD_FRIENDSHIP,                                              \
-        .growthRate = GROWTH_SLOW,                                                      \
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },    \
         .bodyColor = BODY_COLOR_PINK,                                                   \
-        .speciesName = _("Diancie"),                                                    \
-        .natDexNum = NATIONAL_DEX_DIANCIE,                                              \
-        .categoryName = _("Jewel"),                                                     \
-        LEARNSETS(Diancie),                                                             \
-        .formSpeciesIdTable = sDiancieFormSpeciesIdTable,                               \
-        .formChangeTable = sDiancieFormChangeTable,                                     \
-        .isMythical = TRUE
+        .categoryName = _("Jewel"),
 
     [SPECIES_DIANCIE] =
     {
@@ -4226,8 +4219,12 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpeed     = 50,
         .baseSpAttack  = 100,
         .baseSpDefense = 150,
-        .expYield = 270,
+        .catchRate = 34,
+        .expYield = 319,
+        .growthRate = GROWTH_650,
         .abilities = { ABILITY_CLEAR_BODY, ABILITY_NONE },
+        .speciesName = _("Diancie"),
+        .natDexNum = NATIONAL_DEX_DIANCIE,
         .cryId = CRY_DIANCIE,
         .height = 7,
         .weight = 88,
@@ -4249,25 +4246,34 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .backAnimId = BACK_ANIM_CIRCLE_COUNTERCLOCKWISE,
         PALETTES(Diancie),
         ICON(Diancie, 1),
+        LEARNSETS(Diancie),
+        .evolutions = EVOLUTION({EVO_LEVEL, 52, SPECIES_DIANCIE_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
     [SPECIES_DIANCIE_MEGA] =
     {
         DIANCE_MISC_INFO,
-        .baseHP        = 50,
+        .baseHP        = 65,
         .baseAttack    = 160,
         .baseDefense   = 110,
         .baseSpeed     = 110,
         .baseSpAttack  = 160,
         .baseSpDefense = 110,
-        .expYield = 315,
+        .catchRate = 13,
+        .expYield = 418,
+        .growthRate = GROWTH_750,
         .abilities = { ABILITY_MAGIC_BOUNCE, ABILITY_MAGIC_BOUNCE, ABILITY_MAGIC_BOUNCE },
         .cryId = CRY_DIANCIE_MEGA,
+        .speciesName = _("Dimegancie"),
+        .natDexNum = NATIONAL_DEX_DIANCIE_MEGA,
         .height = 11,
         .weight = 278,
         .description = COMPOUND_STRING(
-            ""),
+            "A sudden transformation of Carbink,\n"
+            "its pink, glimmering body is said to be\n"
+            "the loveliest sight in the whole world.\n"
+            "It creates diamonds between its hands."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -4281,7 +4287,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(DiancieMega),
         ICON(DiancieMega, 0),
-        .isMegaEvolution = TRUE,
+        LEARNSETS(DiancieMega),
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_DIANCIE

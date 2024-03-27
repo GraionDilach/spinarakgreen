@@ -339,7 +339,7 @@
 #define P_FAMILY_SIGILYPH                FALSE
 #define P_FAMILY_YAMASK                  FALSE
 #define P_FAMILY_TIRTOUGA                FALSE
-#define P_FAMILY_ARCHEN                  FALSE
+#define P_FAMILY_ARCHEN                  TRUE
 #define P_FAMILY_TRUBBISH                TRUE
 #define P_FAMILY_ZORUA                   FALSE
 #define P_FAMILY_MINCCINO                TRUE
@@ -412,7 +412,7 @@
 #define P_FAMILY_AMAURA                  FALSE
 #define P_FAMILY_HAWLUCHA                FALSE
 #define P_FAMILY_DEDENNE                 FALSE
-#define P_FAMILY_CARBINK                 FALSE
+#define P_FAMILY_CARBINK                 TRUE
 #define P_FAMILY_GOOMY                   FALSE
 #define P_FAMILY_KLEFKI                  FALSE
 #define P_FAMILY_PHANTUMP                TRUE
@@ -422,7 +422,7 @@
 #define P_FAMILY_XERNEAS                 FALSE
 #define P_FAMILY_YVELTAL                 FALSE
 #define P_FAMILY_ZYGARDE                 FALSE
-#define P_FAMILY_DIANCIE                 FALSE
+#define P_FAMILY_DIANCIE                 TRUE
 #define P_FAMILY_HOOPA                   FALSE
 #define P_FAMILY_VOLCANION               FALSE
 
