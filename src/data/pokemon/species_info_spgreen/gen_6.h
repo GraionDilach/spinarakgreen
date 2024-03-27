@@ -4208,7 +4208,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_MINERAL },                            \
         .friendship = STANDARD_FRIENDSHIP,                                              \
         .bodyColor = BODY_COLOR_PINK,                                                   \
-        .categoryName = _("Jewel"),
+        .categoryName = _("Jewel")
 
     [SPECIES_DIANCIE] =
     {
