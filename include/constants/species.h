@@ -1687,19 +1687,18 @@
 #define SPECIES_PENDRAKEN                               SPGREEN_START + 50
 #define SPECIES_CHEEP                                   SPGREEN_START + 51
 #define SPECIES_JABETTA                                 SPGREEN_START + 52
-#define SPECIES_GAVILLAIN                               SPGREEN_START + 53
-#define SPECIES_BALUMBA                                 SPGREEN_START + 54
-#define SPECIES_RAMOOSE                                 SPGREEN_START + 55
-#define SPECIES_GORILLAIMO                              SPGREEN_START + 56
-#define SPECIES_FLAMEPAW                                SPGREEN_START + 57
-#define SPECIES_RUFFMIST                                SPGREEN_START + 58
-#define SPECIES_SPARKMANE                               SPGREEN_START + 59
-#define SPECIES_PETALOUND                               SPGREEN_START + 60
+#define SPECIES_BALUMBA                                 SPGREEN_START + 53
+#define SPECIES_RAMOOSE                                 SPGREEN_START + 54
+#define SPECIES_GORILLAIMO                              SPGREEN_START + 55
+#define SPECIES_FLAMEPAW                                SPGREEN_START + 56
+#define SPECIES_RUFFMIST                                SPGREEN_START + 57
+#define SPECIES_SPARKMANE                               SPGREEN_START + 58
+#define SPECIES_PETALOUND                               SPGREEN_START + 59
 
 // mystery wobbuffet for testing
-#define SPECIES_WOBBUFFET_TEST                          SPGREEN_START + 61
+#define SPECIES_WOBBUFFET_TEST                          SPGREEN_START + 60
 
-#define SPGREEN_END                                     SPGREEN_START + 62
+#define SPGREEN_END                                     SPGREEN_START + 61
 
 #define SPECIES_EGG SPGREEN_END
 
