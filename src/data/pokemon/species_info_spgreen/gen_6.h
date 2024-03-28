@@ -2930,19 +2930,15 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpAttack  = 74,
         .baseSpDefense = 63,
         .types = { TYPE_FIGHTING, TYPE_FLYING },
-        .catchRate = 100,
-        .expYield = 175,
+        .catchRate = 64,
+        .expYield = 242,
         .evYield_Attack = 2,
         .itemRare = ITEM_KINGS_ROCK,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        #if P_UPDATED_EGG_GROUPS >= GEN_8
-            .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_HUMAN_LIKE },
-        #else
-            .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_HUMAN_LIKE },
-        #endif
+        .growthRate = GROWTH_550,
+        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_HUMAN_LIKE },
         .abilities = { ABILITY_LIMBER, ABILITY_UNBURDEN, ABILITY_MOLD_BREAKER },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Hawlucha"),

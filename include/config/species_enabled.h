@@ -331,7 +331,7 @@
 #define P_FAMILY_COTTONEE                TRUE
 #define P_FAMILY_PETILIL                 TRUE
 #define P_FAMILY_BASCULIN                FALSE
-#define P_FAMILY_SANDILE                 FALSE
+#define P_FAMILY_SANDILE                 TRUE
 #define P_FAMILY_DARUMAKA                FALSE
 #define P_FAMILY_MARACTUS                TRUE
 #define P_FAMILY_DWEBBLE                 FALSE
@@ -410,7 +410,7 @@
 #define P_FAMILY_HELIOPTILE              FALSE
 #define P_FAMILY_TYRUNT                  FALSE
 #define P_FAMILY_AMAURA                  FALSE
-#define P_FAMILY_HAWLUCHA                FALSE
+#define P_FAMILY_HAWLUCHA                TRUE
 #define P_FAMILY_DEDENNE                 FALSE
 #define P_FAMILY_CARBINK                 TRUE
 #define P_FAMILY_GOOMY                   FALSE
