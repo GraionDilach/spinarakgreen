@@ -7320,7 +7320,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_GENGAR_MEGA] =
     {
         GENGAR_MISC_INFO,
-        .types = { TYPE_GHOST, TYPE_POISON },
+        .types = { TYPE_GHOST, TYPE_DARK },
         .baseHP        = 60,
         .baseAttack    = 65,
         .baseDefense   = 80,
