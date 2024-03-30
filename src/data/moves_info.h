@@ -141,7 +141,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Pounds the foe with\n"
             "forelegs or tail."),
         .effect = EFFECT_HIT,
-        .power = 40,
+        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 50 : 40,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 35,
@@ -579,7 +579,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Flies up on the first turn,\n"
             "then strikes the next turn."),
         .effect = EFFECT_SEMI_INVULNERABLE,
-        .power = B_UPDATED_MOVE_DATA >= GEN_4 ? 90 : 70,
+        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 100 : B_UPDATED_MOVE_DATA >= GEN_4 ? 90 : 70,
         .type = TYPE_FLYING,
         .accuracy = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 100 : 95,
         .pp = 15,
@@ -6215,7 +6215,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "An attack that may raise\n"
             "all stats."),
         .effect = EFFECT_HIT,
-        .power = 60,
+        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 80 : 60,
         .type = TYPE_ROCK,
         .accuracy = 100,
         .pp = 5,
@@ -7502,7 +7502,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "A kick with a high critical-\n"
             "hit ratio. May cause a burn."),
         .effect = EFFECT_HIT,
-        .power = 85,
+        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 90 : 85,
         .type = TYPE_FIRE,
         .accuracy = 90,
         .criticalHitStage = 1,
@@ -12658,7 +12658,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Attacks with a column of\n"
             "water. May make a rainbow."),
         .effect = EFFECT_PLEDGE,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 80 : 50,
+        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 85 : B_UPDATED_MOVE_DATA >= GEN_6 ? 80 : 50,
         .type = TYPE_WATER,
         .accuracy = 100,
         .pp = 10,
@@ -12679,7 +12679,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Attacks with a column of\n"
             "fire. May burn the grass."),
         .effect = EFFECT_PLEDGE,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 80 : 50,
+        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 85 : B_UPDATED_MOVE_DATA >= GEN_6 ? 80 : 50,
         .type = TYPE_FIRE,
         .accuracy = 100,
         .pp = 10,
@@ -12700,7 +12700,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Attacks with a column of\n"
             "grass. May create a swamp."),
         .effect = EFFECT_PLEDGE,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 80 : 50,
+        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 85 : B_UPDATED_MOVE_DATA >= GEN_6 ? 80 : 50,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 10,
@@ -13129,9 +13129,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Looses a pitch-black shock\n"
             "wave. May lower accuracy."),
         .effect = EFFECT_HIT,
-        .power = 85,
+        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 90 : 85,
         .type = TYPE_DARK,
-        .accuracy = 95,
+        .accuracy = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 100 : 95,
         .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -13312,7 +13312,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Attacks with an ancient\n"
             "song. May induce sleep."),
         .effect = EFFECT_RELIC_SONG,
-        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 85 : 75,
+        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 90 : 75,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 10,
@@ -13979,7 +13979,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 60 : 40,
         .type = TYPE_FAIRY,
         .accuracy = 0,
-        .pp = 15,
+        .pp = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 20 : 15,
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
@@ -14207,7 +14207,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Stirs up a fairy wind to\n"
             "strike the foe."),
         .effect = EFFECT_HIT,
-        .power = 40,
+        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 50 : 40,
         .type = TYPE_FAIRY,
         .accuracy = 100,
         .pp = 30,
