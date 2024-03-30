@@ -130,7 +130,17 @@
     F(SNARL) \
     F(NATURE_POWER) \
     F(POWER_UP_PUNCH) \
-    F(CONFIDE)
+    F(CONFIDE) \
+    F(HYDRO_CANNON) \
+    F(BLAST_BURN) \
+    F(FRENZY_PLANT) \
+    F(DRACO_METEOR) \
+    F(FIRE_PLEDGE) \
+    F(WATER_PLEDGE) \
+    F(GRASS_PLEDGE) \
+    F(TRAILBLAZE) \
+    F(STEEL_BEAM) \
+    F(POUNCE)
 
 #define FOREACH_HM(F) \
     F(CUT) \

@@ -1717,7 +1717,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     [MOVE_DRILL_PECK] =
     {
         .name = COMPOUND_STRING("Drill Peck"),
-        #ifdef B_UPDATED_MOVE_DATA = GEN_SPGRN
+        #if (B_UPDATED_MOVE_DATA == GEN_SPGRN)
         .description = COMPOUND_STRING(
             "A corkscrewing attack with\n"
             "the beak acting as a drill.\n"
@@ -1732,7 +1732,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .type = TYPE_FLYING,
         .accuracy = 100,
         .pp = 20,
-        #ifdef B_UPDATED_MOVE_DATA = GEN_SPGRN
+        #if (B_UPDATED_MOVE_DATA == GEN_SPGRN)
             .criticalHitStage = 1,
         #endif
         .target = MOVE_TARGET_SELECTED,
@@ -9980,7 +9980,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     [MOVE_X_SCISSOR] =
     {
         .name = COMPOUND_STRING("X-Scissor"),
-        #ifdef B_UPDATED_MOVE_DATA = GEN_SPGRN
+        #if (B_UPDATED_MOVE_DATA == GEN_SPGRN)
         .description = COMPOUND_STRING(
             "Slashes the foe with crossed\n"
             "scythes, claws, etc.\n"
@@ -9995,7 +9995,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 15,
-        #ifdef B_UPDATED_MOVE_DATA = GEN_SPGRN
+        #if (B_UPDATED_MOVE_DATA == GEN_SPGRN)
             .criticalHitStage = 1,
         #endif
         .target = MOVE_TARGET_SELECTED,
