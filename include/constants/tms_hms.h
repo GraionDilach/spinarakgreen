@@ -92,7 +92,13 @@
     F(HORN_DRILL) \
     F(TAKE_DOWN) \
     F(BUBBLE_BEAM) \
-    F(PAY_DAY)
+    F(PAY_DAY) \
+    F(SUBMISSION) \
+    F(FISSURE) \
+    F(TELEPORT) \
+    F(SKULL_BASH) \
+    F(SKY_ATTACK) \
+    F(PSYWAVE)
 
 #define FOREACH_HM(F) \
     F(CUT) \
