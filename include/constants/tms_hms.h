@@ -98,7 +98,39 @@
     F(TELEPORT) \
     F(SKULL_BASH) \
     F(SKY_ATTACK) \
-    F(PSYWAVE)
+    F(PSYWAVE) \
+    F(HONE_CLAWS) \
+    F(PSYSHOCK) \
+    F(VENOSHOCK) \
+    F(SMACK_DOWN) \
+    F(FLAME_CHARGE) \
+    F(LOW_SWEEP) \
+    F(ROUND) \
+    F(ECHOED_VOICE) \
+    F(SKY_DROP) \
+    F(INCINERATE) \
+    F(QUASH) \
+    F(ACROBATICS) \
+    F(EMBARGO) \
+    F(SHADOW_CLAW) \
+    F(PAYBACK) \
+    F(GIGA_IMPACT) \
+    F(ROCK_POLISH) \
+    F(STONE_EDGE) \
+    F(VOLT_SWITCH) \
+    F(GYRO_BALL) \
+    F(STRUGGLE_BUG) \
+    F(BULLDOZE) \
+    F(FROST_BREATH) \
+    F(DRAGON_TAIL) \
+    F(INFESTATION) \
+    F(GRASS_KNOT) \
+    F(TRICK_ROOM) \
+    F(WILD_CHARGE) \
+    F(SNARL) \
+    F(NATURE_POWER) \
+    F(POWER_UP_PUNCH) \
+    F(CONFIDE)
 
 #define FOREACH_HM(F) \
     F(CUT) \
