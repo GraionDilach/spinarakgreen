@@ -363,7 +363,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Scratches the foe with\n"
             "sharp claws."),
         .effect = EFFECT_HIT,
-        .power = 40,
+        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 50 : 40,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 35,
@@ -1717,12 +1717,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     [MOVE_DRILL_PECK] =
     {
         .name = COMPOUND_STRING("Drill Peck"),
+        #ifdef B_UPDATED_MOVE_DATA == GEN_SPGRN
         .description = COMPOUND_STRING(
             "A corkscrewing attack with\n"
-        #ifdef B_UPDATED_MOVE_DATA == GEN_SPGRN
             "the beak acting as a drill.\n"
             "Has a high critical rate."),
         #else
+        .description = COMPOUND_STRING(
+            "A corkscrewing attack with\n"
             "the beak acting as a drill."),
         #endif
         .effect = EFFECT_HIT,
@@ -6294,7 +6296,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "A rock-crushing attack\n"
             "that may lower Defense."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 50 : B_UPDATED_MOVE_DATA >= GEN_4 ? 40 : 20,
+        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 65 : B_UPDATED_MOVE_DATA >= GEN_4 ? 40 : 20,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 15,
@@ -9978,12 +9980,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     [MOVE_X_SCISSOR] =
     {
         .name = COMPOUND_STRING("X-Scissor"),
+        #ifdef B_UPDATED_MOVE_DATA == GEN_SPGRN
         .description = COMPOUND_STRING(
             "Slashes the foe with crossed\n"
-        #ifdef B_UPDATED_MOVE_DATA == GEN_SPGRN
             "scythes, claws, etc.\n",
             "Has a high critical rate."),
         #else
+        .description = COMPOUND_STRING(
+            "Slashes the foe with crossed\n"
             "scythes, claws, etc."),
         #endif
         .effect = EFFECT_HIT,
@@ -13079,7 +13083,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Crushes the foe with its\n"
             "body. May cause flinching."),
         .effect = EFFECT_HIT,
-        .power = 65,
+        .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 85 : 65,
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 20,
