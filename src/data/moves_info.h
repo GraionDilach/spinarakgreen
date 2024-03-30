@@ -9983,7 +9983,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         #ifdef B_UPDATED_MOVE_DATA == GEN_SPGRN
         .description = COMPOUND_STRING(
             "Slashes the foe with crossed\n"
-            "scythes, claws, etc.\n",
+            "scythes, claws, etc.\n"
             "Has a high critical rate."),
         #else
         .description = COMPOUND_STRING(
