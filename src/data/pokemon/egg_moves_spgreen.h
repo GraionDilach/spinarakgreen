@@ -255,8 +255,7 @@ const u16 gEggMoves[] = {
               MOVE_SLASH,
               MOVE_STEALTH_ROCK,
               MOVE_STOMPING_TANTRUM,
-              MOVE_SUPER_FANG,
-              MOVE_THROAT_CHOP),
+              MOVE_SUPER_FANG),
 
     egg_moves(SANDSHREW_ALOLAN,
               MOVE_AQUA_TAIL,
@@ -281,8 +280,7 @@ const u16 gEggMoves[] = {
               MOVE_SLASH,
               MOVE_SNOWSCAPE,
               MOVE_STEALTH_ROCK,
-              MOVE_SUPER_FANG,
-              MOVE_THROAT_CHOP),
+              MOVE_SUPER_FANG),
 
     egg_moves(NIDORAN_F,
               MOVE_BEAT_UP,
@@ -604,8 +602,7 @@ const u16 gEggMoves[] = {
               MOVE_SLASH,
               MOVE_STEALTH_ROCK,
               MOVE_STOMPING_TANTRUM,
-              MOVE_SUCKER_PUNCH,
-              MOVE_THROAT_CHOP),
+              MOVE_SUCKER_PUNCH),
 
     egg_moves(DIGLETT_ALOLAN,
               MOVE_ANCIENT_POWER,
@@ -646,7 +643,6 @@ const u16 gEggMoves[] = {
               MOVE_SLAM,
               MOVE_STOMPING_TANTRUM,
               MOVE_SUCKER_PUNCH,
-              MOVE_THROAT_CHOP,
               MOVE_WATER_GUN),
 
     egg_moves(MEOWTH,
@@ -680,7 +676,6 @@ const u16 gEggMoves[] = {
               MOVE_SLASH,
               MOVE_SPITE,
               MOVE_TAIL_WHIP,
-              MOVE_THROAT_CHOP,
               MOVE_WATER_GUN),
 
     egg_moves(MEOWTH_ALOLAN,
@@ -711,8 +706,7 @@ const u16 gEggMoves[] = {
               MOVE_PUNISHMENT,
               MOVE_SCREECH,
               MOVE_SLASH,
-              MOVE_SPITE,
-              MOVE_THROAT_CHOP),
+              MOVE_SPITE),
 
     egg_moves(MEOWTH_GALARIAN,
               MOVE_ASSURANCE,
@@ -734,8 +728,7 @@ const u16 gEggMoves[] = {
               MOVE_SLASH,
               MOVE_SPITE,
               MOVE_STEALTH_ROCK,
-              MOVE_THRASH,
-              MOVE_THROAT_CHOP),
+              MOVE_THRASH),
 
     egg_moves(PSYDUCK,
               MOVE_AQUA_TAIL,
@@ -803,7 +796,6 @@ const u16 gEggMoves[] = {
               MOVE_SPITE,
               MOVE_STOMPING_TANTRUM,
               MOVE_THRASH,
-              MOVE_THROAT_CHOP,
               MOVE_VACUUM_WAVE),
 
     egg_moves(GROWLITHE,
@@ -971,7 +963,6 @@ const u16 gEggMoves[] = {
               MOVE_RAPID_SPIN,
               MOVE_SCREECH,
               MOVE_SUPERSONIC,
-              MOVE_THROAT_CHOP,
               MOVE_TICKLE,
               MOVE_WATER_GUN,
               MOVE_WRING_OUT),
@@ -1180,7 +1171,6 @@ const u16 gEggMoves[] = {
               MOVE_SIMPLE_BEAM,
               MOVE_SLASH,
               MOVE_TAILWIND,
-              MOVE_THROAT_CHOP,
               MOVE_TRUMP_CARD,
               MOVE_TWISTER),
 
@@ -1204,8 +1194,7 @@ const u16 gEggMoves[] = {
               MOVE_REVENGE,
               MOVE_SAND_ATTACK,
               MOVE_SIMPLE_BEAM,
-              MOVE_SLAM,
-              MOVE_THROAT_CHOP),
+              MOVE_SLAM),
 
     egg_moves(DODUO,
               MOVE_ACUPRESSURE,
@@ -1234,7 +1223,6 @@ const u16 gEggMoves[] = {
               MOVE_SUPERSONIC,
               MOVE_TAILWIND,
               MOVE_THRASH,
-              MOVE_THROAT_CHOP,
               MOVE_WING_ATTACK),
 
     egg_moves(SEEL,
@@ -1798,7 +1786,6 @@ const u16 gEggMoves[] = {
               MOVE_SOAK,
               MOVE_SUPERSONIC,
               MOVE_TAIL_WHIP,
-              MOVE_THROAT_CHOP,
               MOVE_WATER_GUN,
               MOVE_WATER_SPORT),
 
@@ -1990,7 +1977,6 @@ const u16 gEggMoves[] = {
               MOVE_STEALTH_ROCK,
               MOVE_STRING_SHOT,
               MOVE_THRASH,
-              MOVE_THROAT_CHOP,
               MOVE_VITAL_THROW),
 
     egg_moves(TAUROS,
@@ -2011,8 +1997,7 @@ const u16 gEggMoves[] = {
               MOVE_STOMP,
               MOVE_STOMPING_TANTRUM,
               MOVE_TAIL_WHIP,
-              MOVE_THRASH,
-              MOVE_THROAT_CHOP),
+              MOVE_THRASH),
 
     egg_moves(TAUROS_PALDEAN_COMBAT_BREED,
               MOVE_ASSURANCE,
@@ -2022,8 +2007,7 @@ const u16 gEggMoves[] = {
               MOVE_SCARY_FACE,
               MOVE_STOMPING_TANTRUM,
               MOVE_TAIL_WHIP,
-              MOVE_THRASH,
-              MOVE_THROAT_CHOP),
+              MOVE_THRASH),
 
     egg_moves(TAUROS_PALDEAN_BLAZE_BREED,
               MOVE_CURSE,
@@ -2454,7 +2438,6 @@ const u16 gEggMoves[] = {
               MOVE_STICKY_WEB,
               MOVE_STRING_SHOT,
               MOVE_SUCKER_PUNCH,
-              MOVE_THROAT_CHOP,
               MOVE_TWINEEDLE),
 
     egg_moves(CHINCHOU,
@@ -2685,7 +2668,6 @@ const u16 gEggMoves[] = {
               MOVE_SWITCHEROO,
               MOVE_TAIL_SLAP,
               MOVE_TAIL_WHIP,
-              MOVE_THROAT_CHOP,
               MOVE_TICKLE),
 
     egg_moves(SUNKERN,
@@ -2972,7 +2954,6 @@ const u16 gEggMoves[] = {
               MOVE_SLASH,
               MOVE_STEALTH_ROCK,
               MOVE_TAILWIND,
-              MOVE_THROAT_CHOP,
               MOVE_THUNDER_FANG,
               MOVE_WING_ATTACK),
 
@@ -3032,7 +3013,6 @@ const u16 gEggMoves[] = {
               MOVE_SPITE,
               MOVE_STEEL_ROLLER,
               MOVE_SUPERSONIC,
-              MOVE_THROAT_CHOP,
               MOVE_VENOM_DRENCH,
               MOVE_WATER_GUN),
 
@@ -3059,8 +3039,7 @@ const u16 gEggMoves[] = {
               MOVE_SCALE_SHOT,
               MOVE_SCARY_FACE,
               MOVE_SPITE,
-              MOVE_SUPERSONIC,
-              MOVE_THROAT_CHOP),
+              MOVE_SUPERSONIC),
 
     egg_moves(SHUCKLE,
               MOVE_ACID,
@@ -3115,7 +3094,6 @@ const u16 gEggMoves[] = {
               MOVE_SKITTER_SMACK,
               MOVE_SLASH,
               MOVE_THRASH,
-              MOVE_THROAT_CHOP,
               MOVE_VACUUM_WAVE),
 
     egg_moves(SNEASEL,
@@ -3148,8 +3126,7 @@ const u16 gEggMoves[] = {
               MOVE_SCREECH,
               MOVE_SLASH,
               MOVE_SNOWSCAPE,
-              MOVE_SPITE,
-              MOVE_THROAT_CHOP),
+              MOVE_SPITE),
 
     egg_moves(SNEASEL_HISUIAN,
               MOVE_ACID_SPRAY,
@@ -3167,7 +3144,6 @@ const u16 gEggMoves[] = {
               MOVE_SLASH,
               MOVE_SPITE,
               MOVE_SWITCHEROO,
-              MOVE_THROAT_CHOP,
               MOVE_VACUUM_WAVE),
 
     egg_moves(TEDDIURSA,
@@ -3270,7 +3246,6 @@ const u16 gEggMoves[] = {
               MOVE_STEALTH_ROCK,
               MOVE_STOMPING_TANTRUM,
               MOVE_SUCKER_PUNCH,
-              MOVE_THROAT_CHOP,
               MOVE_WATER_GUN),
 
     egg_moves(CORSOLA_GALARIAN,
@@ -3293,8 +3268,7 @@ const u16 gEggMoves[] = {
               MOVE_SPITE,
               MOVE_STEALTH_ROCK,
               MOVE_STOMPING_TANTRUM,
-              MOVE_STRENGTH_SAP,
-              MOVE_THROAT_CHOP),
+              MOVE_STRENGTH_SAP),
 
     egg_moves(REMORAID,
               MOVE_ACID_SPRAY,
@@ -3484,8 +3458,7 @@ const u16 gEggMoves[] = {
               MOVE_SPITE,
               MOVE_STOMP,
               MOVE_SUCKER_PUNCH,
-              MOVE_THRASH,
-              MOVE_THROAT_CHOP),
+              MOVE_THRASH),
 
     egg_moves(MILTANK,
               MOVE_AFTER_YOU,
@@ -3877,8 +3850,7 @@ const u16 gEggMoves[] = {
               MOVE_SKITTER_SMACK,
               MOVE_SLASH,
               MOVE_SPITE,
-              MOVE_SUCKER_PUNCH,
-              MOVE_THROAT_CHOP),
+              MOVE_SUCKER_PUNCH),
 
     egg_moves(LIMANBO,
               MOVE_AQUA_JET,
@@ -4393,7 +4365,6 @@ const u16 gEggMoves[] = {
               MOVE_PLUCK,
               MOVE_TAILWIND,
               MOVE_THRASH,
-              MOVE_THROAT_CHOP,
               MOVE_WATER_GUN,
               MOVE_WATER_SPORT,
               MOVE_WING_ATTACK),
@@ -4440,7 +4411,6 @@ const u16 gEggMoves[] = {
               MOVE_SWEET_KISS,
               MOVE_SYNTHESIS,
               MOVE_THRASH,
-              MOVE_THROAT_CHOP,
               MOVE_WORRY_SEED),
 
     egg_moves(GORILLAIMO,
@@ -4562,7 +4532,6 @@ const u16 gEggMoves[] = {
               MOVE_SWITCHEROO,
               MOVE_SYNTHESIS,
               MOVE_TEETER_DANCE,
-              MOVE_THROAT_CHOP,
               MOVE_WORRY_SEED),
 
     egg_moves(CLAMPERL,
@@ -5608,7 +5577,6 @@ const u16 gEggMoves[] = {
               MOVE_PURSUIT,
               MOVE_SLASH,
               MOVE_SUCKER_PUNCH,
-              MOVE_THROAT_CHOP,
               MOVE_TICKLE,
               MOVE_YAWN),
 
@@ -5734,7 +5702,6 @@ const u16 gEggMoves[] = {
               MOVE_SPITE,
               MOVE_SUCKER_PUNCH,
               MOVE_TELEKINESIS,
-              MOVE_THROAT_CHOP,
               MOVE_WONDER_ROOM),
 
     egg_moves(MAWILE,
@@ -6168,8 +6135,7 @@ const u16 gEggMoves[] = {
               MOVE_SCARY_FACE,
               MOVE_SKITTER_SMACK,
               MOVE_STEALTH_ROCK,
-              MOVE_STOMPING_TANTRUM,
-              MOVE_THROAT_CHOP),
+              MOVE_STOMPING_TANTRUM),
 
     egg_moves(TYMPOLE,
               MOVE_ACID,
@@ -6261,7 +6227,6 @@ const u16 gEggMoves[] = {
               MOVE_STOMPING_TANTRUM,
               MOVE_SWEET_KISS,
               MOVE_TELEKINESIS,
-              MOVE_THROAT_CHOP,
               MOVE_WISH,
               MOVE_YAWN),
 
@@ -6320,8 +6285,7 @@ const u16 gEggMoves[] = {
               MOVE_REFRESH,
               MOVE_REVENGE,
               MOVE_SLASH,
-              MOVE_SWITCHEROO,
-              MOVE_THROAT_CHOP),
+              MOVE_SWITCHEROO),
 
     egg_moves(SEVIPER,
               MOVE_ACID_SPRAY,
@@ -6352,7 +6316,6 @@ const u16 gEggMoves[] = {
               MOVE_SKITTER_SMACK,
               MOVE_SUCKER_PUNCH,
               MOVE_SWITCHEROO,
-              MOVE_THROAT_CHOP,
               MOVE_THUNDER_FANG,
               MOVE_VENOM_DRENCH,
               MOVE_WRING_OUT),
@@ -6626,7 +6589,6 @@ const u16 gEggMoves[] = {
               MOVE_QUICK_GUARD,
               MOVE_REVENGE,
               MOVE_TAILWIND,
-              MOVE_THROAT_CHOP,
               MOVE_WING_ATTACK),
 
     egg_moves(LILEEP,
@@ -6788,7 +6750,6 @@ const u16 gEggMoves[] = {
               MOVE_SLEEP_POWDER,
               MOVE_STUN_SPORE,
               MOVE_SYNTHESIS,
-              MOVE_THROAT_CHOP,
               MOVE_VINE_WHIP,
               MOVE_WORRY_SEED,
               MOVE_WRING_OUT),
@@ -7148,7 +7109,6 @@ const u16 gEggMoves[] = {
               MOVE_SCREECH,
               MOVE_SUCKER_PUNCH,
               MOVE_SYNTHESIS,
-              MOVE_THROAT_CHOP,
               MOVE_WOOD_HAMMER,
               MOVE_WORRY_SEED),
 
@@ -7255,8 +7215,7 @@ const u16 gEggMoves[] = {
               MOVE_ROLE_PLAY,
               MOVE_SLASH,
               MOVE_SPITE,
-              MOVE_SUCKER_PUNCH,
-              MOVE_THROAT_CHOP),
+              MOVE_SUCKER_PUNCH),
 
     egg_moves(SPHEAL,
               MOVE_AQUA_RING,
@@ -7367,7 +7326,6 @@ const u16 gEggMoves[] = {
               MOVE_SPEED_SWAP,
               MOVE_STOMP,
               MOVE_STOMPING_TANTRUM,
-              MOVE_THROAT_CHOP,
               MOVE_VITAL_THROW),
 
     egg_moves(NIHILEGO,
@@ -7491,8 +7449,7 @@ const u16 gEggMoves[] = {
               MOVE_SHADOW_PUNCH,
               MOVE_SHADOW_SNEAK,
               MOVE_SKITTER_SMACK,
-              MOVE_SUCKER_PUNCH,
-              MOVE_THROAT_CHOP),
+              MOVE_SUCKER_PUNCH),
 
     egg_moves(BAGON,
               MOVE_BITE,
