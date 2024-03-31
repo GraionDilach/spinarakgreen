@@ -216,7 +216,36 @@
     F(THROAT_CHOP) \
     F(POLLEN_PUFF) \
     F(LIQUIDATION) \
-    F(BODY_PRESS)
+    F(BODY_PRESS) \
+    F(KNOCK_OFF) \
+    F(SCARY_FACE) \
+    F(ENDEAVOR) \
+    F(CHARM) \
+    F(SIGNAL_BEAM) \
+    F(STOMPING_TANTRUM) \
+    F(COVET) \
+    F(MUD_SHOT) \
+    F(ANCIENT_POWER) \
+    F(MAGIC_COAT) \
+    F(PAIN_SPLIT) \
+    F(SUCKER_PUNCH) \
+    F(ROLE_PLAY) \
+    F(AQUA_TAIL) \
+    F(FAKE_TEARS) \
+    F(TAILWIND) \
+    F(BOUNCE) \
+    F(OMINOUS_WIND) \
+    F(MAGICAL_LEAF) \
+    F(AIR_CUTTER) \
+    F(RECYCLE) \
+    F(WONDER_ROOM) \
+    F(MAGIC_ROOM) \
+    F(GRAVITY) \
+    F(HEX) \
+    F(WORRY_SEED) \
+    F(ROCK_BLAST) \
+    F(STEALTH_ROCK) \
+    F(TERA_BLAST)
 
 #define FOREACH_HM(F) \
     F(CUT) \
