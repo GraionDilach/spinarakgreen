@@ -1770,9 +1770,16 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     [MOVE_LOW_KICK] =
     {
         .name = COMPOUND_STRING("Low Kick"),
-        .description = COMPOUND_STRING(
-            "A kick that inflicts more\n"
-            "damage on heavier foes."),
+        #if B_UPDATED_MOVE_DATA == GEN_SPGRN
+            .description = COMPOUND_STRING(
+                "A kick that inflicts more\n"
+                "damage on heavier foes.\n"
+                "May cause flinch."),
+        #else
+            .description = COMPOUND_STRING(
+                "A kick that inflicts more\n"
+                "damage on heavier foes."),
+        #endif
         .effect = EFFECT_LOW_KICK,
         .power = 1,
         .type = TYPE_FIGHTING,
@@ -1781,6 +1788,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
+        #if B_UPDATED_MOVE_DATA == GEN_SPGRN
+            .additionalEffects = ADDITIONAL_EFFECTS({
+                .moveEffect = MOVE_EFFECT_FLINCH,
+                .chance = 30,
+            }),
+        #endif
         .makesContact = TRUE,
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
