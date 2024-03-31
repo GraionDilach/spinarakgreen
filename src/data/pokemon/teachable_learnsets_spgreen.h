@@ -5,6 +5,7 @@ static const u16 sNoneTeachableLearnset[] = {
 
 static const u16 sBulbasaurTeachableLearnset[] = {
     MOVE_AMNESIA,
+    MOVE_ANCIENT_POWER,
     MOVE_ATTRACT,
     MOVE_BIDE,
     MOVE_BODY_SLAM,
@@ -74,6 +75,7 @@ static const u16 sBulbasaurTeachableLearnset[] = {
 
 static const u16 sIvysaurTeachableLearnset[] = {
     MOVE_AMNESIA,
+    MOVE_ANCIENT_POWER,
     MOVE_ATTRACT,
     MOVE_BIDE,
     MOVE_BODY_SLAM,
@@ -144,6 +146,7 @@ static const u16 sIvysaurTeachableLearnset[] = {
 
 static const u16 sVenusaurTeachableLearnset[] = {
     MOVE_AMNESIA,
+    MOVE_ANCIENT_POWER,
     MOVE_ATTRACT,
     MOVE_BIDE,
     MOVE_BODY_SLAM,
@@ -325,6 +328,7 @@ static const u16 sVenusaurMegaTeachableLearnset[] = {
 static const u16 sVenusaurGigantamaxTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_AMNESIA,
+    MOVE_ANCIENT_POWER,
     MOVE_AQUA_TAIL,
     MOVE_ATTRACT,
     MOVE_BIDE,
@@ -2289,6 +2293,7 @@ static const u16 sFearowTeachableLearnset[] = {
     MOVE_MUD_SLAP,
     MOVE_NATURAL_GIFT,
     MOVE_OMINOUS_WIND,
+    MOVE_PAY_DAY,
     MOVE_PROTECT,
     MOVE_RAGE,
     MOVE_RAIN_DANCE,
@@ -21123,6 +21128,7 @@ static const u16 sTotodileTeachableLearnset[] = {
     MOVE_SHADOW_CLAW,
     MOVE_SLEEP_TALK,
     MOVE_SNORE,
+    MOVE_SUBMISSION,
     MOVE_SUBSTITUTE,
     MOVE_SUPERPOWER,
     MOVE_SURF,
@@ -21210,6 +21216,7 @@ static const u16 sCroconawTeachableLearnset[] = {
     MOVE_SLEEP_TALK,
     MOVE_SNORE,
     MOVE_STRENGTH,
+    MOVE_SUBMISSION,
     MOVE_SUBSTITUTE,
     MOVE_SUPERPOWER,
     MOVE_SURF,
@@ -21312,6 +21319,7 @@ static const u16 sFeraligatrTeachableLearnset[] = {
     MOVE_SNORE,
     MOVE_STOMPING_TANTRUM,
     MOVE_STRENGTH,
+    MOVE_SUBMISSION,
     MOVE_SUBSTITUTE,
     MOVE_SUPERPOWER,
     MOVE_SURF,
