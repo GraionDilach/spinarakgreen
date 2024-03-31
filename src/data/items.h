@@ -12698,7 +12698,7 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_TERA_BLAST,
+        .secondaryId = MOVE_NONE,
     },
 
     [ITEM_HM_CUT] =
