@@ -13968,7 +13968,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .description = COMPOUND_STRING(
             "Super effective on Water-\n"
             "types. May cause freezing."),
-        .effect = EFFECT_FREEZE_DRY,
+        .effect = EFFECT_SUPER_EFFECTIVE_ON_ARG,
         .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 95 : 70,
         .type = TYPE_ICE,
         .accuracy = 100,
@@ -13976,6 +13976,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = TYPE_WATER,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
             .chance = 10,
