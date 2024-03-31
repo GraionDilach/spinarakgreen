@@ -170,7 +170,53 @@
     F(SLUDGE_WAVE) \
     F(SOLAR_BLADE) \
     F(WEATHER_BALL) \
-    F(PSYCHIC_FANGS)
+    F(PSYCHIC_FANGS) \
+    F(HYDRO_PUMP) \
+    F(LOW_KICK) \
+    F(AGILITY) \
+    F(AMNESIA) \
+    F(LEECH_LIFE) \
+    F(REVERSAL) \
+    F(SPIKES) \
+    F(MEGAHORN) \
+    F(BATON_PASS) \
+    F(ENCORE) \
+    F(CRUNCH) \
+    F(FUTURE_SIGHT) \
+    F(UPROAR) \
+    F(HEAT_WAVE) \
+    F(TRICK) \
+    F(HYPER_VOICE) \
+    F(MUDDY_WATER) \
+    F(IRON_DEFENSE) \
+    F(DRAGON_DANCE) \
+    F(CLOSE_COMBAT) \
+    F(TOXIC_SPIKES) \
+    F(FLARE_BLITZ) \
+    F(AURA_SPHERE) \
+    F(SEED_BOMB) \
+    F(BUG_BUZZ) \
+    F(POWER_GEM) \
+    F(BRAVE_BIRD) \
+    F(EARTH_POWER) \
+    F(NASTY_PLOT) \
+    F(ZEN_HEADBUTT) \
+    F(LEAF_STORM) \
+    F(GUNK_SHOT) \
+    F(IRON_HEAD) \
+    F(HEAVY_SLAM) \
+    F(ELECTRO_BALL) \
+    F(STORED_POWER) \
+    F(ALLY_SWITCH) \
+    F(WORK_UP) \
+    F(HEAT_CRASH) \
+    F(HURRICANE) \
+    F(DARKEST_LARIAT) \
+    F(HIGH_HORSEPOWER) \
+    F(THROAT_CHOP) \
+    F(POLLEN_PUFF) \
+    F(LIQUIDATION) \
+    F(BODY_PRESS)
 
 #define FOREACH_HM(F) \
     F(CUT) \
