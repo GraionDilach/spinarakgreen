@@ -2267,6 +2267,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                     partydiff = (partydiff > partyData[j].lvl - level) ? partydiff : partyData[j].lvl - level;
                 }
 
+                VarSet(VAR_0x8014, partymax);
                 partymax = partymax * trainer->dynamicLevelRatio / 100;
                 level = (level > partymax - partydiff) ? level : partymax - partydiff;
             }

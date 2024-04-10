@@ -228,4 +228,9 @@ static inline const bool32 GetTrainerAIFlagsFromId(u16 trainerId)
     return gTrainers[SanitizeTrainerId(trainerId)].aiFlags;
 }
 
+static inline const u8 GetTrainerDynamicPartyLevelFromId(u16 trainerId)
+{
+    return gTrainers[SanitizeTrainerId(trainerId)].dynamicLevelRatio;
+}
+
 #endif // GUARD_DATA_H
