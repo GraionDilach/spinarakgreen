@@ -13979,6 +13979,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "types. May cause frostbite."),
         #else
             "types. May cause freezing."),
+        #endif
         .effect = EFFECT_SUPER_EFFECTIVE_ON_ARG,
         .power = B_UPDATED_MOVE_DATA == GEN_SPGRN ? 95 : 70,
         .type = TYPE_ICE,
