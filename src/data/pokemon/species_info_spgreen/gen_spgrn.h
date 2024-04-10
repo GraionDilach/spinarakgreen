@@ -1716,6 +1716,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         LEARNSETS(Pendraken),
     },
 
+    /*
     [SPECIES_CHEEP] =
     {
         .baseHP        = 45,
@@ -1816,6 +1817,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Jabetta),
     },
+    */
 
     [SPECIES_RAMOOSE] =
     {
