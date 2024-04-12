@@ -6776,7 +6776,6 @@
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .dynamicLevelRatio = 95,
         .party = TRAINER_PARTY(sParty_BrendanRoute103Mudkip),
     },
 
@@ -6815,7 +6814,6 @@
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .dynamicLevelRatio = 95,
         .party = TRAINER_PARTY(sParty_BrendanRoute103Treecko),
     },
 
@@ -6854,7 +6852,6 @@
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .dynamicLevelRatio = 95,
         .party = TRAINER_PARTY(sParty_BrendanRoute103Torchic),
     },
 
@@ -6893,7 +6890,6 @@
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .dynamicLevelRatio = 95,
         .party = TRAINER_PARTY(sParty_MayRoute103Mudkip),
     },
 
@@ -6932,7 +6928,6 @@
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .dynamicLevelRatio = 95,
         .party = TRAINER_PARTY(sParty_MayRoute103Treecko),
     },
 
@@ -6971,7 +6966,6 @@
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .dynamicLevelRatio = 95,
         .party = TRAINER_PARTY(sParty_MayRoute103Torchic),
     },
 
