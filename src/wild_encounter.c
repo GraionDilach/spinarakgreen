@@ -409,14 +409,22 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
             partymin = partymax - range;
         }
 
-        if (partymax > max)
+        if (Random() % 4 != 0)
         {
-            max = partymax;
-        }
+            if (partymax > max)
+            {
+                max = partymax;
+            }
 
-        if (partymin > min)
-        {
-            min = partymin;
+            if (partymin < min)
+            {
+                min = partymin;
+            }
+
+            if (Random() % 4 != 0)
+            {
+                max--;
+            }
         }
 
         range = max - min + 1;
