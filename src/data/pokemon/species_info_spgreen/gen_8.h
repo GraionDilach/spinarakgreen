@@ -890,8 +890,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         PALETTES(Dottler),
         ICON(Dottler, 2),
         LEARNSETS(Dottler),
-        .evolutions = EVOLUTION({EVO_LEVEL_DAY, 30, SPECIES_ORBEETLE},
-                                {EVO_LEVEL_NIGHT, 30, SPECIES_ORBEETLE_GIGANTAMAX}),
+        .evolutions = EVOLUTION({EVO_LEVEL_SILCOON, 30, SPECIES_ORBEETLE},
+                                {EVO_LEVEL_CASCOON, 30, SPECIES_ORBEETLE_GIGANTAMAX}),
     },
 
 #define ORBEETLE_MISC_INFO                                                  \
