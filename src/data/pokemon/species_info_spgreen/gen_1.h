@@ -816,8 +816,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Metapod),
         ICON(Metapod, 1),
         LEARNSETS(Metapod),
-        .evolutions = EVOLUTION({EVO_LEVEL, 10, SPECIES_BUTTERFREE},
-                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_BUTTERFREE_GIGANTAMAX}),
+        .evolutions = EVOLUTION({EVO_LEVEL_SILCOON, 10, SPECIES_BUTTERFREE},
+                                {EVO_LEVEL_CASCOON, 10, SPECIES_BUTTERFREE_GIGANTAMAX}),
     },
 
 #define BUTTERFREE_MISC_INFO                                                        \
@@ -1009,8 +1009,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Kakuna),
         ICON(Kakuna, 2),
         LEARNSETS(Kakuna),
-        .evolutions = EVOLUTION({EVO_LEVEL, 10, SPECIES_BEEDRILL},
-                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_BUTTERFREE_GIGANTAMAX}),
+        .evolutions = EVOLUTION({EVO_LEVEL_SILCOON, 10, SPECIES_BEEDRILL},
+                                {EVO_LEVEL_CASCOON, 10, SPECIES_BEEDRILL_MEGA}),
     },
 
 #define BEEDRILL_MISC_INFO                                  \
