@@ -2283,14 +2283,16 @@ static u16 CalculateBoxMonChecksum(struct BoxPokemon *boxMon)
     return checksum;
 }
 
-#define CALC_STAT(base, iv, ev, statIndex, field)               \
-{                                                               \
-    u8 baseStat = gSpeciesInfo[species].base;                   \
-    s32 n = (((2 * baseStat + iv + ev / 4) * level) / 100) + 5; \
-    n = ModifyStatByNature(nature, n, statIndex);               \
-    if (B_FRIENDSHIP_BOOST == TRUE)                             \
-        n = n + ((n * 10 * friendship) / (MAX_FRIENDSHIP * 100));\
-    SetMonData(mon, field, &n);                                 \
+#define CALC_STAT(base, iv, ev, statIndex, field)                          \
+{                                                                          \
+    u8 baseStat = gSpeciesInfo[species].base;                              \
+    s32 n = (((2 * baseStat + iv + ev / 4) * level) / 100) + 5;            \
+    if (B_ADD_EFFORT_LEVEL_BONUS == TRUE)                                  \
+        n = n + (Sqrt(8 * iv + ev) * Sqrt(baseStat) / 10 + level) * 2 / 5; \
+    n = ModifyStatByNature(nature, n, statIndex);                          \
+    if (B_FRIENDSHIP_BOOST == TRUE)                                        \
+        n = n + ((n * 10 * friendship) / (MAX_FRIENDSHIP * 100));          \
+    SetMonData(mon, field, &n);                                            \
 }
 
 void CalculateMonStats(struct Pokemon *mon)
@@ -2326,6 +2328,8 @@ void CalculateMonStats(struct Pokemon *mon)
     {
         s32 n = 2 * gSpeciesInfo[species].baseHP + hpIV;
         newMaxHP = (((n + hpEV / 4) * level) / 100) + level + 10;
+        if (B_ADD_EFFORT_LEVEL_BONUS == TRUE)
+            newMaxHP = newMaxHP + (Sqrt(8 * hpIV + hpEV) * Sqrt(gSpeciesInfo[species].baseHP) / 10 + level) * 2 / 5;
     }
 
     gBattleScripting.levelUpHP = newMaxHP - oldMaxHP;
@@ -2522,7 +2526,7 @@ void GiveBoxMonInitialMoveset_Fast(struct BoxPokemon *boxMon) //Credit: Asparagu
                 alreadyKnown = TRUE;
                 break;
             }
-    
+
         if (!alreadyKnown)
         {
             if (addedMoves < MAX_MON_MOVES)

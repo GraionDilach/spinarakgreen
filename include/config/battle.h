@@ -24,6 +24,8 @@
 #define B_MAX_LEVEL_EV_GAINS        GEN_LATEST // In Gen5+, Lv100 Pokémon can obtain Effort Values normally.
 #define B_RECALCULATE_STATS         GEN_LATEST // In Gen5+, the stats of the Pokémon who participate in battle are recalculated at the end of each battle.
 
+#define B_ADD_EFFORT_LEVEL_BONUS    TRUE       // Apply SpGreen approximation of PLA Effort Level Bonus.
+
 // Damage settings
 #define B_BURN_DAMAGE               GEN_3      // In Gen7+, burn damage is 1/16th of max HP instead of 1/8th. Also applies to Frostbite.
 #define B_BURN_FACADE_DMG           GEN_LATEST // In Gen6+, burn's effect of lowering the Attack stat no longer applies to Facade.
