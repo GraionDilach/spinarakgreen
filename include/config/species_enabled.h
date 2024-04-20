@@ -543,7 +543,7 @@
 #define P_FAMILY_PAWMI                   FALSE
 #define P_FAMILY_TANDEMAUS               FALSE
 #define P_FAMILY_FIDOUGH                 FALSE
-#define P_FAMILY_SMOLIV                  FALSE
+#define P_FAMILY_SMOLIV                  TRUE
 #define P_FAMILY_SQUAWKABILLY            FALSE
 #define P_FAMILY_NACLI                   FALSE
 #define P_FAMILY_CHARCADET               FALSE
