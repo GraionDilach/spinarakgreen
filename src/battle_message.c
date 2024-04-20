@@ -853,6 +853,8 @@ static const u8 sText_TidyingUpComplete[] = _("Tidying up complete!");
 
 static const u8 sText_MonPickedUpItem[] = _("Your POKéMON picked\nup some items!");
 static const u8 sText_MonPickedUpItemSolo[] = _("{B_BUFF1} picked up {B_BUFF2} {B_BUFF3}!");
+static const u8 sText_MonGatheredHoney[] = _("{B_BUFF1} gathered some {B_BUFF3}!");
+static const u8 sText_MonCrushedJuice[] = _("{B_BUFF1} crushed some {B_BUFF3}!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1558,6 +1560,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_CLOAKEDINAHARSHLIGHT - BATTLESTRINGS_TABLE_START] = sText_PkmnIsCloakedInAHarshLight,
     [STRINGID_PICKUP - BATTLESTRINGS_TABLE_START] = sText_MonPickedUpItem,
     [STRINGID_PICKUPSOLO - BATTLESTRINGS_TABLE_START] = sText_MonPickedUpItemSolo,
+    [STRINGID_HONEYGATHERED - BATTLESTRINGS_TABLE_START] = sText_MonGatheredHoney,
+    [STRINGID_JUICECRUSHED - BATTLESTRINGS_TABLE_START] = sText_MonCrushedJuice,
 };
 
 const u16 gTrainerUsedItemStringIds[] =

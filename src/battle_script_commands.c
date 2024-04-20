@@ -14591,7 +14591,7 @@ static void Cmd_pickup(void)
     u8 lvlDivBy10;
     u8 nickname[POKEMON_NAME_LENGTH * 2];
     u32 index = 0;
-    // u32 mode = 0;
+    u32 mode = 0;
     u8 pickupSuccess = 0;
 
     if (!InBattlePike()) // No items in Battle Pike.
@@ -14649,7 +14649,7 @@ static void Cmd_pickup(void)
                     SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
                     pickupSuccess++;
                     index = i;
-                    // mode = 1;
+                    mode = 1;
                 }
             }
             else if (P_SHUCKLE_BERRY_JUICE == GEN_2
@@ -14661,7 +14661,7 @@ static void Cmd_pickup(void)
                 SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
                 pickupSuccess++;
                 index = i;
-                // mode = 2;
+                mode = 2;
             }
         }
     }
@@ -14671,13 +14671,29 @@ static void Cmd_pickup(void)
         GetMonData(&gPlayerParty[index], MON_DATA_NICKNAME, nickname);
         StringCopy_Nickname(gBattleTextBuff1, nickname);
 
-        if(GetMonData(&gPlayerParty[index], MON_DATA_HELD_ITEM) == ITEM_ORAN_BERRY || GetMonData(&gPlayerParty[index], MON_DATA_HELD_ITEM) == ITEM_ASPEAR_BERRY)
+        if (GetMonData(&gPlayerParty[index], MON_DATA_HELD_ITEM) == ITEM_ORAN_BERRY
+           || GetMonData(&gPlayerParty[index], MON_DATA_HELD_ITEM) == ITEM_ASPEAR_BERRY)
             StringCopy(gBattleTextBuff2, (u8 *)gText_An);
         else
             StringCopy(gBattleTextBuff2, (u8 *)gText_A);
+
         CopyItemName(GetMonData(&gPlayerParty[index], MON_DATA_HELD_ITEM), gBattleTextBuff3);
-        BattleScriptPushCursor();
-        gBattlescriptCurrInstr = BattleScript_PickedUpItemSolo;
+        switch(mode)
+        {
+        case 0:
+        default:
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_PickedUpItemSolo;
+            break;
+        case 1:
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_HoneyGathered;
+            break;
+        case 2:
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_JuiceCrushed;
+            break;
+        }
     }
     else if (pickupSuccess > 1)
     {
