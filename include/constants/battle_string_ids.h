@@ -712,7 +712,10 @@
 #define STRINGID_FOGISDEEP                            710
 #define STRINGID_FOGLIFTED                            711
 
-#define BATTLESTRINGS_COUNT                           712
+#define STRINGID_PICKUP                               712
+#define STRINGID_PICKUPSOLO                           713
+
+#define BATTLESTRINGS_COUNT                           714
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

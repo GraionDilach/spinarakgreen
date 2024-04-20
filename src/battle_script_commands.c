@@ -14579,6 +14579,9 @@ static void Cmd_jumpifnotcurrentmoveargtype(void)
         gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
+static const u8 gText_An[] = _("an");
+static const u8 gText_A[] = _("a");
+
 static void Cmd_pickup(void)
 {
     CMD_ARGS();
@@ -14586,6 +14589,10 @@ static void Cmd_pickup(void)
     u32 i, j;
     u16 species, heldItem, ability;
     u8 lvlDivBy10;
+    u8 nickname[POKEMON_NAME_LENGTH * 2];
+    u32 index = 0;
+    // u32 mode = 0;
+    u8 pickupSuccess = 0;
 
     if (!InBattlePike()) // No items in Battle Pike.
     {
@@ -14610,6 +14617,8 @@ static void Cmd_pickup(void)
                 {
                     heldItem = GetBattlePyramidPickupItemId();
                     SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
+                    pickupSuccess++;
+                    index = i;
                 }
                 else
                 {
@@ -14622,6 +14631,8 @@ static void Cmd_pickup(void)
                         if (rand < percentTotal)
                         {
                             SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sPickupTable[j].itemId);
+                            pickupSuccess++;
+                            index = i;
                             break;
                         }
                     }
@@ -14636,6 +14647,9 @@ static void Cmd_pickup(void)
                 {
                     heldItem = ITEM_HONEY;
                     SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
+                    pickupSuccess++;
+                    index = i;
+                    // mode = 1;
                 }
             }
             else if (P_SHUCKLE_BERRY_JUICE == GEN_2
@@ -14645,11 +14659,35 @@ static void Cmd_pickup(void)
             {
                 heldItem = ITEM_BERRY_JUICE;
                 SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
+                pickupSuccess++;
+                index = i;
+                // mode = 2;
             }
         }
     }
 
-    gBattlescriptCurrInstr = cmd->nextInstr;
+    if (pickupSuccess == 1)
+    {
+        GetMonData(&gPlayerParty[index], MON_DATA_NICKNAME, nickname);
+        StringCopy_Nickname(gBattleTextBuff1, nickname);
+
+        if(GetMonData(&gPlayerParty[index], MON_DATA_HELD_ITEM) == ITEM_ORAN_BERRY || GetMonData(&gPlayerParty[index], MON_DATA_HELD_ITEM) == ITEM_ASPEAR_BERRY)
+            StringCopy(gBattleTextBuff2, (u8 *)gText_An);
+        else
+            StringCopy(gBattleTextBuff2, (u8 *)gText_A);
+        CopyItemName(GetMonData(&gPlayerParty[index], MON_DATA_HELD_ITEM), gBattleTextBuff3);
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_PickedUpItemSolo;
+    }
+    else if (pickupSuccess > 1)
+    {
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_PickedUpItem;
+    }
+    else
+    {
+        gBattlescriptCurrInstr = cmd->nextInstr;
+    }
 }
 
 static void Cmd_unused3(void)

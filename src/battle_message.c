@@ -849,6 +849,11 @@ static const u8 sText_ShedItsTail[] = _("{B_ATK_NAME_WITH_PREFIX} shed its tail\
 static const u8 sText_SupersweetAromaWafts[] = _("A supersweet aroma is wafting from\nthe syrup covering {B_ATK_NAME_WITH_PREFIX}!");
 static const u8 sText_TidyingUpComplete[] = _("Tidying up complete!");
 
+// SpinarakGreen battle messages.
+
+static const u8 sText_MonPickedUpItem[] = _("Your POKéMON picked\nup some items!");
+static const u8 sText_MonPickedUpItemSolo[] = _("{B_BUFF1} picked up {B_BUFF2} {B_BUFF3}!");
+
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
     [STRINGID_TIDYINGUPCOMPLETE - BATTLESTRINGS_TABLE_START] = sText_TidyingUpComplete,
@@ -1551,6 +1556,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ITEMWASUSEDUP - BATTLESTRINGS_TABLE_START] = sText_ItemWasUsedUp,
     [STRINGID_ATTACKERLOSTITSTYPE - BATTLESTRINGS_TABLE_START] = sText_AttackerLostItsType,
     [STRINGID_CLOAKEDINAHARSHLIGHT - BATTLESTRINGS_TABLE_START] = sText_PkmnIsCloakedInAHarshLight,
+    [STRINGID_PICKUP - BATTLESTRINGS_TABLE_START] = sText_MonPickedUpItem,
+    [STRINGID_PICKUPSOLO - BATTLESTRINGS_TABLE_START] = sText_MonPickedUpItemSolo,
 };
 
 const u16 gTrainerUsedItemStringIds[] =

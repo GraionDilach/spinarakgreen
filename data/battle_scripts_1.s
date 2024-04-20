@@ -9970,3 +9970,13 @@ BattleScript_EffectSnow::
 	call BattleScript_CheckPrimalWeather
 	setsnow
 	goto BattleScript_MoveWeatherChange
+
+BattleScript_PickedUpItem::
+	printstring STRINGID_PICKUP
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_PickedUpItemSolo::
+	printstring STRINGID_PICKUPSOLO
+	waitmessage B_WAIT_TIME_LONG
+	return
