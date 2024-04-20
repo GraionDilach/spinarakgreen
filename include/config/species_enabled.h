@@ -362,7 +362,7 @@
 #define P_FAMILY_TYNAMO                  TRUE
 #define P_FAMILY_ELGYEM                  FALSE
 #define P_FAMILY_LITWICK                 TRUE
-#define P_FAMILY_AXEW                    FALSE
+#define P_FAMILY_AXEW                    TRUE
 #define P_FAMILY_CUBCHOO                 FALSE
 #define P_FAMILY_CRYOGONAL               FALSE
 #define P_FAMILY_SHELMET                 FALSE
