@@ -22243,7 +22243,6 @@ Move_PSYCHIC:
 
 Move_PSYRIPPLE:
 	monbg ANIM_DEF_PARTNER
-	call SetPsychicBackground
 	setalpha 8, 8
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 10, 1
 	waitforvisualfinish
@@ -22254,7 +22253,6 @@ Move_PSYRIPPLE:
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	delay 1
-	call UnsetPsychicBg
 	end
 
 Move_FUTURE_SIGHT:
