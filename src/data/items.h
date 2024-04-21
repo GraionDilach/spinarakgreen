@@ -541,11 +541,15 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Potion"),
         .price = (I_PRICE >= GEN_7) ? 200 : 300,
-        .holdEffectParam = 20,
+        .holdEffectParam = (I_HEALTH_RECOVERY == GEN_SPGRN) ? 60 : 20,
         .description = COMPOUND_STRING(
             "Restores the HP of\n"
             "a Pokémon by\n"
+        #if I_HEALTH_RECOVERY == GEN_SPGRN
+            "60 points."),
+        #else
             "20 points."),
+        #endif
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -558,14 +562,14 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Super Potion"),
         .price = 700,
-        .holdEffectParam = 60,
+        .holdEffectParam = (I_HEALTH_RECOVERY == GEN_SPGRN) ? 100 : 60,
         .description = COMPOUND_STRING(
             "Restores the HP of\n"
             "a Pokémon by\n"
-        #if I_HEALTH_RECOVERY >= GEN_7
-            "60 points."),
+        #if I_HEALTH_RECOVERY == GEN_SPGRN
+            "100 points."),
         #else
-            "50 points."),
+            "60 points."),
         #endif
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
@@ -579,14 +583,14 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Hyper Potion"),
         .price = (I_PRICE >= GEN_2 || I_PRICE <= GEN_6) ? 1200 : 1500,
-        .holdEffectParam = 120,
+        .holdEffectParam = (I_HEALTH_RECOVERY == GEN_SPGRN) ? 200 : 120,
         .description = COMPOUND_STRING(
             "Restores the HP of\n"
             "a Pokémon by\n"
-        #if I_HEALTH_RECOVERY >= GEN_7
-            "120 points."),
-        #else
+        #if I_HEALTH_RECOVERY == GEN_SPGRN
             "200 points."),
+        #else
+            "120 points."),
         #endif
         .pocket = POCKET_MEDICINE,
         .type = ITEM_USE_PARTY_MENU,
@@ -666,7 +670,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "A mineral water\n"
             "that restores HP\n"
-        #if I_HEALTH_RECOVERY >= GEN_7
+        #if I_HEALTH_RECOVERY >= GEN_7 && && I_HEALTH_RECOVERY != GEN_SPGRN
             "by 30 points."),
         #else
             "by 50 points."),
@@ -687,7 +691,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "A fizzy soda drink\n"
             "that restores HP\n"
-        #if I_HEALTH_RECOVERY >= GEN_7
+        #if I_HEALTH_RECOVERY >= GEN_7 && I_HEALTH_RECOVERY != GEN_SPGRN
             "by 50 points."),
         #else
             "by 60 points."),
@@ -705,7 +709,7 @@ const struct Item gItemsInfo[] =
         .name = _("Lemonade"),
         .price = (I_PRICE >= GEN_7) ? 400 : 350,
         .holdEffectParam = 70,
-#if I_HEALTH_RECOVERY >= GEN_7
+#if I_HEALTH_RECOVERY >= GEN_7 && I_HEALTH_RECOVERY != GEN_SPGRN
         .description = COMPOUND_STRING(
             "A very sweet drink\n"
             "that restores HP\n"
