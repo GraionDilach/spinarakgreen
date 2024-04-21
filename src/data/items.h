@@ -670,7 +670,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "A mineral water\n"
             "that restores HP\n"
-        #if I_HEALTH_RECOVERY >= GEN_7 && && I_HEALTH_RECOVERY != GEN_SPGRN
+        #if I_HEALTH_RECOVERY >= GEN_7 && I_HEALTH_RECOVERY != GEN_SPGRN
             "by 30 points."),
         #else
             "by 50 points."),
