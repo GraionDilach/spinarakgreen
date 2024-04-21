@@ -2,7 +2,7 @@
   "id": "MAP_LILYCOVE_CITY_POKEMON_TRAINER_FAN_CLUB",
   "name": "LilycoveCity_PokemonTrainerFanClub",
   "layout": "LAYOUT_LILYCOVE_CITY_POKEMON_TRAINER_FAN_CLUB",
-  "music": "MUS_LILYCOVE",
+  "music": "MUS_HG_VERMILION",
   "region_map_section": "MAPSEC_LILYCOVE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -12,7 +12,7 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
@@ -148,6 +148,10 @@
       "dest_warp_id": "5"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }
