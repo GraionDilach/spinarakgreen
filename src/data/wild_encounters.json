@@ -163,7 +163,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -367,7 +367,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -571,7 +571,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -775,7 +775,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -914,7 +914,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -1118,7 +1118,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -1352,7 +1352,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -1471,7 +1471,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -1883,7 +1883,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -2087,7 +2087,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -2291,7 +2291,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -2519,7 +2519,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -4227,7 +4227,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -4500,7 +4500,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -4704,7 +4704,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -4908,7 +4908,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -5221,7 +5221,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -9858,7 +9858,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -9997,7 +9997,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -10443,7 +10443,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -10754,7 +10754,7 @@
             ]
           },
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -12924,7 +12924,7 @@
           "map": "MAP_LITTLEROOT_TOWN",
           "base_label": "gLittlerootTown0",
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -12958,7 +12958,7 @@
           "map": "MAP_OLDALE_TOWN",
           "base_label": "gOldaleTown0",
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -12992,7 +12992,7 @@
           "map": "MAP_RUSTBORO_CITY",
           "base_label": "gRustboroCity0",
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -13026,7 +13026,7 @@
           "map": "MAP_MAUVILLE_CITY",
           "base_label": "gMauvilleCity0",
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -13060,7 +13060,7 @@
           "map": "MAP_LAVARIDGE_TOWN",
           "base_label": "gLavaridgeTown0",
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
@@ -13094,7 +13094,7 @@
           "map": "MAP_VERDANTURF_TOWN",
           "base_label": "gVerdanturfTown0",
           "headbutt_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,
