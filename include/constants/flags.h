@@ -1386,8 +1386,8 @@
 #define FLAG_SYS_DEXNAV_SEARCH                      (SYSTEM_FLAGS + 0x21)
 #define FLAG_SHINY_CREATION                         (SYSTEM_FLAGS + 0x22) // force creation of a shiny mon
 #define FLAG_SYS_SET_BATTLE_BGM                     (SYSTEM_FLAGS + 0x23) // Override Battle Music (used by DexNav)
-#define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
-#define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
+#define FLAG_TERA_ORB_CHARGED                       (SYSTEM_FLAGS + 0x24) // SpGreen Tera Orb will always recharge after each battle because why-the-hell-not.
+#define FLAG_TERA_ORB_NO_COST                       (SYSTEM_FLAGS + 0x25) // SpGreen Tera Orb will always recharge after each battle because why-the-hell-not.
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
 #define FLAG_UNUSED_0x887                           (SYSTEM_FLAGS + 0x27) // Unused Flag
 

@@ -19,7 +19,7 @@
                                                 // GEN_9: SV For species present in those games. Otherwise use GEN_8.
 
 // Evolution settings
-#define P_FRIENDSHIP_EVO_THRESHOLD   GEN_7       // Since Gen 8, Pokémon that evolve by friendship evolve at or above 160 friendship instead of 220.
+#define P_FRIENDSHIP_EVO_THRESHOLD   GEN_LATEST     // Since Gen 8, Pokémon that evolve by friendship evolve at or above 160 friendship instead of 220.
 
 // Breeding settings
 #define P_NIDORAN_M_DITTO_BREED         GEN_LATEST  // Since Gen 5, when Nidoran♂ breeds with Ditto it can produce Nidoran♀ offspring. Before, it would only yield male offspring. This change also applies to Volbeat.
@@ -43,7 +43,7 @@
 #define P_FOOTPRINTS                FALSE       // If TRUE, Pokémon will have footprints (as was the case up to Gen 5 and in BDSP). Disabling this saves some ROM space.
 #define P_LEGENDARY_PERFECT_IVS     GEN_LATEST  // Since Gen 6, Legendaries, Mythicals and Ultra Beasts found in the wild or given through gifts have at least 3 perfect IVs.
 #define P_EV_CAP                    GEN_LATEST  // Since Gen 6, the max EVs per stat is 252 instead of 255.
-#define P_SHOW_TERA_TYPE            GEN_8       // Since Gen 9, the Tera Type is shown on the summary screen.
+#define P_SHOW_TERA_TYPE            GEN_LATEST  // Since Gen 9, the Tera Type is shown on the summary screen.
 #define P_TM_LITERACY               GEN_LATEST  // Since Gen 6, TM illiterate Pokémon can learn TMs that teach moves that are in their level-up learnsets.
 
 // Learnset helper toggles
