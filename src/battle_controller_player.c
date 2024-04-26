@@ -1932,16 +1932,13 @@ static void MoveSelectionDisplayMoveTypeDoubles(u32 battler, u8 targetId)
 
 static void MoveSelectionDisplayMoveType(u32 battler)
 {
-    u8 *txtPtr;
+    u8 *txtPtr, *end;
     u32 speciesId;
     struct Pokemon *mon;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleResources->bufferA[battler][4]);
     u8 type = TYPE_MYSTERY;
 
     txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
-    *(txtPtr)++ = EXT_CTRL_CODE_BEGIN;
-    *(txtPtr)++ = EXT_CTRL_CODE_FONT;
-    *(txtPtr)++ = FONT_NORMAL;
 
     if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_HIDDEN_POWER)
     {
@@ -1976,6 +1973,8 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     StringCopy(txtPtr, gTypesInfo[gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type].name);
     }
 
+    end = StringCopy(txtPtr, gTypesInfo[type].name);
+    PrependFontIdToFit(txtPtr, end, FONT_NORMAL, WindowWidthPx(B_WIN_MOVE_TYPE) - 25);
     BattlePutTextOnWindow(gDisplayedStringBattle, TypeEffectiveness(moveInfo, battler, 1, type));
 
     MoveSelectionDisplaySplitIcon(battler);
