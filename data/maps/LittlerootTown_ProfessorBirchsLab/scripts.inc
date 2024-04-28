@@ -554,6 +554,9 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedex::
 	setflag FLAG_SYS_DEXNAV_GET
 	@ TODO GRAION - DISTRIBUTE THIS LATER IN THE STORY
 	setflag FLAG_SYS_DETECTOR_MODE
+	additem ITEM_TERA_ORB
+	setflag FLAG_TERA_ORB_CHARGED
+	setflag FLAG_TERA_ORB_NO_COST
 	special SetUnlockedPokedexFlags
 	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 1

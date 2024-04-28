@@ -24,6 +24,9 @@ Debug_CheatStart::
 	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_SYS_DEXNAV_GET
 	setflag FLAG_SYS_DETECTOR_MODE
+	additem ITEM_TERA_ORB
+	setflag FLAG_TERA_ORB_CHARGED
+	setflag FLAG_TERA_ORB_NO_COST
 	special SetUnlockedPokedexFlags
 	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 2
