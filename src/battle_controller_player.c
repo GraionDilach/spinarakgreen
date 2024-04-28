@@ -1931,6 +1931,8 @@ static void MoveSelectionDisplayMoveType(u32 battler)
 
     txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
 
+    type = gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type;
+
     if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_HIDDEN_POWER)
     {
         u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_HP_IV) & 1) << 0)
@@ -1943,7 +1945,6 @@ static void MoveSelectionDisplayMoveType(u32 battler)
         type = ((NUMBER_OF_MON_TYPES - 3) * typeBits) / 63 + 1;
         if (type >= TYPE_MYSTERY)
             type++;
-        StringCopy(txtPtr, gTypesInfo[type].name);
     }
     else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_TERA_BLAST)
     {
@@ -1958,18 +1959,12 @@ static void MoveSelectionDisplayMoveType(u32 battler)
             || speciesId == SPECIES_OGERPON_HEARTHFLAME_MASK || speciesId == SPECIES_OGERPON_HEARTHFLAME_MASK_TERA
             || speciesId == SPECIES_OGERPON_CORNERSTONE_MASK || speciesId == SPECIES_OGERPON_CORNERSTONE_MASK_TERA)
             type = gBattleMons[battler].type2;
-
-        StringCopy(txtPtr, gTypesInfo[type].name);
     }
     else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_TERA_STARSTORM)
     {
         if (gBattleMons[battler].species == SPECIES_TERAPAGOS_STELLAR
         || (gBattleStruct->tera.playerSelect && gBattleMons[battler].species == SPECIES_TERAPAGOS_TERASTAL))
             type = TYPE_STELLAR;
-    }
-    else
-    {
-    StringCopy(txtPtr, gTypesInfo[gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type].name);
     }
 
     end = StringCopy(txtPtr, gTypesInfo[type].name);
