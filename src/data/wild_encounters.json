@@ -2489,12 +2489,12 @@
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_PICHU"
+                "species": "SPECIES_GRUBBIN"
               },
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_PICHU"
+                "species": "SPECIES_GRUBBIN"
               },
               {
                 "min_level": 5,
@@ -2539,12 +2539,12 @@
               {
                 "min_level": 20,
                 "max_level": 20,
-                "species": "SPECIES_PINSIR"
+                "species": "SPECIES_CHARJABUG"
               },
               {
                 "min_level": 20,
                 "max_level": 20,
-                "species": "SPECIES_HERACROSS"
+                "species": "SPECIES_VIKAVOLT"
               }
             ]
           },
