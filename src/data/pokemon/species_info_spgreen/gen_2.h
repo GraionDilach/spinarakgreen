@@ -3775,15 +3775,15 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 #if P_FAMILY_SHUCKLE
     [SPECIES_SHUCKLE] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 25,
+        .baseHP        = 70,
+        .baseAttack    = 50,
         .baseDefense   = 230,
-        .baseSpeed     = 15,
-        .baseSpAttack  = 15,
+        .baseSpeed     = 30,
+        .baseSpAttack  = 30,
         .baseSpDefense = 230,
         .types = { TYPE_BUG, TYPE_ROCK },
-        .catchRate = 45,
-        .expYield = 298,
+        .catchRate = 25,
+        .expYield = 340,
         .evYield_Defense = 1,
         .evYield_SpDefense = 1,
         .itemCommon = ITEM_BERRY_JUICE,
