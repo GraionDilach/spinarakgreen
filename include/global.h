@@ -16,6 +16,7 @@
 #else
 #include "constants/pokedex.h"
 #endif
+#include "constants/apricorn_tree.h"
 #include "constants/berry.h"
 #include "constants/maps.h"
 #include "constants/pokemon.h"
@@ -131,6 +132,8 @@
 #define NUM_TMHM_BYTES ROUND_BITS_TO_BYTES(BAG_TMHM_COUNT)
 #define NUM_KEYITEM_BYTES ROUND_BITS_TO_BYTES(BAG_KEYITEMS_COUNT)
 
+#define NUM_APRICORN_TREE_BYTES ROUND_BITS_TO_BYTES(APRICORN_TREE_COUNT)
+
 // This produces an error at compile-time if expr is zero.
 // It looks like file.c:line: size of array `id' is negative
 #define STATIC_ASSERT(expr, id) typedef char id[(expr) ? 1 : -1];
@@ -175,6 +178,7 @@ struct UCoords32
 
 struct SaveBlock3
 {
+    u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
 };
 
 extern struct SaveBlock3 *gSaveBlock3Ptr;
