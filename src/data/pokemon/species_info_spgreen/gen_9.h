@@ -119,7 +119,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_GRASS },
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_PROTEAN },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Meowscarad"),
+        .speciesName = HANDLE_EXPANDED_SPECIES_NAME("Meowscarad", "Meowscarada"),
         .cryId = CRY_MEOWSCARADA,
         .natDexNum = NATIONAL_DEX_MEOWSCARADA,
         .categoryName = _("Magician"),
@@ -1268,38 +1268,38 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_SMOLIV
 
 #if P_FAMILY_SQUAWKABILLY
-#define SQUAWKABILLY_MISC_INFO                                  \
-        .baseHP        = 82,                                    \
-        .baseAttack    = 96,                                    \
-        .baseDefense   = 51,                                    \
-        .baseSpeed     = 92,                                    \
-        .baseSpAttack  = 45,                                    \
-        .baseSpDefense = 51,                                    \
-        .types = { TYPE_NORMAL, TYPE_FLYING },                  \
-        .catchRate = 190,                                       \
-        .expYield = 146,                                        \
-        .evYield_Attack = 1,                                    \
-        .genderRatio = PERCENT_FEMALE(50),                      \
-        .eggCycles = 15,                                        \
-        .friendship = STANDARD_FRIENDSHIP,                      \
-        .growthRate = GROWTH_ERRATIC,                           \
-        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },    \
-        .speciesName = _("Sqawkabily"),                         \
-        .cryId = CRY_SQUAWKABILLY,                              \
-        .natDexNum = NATIONAL_DEX_SQUAWKABILLY,                 \
-        .categoryName = _("Parrot"),                            \
-        .height = 6,                                            \
-        .weight = 24,                                           \
-        .pokemonScale = 356,                                    \
-        .pokemonOffset = 17,                                    \
-        .trainerScale = 256,                                    \
-        .trainerOffset = 0,                                     \
-        FRONT_PIC(Squawkabilly, 64, 64),                        \
-        .frontPicYOffset = 4,                                   \
-        .frontAnimFrames = sAnims_Squawkabilly,                 \
-        BACK_PIC(Squawkabilly, 64, 64),                         \
-        .backPicYOffset = 4,                                    \
-        LEARNSETS(Squawkabilly),                                \
+#define SQUAWKABILLY_MISC_INFO                                                     \
+        .baseHP        = 82,                                                       \
+        .baseAttack    = 96,                                                       \
+        .baseDefense   = 51,                                                       \
+        .baseSpeed     = 92,                                                       \
+        .baseSpAttack  = 45,                                                       \
+        .baseSpDefense = 51,                                                       \
+        .types = { TYPE_NORMAL, TYPE_FLYING },                                     \
+        .catchRate = 190,                                                          \
+        .expYield = 146,                                                           \
+        .evYield_Attack = 1,                                                       \
+        .genderRatio = PERCENT_FEMALE(50),                                         \
+        .eggCycles = 15,                                                           \
+        .friendship = STANDARD_FRIENDSHIP,                                         \
+        .growthRate = GROWTH_ERRATIC,                                              \
+        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },                       \
+        .speciesName = HANDLE_EXPANDED_SPECIES_NAME("Sqawkabily", "Squawkabilly"), \
+        .cryId = CRY_SQUAWKABILLY,                                                 \
+        .natDexNum = NATIONAL_DEX_SQUAWKABILLY,                                    \
+        .categoryName = _("Parrot"),                                               \
+        .height = 6,                                                               \
+        .weight = 24,                                                              \
+        .pokemonScale = 356,                                                       \
+        .pokemonOffset = 17,                                                       \
+        .trainerScale = 256,                                                       \
+        .trainerOffset = 0,                                                        \
+        FRONT_PIC(Squawkabilly, 64, 64),                                           \
+        .frontPicYOffset = 4,                                                      \
+        .frontAnimFrames = sAnims_Squawkabilly,                                    \
+        BACK_PIC(Squawkabilly, 64, 64),                                            \
+        .backPicYOffset = 4,                                                       \
+        LEARNSETS(Squawkabilly),                                                   \
         .formSpeciesIdTable = sSquawkabillyFormSpeciesIdTable
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         //.backAnimId = BACK_ANIM_NONE,
@@ -1818,7 +1818,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FLYING },
         .abilities = { ABILITY_WIND_POWER, ABILITY_VOLT_ABSORB, ABILITY_COMPETITIVE },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("Kilowatrel"),
+        .speciesName = HANDLE_EXPANDED_SPECIES_NAME("Kilowatrel", "Kilowattrel"),
         .cryId = CRY_KILOWATTREL,
         .natDexNum = NATIONAL_DEX_KILOWATTREL,
         .categoryName = _("Frigatebird"),
@@ -2109,7 +2109,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = { EGG_GROUP_GRASS, EGG_GROUP_GRASS },
         .abilities = { ABILITY_WIND_RIDER, ABILITY_NONE, ABILITY_INFILTRATOR },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Brmblghast"),
+        .speciesName = HANDLE_EXPANDED_SPECIES_NAME("Brmblghast", "Brambleghast"),
         .cryId = CRY_BRAMBLEGHAST,
         .natDexNum = NATIONAL_DEX_BRAMBLEGHAST,
         .categoryName = _("Tumbleweed"),
@@ -4480,42 +4480,42 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #endif //P_FAMILY_IRON_LEAVES
 
 #if P_FAMILY_POLTCHAGEIST
-#define POLTCHAGEIST_MISC_INFO                                                  \
-        .baseHP        = 40,                                                    \
-        .baseAttack    = 45,                                                    \
-        .baseDefense   = 45,                                                    \
-        .baseSpeed     = 50,                                                    \
-        .baseSpAttack  = 74,                                                    \
-        .baseSpDefense = 54,                                                    \
-        .types = { TYPE_GRASS, TYPE_GHOST },                                    \
-        .catchRate = 120,                                                       \
-        .expYield = 62,                                                         \
-        .evYield_SpAttack = 1,                                                  \
-        .genderRatio = MON_GENDERLESS,                                          \
-        .eggCycles = 20,                                                        \
-        .friendship = STANDARD_FRIENDSHIP,                                      \
-        .growthRate = GROWTH_MEDIUM_FAST,                                       \
-        .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_AMORPHOUS },                \
-        .abilities = { ABILITY_HOSPITALITY, ABILITY_NONE, ABILITY_HEATPROOF },  \
-        .bodyColor = BODY_COLOR_GREEN,                                          \
-        .speciesName = _("Ptchageist"),                                         \
-        .cryId = CRY_POLTCHAGEIST,                                              \
-        .natDexNum = NATIONAL_DEX_POLTCHAGEIST,                                 \
-        .categoryName = _("Matcha"),                                            \
-        .height = 1,                                                            \
-        .weight = 11,                                                           \
-        .pokemonScale = 356,                                                    \
-        .pokemonOffset = 17,                                                    \
-        .trainerScale = 256,                                                    \
-        .trainerOffset = 0,                                                     \
-        FRONT_PIC(Poltchageist, 64, 64),                                        \
-        .frontPicYOffset = 7,                                                   \
-        .frontAnimFrames = sAnims_Poltchageist,                                 \
-        .enemyMonElevation = 10,                                                \
-        BACK_PIC(Poltchageist, 64, 64),                                         \
-        .backPicYOffset = 5,                                                    \
-        PALETTES(Poltchageist),                                                 \
-        ICON(Poltchageist, 4),                                                  \
+#define POLTCHAGEIST_MISC_INFO                                                     \
+        .baseHP        = 40,                                                       \
+        .baseAttack    = 45,                                                       \
+        .baseDefense   = 45,                                                       \
+        .baseSpeed     = 50,                                                       \
+        .baseSpAttack  = 74,                                                       \
+        .baseSpDefense = 54,                                                       \
+        .types = { TYPE_GRASS, TYPE_GHOST },                                       \
+        .catchRate = 120,                                                          \
+        .expYield = 62,                                                            \
+        .evYield_SpAttack = 1,                                                     \
+        .genderRatio = MON_GENDERLESS,                                             \
+        .eggCycles = 20,                                                           \
+        .friendship = STANDARD_FRIENDSHIP,                                         \
+        .growthRate = GROWTH_MEDIUM_FAST,                                          \
+        .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_AMORPHOUS },                   \
+        .abilities = { ABILITY_HOSPITALITY, ABILITY_NONE, ABILITY_HEATPROOF },     \
+        .bodyColor = BODY_COLOR_GREEN,                                             \
+        .speciesName = HANDLE_EXPANDED_SPECIES_NAME("Ptchageist", "Poltchageist"), \
+        .cryId = CRY_POLTCHAGEIST,                                                 \
+        .natDexNum = NATIONAL_DEX_POLTCHAGEIST,                                    \
+        .categoryName = _("Matcha"),                                               \
+        .height = 1,                                                               \
+        .weight = 11,                                                              \
+        .pokemonScale = 356,                                                       \
+        .pokemonOffset = 17,                                                       \
+        .trainerScale = 256,                                                       \
+        .trainerOffset = 0,                                                        \
+        FRONT_PIC(Poltchageist, 64, 64),                                           \
+        .frontPicYOffset = 7,                                                      \
+        .frontAnimFrames = sAnims_Poltchageist,                                    \
+        .enemyMonElevation = 10,                                                   \
+        BACK_PIC(Poltchageist, 64, 64),                                            \
+        .backPicYOffset = 5,                                                       \
+        PALETTES(Poltchageist),                                                    \
+        ICON(Poltchageist, 4),                                                     \
         LEARNSETS(Poltchageist)
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         //.backAnimId = BACK_ANIM_NONE,
@@ -4724,7 +4724,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .abilities = { ABILITY_TOXIC_CHAIN, ABILITY_NONE, ABILITY_TECHNICIAN },
         .bodyColor = BODY_COLOR_BLACK,
         .isLegendary = TRUE,
-        .speciesName = _("Fezndipiti"),
+        .speciesName = HANDLE_EXPANDED_SPECIES_NAME("Fezndipiti", "Fezandipiti"),
         .cryId = CRY_FEZANDIPITI,
         .natDexNum = NATIONAL_DEX_FEZANDIPITI,
         .categoryName = _("Retainer"),
