@@ -2822,10 +2822,10 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     }
 
     // If Mon can learn HM02 and action list consists of < 4 moves, add FLY to action list
-    if (sPartyMenuInternal->numActions < 5 && CanLearnTeachableMove(GetMonData(&mons[slotId], MON_DATA_SPECIES_OR_EGG), MOVE_FLY) && CheckBagHasItem(ITEM_HM02, 1)) 
+    if (sPartyMenuInternal->numActions < 5 && CanLearnTeachableMove(GetMonData(&mons[slotId], MON_DATA_SPECIES_OR_EGG), MOVE_FLY) && CheckBagHasItem(ITEM_HM02, 1))
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 5 + MENU_FIELD_MOVES);
     // If Mon can learn HM05 and action list consists of < 4 moves, add FLASH to action list
-    if (sPartyMenuInternal->numActions < 5 && CanLearnTeachableMove(GetMonData(&mons[slotId], MON_DATA_SPECIES_OR_EGG), MOVE_FLASH) && CheckBagHasItem(ITEM_HM05, 1)) 
+    if (sPartyMenuInternal->numActions < 5 && CanLearnTeachableMove(GetMonData(&mons[slotId], MON_DATA_SPECIES_OR_EGG), MOVE_FLASH) && CheckBagHasItem(ITEM_HM05, 1))
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 1 + MENU_FIELD_MOVES);
 
     if (!InBattlePike())
@@ -4913,21 +4913,21 @@ void Task_AbilityChanger(u8 taskId)
         if (tAbilityNum == 0 && gSpeciesInfo[tSpecies].abilities[0] != gSpeciesInfo[tSpecies].abilities[1] && gSpeciesInfo[tSpecies].abilities[1] != 0)
         {
             newAbilityNum = 1;
-            StringCopy(gStringVar2, gAbilityNames[GetAbilityBySpecies(tSpecies, newAbilityNum)]);
+            StringCopy(gStringVar2, gAbilitiesInfo[GetAbilityBySpecies(tSpecies, newAbilityNum)].name);
         }
         // If mon has 2nd or 3rd ability and 1st ability isn't empty, offer 1st ability
         else if ((tAbilityNum == 1 || tAbilityNum == 2) && gSpeciesInfo[tSpecies].abilities[0] != 0)
         {
             newAbilityNum = 0;
-            StringCopy(gStringVar2, gAbilityNames[GetAbilityBySpecies(tSpecies, newAbilityNum)]);
+            StringCopy(gStringVar2, gAbilitiesInfo[GetAbilityBySpecies(tSpecies, newAbilityNum)].name);
         }
         // If mon has 1st ability and 2nd ability was empty or if mon has 2nd abilities and 1st ability was empty, offer 3rd ability
         else
         {
             newAbilityNum = 2;
-            StringCopy(gStringVar2, gAbilityNames[GetAbilityBySpecies(tSpecies, newAbilityNum)]);
+            StringCopy(gStringVar2, gAbilitiesInfo[GetAbilityBySpecies(tSpecies, newAbilityNum)].name);
         }
-        // If mon only has 
+        // If mon only has
         StringExpandPlaceholders(gStringVar4, askText);
         PlaySE(SE_SELECT);
         DisplayPartyMenuMessage(gStringVar4, 1);
@@ -4986,13 +4986,13 @@ void Task_AbilityChanger(u8 taskId)
         if (tAbilityNum == 2)
         {
             newAbilityNum = 1;
-            StringCopy(gStringVar2, gAbilityNames[GetAbilityBySpecies(tSpecies, newAbilityNum)]);
+            StringCopy(gStringVar2, gAbilitiesInfo[GetAbilityBySpecies(tSpecies, newAbilityNum)].name);
         }
         // If mon has 1st or 2nd ability, offer 3rd ability
         else
         {
             newAbilityNum = 2;
-            StringCopy(gStringVar2, gAbilityNames[GetAbilityBySpecies(tSpecies, newAbilityNum)]);
+            StringCopy(gStringVar2, gAbilitiesInfo[GetAbilityBySpecies(tSpecies, newAbilityNum)].name);
         }
         StringExpandPlaceholders(gStringVar4, askText);
         PlaySE(SE_SELECT);

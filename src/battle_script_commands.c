@@ -1903,8 +1903,8 @@ s32 CalcCritChanceStageGen1(u8 battlerAtk, u8 battlerDef, u32 move, bool32 recor
 {
     // Change these scalers if you want to change how much Focus Energy and high crit rate moves affect crit chance
     u8 focusEnergyScaler = 4; // vanilla is 4
-    u8 highCritRatioScaler = 8; // vanilla is 8
-    u8 superLuckScaler = 4; // not in vanilla 
+    u8 highCritRatioScaler = 4; // criticalHitStage modifier
+    u8 superLuckScaler = 4; // not in vanilla
     u8 scopeLensScaler = 4; // not in vanilla
     u8 luckyPunchScaler = 8; // not in vanilla
     u8 farfetchedLeekScaler = 8; // not in vanilla
@@ -1919,8 +1919,8 @@ s32 CalcCritChanceStageGen1(u8 battlerAtk, u8 battlerDef, u32 move, bool32 recor
     critChance = baseSpeed / 2;
 
     // Scale for high crit chance moves
-    if (gBattleMoves[gCurrentMove].highCritRatio)
-        critChance = critChance * highCritRatioScaler;
+    if (gMovesInfo[gCurrentMove].criticalHitStage > 1)
+        critChance = critChance * highCritRatioScaler * gMovesInfo[gCurrentMove].criticalHitStage;
 
     // Scale for Focus Energy
     if ((gBattleMons[gBattlerAttacker].status2 & STATUS2_FOCUS_ENERGY) != 0)
@@ -1947,8 +1947,7 @@ s32 CalcCritChanceStageGen1(u8 battlerAtk, u8 battlerDef, u32 move, bool32 recor
         critChance = 255;
 
     // Prevented crits
-    if (gSideStatuses[battlerDef] & SIDE_STATUS_LUCKY_CHANT
-        || gStatuses3[gBattlerAttacker] & STATUS3_CANT_SCORE_A_CRIT)
+    if (gSideStatuses[battlerDef] & SIDE_STATUS_LUCKY_CHANT)
     {
         critChance = -1;
     }
@@ -1961,9 +1960,8 @@ s32 CalcCritChanceStageGen1(u8 battlerAtk, u8 battlerDef, u32 move, bool32 recor
     // Guaranteed crits
     }
     else if (gStatuses3[battlerAtk] & STATUS3_LASER_FOCUS
-             || gBattleMoves[move].effect == EFFECT_ALWAYS_CRIT
-             || (abilityAtk == ABILITY_MERCILESS && gBattleMons[battlerDef].status1 & STATUS1_PSN_ANY)
-             || move == MOVE_SURGING_STRIKES)
+             || gMovesInfo[move].alwaysCriticalHit
+             || (abilityAtk == ABILITY_MERCILESS && gBattleMons[battlerDef].status1 & STATUS1_PSN_ANY))
     {
         critChance = -2;
     }
