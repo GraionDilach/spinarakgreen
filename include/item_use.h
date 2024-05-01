@@ -16,6 +16,7 @@ void ItemUseOutOfBattle_AbilityCapsule(u8);
 void ItemUseOutOfBattle_AbilityPatch(u8);
 void ItemUseOutOfBattle_Mint(u8);
 void ItemUseOutOfBattle_ResetEVs(u8);
+void ItemUseOutOfBattle_AbilityChanger(u8);
 void ItemUseOutOfBattle_ReduceEV(u8);
 void ItemUseOutOfBattle_SacredAsh(u8);
 void ItemUseOutOfBattle_PPRecovery(u8);

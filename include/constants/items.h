@@ -1116,7 +1116,6 @@
 #define ITEM_LINKING_CORD 943
 #define ITEM_PEAT_BLOCK 944
 #define ITEM_BERSERK_GENE 945
-
 #define ITEM_FAIRY_FEATHER 946
 #define ITEM_SYRUPY_APPLE 947
 #define ITEM_UNREMARKABLE_TEACUP 948
@@ -1151,7 +1150,9 @@
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 975
+#define ITEM_ABILITY_CHANGER 975
+
+#define ITEMS_COUNT 976
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

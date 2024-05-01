@@ -14800,4 +14800,18 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+
+    [ITEM_ABILITY_CHANGER] =
+    {
+        .name = _("Abili-Change"),
+        .price = 10000,
+        .holdEffectParam = 0,
+        .description = COMPOUND_STRING(
+            "Miracle meds that\n"
+            "change a Pokémon's\n"
+            "ability."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_AbilityChanger,
+    },
 };
