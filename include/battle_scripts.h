@@ -842,5 +842,6 @@ extern const u8 BattleScript_PickedUpItem[];
 extern const u8 BattleScript_PickedUpItemSolo[];
 extern const u8 BattleScript_HoneyGathered[];
 extern const u8 BattleScript_JuiceCrushed[];
+extern const u8 BattleScript_ItemDropped[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

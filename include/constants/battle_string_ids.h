@@ -718,8 +718,10 @@
 #define STRINGID_PICKUPSOLO                           715
 #define STRINGID_HONEYGATHERED                        716
 #define STRINGID_JUICECRUSHED                         717
+#define STRINGID_PKMNDROPPEDITEM                      718
+#define STRINGID_BAGISFULL                            719
 
-#define BATTLESTRINGS_COUNT                           718
+#define BATTLESTRINGS_COUNT                           720
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -1047,5 +1049,9 @@
 #define B_MSG_HURT_BY_VORTEX    1
 #define B_MSG_BURNING_UP  2
 #define B_MSG_HURT_BY_ROCKS_THROWN 3
+
+// gItemDroppedStringIds
+#define B_MSG_ITEM_DROPPED   0
+#define B_MSG_BAG_IS_FULL    1
 
 #endif // GUARD_CONSTANTS_BATTLE_STRING_IDS_H
