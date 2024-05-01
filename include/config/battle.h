@@ -3,6 +3,7 @@
 
 // Calculation settings
 #define B_CRIT_CHANCE               GEN_LATEST // Chances of a critical hit landing. See CalcCritChanceStage. Gen6+ chances guarantee that Farfetch'd and Sirfetch'd always get critical hits while holding a Leek and using high-crit ratio moves.
+#define B_CRIT_CHANCE_GEN_1         TRUE       // Set to True to use Gen 1 crit chance
 #define B_CRIT_MULTIPLIER           GEN_3      // In Gen6+, critical hits multiply damage by 1.5 instead of 2.
 #define B_PARALYSIS_SPEED           GEN_3      // In Gen7+, Speed is decreased by 50% instead of 75%.
 #define B_CONFUSION_SELF_DMG_CHANCE GEN_3      // In Gen7+, confusion has a 33.3% of self-damage, instead of 50%.
