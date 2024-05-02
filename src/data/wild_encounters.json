@@ -13203,22 +13203,22 @@
               {
                 "min_level": 5,
                 "max_level": 5,
+                "species": "SPECIES_BIDOOF"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
                 "species": "SPECIES_POLIWAG"
               },
               {
-                "min_level": 15,
+                "min_level": 5,
                 "max_level": 15,
-                "species": "SPECIES_MARILL"
+                "species": "SPECIES_POLIWAG"
               },
               {
-                "min_level": 15,
+                "min_level": 5,
                 "max_level": 15,
-                "species": "SPECIES_MARILL"
-              },
-              {
-                "min_level": 15,
-                "max_level": 15,
-                "species": "SPECIES_MARILL"
+                "species": "SPECIES_POLIWAG"
               }
             ]
           },
@@ -13238,7 +13238,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_BIDOOF"
               },
               {
                 "min_level": 5,
@@ -13248,12 +13248,12 @@
               {
                 "min_level": 22,
                 "max_level": 22,
-                "species": "SPECIES_POLIWHIRL"
+                "species": "SPECIES_BIBAREL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_KRABBY"
+                "min_level": 22,
+                "max_level": 22,
+                "species": "SPECIES_POLIWHIRL"
               },
               {
                 "min_level": 17,
@@ -13263,7 +13263,7 @@
               {
                 "min_level": 22,
                 "max_level": 22,
-                "species": "SPECIES_POLIWHIRL"
+                "species": "SPECIES_BIBAREL"
               },
               {
                 "min_level": 25,
