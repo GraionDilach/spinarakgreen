@@ -156,9 +156,9 @@
       "map_section": "MAPSEC_ROUTE_104",
       "name": "ROUTE 104",
       "x": 0,
-      "y": 7,
+      "y": 9,
       "width": 1,
-      "height": 3
+      "height": 1
     },
     {
       "map_section": "MAPSEC_ROUTE_105",
@@ -1701,6 +1701,14 @@
       "name": "TRAINER HILL",
       "x": 8,
       "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_104B",
+      "name": "ROUTE 104",
+      "x": 0,
+      "y": 7,
       "width": 1,
       "height": 1
     }
