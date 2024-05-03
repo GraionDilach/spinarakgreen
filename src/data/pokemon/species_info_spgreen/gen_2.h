@@ -2620,7 +2620,6 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
         .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_PROTOSYNTHESIS, ABILITY_PROTOSYNTHESIS },
         .bodyColor = BODY_COLOR_GRAY,
-        .isParadoxForm = TRUE,
         .speciesName = _("Missleepus"),
         .cryId = CRY_FLUTTER_MANE,
         .natDexNum = NATIONAL_DEX_FLUTTER_MANE,
