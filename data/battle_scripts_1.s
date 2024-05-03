@@ -5649,6 +5649,8 @@ BattleScript_LocalBattleWonReward::
 BattleScript_PayDayMoneyAndPickUpItems::
 	givepaydaymoney
 	givedroppeditems
+	rollterashards
+	givedroppeditems
 	pickup
 	end2
 

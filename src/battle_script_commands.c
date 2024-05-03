@@ -11014,6 +11014,30 @@ static void Cmd_various(void)
         }
         break;
         }
+    case VARIOUS_ROLL_TERA_SHARDS:
+        {
+        VARIOUS_ARGS();
+
+        if (!(gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_FIRST_BATTLE | BATTLE_TYPE_WALLY_TUTORIAL)))
+        {
+            u8 i;
+            u8 battlers[] = {GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT),
+                             GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)};
+            for (i = 0; i < 1 + IsDoubleBattle(); i++)
+            {
+                u8 chance = Random() % 99;
+                if (chance < 5)
+                {
+                    gBattleResources->battleHistory->heldItems[battlers[i]] = ITEM_STELLAR_TERA_SHARD;
+                }
+                else if (chance < 20)
+                {
+                    gBattleResources->battleHistory->heldItems[battlers[i]] = gTypesInfo[GetBattlerTeraType(battlers[i])].teraShard;
+                }
+            }
+        }
+        break;
+        }
     } // End of switch (cmd->id)
 
     gBattlescriptCurrInstr = cmd->nextInstr;

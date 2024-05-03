@@ -2498,3 +2498,7 @@
 	.macro givedroppeditems
 	various BS_FAINTED, VARIOUS_GIVE_DROPPED_ITEMS
 	.endm
+
+	.macro rollterashards
+	various BS_FAINTED, VARIOUS_ROLL_TERA_SHARDS
+	.endm

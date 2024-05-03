@@ -118,7 +118,7 @@ struct TypeInfo
     //u16 plate;
     //u16 memory;
     //u16 zCrystal;
-    //u16 teraShard;
+    u16 teraShard;
     //u16 arceusForm;
 };
 
