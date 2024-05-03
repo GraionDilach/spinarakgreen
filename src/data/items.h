@@ -5663,7 +5663,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Normal-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_NORMAL
@@ -5678,7 +5678,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Fire-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_FIRE
@@ -5693,7 +5693,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Water-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_WATER
@@ -5708,7 +5708,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Electric-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_ELECTRIC
@@ -5723,7 +5723,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Grass-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_GRASS
@@ -5738,7 +5738,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Ice-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_ICE
@@ -5753,7 +5753,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Fighting-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_FIGHTING
@@ -5768,7 +5768,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Poison-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_POISON
@@ -5783,7 +5783,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Ground-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_GROUND
@@ -5798,7 +5798,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Flying-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_FLYING
@@ -5813,7 +5813,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Psychic-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_PSYCHIC
@@ -5828,7 +5828,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Bug-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_BUG
@@ -5843,7 +5843,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Rock-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_ROCK
@@ -5858,7 +5858,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Ghost-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_GHOST
@@ -5873,7 +5873,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Dragon-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_DRAGON
@@ -5888,7 +5888,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Dark-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_DARK
@@ -5903,7 +5903,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Steel-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_STEEL
@@ -5918,7 +5918,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Fairy-\n"
             "type moves into\n"
             "Z-Moves."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_FAIRY
@@ -5933,7 +5933,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Pikachu's\n"
             "Volt Tackle\n"
             "into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -5948,7 +5948,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Eevee's\n"
             "Last Resort\n"
             "into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -5963,7 +5963,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Snorlax's\n"
             "Giga Impact\n"
             "into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -5978,7 +5978,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Mew's\n"
             "Psychic into\n"
             "a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -5993,7 +5993,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Decidu-\n"
             "eye's Spirit Sha-\n"
             "ckle into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -6008,7 +6008,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Incine-\n"
             "roar's Darkest La-\n"
             "riat into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -6023,7 +6023,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Primarina's\n"
             "Sparkling Aria\n"
             "into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -6038,7 +6038,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Lycanroc's\n"
             "Stone Edge\n"
             "into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -6053,7 +6053,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Mimikyu's\n"
             "Play Rough\n"
             "into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -6068,7 +6068,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Kommo-o's\n"
             "Clanging Scales\n"
             "into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -6083,7 +6083,7 @@ const struct Item gItemsInfo[] =
             "Upgrade the tapus'\n"
             "Nature's Madness\n"
             "into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  //signature z move
@@ -6098,7 +6098,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Solgaleo's\n"
             "Sunsteel Strike\n"
             "into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -6113,7 +6113,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Lunala's\n"
             "Moongeist Beam\n"
             "into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -6128,7 +6128,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Marsha-\n"
             "dow's Spectral Thi-\n"
             "ef into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -6143,7 +6143,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Alolan\n"
             "Raichu's Thunder-\n"
             "bolt into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -6158,7 +6158,7 @@ const struct Item gItemsInfo[] =
             "Upgrade Pikachu w/\n"
             "a cap's Thunderbolt\n"
             "into a Z-Move."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  // signature z move
@@ -6173,7 +6173,7 @@ const struct Item gItemsInfo[] =
             "A crystal to turn\n"
             "fused Necrozma\n"
             "into a new form."),
-        .pocket = POCKET_Z_CRYSTALS,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  //signature z move
@@ -14097,7 +14097,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("Bug TeraShard", "Bug Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14107,7 +14107,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("DarkTeraShard", "Dark Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14117,7 +14117,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("DragnTeraShrd", "Dragon Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14127,7 +14127,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("EltrcTeraShrd", "Electric Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14137,7 +14137,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("FairyTeraShrd", "Fairy Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14147,7 +14147,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("FghtngTerShrd", "Fighting Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14157,7 +14157,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("FireTeraShard", "Fire Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14167,7 +14167,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("FlyngTeraShrd", "Flying Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14177,7 +14177,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("GhostTeraShrd", "Ghost Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14187,7 +14187,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("GrassTeraShrd", "Grass Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14197,7 +14197,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("GrondTeraShrd", "Ground Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14207,7 +14207,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("Ice TeraShard", "Ice Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14217,7 +14217,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("NormlTeraShrd", "Normal Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14227,7 +14227,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("PoisnTeraShrd", "Poison Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14237,7 +14237,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("PschcTeraShrd", "Psychic Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14247,7 +14247,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("RockTeraShard", "Rock Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14257,7 +14257,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("SteelTeraShrd", "Steel Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14267,7 +14267,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("WaterTeraShrd", "Water Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -14601,7 +14601,7 @@ const struct Item gItemsInfo[] =
         .name = HANDLE_EXPANDED_ITEM_NAME("StllrTeraShrd", "Stellar Tera Shard"),
         .price = 0,
         .description = sTeraShardDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_Z_CRYSTALS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
