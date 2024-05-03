@@ -1049,16 +1049,16 @@ void CreateWonderTradePokemon(void)
     SetMonData(&gEnemyParty[0], MON_DATA_OT_GENDER, &genderOT);
     SetMonData(&gEnemyParty[0], MON_DATA_MET_LOCATION, &metLocation);
 
-    u8 teraType = gSpeciesInfo[wonderTradeSpecies].types[(Random() % 2)];
     if ((Random() % 99) < 10)
     {
-        teraType = Random() % 20;
+        u8 teraType = Random() % 20;
         if (teraType >= TYPE_MYSTERY)
         {
             teraType++;
         }
+
+        SetMonData(&gEnemyParty[0], MON_DATA_TERA_TYPE, &teraType);
     }
-    SetMonData(&gEnemyParty[0], MON_DATA_TERA_TYPE, &teraType);
 
     if ((Random() % 99) < 5)
     {
