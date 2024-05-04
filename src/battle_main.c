@@ -458,9 +458,11 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     },
     [TYPE_MYSTERY] =
     {
-        .name = _("???"),
-        .generic = _("a ??? move"),
+        .name = HANDLE_EXPANDED_TYPE_NAME("???", "Mystery"),
+        .generic = _("a MYSTERY move"),
         .palette = 15,
+        .paletteTMHM = gItemIconPalette_GhostTMHM,
+        .teraShard = ITEM_STELLAR_TERA_SHARD,
     },
     [TYPE_FIRE] =
     {
