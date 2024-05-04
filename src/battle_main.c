@@ -2247,6 +2247,10 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
     u32 personalityValue;
     s32 i;
     u8 monsCount;
+    u16 partymax = 0;
+    u16 trainerpartymax = 0;
+    const struct TrainerMon *partyData = trainer->party;
+
     if (battleTypeFlags & BATTLE_TYPE_TRAINER && !(battleTypeFlags & (BATTLE_TYPE_FRONTIER
                                                                         | BATTLE_TYPE_EREADER_TRAINER
                                                                         | BATTLE_TYPE_TRAINER_HILL)))
@@ -2268,37 +2272,38 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
 
         for (i = 0; i < monsCount; i++)
         {
+            trainerpartymax = (trainerpartymax > partyData[i].lvl) ? trainerpartymax : partyData[i].lvl;
+        }
+
+        if (trainer->dynamicLevelRatio > 0)
+        {
+            for (i = 0; i < PARTY_SIZE; i++)
+            {
+                if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&gPlayerParty[i], MON_DATA_SANITY_IS_EGG))
+                {
+                    partymax = (partymax > GetMonData(&gPlayerParty[i], MON_DATA_LEVEL)) ? partymax : GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+                }
+            }
+
+            partymax = partymax * trainer->dynamicLevelRatio / 100;
+        }
+
+        partymax = (partymax > trainerpartymax) ? partymax : trainerpartymax;
+        VarSet(VAR_0x8014, partymax);
+
+        for (i = 0; i < monsCount; i++)
+        {
             s32 ball = -1;
             u32 personalityHash = GeneratePartyHash(trainer, i);
-            const struct TrainerMon *partyData = trainer->party;
             u32 otIdType = OT_ID_RANDOM_NO_SHINY;
             u32 fixedOtId = 0;
             u32 ability = 0;
             u8 friendship;
 
-            u8 level = partyData[i].lvl;
-            if (trainer->dynamicLevelRatio > 0)
+            u32 level = partyData[i].lvl;
+            if (trainer->dynamicLevelRatio > 0 && (partymax - trainerpartymax) > 0)
             {
-                u16 partymax = 0;
-                u8 partydiff = 0;
-                u8 j;
-
-                for (j = 0; j < PARTY_SIZE; j++)
-                {
-                    if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&gPlayerParty[i], MON_DATA_SANITY_IS_EGG))
-                    {
-                        partymax = (partymax > GetMonData(&gPlayerParty[i], MON_DATA_LEVEL)) ? partymax : GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
-                    }
-                }
-
-                for (j = 0; j < monsCount; j++)
-                {
-                    partydiff = (partydiff > partyData[j].lvl - level) ? partydiff : partyData[j].lvl - level;
-                }
-
-                VarSet(VAR_0x8014, partymax);
-                partymax = partymax * trainer->dynamicLevelRatio / 100;
-                level = (level > partymax - partydiff) ? level : partymax - partydiff;
+                level += (partymax - trainerpartymax);
             }
 
             if (trainer->doubleBattle == TRUE)
