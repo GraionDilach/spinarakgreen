@@ -245,6 +245,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giddy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan1;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTree;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornSapling;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -488,6 +489,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_LUGIA] =                    &gObjectEventGraphicsInfo_Lugia,
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
     [OBJ_EVENT_GFX_APRICORN_TREE] =            &gObjectEventGraphicsInfo_ApricornTree,
+    [OBJ_EVENT_GFX_APRICORN_SAPLING] =         &gObjectEventGraphicsInfo_ApricornSapling,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
