@@ -25,5 +25,17 @@ const struct ApricornTree gApricornTrees[APRICORN_TREE_COUNT] =
         .isSapling = FALSE,
         .apricornType = APRICORN_RED,
     },
+
+    [APRICORN_TREE_ROUTE101_RED_SAPLING] =
+    {
+        .isSapling = TRUE,
+        .apricornType = APRICORN_RED,
+    },
+
+    [APRICORN_TREE_ROUTE101_WHITE_TREE] =
+    {
+        .isSapling = FALSE,
+        .apricornType = APRICORN_WHITE,
+    },
     #endif
 };
