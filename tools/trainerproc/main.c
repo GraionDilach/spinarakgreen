@@ -123,6 +123,9 @@ struct Trainer
 
     struct String starting_status;
     int starting_status_line;
+
+    int dynamicLevelRatio;
+    int dynamicLevelRatio_line;
 };
 
 static bool is_empty_string(struct String s)
@@ -1173,6 +1176,14 @@ static bool parse_trainer(struct Parser *p, const struct Parsed *parsed, struct 
             trainer->starting_status_line = value.location.line;
             trainer->starting_status = token_string(&value);
         }
+        else if (is_literal_token(&key, "Dynamic Level Ratio"))
+        {
+            if (trainer->dynamicLevelRatio_line)
+                any_error = !set_show_parse_error(p, key.location, "duplicate 'Dynamic Level Ratio'");
+            trainer->dynamicLevelRatio_line = value.location.line;
+            if (!token_int(p, &value, &trainer->dynamicLevelRatio))
+                any_error = !show_parse_error(p);
+        }
         else
         {
             any_error = !set_show_parse_error(p, key.location, "expected one of 'Name', 'Class', 'Pic', 'Gender', 'Music', 'Items', 'Double Battle', or 'AI'");
@@ -1694,6 +1705,17 @@ static void fprint_trainers(const char *output_path, FILE *f, struct Parsed *par
             fprintf(f, "        .startingStatus = ");
             fprint_constant(f, "STARTING_STATUS", trainer->starting_status);
             fprintf(f, ",\n");
+        }
+
+        if (trainer->dynamicLevelRatio_line > 0)
+        {
+            fprintf(f, "#line %d\n", trainer->dynamicLevelRatio_line);
+            fprintf(f, "        .dynamicLevelRatio = %d,\n", trainer->dynamicLevelRatio);
+        }
+        else
+        {
+            fprintf(f, "// #line AUTO-GENERATED\n");
+            fprintf(f, "        .dynamicLevelRatio = %d,\n", (80 + 5 * trainer->ai_flags_n));
         }
 
         fprintf(f, "        .partySize = %d,\n", trainer->pokemon_n);

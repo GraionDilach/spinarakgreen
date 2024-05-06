@@ -9434,6 +9434,7 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
+Dynamic Level Ratio: 0
 
 Treecko
 Level: 5
@@ -9489,6 +9490,7 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Setup First Turn
+Dynamic Level Ratio: 0
 
 Torchic
 Level: 5
@@ -9544,6 +9546,7 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
+Dynamic Level Ratio: 0
 
 Mudkip
 Level: 5
@@ -9599,6 +9602,7 @@ Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
+Dynamic Level Ratio: 0
 
 Treecko
 Level: 5
@@ -9654,6 +9658,7 @@ Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
+Dynamic Level Ratio: 0
 
 Torchic
 Level: 5
@@ -9709,6 +9714,7 @@ Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
+Dynamic Level Ratio: 0
 
 Mudkip
 Level: 5
