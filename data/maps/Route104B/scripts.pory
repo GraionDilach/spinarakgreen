@@ -1,1 +1,4 @@
-mapscripts Route104B_MapScripts {}
+mapscripts Route104B_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE: Route104_OnFrame
+	MAP_SCRIPT_ON_TRANSITION: Route104_OnTransition
+}
