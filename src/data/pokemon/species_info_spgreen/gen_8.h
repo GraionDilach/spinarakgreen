@@ -359,14 +359,14 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 70,
         .baseSpDefense = 40,
         .types = { TYPE_WATER, TYPE_WATER },
-        .catchRate = 45,
-        .expYield = 62,
+        .catchRate = 149,
+        .expYield = 124,
         .evYield_Speed = 1,
         .evYield_SpDefense = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_SLOW,
+        .growthRate = GROWTH_350,
         .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FIELD },
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_SNIPER },
         .bodyColor = BODY_COLOR_BLUE,
@@ -407,13 +407,13 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 95,
         .baseSpDefense = 55,
         .types = { TYPE_WATER, TYPE_WATER },
-        .catchRate = 45,
-        .expYield = 147,
+        .catchRate = 97,
+        .expYield = 185,
         .evYield_SpAttack = 2,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_SLOW,
+        .growthRate = GROWTH_450,
         .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FIELD },
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_SNIPER },
         .bodyColor = BODY_COLOR_BLUE,
@@ -441,7 +441,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         PALETTES(Drizzile),
         ICON(Drizzile, 2),
         LEARNSETS(Drizzile),
-        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_INTELEON}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_INTELEON},
+                                {EVO_ITEM, ITEM_DUSK_STONE, SPECIES_INTELEON_GIGANTAMAX}),
     },
 
 #define INTELEON_MISC_INFO                                              \
@@ -451,30 +452,28 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpeed     = 120,                                           \
         .baseSpAttack  = 125,                                           \
         .baseSpDefense = 65,                                            \
-        .types = { TYPE_WATER, TYPE_WATER },                            \
-        .catchRate = 45,                                                \
-        .expYield = 265,                                                \
+        .catchRate = 54,                                                \
+        .expYield = 256,                                                \
         .evYield_Speed = 3,                                             \
         .genderRatio = PERCENT_FEMALE(12.5),                            \
         .eggCycles = 20,                                                \
         .friendship = STANDARD_FRIENDSHIP,                              \
-        .growthRate = GROWTH_MEDIUM_SLOW,                               \
+        .growthRate = GROWTH_550,                                       \
         .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FIELD },            \
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_SNIPER }, \
         .bodyColor = BODY_COLOR_BLUE,                                   \
-        .speciesName = _("Inteleon"),                                   \
-        .cryId = CRY_INTELEON,                                          \
-        .natDexNum = NATIONAL_DEX_INTELEON,                             \
-        .categoryName = _("Secret Agent"),                              \
-        LEARNSETS(Inteleon),                                            \
-        .formSpeciesIdTable = sInteleonFormSpeciesIdTable,              \
-        .formChangeTable = sInteleonFormChangeTable
+        .cryId = CRY_INTELEON
 
     [SPECIES_INTELEON] =
     {
         INTELEON_MISC_INFO,
         .height = 19,
         .weight = 452,
+        .types = { TYPE_WATER, TYPE_WATER },
+        .speciesName = _("Inteleon"),
+        .categoryName = _("Secret Agent"),
+        LEARNSETS(Inteleon),
+        .natDexNum = NATIONAL_DEX_INTELEON,
         .description = COMPOUND_STRING(
             "It has many hidden capabilities, such as\n"
             "fingertips that can shoot water and a\n"
@@ -500,7 +499,12 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
     {
         INTELEON_MISC_INFO,
         .height = 400,
-        .weight = 0,
+        .weight = 552,
+        .types = { TYPE_WATER, TYPE_DARK },
+        .speciesName = _("Toweleon"),
+        .categoryName = _("Watchtower"),
+        LEARNSETS(InteleonGigantamax),
+        .natDexNum = NATIONAL_DEX_INTELEON_GIGANTAMAX,
         .description = COMPOUND_STRING(
             "Gigantamax Inteleon's Water Gun\n"
             "move fires at Mach 7. As the Pokémon\n"
@@ -519,7 +523,6 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(InteleonGigantamax),
         ICON(InteleonGigantamax, 0),
-        .isGigantamax = TRUE,
     },
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_SOBBLE
@@ -2138,13 +2141,13 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 40,
         .baseSpDefense = 30,
         .types = { TYPE_WATER, TYPE_WATER },
-        .catchRate = 255,
-        .expYield = 56,
+        .catchRate = 164,
+        .expYield = 112,
         .evYield_Speed = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_SLOW,
+        .growthRate = GROWTH_350,
         .eggGroups = { EGG_GROUP_WATER_2, EGG_GROUP_WATER_2 },
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_NONE, ABILITY_PROPELLER_TAIL },
         .bodyColor = BODY_COLOR_BROWN,
@@ -2185,13 +2188,13 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 60,
         .baseSpDefense = 50,
         .types = { TYPE_WATER, TYPE_WATER },
-        .catchRate = 60,
-        .expYield = 172,
+        .catchRate = 68,
+        .expYield = 237,
         .evYield_Speed = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_SLOW,
+        .growthRate = GROWTH_550,
         .eggGroups = { EGG_GROUP_WATER_2, EGG_GROUP_WATER_2 },
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_NONE, ABILITY_PROPELLER_TAIL },
         .bodyColor = BODY_COLOR_BROWN,

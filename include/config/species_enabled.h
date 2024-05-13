@@ -409,7 +409,7 @@
 #define P_FAMILY_INKAY                   TRUE
 #define P_FAMILY_BINACLE                 FALSE
 #define P_FAMILY_SKRELP                  FALSE
-#define P_FAMILY_CLAUNCHER               FALSE
+#define P_FAMILY_CLAUNCHER               TRUE
 #define P_FAMILY_HELIOPTILE              FALSE
 #define P_FAMILY_TYRUNT                  FALSE
 #define P_FAMILY_AMAURA                  FALSE
@@ -487,7 +487,7 @@
 
 #define P_FAMILY_GROOKEY                 FALSE
 #define P_FAMILY_SCORBUNNY               FALSE
-#define P_FAMILY_SOBBLE                  FALSE
+#define P_FAMILY_SOBBLE                  TRUE
 #define P_FAMILY_SKWOVET                 TRUE
 #define P_FAMILY_ROOKIDEE                TRUE
 #define P_FAMILY_BLIPBUG                 TRUE
@@ -500,7 +500,7 @@
 #define P_FAMILY_APPLIN                  FALSE
 #define P_FAMILY_SILICOBRA               FALSE
 #define P_FAMILY_CRAMORANT               FALSE
-#define P_FAMILY_ARROKUDA                FALSE
+#define P_FAMILY_ARROKUDA                TRUE
 #define P_FAMILY_TOXEL                   FALSE
 #define P_FAMILY_SIZZLIPEDE              FALSE
 #define P_FAMILY_CLOBBOPUS               FALSE
