@@ -266,7 +266,7 @@
 #define P_FAMILY_TURTWIG                 TRUE
 #define P_FAMILY_CHIMCHAR                TRUE
 #define P_FAMILY_PIPLUP                  TRUE
-#define P_FAMILY_STARLY                  FALSE
+#define P_FAMILY_STARLY                  TRUE
 #define P_FAMILY_BIDOOF                  TRUE
 #define P_FAMILY_KRICKETOT               TRUE
 #define P_FAMILY_SHINX                   TRUE
@@ -287,7 +287,7 @@
 #define P_FAMILY_SPIRITOMB               TRUE
 #define P_FAMILY_GIBLE                   TRUE
 #define P_FAMILY_RIOLU                   TRUE
-#define P_FAMILY_HIPPOPOTAS              FALSE
+#define P_FAMILY_HIPPOPOTAS              TRUE
 #define P_FAMILY_SKORUPI                 TRUE
 #define P_FAMILY_CROAGUNK                TRUE
 #define P_FAMILY_CARNIVINE               TRUE
@@ -330,7 +330,7 @@
 #define P_FAMILY_THROH                   FALSE
 #define P_FAMILY_SAWK                    FALSE
 #define P_FAMILY_SEWADDLE                FALSE
-#define P_FAMILY_VENIPEDE                FALSE
+#define P_FAMILY_VENIPEDE                TRUE
 #define P_FAMILY_COTTONEE                TRUE
 #define P_FAMILY_PETILIL                 TRUE
 #define P_FAMILY_BASCULIN                FALSE
@@ -348,7 +348,7 @@
 #define P_FAMILY_MINCCINO                TRUE
 #define P_FAMILY_GOTHITA                 TRUE
 #define P_FAMILY_SOLOSIS                 FALSE
-#define P_FAMILY_DUCKLETT                FALSE
+#define P_FAMILY_DUCKLETT                TRUE
 #define P_FAMILY_VANILLITE               FALSE
 #define P_FAMILY_DEERLING                FALSE
 #define P_FAMILY_EMOLGA                  TRUE
@@ -441,7 +441,7 @@
 #define P_FAMILY_ROCKRUFF                FALSE
 #define P_FAMILY_WISHIWASHI              FALSE
 #define P_FAMILY_MAREANIE                TRUE
-#define P_FAMILY_MUDBRAY                 FALSE
+#define P_FAMILY_MUDBRAY                 TRUE
 #define P_FAMILY_DEWPIDER                FALSE
 #define P_FAMILY_FOMANTIS                FALSE
 #define P_FAMILY_MORELULL                FALSE
@@ -550,7 +550,7 @@
 #define P_FAMILY_TADBULB                 TRUE
 #define P_FAMILY_WATTREL                 TRUE
 #define P_FAMILY_MASCHIFF                TRUE
-#define P_FAMILY_SHROODLE                FALSE
+#define P_FAMILY_SHROODLE                TRUE
 #define P_FAMILY_BRAMBLIN                FALSE
 #define P_FAMILY_TOEDSCOOL               TRUE
 #define P_FAMILY_KLAWF                   TRUE
