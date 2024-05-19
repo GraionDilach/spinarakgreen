@@ -1166,6 +1166,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Pidgey),
         ICON(Pidgey, 0),
         LEARNSETS(Pidgey),
+        .eggMoveLearnset = sPidgeyEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_PIDGEOTTO}),
     },
 
@@ -1214,6 +1215,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Pidgeotto),
         ICON(Pidgeotto, 0),
         LEARNSETS(Pidgeotto),
+        .eggMoveLearnset = sPidgeyEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL_NIGHT, 36, SPECIES_PIDGEOT},
                                 {EVO_LEVEL_DAY, 36, SPECIES_PIDGEOT_MEGA}),
     },
@@ -1228,7 +1230,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_650,                           \
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },\
         .bodyColor = BODY_COLOR_BROWN,                      \
-        .categoryName = _("Bird")
+        .categoryName = _("Bird"),                          \
+        .eggMoveLearnset = sPidgeyEggMoveLearnset
 
     [SPECIES_PIDGEOT] =
     {
@@ -1370,6 +1373,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Rattata),
         ICON(Rattata, 2),
         LEARNSETS(Rattata),
+        .eggMoveLearnset = sRattataEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_RATICATE}),
     },
 
@@ -1410,6 +1414,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Raticate),
         ICON(Raticate, 2),
         LEARNSETS(Raticate),
+        .eggMoveLearnset = sRattataEggMoveLearnset,
     },
 
 #if P_ALOLAN_FORMS
@@ -1444,6 +1449,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(RattataAlolan),
         ICON(RattataAlolan, 2),
         LEARNSETS(RattataAlolan),
+        .eggMoveLearnset = sRattataAlolanEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL_NIGHT, 20, SPECIES_RATICATE_ALOLAN}),
     },
 
@@ -1483,6 +1489,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(RaticateAlolan),
         ICON(RaticateAlolan, 2),
         LEARNSETS(RaticateAlolan),
+        .eggMoveLearnset = sRattataAlolanEggMoveLearnset,
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_RATTATA
