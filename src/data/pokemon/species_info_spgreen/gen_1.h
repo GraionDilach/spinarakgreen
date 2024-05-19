@@ -48,6 +48,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Bulbasaur),
         ICON(Bulbasaur, 4),
         LEARNSETS(Bulbasaur),
+        .eggMoveLearnset = sBulbasaurEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_IVYSAUR}),
     },
 
@@ -96,6 +97,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Ivysaur),
         ICON(Ivysaur, 4),
         LEARNSETS(Ivysaur),
+        .eggMoveLearnset = sBulbasaurEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_VENUSAUR},
                                 {EVO_ITEM, ITEM_SUN_STONE, SPECIES_VENUSAUR_MEGA},
                                 {EVO_ITEM, ITEM_LEAF_STONE, SPECIES_VENUSAUR_GIGANTAMAX}),
@@ -111,7 +113,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_650,                                           \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_GRASS },                \
         .bodyColor = BODY_COLOR_GREEN,                                      \
-        .categoryName = _("Seed")
+        .categoryName = _("Seed"),                                          \
+        .eggMoveLearnset = sBulbasaurEggMoveLearnset
 
     [SPECIES_VENUSAUR] =
     {
@@ -274,6 +277,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Charmander),
         ICON(Charmander, 0),
         LEARNSETS(Charmander),
+        .eggMoveLearnset = sCharmanderEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_CHARMELEON}),
     },
 
@@ -322,6 +326,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Charmeleon),
         ICON(Charmeleon, 0),
         LEARNSETS(Charmeleon),
+        .eggMoveLearnset = sCharmanderEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_CHARIZARD},
                                 {EVO_ITEM, ITEM_SUN_STONE, SPECIES_CHARIZARD_MEGA_X},
                                 {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_CHARIZARD_GIGANTAMAX}),
@@ -335,7 +340,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,                              \
         .growthRate = GROWTH_650,                                       \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_DRAGON },           \
-        .categoryName = _("Flame")
+        .categoryName = _("Flame"),                                     \
+        .eggMoveLearnset = sCharmanderEggMoveLearnset
 
     [SPECIES_CHARIZARD] =
     {
@@ -540,6 +546,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Squirtle),
         ICON(Squirtle, 0),
         LEARNSETS(Squirtle),
+        .eggMoveLearnset = sSquirtleEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_WARTORTLE}),
     },
 
@@ -588,6 +595,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Wartortle),
         ICON(Wartortle, 2),
         LEARNSETS(Wartortle),
+        .eggMoveLearnset = sSquirtleEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_BLASTOISE},
                                 {EVO_ITEM, ITEM_SUN_STONE, SPECIES_BLASTOISE_MEGA},
                                 {EVO_ITEM, ITEM_WATER_STONE, SPECIES_BLASTOISE_GIGANTAMAX}),
@@ -602,7 +610,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_650,                                       \
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_WATER_1 },          \
         .bodyColor = BODY_COLOR_BLUE,                                   \
-        .categoryName = _("Shellfish")
+        .categoryName = _("Shellfish"),                                 \
+        .eggMoveLearnset = sSquirtleEggMoveLearnset
 
     [SPECIES_BLASTOISE] =
     {
@@ -769,6 +778,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Caterpie),
         ICON(Caterpie, 1),
         LEARNSETS(Caterpie),
+        .eggMoveLearnset = sCaterpieEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 7, SPECIES_METAPOD}),
     },
 
@@ -816,6 +826,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Metapod),
         ICON(Metapod, 1),
         LEARNSETS(Metapod),
+        .eggMoveLearnset = sCaterpieEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL_SILCOON, 10, SPECIES_BUTTERFREE},
                                 {EVO_LEVEL_CASCOON, 10, SPECIES_BUTTERFREE_GIGANTAMAX}),
     },
@@ -832,7 +843,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_COMPOUND_EYES, ABILITY_NONE, ABILITY_TINTED_LENS },  \
         .bodyColor = BODY_COLOR_WHITE,                                              \
         .cryId = CRY_BUTTERFREE,                                                    \
-        .categoryName = _("Butterfly")
+        .categoryName = _("Butterfly"),                                             \
+        .eggMoveLearnset = sCaterpieEggMoveLearnset
 
     [SPECIES_BUTTERFREE] =
     {
@@ -961,6 +973,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Weedle),
         ICON(Weedle, 2),
         LEARNSETS(Weedle),
+        .eggMoveLearnset = sWeedleEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 7, SPECIES_KAKUNA}),
     },
 
@@ -1009,6 +1022,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Kakuna),
         ICON(Kakuna, 2),
         LEARNSETS(Kakuna),
+        .eggMoveLearnset = sWeedleEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL_SILCOON, 10, SPECIES_BEEDRILL},
                                 {EVO_LEVEL_CASCOON, 10, SPECIES_BEEDRILL_MEGA}),
     },
@@ -1025,7 +1039,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_550,                           \
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },      \
         .bodyColor = BODY_COLOR_YELLOW,                     \
-        .categoryName = _("Poison Bee")
+        .categoryName = _("Poison Bee"),                    \
+        .eggMoveLearnset = sWeedleEggMoveLearnset
 
     [SPECIES_BEEDRILL] =
     {
