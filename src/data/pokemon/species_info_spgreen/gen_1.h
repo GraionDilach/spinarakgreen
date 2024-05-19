@@ -1540,6 +1540,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Spearow),
         ICON(Spearow, 0),
         LEARNSETS(Spearow),
+        .eggMoveLearnset = sSpearowEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_FEAROW}),
     },
 
@@ -1590,6 +1591,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Fearow),
         ICON(Fearow, 0),
         LEARNSETS(Fearow),
+        .eggMoveLearnset = sSpearowEggMoveLearnset,
     },
 #endif //P_FAMILY_SPEAROW
 
@@ -1639,6 +1641,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Ekans),
         ICON(Ekans, 2),
         LEARNSETS(Ekans),
+        .eggMoveLearnset = sEkansEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_ARBOK}),
     },
 
@@ -1686,6 +1689,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Arbok),
         ICON(Arbok, 2),
         LEARNSETS(Arbok),
+        .eggMoveLearnset = sEkansEggMoveLearnset,
     },
 #endif //P_FAMILY_EKANS
 
@@ -1721,6 +1725,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .trainerScale = 256,                                                            \
         .trainerOffset = 0,                                                             \
         LEARNSETS(Pichu),                                                               \
+        .eggMoveLearnset = sPichuEggMoveLearnset,                                       \
         .formSpeciesIdTable = sPichuFormSpeciesIdTable
 
     [SPECIES_PICHU] =
@@ -1776,6 +1781,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .natDexNum = NATIONAL_DEX_PIKACHU,                                      \
         .categoryName = _("Mouse"),                                             \
         LEARNSETS(Pikachu),                                                     \
+        .eggMoveLearnset = sPichuEggMoveLearnset,                               \
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable
 
 #define PIKACHU_REGULAR_SIZE_INFO   \
@@ -2097,6 +2103,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .natDexNum = NATIONAL_DEX_PIKACHU_GIGANTAMAX,
         .categoryName = _("Mouse"),
         LEARNSETS(PikachuGigantamax),
+        .eggMoveLearnset = sPichuEggMoveLearnset,
         .genderRatio = PERCENT_FEMALE(50),
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FAIRY },
         .height = 210,
@@ -2132,7 +2139,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_650,                           \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FAIRY },  \
         .cryId = CRY_RAICHU,                                \
-        .categoryName = _("Mouse")
+        .categoryName = _("Mouse"),                         \
+        .eggMoveLearnset = sPichuEggMoveLearnset
 
     [SPECIES_RAICHU] =
     {
@@ -2311,6 +2319,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Sandshrew),
         ICON(Sandshrew, 2),
         LEARNSETS(Sandshrew),
+        .eggMoveLearnset = sSandshrewEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_SANDSLASH}),
     },
 
@@ -2349,6 +2358,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Sandslash),
         ICON(Sandslash, 2),
         LEARNSETS(Sandslash),
+        .eggMoveLearnset = sSandshrewEggMoveLearnset,
     },
 
 #if P_ALOLAN_FORMS
@@ -2387,6 +2397,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(SandshrewAlolan),
         ICON(SandshrewAlolan, 0),
         LEARNSETS(SandshrewAlolan),
+        .eggMoveLearnset = sSandshrewAlolanEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_ICE_STONE, SPECIES_SANDSLASH_ALOLAN}),
     },
 
@@ -2425,6 +2436,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(SandslashAlolan),
         ICON(SandslashAlolan, 0),
         LEARNSETS(SandslashAlolan),
+        .eggMoveLearnset = sSandshrewAlolanEggMoveLearnset,
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_SANDSHREW
@@ -2475,6 +2487,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(NidoranF),
         ICON(NidoranF, 0),
         LEARNSETS(NidoranF),
+        .eggMoveLearnset = sNidoranFEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_NIDORINA}),
     },
 
@@ -2522,6 +2535,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Nidorina),
         ICON(Nidorina, 0),
         LEARNSETS(Nidorina),
+        .eggMoveLearnset = sNidoranFEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOON_STONE, SPECIES_NIDOQUEEN}),
     },
 
@@ -2569,6 +2583,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Nidoqueen),
         ICON(Nidoqueen, 2),
         LEARNSETS(Nidoqueen),
+        .eggMoveLearnset = sNidoranFEggMoveLearnset,
     },
 
     [SPECIES_NIDORAN_M] =
@@ -2615,6 +2630,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(NidoranM),
         ICON(NidoranM, 2),
         LEARNSETS(NidoranM),
+        .eggMoveLearnset = sNidoranMEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_NIDORINO}),
     },
 
@@ -2662,6 +2678,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Nidorino),
         ICON(Nidorino, 2),
         LEARNSETS(Nidorino),
+        .eggMoveLearnset = sNidoranMEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOON_STONE, SPECIES_NIDOKING}),
     },
 
@@ -2710,6 +2727,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Nidoking),
         ICON(Nidoking, 2),
         LEARNSETS(Nidoking),
+        .eggMoveLearnset = sNidoranMEggMoveLearnset,
     },
 #endif //P_FAMILY_NIDORAN
 
@@ -2761,6 +2779,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Cleffa),
         ICON(Cleffa, 0),
         LEARNSETS(Cleffa),
+        .eggMoveLearnset = sCleffaEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_FRIENDSHIP, 0, SPECIES_CLEFAIRY}),
     },
 #endif //P_GEN_2_CROSS_EVOS
@@ -2811,6 +2830,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Clefairy),
         ICON(Clefairy, 0),
         LEARNSETS(Clefairy),
+        .eggMoveLearnset = sCleffaEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOON_STONE, SPECIES_CLEFABLE}),
     },
 
@@ -2860,6 +2880,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Clefable),
         ICON(Clefable, 0),
         LEARNSETS(Clefable),
+        .eggMoveLearnset = sCleffaEggMoveLearnset,
     },
 #endif //P_FAMILY_CLEFAIRY
 
@@ -2931,6 +2952,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Vulpix),
         ICON(Vulpix, 5),
         LEARNSETS(Vulpix),
+        .eggMoveLearnset = sVulpixEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_FIRE_STONE, SPECIES_NINETALES}),
     },
 
@@ -2964,6 +2986,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Ninetales),
         ICON(Ninetales, 3),
         LEARNSETS(Ninetales),
+        .eggMoveLearnset = sVulpixEggMoveLearnset,
     },
 
 #if P_ALOLAN_FORMS
@@ -2991,6 +3014,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(VulpixAlolan),
         ICON(VulpixAlolan, 2),
         LEARNSETS(VulpixAlolan),
+        .eggMoveLearnset = sVulpixAlolanEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_ICE_STONE, SPECIES_NINETALES_ALOLAN}),
     },
 
@@ -3024,6 +3048,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(NinetalesAlolan),
         ICON(NinetalesAlolan, 2),
         LEARNSETS(NinetalesAlolan),
+        .eggMoveLearnset = sVulpixAlolanEggMoveLearnset,
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_VULPIX
@@ -3075,6 +3100,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Igglybuff),
         ICON(Igglybuff, 1),
         LEARNSETS(Igglybuff),
+        .eggMoveLearnset = sIgglybuffEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_FRIENDSHIP, 0, SPECIES_JIGGLYPUFF}),
     },
 #endif //P_GEN_2_CROSS_EVOS
@@ -3125,6 +3151,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Jigglypuff),
         ICON(Jigglypuff, 0),
         LEARNSETS(Jigglypuff),
+        .eggMoveLearnset = sIgglybuffEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOON_STONE, SPECIES_WIGGLYTUFF},
                                 {EVO_ITEM, ITEM_SUN_STONE, SPECIES_SCREAM_TAIL}),
     },
@@ -3175,6 +3202,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Wigglytuff),
         ICON(Wigglytuff, 0),
         LEARNSETS(Wigglytuff),
+        .eggMoveLearnset = sIgglybuffEggMoveLearnset,
     },
 
     [SPECIES_SCREAM_TAIL] =
@@ -3223,6 +3251,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(ScreamTail, 0),
         //.footprint = gMonFootprint_ScreamTail,
         LEARNSETS(ScreamTail),
+        .eggMoveLearnset = sIgglybuffEggMoveLearnset,
     },
 #endif //P_FAMILY_JIGGLYPUFF
 
@@ -3274,6 +3303,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Zubat),
         ICON(Zubat, 2),
         LEARNSETS(Zubat),
+        .eggMoveLearnset = sZubatEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_GOLBAT}),
     },
 
@@ -3324,6 +3354,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Golbat),
         ICON(Golbat, 2),
         LEARNSETS(Golbat),
+        .eggMoveLearnset = sZubatEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_FRIENDSHIP, 0, SPECIES_CROBAT}),
     },
 
@@ -3373,6 +3404,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Crobat),
         ICON(Crobat, 2),
         LEARNSETS(Crobat),
+        .eggMoveLearnset = sZubatEggMoveLearnset,
     },
 #endif //P_GEN_2_CROSS_EVOS
 #endif //P_FAMILY_ZUBAT
@@ -3423,6 +3455,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Oddish),
         ICON(Oddish, 4),
         LEARNSETS(Oddish),
+        .eggMoveLearnset = sOddishEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 21, SPECIES_GLOOM}),
     },
 
@@ -3473,6 +3506,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Gloom),
         ICON(Gloom, 0),
         LEARNSETS(Gloom),
+        .eggMoveLearnset = sOddishEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_VILEPLUME},
                                 {EVO_ITEM, ITEM_SUN_STONE, SPECIES_BELLOSSOM}),
     },
@@ -3524,6 +3558,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Vileplume),
         ICON(Vileplume, 0),
         LEARNSETS(Vileplume),
+        .eggMoveLearnset = sOddishEggMoveLearnset,
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -3572,6 +3607,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Bellossom),
         ICON(Bellossom, 1),
         LEARNSETS(Bellossom),
+        .eggMoveLearnset = sOddishEggMoveLearnset,
     },
 #endif //P_GEN_2_CROSS_EVOS
 #endif //P_FAMILY_ODDISH
@@ -3624,6 +3660,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Paras),
         ICON(Paras, 0),
         LEARNSETS(Paras),
+        .eggMoveLearnset = sParasEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 24, SPECIES_PARASECT}),
     },
 
@@ -3675,6 +3712,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Parasect),
         ICON(Parasect, 0),
         LEARNSETS(Parasect),
+        .eggMoveLearnset = sParasEggMoveLearnset,
     },
 #endif //P_FAMILY_PARAS
 
@@ -3724,6 +3762,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Venonat),
         ICON(Venonat, 2),
         LEARNSETS(Venonat),
+        .eggMoveLearnset = sVenonatEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 31, SPECIES_VENOMOTH}),
     },
 
@@ -3774,6 +3813,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Venomoth),
         ICON(Venomoth, 2),
         LEARNSETS(Venomoth),
+        .eggMoveLearnset = sVenonatEggMoveLearnset,
     },
 #endif //P_FAMILY_VENONAT
 
@@ -3844,6 +3884,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Diglett),
         ICON(Diglett, 2),
         LEARNSETS(Diglett),
+        .eggMoveLearnset = sDiglettEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 26, SPECIES_DUGTRIO}),
     },
 
@@ -3877,6 +3918,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Dugtrio),
         ICON(Dugtrio, 2),
         LEARNSETS(Dugtrio),
+        .eggMoveLearnset = sDiglettEggMoveLearnset,
     },
 
 #if P_ALOLAN_FORMS
@@ -3909,6 +3951,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(DiglettAlolan),
         ICON(DiglettAlolan, 2),
         LEARNSETS(DiglettAlolan),
+        .eggMoveLearnset = sDiglettAlolanEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 26, SPECIES_DUGTRIO_ALOLAN}),
     },
 
@@ -3942,6 +3985,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(DugtrioAlolan),
         ICON(DugtrioAlolan, 2),
         LEARNSETS(DugtrioAlolan),
+        .eggMoveLearnset = sDiglettAlolanEggMoveLearnset,
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_DIGLETT
@@ -4009,6 +4053,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Meowth),
         ICON(Meowth, 1),
         LEARNSETS(Meowth),
+        .eggMoveLearnset = sMeowthEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_PERSIAN}),
     },
 
@@ -4048,6 +4093,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Persian),
         ICON(Persian, 1),
         LEARNSETS(Persian),
+        .eggMoveLearnset = sMeowthEggMoveLearnset,
     },
 
 #if P_ALOLAN_FORMS
@@ -4088,6 +4134,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(MeowthAlolan),
         ICON(MeowthAlolan, 2),
         LEARNSETS(MeowthAlolan),
+        .eggMoveLearnset = sMeowthAlolanEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_FRIENDSHIP, 0, SPECIES_PERSIAN_ALOLAN}),
     },
 
@@ -4126,6 +4173,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(PersianAlolan),
         ICON(PersianAlolan, 2),
         LEARNSETS(PersianAlolan),
+        .eggMoveLearnset = sMeowthAlolanEggMoveLearnset,
     },
 #endif //P_ALOLAN_FORMS
 
@@ -4166,6 +4214,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(MeowthGalarian),
         ICON(MeowthGalarian, 0),
         LEARNSETS(MeowthGalarian),
+        .eggMoveLearnset = sMeowthGalarianEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_PERRSERKER}),
     },
 
@@ -4212,6 +4261,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Perrserker),
         ICON(Perrserker, 2),
         LEARNSETS(Perrserker),
+        .eggMoveLearnset = sMeowthGalarianEggMoveLearnset,
     },
 #endif //P_GALARIAN_FORMS
 
@@ -4251,6 +4301,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(MeowthGigantamax),
         ICON(MeowthGigantamax, 1),
         LEARNSETS(Meowth),
+        .eggMoveLearnset = sMeowthEggMoveLearnset,
         .isGigantamax = TRUE,
     },
 #endif //P_GIGANTAMAX_FORMS
@@ -4301,6 +4352,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Psyduck),
         ICON(Psyduck, 1),
         LEARNSETS(Psyduck),
+        .eggMoveLearnset = sPsyduckEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 33, SPECIES_GOLDUCK}),
     },
 
@@ -4348,6 +4400,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Golduck),
         ICON(Golduck, 0),
         LEARNSETS(Golduck),
+        .eggMoveLearnset = sPsyduckEggMoveLearnset,
     },
 #endif //P_FAMILY_PSYDUCK
 
@@ -4397,6 +4450,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Mankey),
         ICON(Mankey, 1),
         LEARNSETS(Mankey),
+        .eggMoveLearnset = sMankeyEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_PRIMEAPE}),
     },
 
@@ -4444,6 +4498,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Primeape),
         ICON(Primeape, 2),
         LEARNSETS(Primeape),
+        .eggMoveLearnset = sMankeyEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_MOVE, MOVE_RAGE_FIST, SPECIES_ANNIHILAPE}),
     },
 
@@ -4493,6 +4548,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Annihilape, 0),
         //.footprint = gMonFootprint_Annihilape,
         LEARNSETS(Annihilape),
+        .eggMoveLearnset = sMankeyEggMoveLearnset,
     },
 #endif //P_GEN_9_CROSS_EVOS
 #endif //P_FAMILY_MANKEY
@@ -4558,6 +4614,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Growlithe),
         ICON(Growlithe, 3),
         LEARNSETS(Growlithe),
+        .eggMoveLearnset = sGrowlitheEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_FIRE_STONE, SPECIES_ARCANINE}),
     },
 
@@ -4596,6 +4653,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Arcanine),
         ICON(Arcanine, 3),
         LEARNSETS(Arcanine),
+        .eggMoveLearnset = sGrowlitheEggMoveLearnset,
     },
 
 #if P_HISUIAN_FORMS
@@ -4634,6 +4692,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(GrowlitheHisuian),
         ICON(GrowlitheHisuian, 0),
         LEARNSETS(GrowlitheHisuian),
+        .eggMoveLearnset = sGrowlitheHisuianEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_FIRE_STONE, SPECIES_ARCANINE_HISUIAN}),
     },
 
@@ -4671,6 +4730,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(ArcanineHisuian),
         ICON(ArcanineHisuian, 0),
         LEARNSETS(ArcanineHisuian),
+        .eggMoveLearnset = sGrowlitheHisuianEggMoveLearnset,
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_GROWLITHE
@@ -4721,6 +4781,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Poliwag),
         ICON(Poliwag, 0),
         LEARNSETS(Poliwag),
+        .eggMoveLearnset = sPoliwagEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 25, SPECIES_POLIWHIRL}),
     },
 
@@ -4771,6 +4832,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Poliwhirl),
         ICON(Poliwhirl, 0),
         LEARNSETS(Poliwhirl),
+        .eggMoveLearnset = sPoliwagEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_WATER_STONE, SPECIES_POLIWRATH},
                                 {EVO_TRADE_ITEM, ITEM_KINGS_ROCK, SPECIES_POLITOED},
                                 {EVO_ITEM, ITEM_KINGS_ROCK, SPECIES_POLITOED},
@@ -4823,6 +4885,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Poliwrath),
         ICON(Poliwrath, 0),
         LEARNSETS(Poliwrath),
+        .eggMoveLearnset = sPoliwagEggMoveLearnset,
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -4875,6 +4938,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Politoed),
         ICON(Politoed, 1),
         LEARNSETS(Politoed),
+        .eggMoveLearnset = sPoliwagEggMoveLearnset,
     },
 #endif //P_GEN_2_CROSS_EVOS
 
@@ -4927,6 +4991,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Politoed),
         ICON(Politoed, 1),
         LEARNSETS(Polifrog),
+        .eggMoveLearnset = sPoliwagEggMoveLearnset,
     },
 #endif //P_FAMILY_POLIWAG
 
@@ -4976,6 +5041,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Abra),
         ICON(Abra, 2),
         LEARNSETS(Abra),
+        .eggMoveLearnset = sAbraEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_KADABRA}),
     },
 
@@ -5027,6 +5093,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Kadabra),
         ICON(Kadabra, 2),
         LEARNSETS(Kadabra),
+        .eggMoveLearnset = sAbraEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_ALAKAZAM},
                                 {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_ALAKAZAM}),
     },
@@ -5081,6 +5148,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Alakazam),
         ICON(Alakazam, 2),
         LEARNSETS(Alakazam),
+        .eggMoveLearnset = sAbraEggMoveLearnset,
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -5119,6 +5187,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(AlakazamMega),
         ICON(AlakazamMega, 2),
         LEARNSETS(AlakazamMega),
+        .eggMoveLearnset = sAbraEggMoveLearnset,
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_ABRA
@@ -5169,6 +5238,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Machop),
         ICON(Machop, 0),
         LEARNSETS(Machop),
+        .eggMoveLearnset = sMachopEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_MACHOKE}),
     },
 
@@ -5218,6 +5288,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Machoke),
         ICON(Machoke, 2),
         LEARNSETS(Machoke),
+        .eggMoveLearnset = sMachopEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_MACHAMP},
                                 {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_MACHAMP},
                                 {EVO_ITEM, ITEM_MOON_STONE, SPECIES_MACHAMP_GIGANTAMAX}),
@@ -5236,7 +5307,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_GUTS, ABILITY_NO_GUARD, ABILITY_STEADFAST }, \
         .bodyColor = BODY_COLOR_GRAY,                                       \
         .cryId = CRY_MACHAMP,                                               \
-        .categoryName = _("Superpower")
+        .categoryName = _("Superpower"),                                    \
+        .eggMoveLearnset = sMachopEggMoveLearnset
 
     [SPECIES_MACHAMP] =
     {
@@ -5356,6 +5428,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Bellsprout),
         ICON(Bellsprout, 1),
         LEARNSETS(Bellsprout),
+        .eggMoveLearnset = sBellsproutEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 21, SPECIES_WEEPINBELL}),
     },
 
@@ -5404,6 +5477,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Weepinbell),
         ICON(Weepinbell, 1),
         LEARNSETS(Weepinbell),
+        .eggMoveLearnset = sBellsproutEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_VICTREEBEL},
                                 {EVO_ITEM, ITEM_SUN_STONE, SPECIES_PITCHTREEBEL}),
     },
@@ -5452,6 +5526,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Victreebel),
         ICON(Victreebel, 1),
         LEARNSETS(Victreebel),
+        .eggMoveLearnset = sBellsproutEggMoveLearnset,
     },
 
     [SPECIES_PITCHTREEBEL] =
@@ -5498,6 +5573,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Bellsprout),
         ICON(Bellsprout, 1),
         LEARNSETS(Pitchtreebel),
+        .eggMoveLearnset = sBellsproutEggMoveLearnset,
     },
 #endif //P_FAMILY_BELLSPROUT
 
@@ -5547,6 +5623,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Tentacool),
         ICON(Tentacool, 0),
         LEARNSETS(Tentacool),
+        .eggMoveLearnset = sTentacoolEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_TENTACRUEL}),
     },
 
@@ -5595,14 +5672,16 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Tentacruel),
         ICON(Tentacruel, 0),
         LEARNSETS(Tentacruel),
+        .eggMoveLearnset = sTentacoolEggMoveLearnset,
     },
 #endif //P_FAMILY_TENTACOOL
 
 #if P_FAMILY_GEODUDE
-#define KANTONIAN_GEODUDE_FAMILY_INFO                                       \
-        .types = { TYPE_ROCK, TYPE_GROUND },                                \
-        .itemRare = ITEM_EVERSTONE,                                         \
-        .abilities = { ABILITY_ROCK_HEAD, ABILITY_STURDY, ABILITY_SAND_VEIL }
+#define KANTONIAN_GEODUDE_FAMILY_INFO                                         \
+        .types = { TYPE_ROCK, TYPE_GROUND },                                  \
+        .itemRare = ITEM_EVERSTONE,                                           \
+        .abilities = { ABILITY_ROCK_HEAD, ABILITY_STURDY, ABILITY_SAND_VEIL },\
+        .eggMoveLearnset = sGeodudeEggMoveLearnset
 
 #define GEODUDE_FAMILY_MISC_INFO                                \
         .genderRatio = PERCENT_FEMALE(50),                      \
@@ -5750,7 +5829,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_ALOLAN_FORMS
 #define ALOLAN_GEODUDE_FAMILY_INFO                                              \
         .types = { TYPE_ROCK, TYPE_ELECTRIC },                                  \
-        .abilities = { ABILITY_MAGNET_PULL, ABILITY_STURDY, ABILITY_GALVANIZE }
+        .abilities = { ABILITY_MAGNET_PULL, ABILITY_STURDY, ABILITY_GALVANIZE },\
+        .eggMoveLearnset = sGeodudeAlolanEggMoveLearnset
 
     [SPECIES_GEODUDE_ALOLAN] =
     {
@@ -5860,7 +5940,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #define KANTONIAN_PONYTA_FAMILY_INFO                                                \
         .types = { TYPE_FIRE, TYPE_NORMAL },                                        \
         .abilities = { ABILITY_RUN_AWAY, ABILITY_FLASH_FIRE, ABILITY_FLAME_BODY },  \
-        .bodyColor = BODY_COLOR_YELLOW
+        .bodyColor = BODY_COLOR_YELLOW,                                             \
+        .eggMoveLearnset = sPonytaEggMoveLearnset
 
 #define PONYTA_FAMILY_MISC_INFO                             \
         .genderRatio = PERCENT_FEMALE(50),                  \
@@ -5960,7 +6041,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
 #define GALARIAN_PONYTA_FAMILY_INFO                                                  \
         .abilities = { ABILITY_RUN_AWAY, ABILITY_PASTEL_VEIL, ABILITY_ANTICIPATION },\
-        .bodyColor = BODY_COLOR_WHITE
+        .bodyColor = BODY_COLOR_WHITE,                                               \
+        .eggMoveLearnset = sPonytaGalarianEggMoveLearnset
 
 #if P_GALARIAN_FORMS
     [SPECIES_PONYTA_GALARIAN] =
