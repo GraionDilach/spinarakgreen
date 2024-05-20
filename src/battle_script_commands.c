@@ -16214,7 +16214,7 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
 
 void BS_ItemRestoreHP(void)
 {
-    NATIVE_ARGS(const u8 *alreadyMaxHpInstr);
+    NATIVE_ARGS(const u8 *alreadyMaxHpInstr, const u8 *restoreBattlerInstr);
     u16 healAmount;
     u32 battler = MAX_BATTLERS_COUNT;
     u32 healParam = ItemId_GetEffect(gLastUsedItem)[6];
@@ -16267,7 +16267,7 @@ void BS_ItemRestoreHP(void)
         if (battler != MAX_BATTLERS_COUNT && hp != 0)
         {
             gBattleMoveDamage = -healAmount;
-            gBattlescriptCurrInstr = cmd->nextInstr;
+            gBattlescriptCurrInstr = cmd->restoreBattlerInstr;
         }
         else
         {
@@ -16280,7 +16280,7 @@ void BS_ItemRestoreHP(void)
                 gAbsentBattlerFlags &= ~gBitTable[battler];
                 gBattleCommunication[MULTIUSE_STATE] = TRUE;
             }
-            gBattlescriptCurrInstr = BattleScript_ItemRestoreHP_Party;
+            gBattlescriptCurrInstr = cmd->nextInstr;
         }
     }
 }
