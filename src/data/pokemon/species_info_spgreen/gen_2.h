@@ -48,6 +48,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Chikorita),
         ICON(Chikorita, 1),
         LEARNSETS(Chikorita),
+        .eggMoveLearnset = sChikoritaEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_BAYLEEF}),
     },
 
@@ -96,6 +97,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Bayleef),
         ICON(Bayleef, 1),
         LEARNSETS(Bayleef),
+        .eggMoveLearnset = sChikoritaEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_MEGANIUM}),
     },
 
@@ -146,6 +148,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Meganium),
         ICON(Meganium, 1),
         LEARNSETS(Meganium),
+        .eggMoveLearnset = sChikoritaEggMoveLearnset,
     },
 #endif //P_FAMILY_CHIKORITA
 
@@ -194,6 +197,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Cyndaquil),
         ICON(Cyndaquil, 3),
         LEARNSETS(Cyndaquil),
+        .eggMoveLearnset = sCyndaquilEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 14, SPECIES_QUILAVA}),
     },
 
@@ -242,6 +246,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Quilava),
         ICON(Quilava, 3),
         LEARNSETS(Quilava),
+        .eggMoveLearnset = sCyndaquilEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL_DAY, 36, SPECIES_TYPHLOSION},
                                 {EVO_LEVEL_NIGHT, 36, SPECIES_TYPHLOSION_HISUIAN}),
     },
@@ -256,7 +261,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .growthRate = GROWTH_550,                                       \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },              \
         .bodyColor = BODY_COLOR_YELLOW,                                 \
-        .cryId = CRY_TYPHLOSION
+        .cryId = CRY_TYPHLOSION,                                        \
+        .eggMoveLearnset = sCyndaquilEggMoveLearnset
 
     [SPECIES_TYPHLOSION] =
     {
@@ -381,6 +387,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Totodile),
         ICON(Totodile, 0),
         LEARNSETS(Totodile),
+        .eggMoveLearnset = sTotodileEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_CROCONAW}),
     },
 
@@ -430,6 +437,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Croconaw),
         ICON(Croconaw, 0),
         LEARNSETS(Croconaw),
+        .eggMoveLearnset = sTotodileEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_FERALIGATR}),
     },
 
@@ -479,6 +487,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Feraligatr),
         ICON(Feraligatr, 0),
         LEARNSETS(Feraligatr),
+        .eggMoveLearnset = sTotodileEggMoveLearnset,
     },
 #endif //P_FAMILY_TOTODILE
 
@@ -527,6 +536,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Sentret),
         ICON(Sentret, 2),
         LEARNSETS(Sentret),
+        .eggMoveLearnset = sSentretEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 15, SPECIES_FURRET}),
     },
 
@@ -574,6 +584,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Furret),
         ICON(Furret, 2),
         LEARNSETS(Furret),
+        .eggMoveLearnset = sSentretEggMoveLearnset,
     },
 #endif //P_FAMILY_SENTRET
 
