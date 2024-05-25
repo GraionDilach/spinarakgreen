@@ -4045,6 +4045,21 @@ static const u16 sTynamoEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sBombiraEggMoveLearnset[] = {
+    MOVE_CURSE,
+    MOVE_DUAL_WINGBEAT,
+    MOVE_FEATHER_DANCE,
+    MOVE_LEER,
+    MOVE_MEMENTO,
+    MOVE_PARTING_SHOT,
+    MOVE_PECK,
+    MOVE_PLUCK,
+    MOVE_POWER_TRIP,
+    MOVE_ROCK_THROW,
+    MOVE_WING_ATTACK,
+    MOVE_UNAVAILABLE,
+};
+
 static const u16 sBurmyEggMoveLearnset[] = {
     MOVE_BUG_BITE,
     MOVE_STRING_SHOT,
