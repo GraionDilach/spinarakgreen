@@ -6545,6 +6545,29 @@ static const u16 sChinglingEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sCresseliaEggMoveLearnset[] = {
+    MOVE_AURORA_BEAM,
+    MOVE_CAPTIVATE,
+    MOVE_CONFUSE_RAY,
+    MOVE_CONFUSION,
+    MOVE_EXPANDING_FORCE,
+    MOVE_GUARD_SWAP,
+    MOVE_HELPING_HAND,
+    MOVE_MIST,
+    MOVE_MOONBLAST,
+    MOVE_MOONLIGHT,
+    MOVE_POWER_SHIFT,
+    MOVE_POWER_SWAP,
+    MOVE_PSYBEAM,
+    MOVE_PSYCHIC_TERRAIN,
+    MOVE_PSYCHO_CUT,
+    MOVE_PSYCHO_SHIFT,
+    MOVE_RECOVER,
+    MOVE_SLASH,
+    MOVE_TELEKINESIS,
+    MOVE_UNAVAILABLE,
+};
+
 static const u16 sHatennaEggMoveLearnset[] = {
     MOVE_AFTER_YOU,
     MOVE_AROMATHERAPY,
