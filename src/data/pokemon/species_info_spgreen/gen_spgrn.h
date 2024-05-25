@@ -52,6 +52,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         //ICON_FEMALE(QuestionMark, 1),
         //.footprint = gMonFootprint_None,
         LEARNSETS(Flabear),
+        .eggMoveLearnset = sFlabearEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_VOLBEAR}),
     },
 
@@ -103,6 +104,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Volbear),
+        .eggMoveLearnset = sFlabearEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_DYNABEAR}),
     },
 
@@ -154,6 +156,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Dynabear),
+        .eggMoveLearnset = sFlabearEggMoveLearnset,
     },
 
     [SPECIES_CRUISEAL] =
@@ -204,6 +207,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Cruiseal),
+        .eggMoveLearnset = sCruisealEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_MARICE}),
     },
 
@@ -255,6 +259,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Marice),
+        .eggMoveLearnset = sCruisealEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_LAKENESS}),
     },
 
@@ -306,6 +311,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Lakeness),
+        .eggMoveLearnset = sCruisealEggMoveLearnset,
     },
 
     [SPECIES_KOTORA] =
@@ -356,6 +362,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Kotora),
+        .eggMoveLearnset = sKotoraEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_RAITORA}),
     },
 
@@ -407,6 +414,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Raitora),
+        .eggMoveLearnset = sKotoraEggMoveLearnset,
     },
 
     [SPECIES_VOONAIL] =
@@ -457,6 +465,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Voonail),
+        .eggMoveLearnset = sVoonailEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_KYONPAN}),
     },
 
@@ -508,6 +517,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Kyonpan),
+        .eggMoveLearnset = sVoonailEggMoveLearnset,
     },
 
     [SPECIES_LIONBOMB] =
@@ -558,6 +568,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Lionbomb),
+        .eggMoveLearnset = sLionbombEggMoveLearnset,
     },
 
     [SPECIES_RINRING] =
@@ -608,6 +619,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Rinring),
+        .eggMoveLearnset = sRinringEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_BELLRUN}),
     },
 
@@ -659,6 +671,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Bellrun),
+        .eggMoveLearnset = sRinringEggMoveLearnset,
     },
 
     [SPECIES_RIBBIRABB] =
@@ -709,6 +722,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Ribbirabb),
+        .eggMoveLearnset = sRibbirabbEggMoveLearnset,
     },
 
     [SPECIES_WOLFMAN] =
@@ -759,6 +773,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Wolfman),
+        .eggMoveLearnset = sWolfmanEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_WARWOLF}),
     },
 
@@ -810,6 +825,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Warwolf),
+        .eggMoveLearnset = sWolfmanEggMoveLearnset,
     },
 
     [SPECIES_KAZUFROG] =
@@ -860,6 +876,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Kazufrog),
+        .eggMoveLearnset = sKazufrogEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 39, SPECIES_TOADRYU}),
     },
 
@@ -911,6 +928,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Toadryu),
+        .eggMoveLearnset = sKazufrogEggMoveLearnset,
     },
 
     [SPECIES_SICKLEASEL] =
@@ -961,6 +979,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Sickleasel),
+        .eggMoveLearnset = sSickleaselEggMoveLearnset,
     },
 
     [SPECIES_LIMANBO] =
@@ -1011,6 +1030,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Limanbo),
+        .eggMoveLearnset = sLimanboEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_BIMANBO}),
     },
 
@@ -1062,6 +1082,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Bimanbo),
+        .eggMoveLearnset = sLimanboEggMoveLearnset,
     },
 
     [SPECIES_NOKOCHI] =
@@ -1112,6 +1133,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Nokochi),
+        .eggMoveLearnset = sNokochiEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 33, SPECIES_ANKOCHI}),
     },
 
@@ -1163,6 +1185,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Ankochi),
+        .eggMoveLearnset = sNokochiEggMoveLearnset,
     },
 
     [SPECIES_MODELION] =
@@ -1213,6 +1236,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Modelion),
+        .eggMoveLearnset = sModelionEggMoveLearnset,
     },
 
     [SPECIES_SHADRAKE] =
@@ -1263,6 +1287,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Shadrake),
+        .eggMoveLearnset = sShadrakeEggMoveLearnset,
     },
 
     [SPECIES_JAGG] =
@@ -1313,6 +1338,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Jagg),
+        .eggMoveLearnset = sJaggEggMoveLearnset,
     },
 
     [SPECIES_IKARI] =
@@ -1363,6 +1389,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Ikari),
+        .eggMoveLearnset = sIkariEggMoveLearnset,
     },
 
     [SPECIES_HANAMOGURA] =
@@ -1413,6 +1440,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Hanamogura),
+        .eggMoveLearnset = sHanamoguraEggMoveLearnset,
     },
 
     [SPECIES_LEVIRAY] =
@@ -1463,6 +1491,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Leviray),
+        .eggMoveLearnset = sLevirayEggMoveLearnset,
     },
 
     [SPECIES_TUSKRUSH] =
@@ -1513,6 +1542,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Tuskrush),
+        .eggMoveLearnset = sTuskrushEggMoveLearnset,
     },
 
     [SPECIES_BUU] =
@@ -1563,6 +1593,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Buu),
+        .eggMoveLearnset = sBuuEggMoveLearnset,
     },
 
     [SPECIES_CACTORMUS] =
@@ -1613,6 +1644,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Cactormus),
+        .eggMoveLearnset = sCactormusEggMoveLearnset,
     },
 
     [SPECIES_BLOTTLE] =
@@ -1663,6 +1695,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Blottle),
+        .eggMoveLearnset = sBlottleEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_PENDRAKEN}),
     },
 
@@ -1714,6 +1747,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Pendraken),
+        .eggMoveLearnset = sBlottleEggMoveLearnset,
     },
 
     /*
@@ -1765,6 +1799,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Cheep),
+        .eggMoveLearnset = sCheepEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_JABETTA}),
     },
 
@@ -1816,6 +1851,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Jabetta),
+        .eggMoveLearnset = sCheepEggMoveLearnset,
     },
     */
 
@@ -1867,6 +1903,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Ramoose),
+        .eggMoveLearnset = sRamooseEggMoveLearnset,
     },
 
     [SPECIES_GORILLAIMO] =
@@ -1917,6 +1954,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         ICON(QuestionMark, 0),
         //ICON_FEMALE(QuestionMark, 1),
         LEARNSETS(Gorillaimo),
+        .eggMoveLearnset = sGorillaimoEggMoveLearnset,
     },
 
     [SPECIES_FLAMEPAW] =
@@ -1965,6 +2003,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         PALETTES(Entei),
         ICON(Entei, 2),
         LEARNSETS(Flamepaw),
+        // .eggMoveLearnset = sFlamepawEggMoveLearnset,
     },
 
     [SPECIES_RUFFMIST] =
@@ -2013,6 +2052,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         PALETTES(Suicune),
         ICON(Suicune, 2),
         LEARNSETS(Ruffmist),
+        // .eggMoveLearnset = sRuffmistEggMoveLearnset,
     },
 
     [SPECIES_SPARKMANE] =
@@ -2061,6 +2101,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         PALETTES(Raikou),
         ICON(Raikou, 2),
         LEARNSETS(Sparkmane),
+        // .eggMoveLearnset = sSparkmaneEggMoveLearnset,
     },
 
     [SPECIES_PETALOUND] =
@@ -2109,6 +2150,7 @@ const struct SpeciesInfo gSpeciesInfoGenSpGreen[] =
         PALETTES(Leafeon),
         ICON(Leafeon, 1),
         LEARNSETS(Petalound),
+        // .eggMoveLearnset = sPetaloundEggMoveLearnset,
     },
 
     /*
