@@ -4475,6 +4475,13 @@ static const u16 sSkittyEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sMeltanEggMoveLearnset[] = {
+    MOVE_ACID_ARMOR,
+    MOVE_HARDEN,
+    MOVE_TAIL_WHIP,
+    MOVE_UNAVAILABLE,
+};
+
 static const u16 sTreeckoEggMoveLearnset[] = {
     MOVE_ABSORB,
     MOVE_ASSURANCE,
@@ -6688,6 +6695,35 @@ static const u16 sPhantumpEggMoveLearnset[] = {
     MOVE_TELEKINESIS,
     MOVE_VENOM_DRENCH,
     MOVE_WOOD_HAMMER,
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sMagearnaEggMoveLearnset[] = {
+    MOVE_AFTER_YOU,
+    MOVE_AURORA_BEAM,
+    MOVE_CONFUSE_RAY,
+    MOVE_CRAFTY_SHIELD,
+    MOVE_DISARMING_VOICE,
+    MOVE_GUARD_SWAP,
+    MOVE_HEAL_BELL,
+    MOVE_HELPING_HAND,
+    MOVE_ICE_SPINNER,
+    MOVE_IMPRISON,
+    MOVE_LAST_RESORT,
+    MOVE_LOCK_ON,
+    MOVE_LUCKY_CHANT,
+    MOVE_MAGNET_RISE,
+    MOVE_METAL_SOUND,
+    MOVE_MIND_READER,
+    MOVE_MISTY_TERRAIN,
+    MOVE_POWER_SWAP,
+    MOVE_PSYBEAM,
+    MOVE_SNOWSCAPE,
+    MOVE_SONIC_BOOM,
+    MOVE_SPEED_SWAP,
+    MOVE_STEEL_ROLLER,
+    MOVE_SYNCHRONOISE,
+    MOVE_TRUMP_CARD,
     MOVE_UNAVAILABLE,
 };
 
