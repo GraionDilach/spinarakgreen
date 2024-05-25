@@ -48,6 +48,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Chespin),
         ICON(Chespin, 1),
         LEARNSETS(Chespin),
+        .eggMoveLearnset = sChespinEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_QUILLADIN}),
     },
 
@@ -95,6 +96,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Quilladin),
         ICON(Quilladin, 1),
         LEARNSETS(Quilladin),
+        .eggMoveLearnset = sChespinEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_CHESNAUGHT}),
     },
 
@@ -142,6 +144,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Chesnaught),
         ICON(Chesnaught, 1),
         LEARNSETS(Chesnaught),
+        .eggMoveLearnset = sChespinEggMoveLearnset,
     },
 #endif //P_FAMILY_CHESPIN
 
@@ -190,6 +193,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Fennekin),
         ICON(Fennekin, 0),
         LEARNSETS(Fennekin),
+        .eggMoveLearnset = sFennekinEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_BRAIXEN}),
     },
 
@@ -237,6 +241,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Braixen),
         ICON(Braixen, 0),
         LEARNSETS(Braixen),
+        .eggMoveLearnset = sFennekinEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_DELPHOX}),
     },
 
@@ -284,6 +289,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Delphox),
         ICON(Delphox, 0),
         LEARNSETS(Delphox),
+        .eggMoveLearnset = sFennekinEggMoveLearnset,
     },
 #endif //P_FAMILY_FENNEKIN
 
@@ -332,6 +338,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Froakie),
         ICON(Froakie, 0),
         LEARNSETS(Froakie),
+        .eggMoveLearnset = sFroakieEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_FROGADIER}),
     },
 
@@ -379,6 +386,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Frogadier),
         ICON(Frogadier, 0),
         LEARNSETS(Frogadier),
+        .eggMoveLearnset = sFroakieEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_GRENINJA}),
     },
 
@@ -419,6 +427,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .trainerScale = 271,                            \
         .trainerOffset = 0,                             \
         LEARNSETS(Greninja),                            \
+        .eggMoveLearnset = sFroakieEggMoveLearnset,     \
         .formSpeciesIdTable = sGreninjaFormSpeciesIdTable
 
     [SPECIES_GRENINJA] =
@@ -520,6 +529,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Bunnelby),
         ICON(Bunnelby, 2),
         LEARNSETS(Bunnelby),
+        .eggMoveLearnset = sBunnelbyEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_DIGGERSBY}),
     },
 
@@ -567,6 +577,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Diggersby),
         ICON(Diggersby, 2),
         LEARNSETS(Diggersby),
+        .eggMoveLearnset = sBunnelbyEggMoveLearnset,
     },
 #endif //P_FAMILY_BUNNELBY
 
@@ -615,6 +626,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Fletchling),
         ICON(Fletchling, 2),
         LEARNSETS(Fletchling),
+        .eggMoveLearnset = sFletchlingEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_FLETCHINDER}),
     },
 
@@ -663,6 +675,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Fletchinder),
         ICON(Fletchinder, 2),
         LEARNSETS(Fletchinder),
+        .eggMoveLearnset = sFletchlingEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_TALONFLAME}),
     },
 
@@ -711,6 +724,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Talonflame),
         ICON(Talonflame, 2),
         LEARNSETS(Talonflame),
+        .eggMoveLearnset = sFletchlingEggMoveLearnset,
     },
 #endif //P_FAMILY_FLETCHLING
 
@@ -759,6 +773,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Scatterbug),
         ICON(Scatterbug, 1),
         LEARNSETS(Scatterbug),
+        .eggMoveLearnset = sScatterbugEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 9, SPECIES_SPEWPA}),
     },
 
@@ -806,6 +821,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Spewpa),
         ICON(Spewpa, 1),
         LEARNSETS(Spewpa),
+        .eggMoveLearnset = sScatterbugEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL_DAY, 12, SPECIES_VIVILLON_OCEAN},
                                 {EVO_LEVEL_NIGHT, 12, SPECIES_VIVILLON_ELEGANT}),
     },
@@ -848,9 +864,10 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         BACK_PIC(Vivillon ##form, 64, 64),                                                  \
         .backPicYOffset = 0,                                                                \
         .backAnimId = BACK_ANIM_CIRCLE_COUNTERCLOCKWISE,                                    \
-        PALETTES(Vivillon ##form),                                                           \
+        PALETTES(Vivillon ##form),                                                          \
         ICON(Vivillon ##form, iconPal),                                                     \
         LEARNSETS(Vivillon),                                                                \
+        .eggMoveLearnset = sScatterbugEggMoveLearnset,                                      \
         .formSpeciesIdTable = sVivillonFormSpeciesIdTable
 
     [SPECIES_VIVILLON_ICY_SNOW] =
@@ -1080,6 +1097,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Litleo),
         ICON(Litleo, 2),
         LEARNSETS(Litleo),
+        .eggMoveLearnset = sLitleoEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_PYROAR}),
     },
 
@@ -1130,6 +1148,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         ICON(Pyroar, 2),
         ICON_FEMALE(Pyroar, 2),
         LEARNSETS(Pyroar),
+        .eggMoveLearnset = sLitleoEggMoveLearnset,
     },
 #endif //P_FAMILY_LITLEO
 
@@ -1173,6 +1192,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Flabebe##Form##Flower),                                        \
         ICON(Flabebe##Form##Flower, iconPal),                                   \
         LEARNSETS(Flabebe),                                                     \
+        .eggMoveLearnset = sFlabebeEggMoveLearnset,                             \
         .formSpeciesIdTable = sFlabebeFormSpeciesIdTable,                       \
         .evolutions = EVOLUTION({EVO_LEVEL, 19, SPECIES_FLOETTE_ ##FORM##_FLOWER})
 
@@ -1241,8 +1261,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .frontAnimFrames = sAnims_Floette,                                      \
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,                                     \
         .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,                              \
-        PALETTES(Floette ##form##Flower),                                        \
-        ICON(Floette##form##Flower, iconPal)
+        PALETTES(Floette ##form##Flower),                                       \
+        ICON(Floette##form##Flower, iconPal),                                   \
+        .eggMoveLearnset = sFlabebeEggMoveLearnset
 
 #define FLOETTE_NORMAL_INFO(form, FORM, iconPal)                                                \
         .baseHP        = 54,                                                                    \
@@ -1375,9 +1396,10 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         BACK_PIC(Florges, 64, 48),                                              \
         .backPicYOffset = 9,                                                    \
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,                            \
-        PALETTES(Florges##Form##Flower),                                         \
+        PALETTES(Florges##Form##Flower),                                        \
         ICON(Florges##Form##Flower, iconPal),                                   \
         LEARNSETS(Florges),                                                     \
+        .eggMoveLearnset = sFlabebeEggMoveLearnset,                             \
         .formSpeciesIdTable = sFlorgesFormSpeciesIdTable
 
     [SPECIES_FLORGES_RED_FLOWER] =
@@ -1471,6 +1493,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Skiddo),
         ICON(Skiddo, 1),
         LEARNSETS(Skiddo),
+        .eggMoveLearnset = sSkiddoEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_GOGOAT}),
     },
 
@@ -1518,6 +1541,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Gogoat),
         ICON(Gogoat, 1),
         LEARNSETS(Gogoat),
+        .eggMoveLearnset = sSkiddoEggMoveLearnset,
     },
 #endif //P_FAMILY_SKIDDO
 
@@ -1567,6 +1591,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Pancham),
         ICON(Pancham, 1),
         LEARNSETS(Pancham),
+        .eggMoveLearnset = sPanchamEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL_DARK_TYPE_MON_IN_PARTY, 32, SPECIES_PANGORO}),
     },
 
@@ -1615,6 +1640,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Pangoro),
         ICON(Pangoro, 1),
         LEARNSETS(Pangoro),
+        .eggMoveLearnset = sPanchamEggMoveLearnset,
     },
 #endif //P_FAMILY_PANCHAM
 
@@ -1652,6 +1678,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .frontAnimId = ANIM_H_SLIDE,                        \
         .backAnimId = BACK_ANIM_V_STRETCH,                  \
         LEARNSETS(Furfrou),                                 \
+        .eggMoveLearnset = sFurfrouEggMoveLearnset,         \
         .formSpeciesIdTable = sFurfrouFormSpeciesIdTable
 
     [SPECIES_FURFROU_NATURAL] =
@@ -1802,6 +1829,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Espurr),
         ICON(Espurr, 2),
         LEARNSETS(Espurr),
+        .eggMoveLearnset = sEspurrEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL_MALE, 25, SPECIES_MEOWSTIC_MALE},
                                 {EVO_LEVEL_FEMALE, 25, SPECIES_MEOWSTIC_FEMALE}),
     },
@@ -1835,6 +1863,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .frontAnimId = ANIM_GROW_VIBRATE,                   \
         .backPicYOffset = 9,                                \
         .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,          \
+        .eggMoveLearnset = sEspurrEggMoveLearnset,          \
         .formSpeciesIdTable = sMeowsticFormSpeciesIdTable
 
     [SPECIES_MEOWSTIC_MALE] =
@@ -1922,6 +1951,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Honedge),
         ICON(Honedge, 2),
         LEARNSETS(Honedge),
+        .eggMoveLearnset = sHonedgeEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_DOUBLADE}),
     },
 
@@ -1970,6 +2000,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Doublade),
         ICON(Doublade, 2),
         LEARNSETS(Doublade),
+        .eggMoveLearnset = sHonedgeEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_DUSK_STONE, SPECIES_AEGISLASH_SHIELD}),
     },
 
@@ -1995,6 +2026,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .trainerScale = 290,                                    \
         .trainerOffset = 1,                                     \
         LEARNSETS(Aegislash),                                   \
+        .eggMoveLearnset = sHonedgeEggMoveLearnset,             \
         .formSpeciesIdTable = sAegislashFormSpeciesIdTable,     \
         .formChangeTable = sAegislashFormChangeTable
 
@@ -2103,6 +2135,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Spritzee),
         ICON(Spritzee, 0),
         LEARNSETS(Spritzee),
+        .eggMoveLearnset = sSpritzeeEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_TRADE_ITEM, ITEM_SACHET, SPECIES_AROMATISSE},
                                 {EVO_ITEM, ITEM_SACHET, SPECIES_AROMATISSE}),
     },
@@ -2151,6 +2184,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Aromatisse),
         ICON(Aromatisse, 0),
         LEARNSETS(Aromatisse),
+        .eggMoveLearnset = sSpritzeeEggMoveLearnset,
     },
 #endif //P_FAMILY_SPRITZEE
 
@@ -2199,6 +2233,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Swirlix),
         ICON(Swirlix, 1),
         LEARNSETS(Swirlix),
+        .eggMoveLearnset = sSwirlixEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_TRADE_ITEM, ITEM_WHIPPED_DREAM, SPECIES_SLURPUFF},
                                 {EVO_ITEM, ITEM_WHIPPED_DREAM, SPECIES_SLURPUFF}),
     },
@@ -2247,6 +2282,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Slurpuff),
         ICON(Slurpuff, 1),
         LEARNSETS(Slurpuff),
+        .eggMoveLearnset = sSwirlixEggMoveLearnset,
     },
 #endif //P_FAMILY_SWIRLIX
 
@@ -2296,6 +2332,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Inkay),
         ICON(Inkay, 0),
         LEARNSETS(Inkay),
+        .eggMoveLearnset = sInkayEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_MALAMAR}),
     },
 
@@ -2343,6 +2380,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Malamar),
         ICON(Malamar, 2),
         LEARNSETS(Malamar),
+        .eggMoveLearnset = sInkayEggMoveLearnset,
     },
 #endif //P_FAMILY_INKAY
 
@@ -2391,6 +2429,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Binacle),
         ICON(Binacle, 2),
         LEARNSETS(Binacle),
+        .eggMoveLearnset = sBinacleEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 39, SPECIES_BARBARACLE}),
     },
 
@@ -2439,6 +2478,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Barbaracle),
         ICON(Barbaracle, 2),
         LEARNSETS(Barbaracle),
+        .eggMoveLearnset = sBinacleEggMoveLearnset,
     },
 #endif //P_FAMILY_BINACLE
 
@@ -2487,6 +2527,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Skrelp),
         ICON(Skrelp, 2),
         LEARNSETS(Skrelp),
+        .eggMoveLearnset = sSkrelpEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 48, SPECIES_DRAGALGE}),
     },
 
@@ -2534,6 +2575,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Dragalge),
         ICON(Dragalge, 5),
         LEARNSETS(Dragalge),
+        .eggMoveLearnset = sSkrelpEggMoveLearnset,
     },
 #endif //P_FAMILY_SKRELP
 
@@ -2583,6 +2625,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Clauncher),
         ICON(Clauncher, 0),
         LEARNSETS(Clauncher),
+        .eggMoveLearnset = sClauncherEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_CLAWITZER}),
     },
 
@@ -2631,6 +2674,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Clawitzer),
         ICON(Clawitzer, 0),
         LEARNSETS(Clawitzer),
+        .eggMoveLearnset = sClauncherEggMoveLearnset,
     },
 #endif //P_FAMILY_CLAUNCHER
 
@@ -2679,6 +2723,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Helioptile),
         ICON(Helioptile, 2),
         LEARNSETS(Helioptile),
+        .eggMoveLearnset = sHelioptileEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_SUN_STONE, SPECIES_HELIOLISK}),
     },
 
@@ -2727,6 +2772,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Heliolisk),
         ICON(Heliolisk, 2),
         LEARNSETS(Heliolisk),
+        .eggMoveLearnset = sHelioptileEggMoveLearnset,
     },
 #endif //P_FAMILY_HELIOPTILE
 
@@ -2775,6 +2821,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Tyrunt),
         ICON(Tyrunt, 2),
         LEARNSETS(Tyrunt),
+        .eggMoveLearnset = sTyruntEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL_DAY, 39, SPECIES_TYRANTRUM}),
     },
 
@@ -2822,6 +2869,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Tyrantrum),
         ICON(Tyrantrum, 0),
         LEARNSETS(Tyrantrum),
+        .eggMoveLearnset = sTyruntEggMoveLearnset,
     },
 #endif //P_FAMILY_TYRUNT
 
@@ -2870,6 +2918,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Amaura),
         ICON(Amaura, 0),
         LEARNSETS(Amaura),
+        .eggMoveLearnset = sAmauraEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL_NIGHT, 39, SPECIES_AURORUS}),
     },
 
@@ -2917,6 +2966,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Aurorus),
         ICON(Aurorus, 0),
         LEARNSETS(Aurorus),
+        .eggMoveLearnset = sAmauraEggMoveLearnset,
     },
 #endif //P_FAMILY_AMAURA
 
@@ -2966,6 +3016,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Hawlucha),
         ICON(Hawlucha, 0),
         LEARNSETS(Hawlucha),
+        .eggMoveLearnset = sHawluchaEggMoveLearnset,
     },
 #endif //P_FAMILY_HAWLUCHA
 
@@ -3014,6 +3065,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Dedenne),
         ICON(Dedenne, 0),
         LEARNSETS(Dedenne),
+        .eggMoveLearnset = sDedenneEggMoveLearnset,
     },
 #endif //P_FAMILY_DEDENNE
 
@@ -3064,6 +3116,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Carbink),
         ICON(Carbink, 2),
         LEARNSETS(Carbink),
+        .eggMoveLearnset = sCarbinkEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_MOVE, MOVE_POWER_GEM, SPECIES_DIANCIE}),
     },
 #endif //P_FAMILY_CARBINK
@@ -3114,6 +3167,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Goomy),
         ICON(Goomy, 5),
         LEARNSETS(Goomy),
+        .eggMoveLearnset = sGoomyEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_SLIGGOO},
                                 {EVO_NONE, 0, SPECIES_SLIGGOO_HISUIAN}),
     },
@@ -3132,6 +3186,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .speciesName = _("Sliggoo"),                            \
         .cryId = CRY_SLIGGOO,                                   \
         .natDexNum = NATIONAL_DEX_SLIGGOO,                      \
+        .eggMoveLearnset = sGoomyEggMoveLearnset,               \
         .formSpeciesIdTable = sSliggooFormSpeciesIdTable
 
     [SPECIES_SLIGGOO] =
@@ -3184,6 +3239,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .speciesName = _("Goodra"),                             \
         .cryId = CRY_GOODRA,                                    \
         .natDexNum = NATIONAL_DEX_GOODRA,                       \
+        .eggMoveLearnset = sGoomyEggMoveLearnset,               \
         .formSpeciesIdTable = sGoodraFormSpeciesIdTable
 
     [SPECIES_GOODRA] =
@@ -3345,6 +3401,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Klefki),
         ICON(Klefki, 0),
         LEARNSETS(Klefki),
+        .eggMoveLearnset = sKlefkiEggMoveLearnset,
     },
 #endif //P_FAMILY_KLEFKI
 
@@ -3394,6 +3451,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Phantump),
         ICON(Phantump, 1),
         LEARNSETS(Phantump),
+        .eggMoveLearnset = sPhantumpEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_TREVENANT},
                                 {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_TREVENANT}),
     },
@@ -3442,6 +3500,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Trevenant),
         ICON(Trevenant, 1),
         LEARNSETS(Trevenant),
+        .eggMoveLearnset = sPhantumpEggMoveLearnset,
     },
 #endif //P_FAMILY_PHANTUMP
 
@@ -3467,6 +3526,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Pumpkaboo),                                                \
         ICON(Pumpkaboo, 2),                                                 \
         LEARNSETS(Pumpkaboo),                                               \
+        .eggMoveLearnset = sPumpkabooEggMoveLearnset,                       \
         .formSpeciesIdTable = sPumpkabooFormSpeciesIdTable
 
     [SPECIES_PUMPKABOO_AVERAGE] =
@@ -3605,6 +3665,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Gourgeist),                                                \
         ICON(Gourgeist, 2),                                                 \
         LEARNSETS(Gourgeist),                                               \
+        .eggMoveLearnset = sPumpkabooEggMoveLearnset,                       \
         .formSpeciesIdTable = sGourgeistFormSpeciesIdTable
 
     [SPECIES_GOURGEIST_AVERAGE] =
@@ -3769,6 +3830,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Bergmite),
         ICON(Bergmite, 0),
         LEARNSETS(Bergmite),
+        .eggMoveLearnset = sBergmiteEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_AVALUGG},
                                 {EVO_NONE, 0, SPECIES_AVALUGG_HISUIAN}),
     },
@@ -3787,6 +3849,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .cryId = CRY_AVALUGG,                           \
         .natDexNum = NATIONAL_DEX_AVALUGG,              \
         .categoryName = _("Iceberg"),                   \
+        .eggMoveLearnset = sBergmiteEggMoveLearnset,    \
         .formSpeciesIdTable = sAvaluggFormSpeciesIdTable
 
     [SPECIES_AVALUGG] =
@@ -3911,6 +3974,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Noibat),
         ICON(Noibat, 2),
         LEARNSETS(Noibat),
+        .eggMoveLearnset = sNoibatEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 48, SPECIES_NOIVERN}),
     },
 
@@ -3962,6 +4026,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Noivern),
         ICON(Noivern, 2),
         LEARNSETS(Noivern),
+        .eggMoveLearnset = sNoibatEggMoveLearnset,
     },
 #endif //P_FAMILY_NOIBAT
 
@@ -4006,6 +4071,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Xerneas##Form),                                                        \
         ICON(Xerneas##Form, 0),                                                         \
         LEARNSETS(Xerneas),                                                             \
+        .eggMoveLearnset = sXerneasEggMoveLearnset,                                     \
         .formSpeciesIdTable = sXerneasFormSpeciesIdTable,                               \
         .formChangeTable = sXerneasFormChangeTable,                                     \
         .isLegendary = TRUE,                                                            \
@@ -4062,6 +4128,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Yveltal),
         ICON(Yveltal, 0),
         LEARNSETS(Yveltal),
+        .eggMoveLearnset = sYveltalEggMoveLearnset,
     },
 #endif //P_FAMILY_YVELTAL
 
@@ -4081,6 +4148,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .natDexNum = NATIONAL_DEX_ZYGARDE,                                              \
         .categoryName = _("Order"),                                                     \
         LEARNSETS(Zygarde),                                                             \
+        .eggMoveLearnset = sZygardeEggMoveLearnset,                                     \
         .formSpeciesIdTable = sZygardeFormSpeciesIdTable,                               \
         .isLegendary = TRUE
 
@@ -4204,7 +4272,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_MINERAL },                            \
         .friendship = STANDARD_FRIENDSHIP,                                              \
         .bodyColor = BODY_COLOR_PINK,                                                   \
-        .categoryName = _("Jewel")
+        .categoryName = _("Jewel"),                                                     \
+        .eggMoveLearnset = sCarbinkEggMoveLearnset
 
     [SPECIES_DIANCIE] =
     {
@@ -4301,6 +4370,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .bodyColor = BODY_COLOR_PURPLE,                                                 \
         .speciesName = _("Hoopa"),                                                      \
         .natDexNum = NATIONAL_DEX_HOOPA,                                                \
+        .eggMoveLearnset = sHoopaConfinedEggMoveLearnset,                               \
         .formSpeciesIdTable = sHoopaFormSpeciesIdTable,                                 \
         .formChangeTable = sHoopaFormChangeTable,                                       \
         .isMythical = TRUE
@@ -4423,6 +4493,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(Volcanion),
         ICON(Volcanion, 0),
         LEARNSETS(Volcanion),
+        .eggMoveLearnset = sVolcanionEggMoveLearnset,
     },
 #endif //P_FAMILY_VOLCANION
 
