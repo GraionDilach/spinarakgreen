@@ -7103,15 +7103,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 
     [SPECIES_GOLURK] =
     {
-        .baseHP        = 89,
+        .baseHP        = 100,
         .baseAttack    = 124,
-        .baseDefense   = 80,
+        .baseDefense   = 90,
         .baseSpeed     = 55,
         .baseSpAttack  = 55,
-        .baseSpDefense = 80,
+        .baseSpDefense = 90,
         .types = { TYPE_GROUND, TYPE_GHOST },
-        .catchRate = 71,
-        .expYield = 234,
+        .catchRate = 59,
+        .expYield = 249,
         .evYield_Attack = 2,
         .itemRare = ITEM_LIGHT_CLAY,
         .genderRatio = MON_GENDERLESS,

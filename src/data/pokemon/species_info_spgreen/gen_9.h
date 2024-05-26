@@ -2924,15 +2924,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 
     [SPECIES_BOMBIRDIER] =
     {
-        .baseHP        = 70,
+        .baseHP        = 85,
         .baseAttack    = 103,
         .baseDefense   = 85,
         .baseSpeed     = 82,
         .baseSpAttack  = 60,
         .baseSpDefense = 85,
         .types = { TYPE_FLYING, TYPE_DARK },
-        .catchRate = 70,
-        .expYield = 235,
+        .catchRate = 64,
+        .expYield = 242,
         .evYield_Attack = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 35,

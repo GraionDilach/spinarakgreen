@@ -3465,7 +3465,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpeed     = 65,
         .baseSpAttack  = 65,
         .baseSpDefense = 40,
-        .types = { TYPE_ELECTRIC, TYPE_ELECTRIC },
+        .types = { TYPE_ELECTRIC, TYPE_NORMAL },
         .catchRate = 156,
         .expYield = 118,
         .evYield_Speed = 1,
@@ -3506,7 +3506,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     },
 
 #define MANECTRIC_MISC_INFO                                 \
-        .types = { TYPE_ELECTRIC, TYPE_ELECTRIC },          \
+        .types = { TYPE_ELECTRIC, TYPE_NORMAL },            \
         .evYield_Speed = 2,                                 \
         .genderRatio = PERCENT_FEMALE(50),                  \
         .eggCycles = 20,                                    \
