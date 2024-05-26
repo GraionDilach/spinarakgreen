@@ -279,7 +279,7 @@
 #define P_FAMILY_CHERUBI                 TRUE
 #define P_FAMILY_SHELLOS                 TRUE
 #define P_FAMILY_DRIFLOON                TRUE
-#define P_FAMILY_BUNEARY                 FALSE
+#define P_FAMILY_BUNEARY                 TRUE
 #define P_FAMILY_GLAMEOW                 FALSE
 #define P_FAMILY_STUNKY                  FALSE
 #define P_FAMILY_BRONZOR                 FALSE
@@ -341,7 +341,7 @@
 #define P_FAMILY_SCRAGGY                 FALSE
 #define P_FAMILY_SIGILYPH                FALSE
 #define P_FAMILY_YAMASK                  FALSE
-#define P_FAMILY_TIRTOUGA                FALSE
+#define P_FAMILY_TIRTOUGA                TRUE
 #define P_FAMILY_ARCHEN                  TRUE
 #define P_FAMILY_TRUBBISH                TRUE
 #define P_FAMILY_ZORUA                   FALSE
@@ -429,7 +429,7 @@
 #define P_FAMILY_HOOPA                   FALSE
 #define P_FAMILY_VOLCANION               FALSE
 
-#define P_FAMILY_ROWLET                  FALSE
+#define P_FAMILY_ROWLET                  TRUE
 #define P_FAMILY_LITTEN                  FALSE
 #define P_FAMILY_POPPLIO                 TRUE
 #define P_FAMILY_PIKIPEK                 FALSE
@@ -521,7 +521,7 @@
 #define P_FAMILY_DRACOVISH               FALSE
 #define P_FAMILY_ARCTOVISH               FALSE
 #define P_FAMILY_DURALUDON               FALSE
-#define P_FAMILY_DREEPY                  FALSE
+#define P_FAMILY_DREEPY                  TRUE
 #define P_FAMILY_ZACIAN                  FALSE
 #define P_FAMILY_ZAMAZENTA               FALSE
 #define P_FAMILY_ETERNATUS               FALSE
@@ -564,8 +564,8 @@
 #define P_FAMILY_VAROOM                  FALSE
 #define P_FAMILY_CYCLIZAR                FALSE
 #define P_FAMILY_ORTHWORM                FALSE
-#define P_FAMILY_GLIMMET                 FALSE
-#define P_FAMILY_GREAVARD                FALSE
+#define P_FAMILY_GLIMMET                 TRUE
+#define P_FAMILY_GREAVARD                TRUE
 #define P_FAMILY_FLAMIGO                 FALSE
 #define P_FAMILY_CETODDLE                FALSE
 #define P_FAMILY_VELUZA                  FALSE
@@ -606,6 +606,6 @@
 #define P_FAMILY_IRON_BOULDER            FALSE
 #define P_FAMILY_IRON_CROWN              FALSE
 #define P_FAMILY_TERAPAGOS               FALSE
-#define P_FAMILY_PECHARUNT               FALSE
+#define P_FAMILY_PECHARUNT               TRUE
 
 #endif // GUARD_CONFIG_SPECIES_ENABLED_H

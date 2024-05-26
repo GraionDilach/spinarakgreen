@@ -13,13 +13,13 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpAttack  = 50,
         .baseSpDefense = 50,
         .types = { TYPE_GRASS, TYPE_FLYING },
-        .catchRate = 45,
-        .expYield = 64,
+        .catchRate = 144,
+        .expYield = 128,
         .evYield_HP = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_SLOW,
+        .growthRate = GROWTH_350,
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_LONG_REACH },
         .bodyColor = BODY_COLOR_BROWN,
@@ -61,13 +61,13 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpAttack  = 70,
         .baseSpDefense = 70,
         .types = { TYPE_GRASS, TYPE_FLYING },
-        .catchRate = 45,
-        .expYield = 147,
+        .catchRate = 97,
+        .expYield = 185,
         .evYield_HP = 2,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_SLOW,
+        .growthRate = GROWTH_450,
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_LONG_REACH },
         .bodyColor = BODY_COLOR_BROWN,
@@ -98,31 +98,28 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         ICON(Dartrix, 1),
         LEARNSETS(Dartrix),
         .eggMoveLearnset = sRowletEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_DECIDUEYE},
-                                {EVO_NONE, 0, SPECIES_DECIDUEYE_HISUIAN}),
+        .evolutions = EVOLUTION({EVO_LEVEL_NIGHT, 34, SPECIES_DECIDUEYE},
+                                {EVO_LEVEL_DAY, 34, SPECIES_DECIDUEYE_HISUIAN}),
     },
 
 #define DECIDUEYE_MISC_INFO                                     \
-        .catchRate = 45,                                        \
-        .expYield = 239,                                        \
+        .catchRate = 42,                                        \
+        .expYield = 303,                                        \
         .evYield_Attack = 3,                                    \
         .genderRatio = PERCENT_FEMALE(12.5),                    \
         .eggCycles = 15,                                        \
         .friendship = STANDARD_FRIENDSHIP,                      \
-        .growthRate = GROWTH_MEDIUM_SLOW,                       \
+        .growthRate = GROWTH_650,                               \
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },    \
         .bodyColor = BODY_COLOR_BROWN,                          \
-        .speciesName = _("Decidueye"),                          \
         .cryId = CRY_DECIDUEYE,                                 \
-        .natDexNum = NATIONAL_DEX_DECIDUEYE,                    \
         .categoryName = _("Arrow Quill"),                       \
         .height = 16,                                           \
         .pokemonScale = 259,                                    \
         .pokemonOffset = 1,                                     \
         .trainerScale = 296,                                    \
         .trainerOffset = 1,                                     \
-        .eggMoveLearnset = sRowletEggMoveLearnset,              \
-        .formSpeciesIdTable = sDecidueyeFormSpeciesIdTable
+        .eggMoveLearnset = sRowletEggMoveLearnset
 
     [SPECIES_DECIDUEYE] =
     {
@@ -130,11 +127,13 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseHP        = 78,
         .baseAttack    = 107,
         .baseDefense   = 75,
-        .baseSpeed     = 70,
+        .baseSpeed     = 110,
         .baseSpAttack  = 100,
         .baseSpDefense = 100,
         .types = { TYPE_GRASS, TYPE_GHOST },
+        .speciesName = _("Decidueye"),
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_LONG_REACH },
+        .natDexNum = NATIONAL_DEX_DECIDUEYE,
         .weight = 366,
         .description = COMPOUND_STRING(
             "Decidueye is cool and cautious.\n"
@@ -160,11 +159,13 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseHP        = 88,
         .baseAttack    = 112,
         .baseDefense   = 80,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 95,
-        .baseSpDefense = 95,
+        .baseSpeed     = 80,
+        .baseSpAttack  = 105,
+        .baseSpDefense = 105,
         .types = { TYPE_GRASS, TYPE_FIGHTING },
+        .speciesName = _("Decidufight"),
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_SCRAPPY },
+        .natDexNum = NATIONAL_DEX_DECIDUEYE_HISUIAN,
         .weight = 370,
         .description = COMPOUND_STRING(
             "The air stored inside the rachises\n"
@@ -181,7 +182,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         PALETTES(DecidueyeHisuian),
         ICON(DecidueyeHisuian, 0),
         LEARNSETS(DecidueyeHisuian),
-        .isHisuianForm = TRUE,
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_ROWLET

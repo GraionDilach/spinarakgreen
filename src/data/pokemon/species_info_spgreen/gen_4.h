@@ -2013,13 +2013,13 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpAttack  = 44,
         .baseSpDefense = 56,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
-        .catchRate = 190,
-        .expYield = 70,
+        .catchRate = 129,
+        .expYield = 152,
         .evYield_Speed = 1,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 0,
-        .growthRate = GROWTH_MEDIUM_FAST,
+        .growthRate = GROWTH_350,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE },
         .abilities = { ABILITY_RUN_AWAY, ABILITY_KLUTZ, ABILITY_LIMBER },
         .bodyColor = BODY_COLOR_BROWN,
@@ -2053,35 +2053,33 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     },
 
 #define LOPUNNY_MISC_INFO                                       \
-        .catchRate = 60,                                        \
         .evYield_Speed = 2,                                     \
         .genderRatio = PERCENT_FEMALE(50),                      \
         .eggCycles = 20,                                        \
         .friendship = 140,                                      \
-        .growthRate = GROWTH_MEDIUM_FAST,                       \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE }, \
         .bodyColor = BODY_COLOR_BROWN,                          \
-        .speciesName = _("Lopunny"),                            \
-        .natDexNum = NATIONAL_DEX_LOPUNNY,                      \
         .categoryName = _("Rabbit"),                            \
         LEARNSETS(Lopunny),                                     \
-        .eggMoveLearnset = sBunearyEggMoveLearnset,             \
-        .formSpeciesIdTable = sLopunnyFormSpeciesIdTable,       \
-        .formChangeTable = sLopunnyFormChangeTable
+        .eggMoveLearnset = sBunearyEggMoveLearnset
 
     [SPECIES_LOPUNNY] =
     {
         LOPUNNY_MISC_INFO,
         .baseHP        = 65,
-        .baseAttack    = 76,
+        .baseAttack    = 96,
         .baseDefense   = 84,
         .baseSpeed     = 105,
         .baseSpAttack  = 54,
         .baseSpDefense = 96,
-        .types = { TYPE_NORMAL, TYPE_NORMAL },
-        .expYield = 168,
+        .types = { TYPE_NORMAL, TYPE_FIGHTING },
+        .catchRate = 64,
+        .expYield = 242,
         .abilities = { ABILITY_CUTE_CHARM, ABILITY_KLUTZ, ABILITY_LIMBER },
+        .speciesName = _("Lopunny"),
+        .natDexNum = NATIONAL_DEX_LOPUNNY,
         .cryId = CRY_LOPUNNY,
+        .growthRate = GROWTH_550,
         .height = 12,
         .weight = 333,
         .description = COMPOUND_STRING(
@@ -2102,22 +2100,27 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         PALETTES(Lopunny),
         ICON(Lopunny, 2),
+        .evolutions = EVOLUTION({EVO_LEVEL, 47, SPECIES_LOPUNNY_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
     [SPECIES_LOPUNNY_MEGA] =
     {
         LOPUNNY_MISC_INFO,
-        .baseHP        = 65,
+        .baseHP        = 85,
         .baseAttack    = 136,
         .baseDefense   = 94,
         .baseSpeed     = 135,
-        .baseSpAttack  = 54,
+        .baseSpAttack  = 74,
         .baseSpDefense = 96,
         .types = { TYPE_NORMAL, TYPE_FIGHTING },
-        .expYield = 203,
+        .catchRate = 29,
+        .expYield = 330,
         .abilities = { ABILITY_SCRAPPY, ABILITY_SCRAPPY, ABILITY_SCRAPPY },
+        .speciesName = _("Lomepunny"),
+        .natDexNum = NATIONAL_DEX_LOPUNNY_MEGA,
         .cryId = CRY_LOPUNNY_MEGA,
+        .growthRate = GROWTH_650,
         .height = 13,
         .weight = 283,
         .description = COMPOUND_STRING(
@@ -2138,7 +2141,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,
         PALETTES(LopunnyMega),
         ICON(LopunnyMega, 2),
-        .isMegaEvolution = TRUE,
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_BUNEARY
