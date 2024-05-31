@@ -477,6 +477,7 @@
 #define B_WIN_VS_OUTCOME_DRAW    21
 #define B_WIN_VS_OUTCOME_LEFT    22
 #define B_WIN_VS_OUTCOME_RIGHT   23
+#define B_WIN_MOVE_DESCRIPTION   24
 
 // declarations for in-battle type-effectiveness
 #define B_WIN_MOVE_TYPE_SUPER_EFFECTIVE          24
