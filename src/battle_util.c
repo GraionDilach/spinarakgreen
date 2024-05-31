@@ -5126,7 +5126,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             }
             else if (effect == 3)
             {
-                gBattlescriptCurrInstr = BattleScript_GoodAsGoldActivates;
+                battleScriptBlocksMove = BattleScript_GoodAsGoldActivates;
             }
             else if (GetChosenMovePriority(gBattlerAttacker) > 0
                   && BlocksPrankster(move, gBattlerAttacker, gBattlerTarget, TRUE)
@@ -10049,7 +10049,7 @@ static inline s32 DoMoveDamageCalcVars(u32 move, u32 battlerAtk, u32 battlerDef,
 
     if (randomFactor)
     {
-        dmg *= 100 - RandomUniform(RNG_DAMAGE_MODIFIER, 0, 15);
+        dmg *= DMG_ROLL_PERCENT_HI - RandomUniform(RNG_DAMAGE_MODIFIER, 0, DMG_ROLL_PERCENT_HI - DMG_ROLL_PERCENT_LO);
         dmg /= 100;
     }
 
@@ -10110,7 +10110,7 @@ static inline s32 DoFutureSightAttackDamageCalcVars(u32 move, u32 battlerAtk, u3
 
     if (randomFactor)
     {
-        dmg *= 100 - RandomUniform(RNG_DAMAGE_MODIFIER, 0, 15);
+        dmg *= DMG_ROLL_PERCENT_HI - RandomUniform(RNG_DAMAGE_MODIFIER, 0, DMG_ROLL_PERCENT_HI - DMG_ROLL_PERCENT_LO);
         dmg /= 100;
     }
 
