@@ -4068,11 +4068,18 @@ static void SetMoveTypeIcons(void)
                      | ((GetMonData(mon, MON_DATA_SPATK_IV) & 1) << 4)
                      | ((GetMonData(mon, MON_DATA_SPDEF_IV) & 1) << 5);
 
-                u8 type = ((NUMBER_OF_MON_TYPES - 3) * typeBits) / 63 + 1;
+                // Subtract 6 instead of 1 below because 5 types are excluded (TYPE_NONE, TYPE_NORMAL, TYPE_MYSTERY, TYPE_FAIRY and TYPE_STELLAR)
+                // The final + 2 skips past TYPE_NONE and Normal.
+                // Graion: changed the 6 to 4, to include TYPE_FAIRY and TYPE_STELLAR
+                u8 type = ((NUMBER_OF_MON_TYPES - 4) * typeBits) / 63 + 2;
                 if (type >= TYPE_MYSTERY)
                     type++;
 
                 SetTypeSpritePosAndPal(type, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
+            }
+            else if (summary->moves[i] == MOVE_TERA_BLAST)
+            {
+                SetTypeSpritePosAndPal(GetMonData(mon, MON_DATA_TERA_TYPE), 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
             }
             else
             {

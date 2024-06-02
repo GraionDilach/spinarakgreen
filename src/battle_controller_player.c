@@ -45,60 +45,6 @@
 #include "menu.h"
 #include "pokemon_summary_screen.h"
 
-#define X UQ_4_12
-#define ______ X(1.0) // Regular effectiveness.
-
-static const uq4_12_t sTypeEffectivenessTable[NUMBER_OF_MON_TYPES][NUMBER_OF_MON_TYPES] =
-{//                   Defender -->
- //  Attacker         Normal  Fighting Flying  Poison  Ground   Rock    Bug     Ghost   Steel  Mystery  Fire   Water   Grass  Electric Psychic   Ice   Dragon   Dark   Fairy  Stellar
-#if B_SPGREEN_TYPE_MATCHUP == GEN_SPGRN
-    [TYPE_NORMAL]   = {______, ______, ______, ______, ______, X(0.5), ______, X(0.0), X(0.5), ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
-    [TYPE_FIGHTING] = {X(2.0), ______, X(0.5), X(0.5), ______, X(2.0), X(0.5), X(0.0), X(2.0), ______, ______, ______, X(0.5), ______, X(0.5), X(2.0), ______, X(2.0), X(0.5), ______},
-    [TYPE_FLYING]   = {______, X(2.0), ______, ______, ______, X(0.5), X(2.0), ______, X(0.5), ______, ______, ______, X(2.0), X(0.5), ______, X(0.5), ______, ______, ______, ______},
-    [TYPE_POISON]   = {______, ______, ______, X(0.5), X(0.5), X(0.5), X(2.0), X(0.5), X(0.0), ______, ______, X(2.0), X(2.0), ______, ______, ______, ______, X(0.5), X(2.0), ______},
-    [TYPE_GROUND]   = {______, ______, X(0.0), X(2.0), ______, X(2.0), X(0.5), ______, X(2.0), ______, X(2.0), ______, X(0.5), X(2.0), ______, X(0.5), ______, ______, ______, ______},
-    [TYPE_ROCK]     = {______, X(0.5), X(2.0), ______, X(0.5), X(0.5), X(2.0), ______, X(0.5), ______, X(2.0), ______, X(0.5), ______, ______, X(2.0), X(2.0), ______, ______, ______},
-    [TYPE_BUG]      = {______, X(0.5), X(0.5), X(2.0), ______, ______, ______, X(2.0), X(0.5), ______, X(0.5), ______, X(2.0), ______, X(2.0), ______, ______, X(2.0), X(0.5), ______},
-    [TYPE_GHOST]    = {X(0.0), ______, ______, ______, ______, ______, X(0.5), X(2.0), X(0.5), ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), X(2.0), ______},
-    [TYPE_STEEL]    = {______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), ______, X(0.5), X(0.5), ______, X(0.5), ______, X(2.0), ______, X(0.5), X(2.0), ______},
-    [TYPE_MYSTERY]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
-    [TYPE_FIRE]     = {______, ______, ______, ______, ______, X(0.5), X(2.0), ______, X(2.0), ______, X(0.5), X(0.5), X(2.0), ______, ______, X(2.0), X(0.5), ______, ______, ______},
-    [TYPE_WATER]    = {______, ______, ______, ______, X(2.0), X(2.0), ______, ______, X(2.0), ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), X(0.5), ______, ______, ______},
-    [TYPE_GRASS]    = {______, ______, X(0.5), X(0.5), X(2.0), X(2.0), X(0.5), ______, X(0.5), ______, X(0.5), X(2.0), X(0.5), ______, ______, X(0.5), X(0.5), ______, ______, ______},
-    [TYPE_ELECTRIC] = {______, ______, X(2.0), ______, X(0.0), ______, ______, ______, X(2.0), ______, ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), ______, ______, ______},
-    [TYPE_PSYCHIC]  = {______, X(2.0), ______, X(2.0), ______, ______, X(0.5), ______, X(0.5), ______, ______, ______, ______, ______, X(0.5), ______, ______, X(0.0), X(2.0), ______},
-    [TYPE_ICE]      = {______, ______, X(2.0), ______, X(2.0), ______, ______, ______, X(0.5), ______, X(2.0), X(0.5), X(2.0), ______, ______, X(0.5), X(2.0), ______, ______, ______},
-    [TYPE_DRAGON]   = {______, ______, ______, ______, ______, X(0.5), ______, ______, X(0.5), ______, X(2.0), X(2.0), X(2.0), X(2.0), ______, X(0.5), X(2.0), X(2.0), X(0.0), ______},
-    [TYPE_DARK]     = {X(0.5), X(0.5), ______, ______, ______, ______, ______, X(2.0), X(0.5), ______, ______, ______, ______, ______, X(2.0), ______, X(0.5), X(0.5), X(2.0), ______},
-    [TYPE_FAIRY]    = {X(0.5), X(2.0), ______, X(0.5), ______, ______, ______, X(0.5), X(0.5), ______, X(0.5), ______, ______, ______, X(0.5), ______, X(2.0), X(2.0), X(0.5), ______},
-#else
-#if B_STEEL_RESISTANCES >= GEN_6
-    [TYPE_GHOST]    = {X(0.0), ______, ______, ______, ______, ______, ______, X(2.0), ______, ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), ______, ______},
-#else
-    [TYPE_GHOST]    = {X(0.0), ______, ______, ______, ______, ______, ______, X(2.0), X(0.5), ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), ______, ______},
-#endif
-    [TYPE_STEEL]    = {______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), ______, X(0.5), X(0.5), ______, X(0.5), ______, X(2.0), ______, ______, X(2.0), ______},
-    [TYPE_MYSTERY]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
-    [TYPE_FIRE]     = {______, ______, ______, ______, ______, X(0.5), X(2.0), ______, X(2.0), ______, X(0.5), X(0.5), X(2.0), ______, ______, X(2.0), X(0.5), ______, ______, ______},
-    [TYPE_WATER]    = {______, ______, ______, ______, X(2.0), X(2.0), ______, ______, ______, ______, X(2.0), X(0.5), X(0.5), ______, ______, ______, X(0.5), ______, ______, ______},
-    [TYPE_GRASS]    = {______, ______, X(0.5), X(0.5), X(2.0), X(2.0), X(0.5), ______, X(0.5), ______, X(0.5), X(2.0), X(0.5), ______, ______, ______, X(0.5), ______, ______, ______},
-    [TYPE_ELECTRIC] = {______, ______, X(2.0), ______, X(0.0), ______, ______, ______, ______, ______, ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), ______, ______, ______},
-    [TYPE_PSYCHIC]  = {______, X(2.0), ______, X(2.0), ______, ______, ______, ______, X(0.5), ______, ______, ______, ______, ______, X(0.5), ______, ______, X(0.0), ______, ______},
-    [TYPE_ICE]      = {______, ______, X(2.0), ______, X(2.0), ______, ______, ______, X(0.5), ______, X(0.5), X(0.5), X(2.0), ______, ______, X(0.5), X(2.0), ______, ______, ______},
-    [TYPE_DRAGON]   = {______, ______, ______, ______, ______, ______, ______, ______, X(0.5), ______, ______, ______, ______, ______, ______, ______, X(2.0), ______, X(0.0), ______},
-#if B_STEEL_RESISTANCES >= GEN_6
-    [TYPE_DARK]     = {______, X(0.5), ______, ______, ______, ______, ______, X(2.0), ______, ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), X(0.5), ______},
-#else
-    [TYPE_DARK]     = {______, X(0.5), ______, ______, ______, ______, ______, X(2.0), X(0.5), ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), X(0.5), ______},
-#endif
-    [TYPE_FAIRY]    = {______, X(2.0), ______, X(0.5), ______, ______, ______, ______, X(0.5), ______, X(0.5), ______, ______, ______, ______, ______, X(2.0), X(2.0), ______, ______},
-#endif
-    [TYPE_STELLAR]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
-};
-
-#undef ______
-#undef X
-
 static void PlayerBufferExecCompleted(u32 battler);
 static void PlayerHandleLoadMonSprite(u32 battler);
 static void PlayerHandleSwitchInAnim(u32 battler);
@@ -1852,34 +1798,34 @@ u8 TypeEffectiveness(struct ChooseMoveStruct *moveInfo, u32 battler, u8 targetId
         if (type != TYPE_MYSTERY)
         {
 
-            mod = sTypeEffectivenessTable[type][gBattleMons[targetId].type1];
+            mod = gTypeEffectivenessTable[type][gBattleMons[targetId].type1];
 
             if (gBattleMons[targetId].type2 != gBattleMons[targetId].type1)
             {
-                u16 mod2 = sTypeEffectivenessTable[type][gBattleMons[targetId].type2];
+                u16 mod2 = gTypeEffectivenessTable[type][gBattleMons[targetId].type2];
                 MulModifier(&mod, mod2);
             }
 
             if (gBattleMons[targetId].type3 != TYPE_MYSTERY)
             {
-                u16 mod3 = sTypeEffectivenessTable[type][gBattleMons[targetId].type3];
+                u16 mod3 = gTypeEffectivenessTable[type][gBattleMons[targetId].type3];
                 MulModifier(&mod, mod3);
             }
 
         }
         else
         {
-            mod = sTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].type1];
+            mod = gTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].type1];
 
             if (gBattleMons[targetId].type2 != gBattleMons[targetId].type1)
             {
-                u16 mod2 = sTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].type2];
+                u16 mod2 = gTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].type2];
                 MulModifier(&mod, mod2);
             }
 
             if (gBattleMons[targetId].type3 != TYPE_MYSTERY)
             {
-                u16 mod3 = sTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].type3];
+                u16 mod3 = gTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].type3];
                 MulModifier(&mod, mod3);
             }
 
@@ -1887,18 +1833,18 @@ u8 TypeEffectiveness(struct ChooseMoveStruct *moveInfo, u32 battler, u8 targetId
 
         if (gMovesInfo[moveID].effect == EFFECT_TWO_TYPED_MOVE)
         {
-            u16 mod4 = sTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].type1];
+            u16 mod4 = gTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].type1];
             MulModifier(&mod, mod4);
 
             if (gBattleMons[targetId].type2 != gBattleMons[targetId].type1)
             {
-                u16 mod5 = sTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].type2];
+                u16 mod5 = gTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].type2];
                 MulModifier(&mod, mod5);
             }
 
             if (gBattleMons[targetId].type3 != TYPE_MYSTERY)
             {
-                u16 mod6 = sTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].type3];
+                u16 mod6 = gTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].type3];
                 MulModifier(&mod, mod6);
             }
         }
@@ -2032,7 +1978,7 @@ static void MoveSelectionDisplayMoveDescription(u32 battler)
     u16 pwr = gMovesInfo[move].power;
     u16 acc = gMovesInfo[move].accuracy;
     u8 cat = gMovesInfo[move].category;
-    
+
     u8 pwr_num[3], acc_num[3];
     u8 cat_desc[7] = _("CAT: ");
     u8 pwr_desc[7] = _("PWR: ");

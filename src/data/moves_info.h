@@ -20969,6 +20969,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = Move_MALIGNANT_CHAIN,
     },
 
     //SpinarakGreen moves
@@ -20990,6 +20991,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             .moveEffect = MOVE_EFFECT_SP_DEF_MINUS_1,
             .chance = 10,
         }),
+        .battleAnimScript = Move_PSYRIPPLE,
     },
 
     [MOVE_COMET_CRASH] =
@@ -21010,7 +21012,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             .moveEffect = MOVE_EFFECT_SP_ATK_MINUS_2,
             .self = TRUE,
         }),
-        .battleAnimScript = Move_MALIGNANT_CHAIN,
+        .battleAnimScript = Move_COMET_CRASH,
     },
 
     // Z-Moves

@@ -14,6 +14,29 @@
 const uq4_12_t gTypeEffectivenessTable[NUMBER_OF_MON_TYPES][NUMBER_OF_MON_TYPES] =
 {//                   Defender -->
  //  Attacker           None   Normal Fighting Flying  Poison  Ground   Rock    Bug     Ghost   Steel  Mystery  Fire   Water   Grass  Electric Psychic   Ice   Dragon   Dark   Fairy   Stellar
+ #if B_SPGREEN_TYPE_MATCHUP == GEN_SPGRN
+    [TYPE_NONE]     = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_NORMAL]   = {______, ______, ______, ______, ______, ______, X(0.5), ______, X(0.0), X(0.5), ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_FIGHTING] = {______, X(2.0), ______, X(0.5), X(0.5), ______, X(2.0), X(0.5), X(0.0), X(2.0), ______, ______, ______, X(0.5), ______, X(0.5), X(2.0), ______, X(2.0), X(0.5), ______},
+    [TYPE_FLYING]   = {______, ______, X(2.0), ______, ______, ______, X(0.5), X(2.0), ______, X(0.5), ______, ______, ______, X(2.0), X(0.5), ______, X(0.5), ______, ______, ______, ______},
+    [TYPE_POISON]   = {______, ______, ______, ______, X(0.5), X(0.5), X(0.5), X(2.0), X(0.5), X(0.0), ______, ______, X(2.0), X(2.0), ______, ______, ______, ______, X(0.5), X(2.0), ______},
+    [TYPE_GROUND]   = {______, ______, ______, X(0.0), X(2.0), ______, X(2.0), X(0.5), ______, X(2.0), ______, X(2.0), ______, X(0.5), X(2.0), ______, X(0.5), ______, ______, ______, ______},
+    [TYPE_ROCK]     = {______, ______, X(0.5), X(2.0), ______, X(0.5), X(0.5), X(2.0), ______, X(0.5), ______, X(2.0), ______, X(0.5), ______, ______, X(2.0), X(2.0), ______, ______, ______},
+    [TYPE_BUG]      = {______, ______, X(0.5), X(0.5), X(2.0), ______, ______, ______, X(2.0), X(0.5), ______, X(0.5), ______, X(2.0), ______, X(2.0), ______, ______, X(2.0), X(0.5), ______},
+    [TYPE_GHOST]    = {______, X(0.0), ______, ______, ______, ______, ______, X(0.5), X(2.0), X(0.5), ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), X(2.0), ______},
+    [TYPE_STEEL]    = {______, ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), ______, X(0.5), X(0.5), ______, X(0.5), ______, X(2.0), ______, X(0.5), X(2.0), ______},
+    [TYPE_MYSTERY]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_FIRE]     = {______, ______, ______, ______, ______, ______, X(0.5), X(2.0), ______, X(2.0), ______, X(0.5), X(0.5), X(2.0), ______, ______, X(2.0), X(0.5), ______, ______, ______},
+    [TYPE_WATER]    = {______, ______, ______, ______, ______, X(2.0), X(2.0), ______, ______, X(2.0), ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), X(0.5), ______, ______, ______},
+    [TYPE_GRASS]    = {______, ______, ______, X(0.5), X(0.5), X(2.0), X(2.0), X(0.5), ______, X(0.5), ______, X(0.5), X(2.0), X(0.5), ______, ______, X(0.5), X(0.5), ______, ______, ______},
+    [TYPE_ELECTRIC] = {______, ______, ______, X(2.0), ______, X(0.0), ______, ______, ______, X(2.0), ______, ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), ______, ______, ______},
+    [TYPE_PSYCHIC]  = {______, ______, X(2.0), ______, X(2.0), ______, ______, X(0.5), ______, X(0.5), ______, ______, ______, ______, ______, X(0.5), ______, ______, X(0.0), X(2.0), ______},
+    [TYPE_ICE]      = {______, ______, ______, X(2.0), ______, X(2.0), ______, ______, ______, X(0.5), ______, X(2.0), X(0.5), X(2.0), ______, ______, X(0.5), X(2.0), ______, ______, ______},
+    [TYPE_DRAGON]   = {______, ______, ______, ______, ______, ______, X(0.5), ______, ______, X(0.5), ______, X(2.0), X(2.0), X(2.0), X(2.0), ______, X(0.5), X(2.0), X(2.0), X(0.0), ______},
+    [TYPE_DARK]     = {______, X(0.5), X(0.5), ______, ______, ______, ______, ______, X(2.0), X(0.5), ______, ______, ______, ______, ______, X(2.0), ______, X(0.5), X(0.5), X(2.0), ______},
+    [TYPE_FAIRY]    = {______, X(0.5), X(2.0), ______, X(0.5), ______, ______, ______, X(0.5), X(0.5), ______, X(0.5), ______, ______, ______, X(0.5), ______, X(2.0), X(2.0), X(0.5), ______},
+    [TYPE_STELLAR]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+#else
     [TYPE_NONE]     = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
     [TYPE_NORMAL]   = {______, ______, ______, ______, ______, ______, X(0.5), ______, X(0.0), X(0.5), ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
     [TYPE_FIGHTING] = {______, X(2.0), ______, X(0.5), X(0.5), ______, X(2.0), X(0.5), X(0.0), X(2.0), ______, ______, ______, ______, ______, X(0.5), X(2.0), ______, X(2.0), X(0.5), ______},
@@ -35,6 +58,7 @@ const uq4_12_t gTypeEffectivenessTable[NUMBER_OF_MON_TYPES][NUMBER_OF_MON_TYPES]
     [TYPE_DARK]     = {______, ______, X(0.5), ______, ______, ______, ______, ______, X(2.0), STL_RS, ______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), X(0.5), ______},
     [TYPE_FAIRY]    = {______, ______, X(2.0), ______, X(0.5), ______, ______, ______, ______, X(0.5), ______, X(0.5), ______, ______, ______, ______, ______, X(2.0), X(2.0), ______, ______},
     [TYPE_STELLAR]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+#endif
 };
 
 #undef ______
@@ -75,7 +99,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.berry = ITEM_CHILAN_BERRY,
         //.gem = ITEM_NORMAL_GEM,
         //.zCrystal = ITEM_NORMALIUM_Z,
-        //.teraShard = ITEM_NORMAL_TERA_SHARD,
+        .teraShard = ITEM_NORMAL_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_NORMAL,
     },
     [TYPE_FIGHTING] =
@@ -94,7 +118,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_FIGHTINIUM_Z,
         //.plate = ITEM_FIST_PLATE,
         //.memory = ITEM_FIGHTING_MEMORY,
-        //.teraShard = ITEM_FIGHTING_TERA_SHARD,
+        .teraShard = ITEM_FIGHTING_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_FIGHTING,
     },
     [TYPE_FLYING] =
@@ -113,7 +137,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_FLYINIUM_Z,
         //.plate = ITEM_SKY_PLATE,
         //.memory = ITEM_FLYING_MEMORY,
-        //.teraShard = ITEM_FLYING_TERA_SHARD,
+        .teraShard = ITEM_FLYING_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_FLYING,
     },
     [TYPE_POISON] =
@@ -132,7 +156,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_POISONIUM_Z,
         //.plate = ITEM_TOXIC_PLATE,
         //.memory = ITEM_POISON_MEMORY,
-        //.teraShard = ITEM_POISON_TERA_SHARD,
+        .teraShard = ITEM_POISON_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_POISON,
     },
     [TYPE_GROUND] =
@@ -151,7 +175,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_GROUNDIUM_Z,
         //.plate = ITEM_EARTH_PLATE,
         //.memory = ITEM_GROUND_MEMORY,
-        //.teraShard = ITEM_GROUND_TERA_SHARD,
+        .teraShard = ITEM_GROUND_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_GROUND,
     },
     [TYPE_ROCK] =
@@ -170,7 +194,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_ROCKIUM_Z,
         //.plate = ITEM_STONE_PLATE,
         //.memory = ITEM_ROCK_MEMORY,
-        //.teraShard = ITEM_ROCK_TERA_SHARD,
+        .teraShard = ITEM_ROCK_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_ROCK,
     },
     [TYPE_BUG] =
@@ -189,7 +213,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_BUGINIUM_Z,
         //.plate = ITEM_INSECT_PLATE,
         //.memory = ITEM_BUG_MEMORY,
-        //.teraShard = ITEM_BUG_TERA_SHARD,
+        .teraShard = ITEM_BUG_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_BUG,
     },
     [TYPE_GHOST] =
@@ -208,7 +232,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_GHOSTIUM_Z,
         //.plate = ITEM_SPOOKY_PLATE,
         //.memory = ITEM_GHOST_MEMORY,
-        //.teraShard = ITEM_GHOST_TERA_SHARD,
+        .teraShard = ITEM_GHOST_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_GHOST,
     },
     [TYPE_STEEL] =
@@ -227,7 +251,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_STEELIUM_Z,
         //.plate = ITEM_IRON_PLATE,
         //.memory = ITEM_STEEL_MEMORY,
-        //.teraShard = ITEM_STEEL_TERA_SHARD,
+        .teraShard = ITEM_STEEL_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_STEEL,
     },
     [TYPE_MYSTERY] =
@@ -237,6 +261,8 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         .palette = 15,
         .teraTypeRGBValue = RGB_WHITE,
         .damageCategory = DAMAGE_CATEGORY_SPECIAL,
+        .paletteTMHM = gItemIconPalette_GhostTMHM,
+        .teraShard = ITEM_STELLAR_TERA_SHARD,
     },
     [TYPE_FIRE] =
     {
@@ -254,7 +280,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_FIRIUM_Z,
         //.plate = ITEM_FLAME_PLATE,
         //.memory = ITEM_FIRE_MEMORY,
-        //.teraShard = ITEM_FIRE_TERA_SHARD,
+        .teraShard = ITEM_FIRE_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_FIRE,
     },
     [TYPE_WATER] =
@@ -273,7 +299,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_WATERIUM_Z,
         //.plate = ITEM_SPLASH_PLATE,
         //.memory = ITEM_WATER_MEMORY,
-        //.teraShard = ITEM_WATER_TERA_SHARD,
+        .teraShard = ITEM_WATER_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_WATER,
     },
     [TYPE_GRASS] =
@@ -292,7 +318,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_GRASSIUM_Z,
         //.plate = ITEM_MEADOW_PLATE,
         //.memory = ITEM_GRASS_MEMORY,
-        //.teraShard = ITEM_GRASS_TERA_SHARD,
+        .teraShard = ITEM_GRASS_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_GRASS,
     },
     [TYPE_ELECTRIC] =
@@ -311,7 +337,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_ELECTRIUM_Z,
         //.plate = ITEM_ZAP_PLATE,
         //.memory = ITEM_ELECTRIC_MEMORY,
-        //.teraShard = ITEM_ELECTRIC_TERA_SHARD,
+        .teraShard = ITEM_ELECTRIC_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_ELECTRIC,
     },
     [TYPE_PSYCHIC] =
@@ -330,7 +356,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_PSYCHIUM_Z,
         //.plate = ITEM_MIND_PLATE,
         //.memory = ITEM_PSYCHIC_MEMORY,
-        //.teraShard = ITEM_PSYCHIC_TERA_SHARD,
+        .teraShard = ITEM_PSYCHIC_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_PSYCHIC,
     },
     [TYPE_ICE] =
@@ -349,7 +375,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_ICIUM_Z,
         //.plate = ITEM_ICICLE_PLATE,
         //.memory = ITEM_ICE_MEMORY,
-        //.teraShard = ITEM_ICE_TERA_SHARD,
+        .teraShard = ITEM_ICE_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_ICE,
     },
     [TYPE_DRAGON] =
@@ -368,7 +394,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_DRAGONIUM_Z,
         //.plate = ITEM_DRACO_PLATE,
         //.memory = ITEM_DRAGON_MEMORY,
-        //.teraShard = ITEM_DRAGON_TERA_SHARD,
+        .teraShard = ITEM_DRAGON_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_DRAGON,
     },
     [TYPE_DARK] =
@@ -387,7 +413,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_DARKINIUM_Z,
         //.plate = ITEM_DREAD_PLATE,
         //.memory = ITEM_DARK_MEMORY,
-        //.teraShard = ITEM_DARK_TERA_SHARD,
+        .teraShard = ITEM_DARK_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_DARK,
     },
     [TYPE_FAIRY] =
@@ -406,7 +432,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.zCrystal = ITEM_FAIRIUM_Z,
         //.plate = ITEM_PIXIE_PLATE,
         //.memory = ITEM_FAIRY_MEMORY,
-        //.teraShard = ITEM_FAIRY_TERA_SHARD,
+        .teraShard = ITEM_FAIRY_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_FAIRY,
     },
     [TYPE_STELLAR] =
@@ -418,6 +444,6 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         .maxMove = MOVE_MAX_STRIKE,
         .teraTypeRGBValue = RGB(10, 18, 27),
         .paletteTMHM = gItemIconPalette_NormalTMHM, // failsafe
-        // .teraShard = ITEM_STELLAR_TERA_SHARD,
+        .teraShard = ITEM_STELLAR_TERA_SHARD,
     },
 };

@@ -19,9 +19,6 @@ gMovesWithQuietBGM::
 	.2byte MOVE_SING, MOVE_PERISH_SONG, MOVE_GRASS_WHISTLE, 0xFFFF
 
 	.align 2
-@@@@ SpinarakGreen
-	.4byte Move_PSYRIPPLE
-	.4byte Move_COMET_CRASH
 gBattleAnims_StatusConditions::
 	.4byte Status_Poison                    @ B_ANIM_STATUS_PSN
 	.4byte Status_Confusion                 @ B_ANIM_STATUS_CONFUSION
@@ -21339,7 +21336,7 @@ Move_PSYCHIC::
 	call UnsetPsychicBg
 	end
 
-Move_PSYRIPPLE:
+Move_PSYRIPPLE::
 	monbg ANIM_DEF_PARTNER
 	setalpha 8, 8
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 10, 1
@@ -27481,7 +27478,7 @@ General_TeraCharge:
 	clearmonbg ANIM_ATK_PARTNER
 	blendoff
 	end
-	
+
 TeraChargeParticles:
 	createsprite gTeraCrystalSpreadSpriteTemplate, ANIM_TARGET, 0, 0, -5, 8
 	createsprite gTeraCrystalSpreadSpriteTemplate, ANIM_TARGET, 0, 1, 5, 9
