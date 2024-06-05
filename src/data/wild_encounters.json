@@ -4438,9 +4438,9 @@
                 "species": "SPECIES_MILOTIC"
               },
               {
-                "min_level": 25,
+                "min_level": 5,
                 "max_level": 30,
-                "species": "SPECIES_MILOTIC"
+                "species": "SPECIES_GOOMY"
               }
             ]
           },
