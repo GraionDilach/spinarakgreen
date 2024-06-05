@@ -7019,6 +7019,20 @@ static const u16 sMarshadowEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sGoomyEggMoveLearnset[] = {
+    MOVE_ABSORB,
+    MOVE_ACID_ARMOR,
+    MOVE_ACID_SPRAY,
+    MOVE_BUBBLE,
+    MOVE_CURSE,
+    MOVE_FLAIL,
+    MOVE_LIFE_DEW,
+    MOVE_POISON_TAIL,
+    MOVE_SKITTER_SMACK,
+    MOVE_WATER_GUN,
+    MOVE_UNAVAILABLE,
+};
+
 static const u16 sBagonEggMoveLearnset[] = {
     MOVE_BITE,
     MOVE_CAPTIVATE,

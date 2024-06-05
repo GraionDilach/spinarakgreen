@@ -416,7 +416,7 @@
 #define P_FAMILY_HAWLUCHA                TRUE
 #define P_FAMILY_DEDENNE                 FALSE
 #define P_FAMILY_CARBINK                 TRUE
-#define P_FAMILY_GOOMY                   FALSE
+#define P_FAMILY_GOOMY                   TRUE
 #define P_FAMILY_KLEFKI                  FALSE
 #define P_FAMILY_PHANTUMP                TRUE
 #define P_FAMILY_PUMPKABOO               FALSE

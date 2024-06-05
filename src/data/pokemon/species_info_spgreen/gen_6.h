@@ -3131,14 +3131,14 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpAttack  = 55,
         .baseSpDefense = 75,
         .types = { TYPE_DRAGON, TYPE_DRAGON },
-        .catchRate = 45,
-        .expYield = 60,
+        .catchRate = 154,
+        .expYield = 120,
         .evYield_SpDefense = 1,
         .itemRare = ITEM_SHED_SHELL,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 40,
         .friendship = 35,
-        .growthRate = GROWTH_SLOW,
+        .growthRate = GROWTH_350,
         .eggGroups = { EGG_GROUP_DRAGON, EGG_GROUP_DRAGON },
         .abilities = { ABILITY_SAP_SIPPER, ABILITY_HYDRATION, ABILITY_GOOEY },
         .bodyColor = BODY_COLOR_PURPLE,
@@ -3169,25 +3169,22 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         LEARNSETS(Goomy),
         .eggMoveLearnset = sGoomyEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_SLIGGOO},
-                                {EVO_NONE, 0, SPECIES_SLIGGOO_HISUIAN}),
+                                {EVO_ITEM, ITEM_WATER_STONE, SPECIES_SLIGGOO_HISUIAN}),
     },
 
 #define SLIGGOO_MISC_INFO                                       \
-        .catchRate = 45,                                        \
-        .expYield = 158,                                        \
+        .catchRate = 83,                                        \
+        .expYield = 219,                                        \
         .evYield_SpDefense = 2,                                 \
         .itemRare = ITEM_SHED_SHELL,                            \
         .genderRatio = PERCENT_FEMALE(50),                      \
         .eggCycles = 40,                                        \
         .friendship = 35,                                       \
-        .growthRate = GROWTH_SLOW,                              \
+        .growthRate = GROWTH_550,                               \
         .eggGroups = { EGG_GROUP_DRAGON, EGG_GROUP_DRAGON },    \
         .bodyColor = BODY_COLOR_PURPLE,                         \
-        .speciesName = _("Sliggoo"),                            \
         .cryId = CRY_SLIGGOO,                                   \
-        .natDexNum = NATIONAL_DEX_SLIGGOO,                      \
-        .eggMoveLearnset = sGoomyEggMoveLearnset,               \
-        .formSpeciesIdTable = sSliggooFormSpeciesIdTable
+        .eggMoveLearnset = sGoomyEggMoveLearnset
 
     [SPECIES_SLIGGOO] =
     {
@@ -3198,9 +3195,11 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseSpeed     = 60,
         .baseSpAttack  = 83,
         .baseSpDefense = 113,
-        .types = { TYPE_DRAGON, TYPE_DRAGON },
+        .types = { TYPE_DRAGON, TYPE_WATER },
         .abilities = { ABILITY_SAP_SIPPER, ABILITY_HYDRATION, ABILITY_GOOEY },
         .categoryName = _("Soft Tissue"),
+        .speciesName = _("Sliggoo"),
+        .natDexNum = NATIONAL_DEX_SLIGGOO,
         .height = 8,
         .weight = 175,
         .description = COMPOUND_STRING(
@@ -3227,32 +3226,31 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
     },
 
 #define GOODRA_MISC_INFO                                        \
-        .catchRate = 45,                                        \
-        .expYield = 270,                                        \
+        .catchRate = 30,                                        \
+        .expYield = 327,                                        \
         .evYield_SpDefense = 3,                                 \
         .genderRatio = PERCENT_FEMALE(50),                      \
         .eggCycles = 40,                                        \
         .friendship = 35,                                       \
-        .growthRate = GROWTH_SLOW,                              \
+        .growthRate = GROWTH_650,                               \
         .eggGroups = { EGG_GROUP_DRAGON, EGG_GROUP_DRAGON },    \
         .bodyColor = BODY_COLOR_PURPLE,                         \
-        .speciesName = _("Goodra"),                             \
         .cryId = CRY_GOODRA,                                    \
-        .natDexNum = NATIONAL_DEX_GOODRA,                       \
-        .eggMoveLearnset = sGoomyEggMoveLearnset,               \
-        .formSpeciesIdTable = sGoodraFormSpeciesIdTable
+        .eggMoveLearnset = sGoomyEggMoveLearnset
 
     [SPECIES_GOODRA] =
     {
         GOODRA_MISC_INFO,
         .baseHP        = 90,
         .baseAttack    = 100,
-        .baseDefense   = 70,
+        .baseDefense   = 85,
         .baseSpeed     = 80,
         .baseSpAttack  = 110,
         .baseSpDefense = 150,
-        .types = { TYPE_DRAGON, TYPE_DRAGON },
+        .types = { TYPE_DRAGON, TYPE_WATER },
         .abilities = { ABILITY_SAP_SIPPER, ABILITY_HYDRATION, ABILITY_GOOEY },
+        .speciesName = _("Goodra"),
+        .natDexNum = NATIONAL_DEX_GOODRA,
         .categoryName = _("Dragon"),
         .height = 20,
         .weight = 1505,
@@ -3290,6 +3288,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .types = { TYPE_DRAGON, TYPE_STEEL },
         .abilities = { ABILITY_SAP_SIPPER, ABILITY_SHELL_ARMOR, ABILITY_GOOEY },
         .categoryName = _("Snail"),
+        .speciesName = _("Slipgoo"),
+        .natDexNum = NATIONAL_DEX_SLIGGOO_HISUIAN,
         .height = 7,
         .weight = 685,
         .description = COMPOUND_STRING(
@@ -3311,7 +3311,6 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(SliggooHisuian),
         ICON(SliggooHisuian, 2),
         LEARNSETS(SliggooHisuian),
-        .isHisuianForm = TRUE,
         .evolutions = EVOLUTION({EVO_LEVEL_RAIN, 50, SPECIES_GOODRA_HISUIAN},
                                 {EVO_LEVEL_FOG, 50, SPECIES_GOODRA_HISUIAN}),
     },
@@ -3320,14 +3319,16 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
     {
         GOODRA_MISC_INFO,
         .baseHP        = 80,
-        .baseAttack    = 100,
-        .baseDefense   = 100,
+        .baseAttack    = 105,
+        .baseDefense   = 110,
         .baseSpeed     = 60,
         .baseSpAttack  = 110,
         .baseSpDefense = 150,
         .types = { TYPE_DRAGON, TYPE_STEEL },
         .abilities = { ABILITY_SAP_SIPPER, ABILITY_SHELL_ARMOR, ABILITY_GOOEY },
         .categoryName = _("Shell Bunker"),
+        .speciesName = _("Goormor"),
+        .natDexNum = NATIONAL_DEX_GOODRA_HISUIAN,
         .height = 17,
         .weight = 3341,
         .description = COMPOUND_STRING(
@@ -3349,7 +3350,6 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         PALETTES(GoodraHisuian),
         ICON(GoodraHisuian, 2),
         LEARNSETS(GoodraHisuian),
-        .isHisuianForm = TRUE,
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_GOOMY
