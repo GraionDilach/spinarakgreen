@@ -22,6 +22,8 @@
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 7
         .doubleBattle = FALSE,
+// #line AUTO-GENERATED
+        .dynamicLevelRatio = 80,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
