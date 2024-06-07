@@ -5692,7 +5692,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         #endif
         .accuracy = 0,
         .pp = 5,
-        .target = MOVE_TARGET_USER | MOVE_TARGET_ALLY,
+        .target = MOVE_TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
         .zMove = { .effect = Z_EFFECT_RECOVER_HP },
@@ -8166,7 +8166,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .type = TYPE_GRASS,
         .accuracy = 0,
         .pp = 5,
-        .target = MOVE_TARGET_USER | MOVE_TARGET_ALLY,
+        .target = MOVE_TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
         .zMove = { .effect = Z_EFFECT_RECOVER_HP },
