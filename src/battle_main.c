@@ -3962,6 +3962,7 @@ static void TryDoEventsBeforeFirstTurn(void)
 
     memset(gQueuedStatBoosts, 0, sizeof(gQueuedStatBoosts));  // erase all totem boosts just to be safe
 
+    SetShellSideArmCategory();
     SetAiLogicDataForTurn(AI_DATA); // get assumed abilities, hold effects, etc of all battlers
 
     if (gBattleTypeFlags & BATTLE_TYPE_ARENA)
@@ -4054,6 +4055,7 @@ void BattleTurnPassed(void)
 
     *(&gBattleStruct->absentBattlerFlags) = gAbsentBattlerFlags;
     BattlePutTextOnWindow(gText_EmptyString3, B_WIN_MSG);
+    SetShellSideArmCategory();
     SetAiLogicDataForTurn(AI_DATA); // get assumed abilities, hold effects, etc of all battlers
     gBattleMainFunc = HandleTurnActionSelectionState;
 
@@ -5664,9 +5666,9 @@ static void TryEvolvePokemon(void)
             sTriedEvolving |= gBitTable[i];
 
             if (species == SPECIES_NONE && (gLeveledUpInBattle & gBitTable[i]))
-            { 
+            {
                 gLeveledUpInBattle &= ~(gBitTable[i]);
-                species = GetEvolutionTargetSpecies(&gPlayerParty[i], EVO_MODE_NORMAL, gLeveledUpInBattle, NULL);
+                species = GetEvolutionTargetSpecies(&gPlayerParty[i], EVO_MODE_BATTLE_ONLY, gLeveledUpInBattle, NULL);
             }
             if (species == SPECIES_NONE)
             {
