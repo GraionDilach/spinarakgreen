@@ -3458,15 +3458,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 #if P_FAMILY_MARACTUS
     [SPECIES_MARACTUS] =
     {
-        .baseHP        = 75,
+        .baseHP        = 102,
         .baseAttack    = 86,
-        .baseDefense   = 87,
+        .baseDefense   = 95,
         .baseSpeed     = 60,
         .baseSpAttack  = 106,
-        .baseSpDefense = 87,
-        .types = { TYPE_GRASS, TYPE_GRASS },
-        .catchRate = 64,
-        .expYield = 202,
+        .baseSpDefense = 95,
+        .types = { TYPE_GRASS, TYPE_GROUND },
+        .catchRate = 49,
+        .expYield = 263,
         .evYield_SpAttack = 2,
         .itemRare = ITEM_MIRACLE_SEED,
         .genderRatio = PERCENT_FEMALE(50),
