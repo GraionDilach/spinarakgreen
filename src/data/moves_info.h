@@ -21015,6 +21015,23 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .battleAnimScript = Move_COMET_CRASH,
     },
 
+    [MOVE_TERA_BLAST_SPGREEN] =
+    {
+        .name = COMPOUND_STRING("Tera Blast"),
+        .description = COMPOUND_STRING(
+            "Hits with its Tera-type."),
+        .effect = EFFECT_TERA_BLAST,
+        .power = 80,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .forcePressure = TRUE,
+        .battleAnimScript = Move_TERA_BLAST,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

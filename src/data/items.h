@@ -13882,13 +13882,12 @@ const struct Item gItemsInfo[] =
         .name = _("TM244"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "If the user's Terastallized,\n"
-            "it hits with its Tera-type."),
+            "Hhits with its Tera-type."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE,
+        .secondaryId = MOVE_TERA_BLAST_SPGREEN,
     },
 
     [ITEM_HM_CUT] =

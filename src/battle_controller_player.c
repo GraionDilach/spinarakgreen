@@ -1871,6 +1871,10 @@ static void MoveSelectionDisplayMoveType(u32 battler)
         if (IsGimmickSelected(battler, GIMMICK_TERA) || GetActiveGimmick(battler) == GIMMICK_TERA)
             type = GetBattlerTeraType(battler);
     }
+    else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_TERA_BLAST_SPGREEN)
+    {
+        type = GetBattlerTeraType(battler);
+    }
     else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_IVY_CUDGEL)
     {
         speciesId = gBattleMons[battler].species;

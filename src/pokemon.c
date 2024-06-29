@@ -6377,6 +6377,7 @@ static const u16 sUniversalMoves[] =
     MOVE_SECRET_POWER,
     MOVE_SUBSTITUTE,
     MOVE_TERA_BLAST,
+    MOVE_TERA_BLAST_SPGREEN,
 };
 
 u8 CanLearnTeachableMove(u16 species, u16 move)
@@ -7958,7 +7959,7 @@ void UpdateDaysPassedSinceFormChange(u16 days)
         if (daysSinceFormChange == 0)
         {
             u16 targetSpecies = GetFormChangeTargetSpecies(mon, FORM_CHANGE_DAYS_PASSED, 0);
-            
+
             if (targetSpecies != SPECIES_NONE)
             {
                 SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);

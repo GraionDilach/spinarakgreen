@@ -4077,7 +4077,7 @@ static void SetMoveTypeIcons(void)
 
                 SetTypeSpritePosAndPal(type, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
             }
-            else if (summary->moves[i] == MOVE_TERA_BLAST)
+            else if (summary->moves[i] == MOVE_TERA_BLAST || summary->moves[i] == MOVE_TERA_BLAST_SPGREEN)
             {
                 SetTypeSpritePosAndPal(GetMonData(mon, MON_DATA_TERA_TYPE), 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
             }
