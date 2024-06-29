@@ -44,9 +44,9 @@
                                                   // (You should not use 48x48 sprites/tables for compressed gfx)
                                                   // 16x32, 32x32, 64x64 etc are fine
 // Follower Pokémon
-#define OW_FOLLOWERS_ENABLED           TRUE       // Enables follower Pokémon, HGSS style. Requires OW_POKEMON_OBJECT_EVENTS.
-#define OW_FOLLOWERS_BOBBING           TRUE       // If true, follower pokemon will bob up and down during their idle & walking animations
-#define OW_FOLLOWERS_POKEBALLS         TRUE       // Followers will emerge from the pokeball they are stored in, instead of a normal pokeball
+#define OW_FOLLOWERS_ENABLED           FALSE      // Enables follower Pokémon, HGSS style. Requires OW_POKEMON_OBJECT_EVENTS.
+#define OW_FOLLOWERS_BOBBING           FALSE      // If true, follower pokemon will bob up and down during their idle & walking animations
+#define OW_FOLLOWERS_POKEBALLS         FALSE      // Followers will emerge from the pokeball they are stored in, instead of a normal pokeball
 
 // Out-of-battle Ability effects
 #define OW_SYNCHRONIZE_NATURE       GEN_LATEST // In Gen8+, if a Pokémon with Synchronize leads the party, wild Pokémon will always have their same Nature as opposed to the 50% chance in previous games. Gift Pokémon excluded.
@@ -82,7 +82,7 @@
 #define OW_POPUP_BW_COLOR_WHITE    1   // White pop-up from W2
 
 // Configuration
-#define OW_POPUP_BW_COLOR          OW_POPUP_BW_COLOR_BLACK  // B2W2 use different colors for their map pop-ups.       
+#define OW_POPUP_BW_COLOR          OW_POPUP_BW_COLOR_BLACK  // B2W2 use different colors for their map pop-ups.
 #define OW_POPUP_BW_TIME_MODE      OW_POPUP_BW_TIME_NONE    // Determines what type of time is shown.
 #define OW_POPUP_BW_ALPHA_BLEND    FALSE                    // Enables alpha blending/transparency for the pop-ups. Mainly intended to be used with the black color option.
 
