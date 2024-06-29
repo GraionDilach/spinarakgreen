@@ -13863,31 +13863,30 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_ROCK_BLAST,
     },
 
-    [ITEM_TM_STEALTH_ROCK] =
+    [ITEM_TM_TERA_BLAST_SPGREEN] =
     {
         .name = _("TM243"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Sets floating stones that\n"
-            "hurt a foe switching in."),
-        .importance = I_REUSABLE_TMS,
-        .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_STEALTH_ROCK,
-    },
-
-    [ITEM_TM_TERA_BLAST] =
-    {
-        .name = _("TM244"),
-        .price = 3000,
-        .description = COMPOUND_STRING(
-            "Hhits with its Tera-type."),
+            "Hits with its Tera-type."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
         .secondaryId = MOVE_TERA_BLAST_SPGREEN,
+    },
+
+    //broken, do not use
+    [ITEM_TM244] =
+    {
+        .name = _("TM244"),
+        .price = 3000,
+        .description = sQuestionMarksDesc, // Todo
+        .importance = I_REUSABLE_TMS,
+        .pocket = POCKET_TM_HM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .secondaryId = MOVE_NONE, // Todo
     },
 
     [ITEM_HM_CUT] =

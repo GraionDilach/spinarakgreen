@@ -244,8 +244,7 @@
     F(HEX) \
     F(WORRY_SEED) \
     F(ROCK_BLAST) \
-    F(STEALTH_ROCK) \
-    F(TERA_BLAST)
+    F(TERA_BLAST_SPGREEN)
 
 #define FOREACH_HM(F) \
     F(CUT) \
