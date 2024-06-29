@@ -1871,7 +1871,7 @@ static void MoveSelectionDisplayMoveType(u32 battler)
         if (IsGimmickSelected(battler, GIMMICK_TERA) || GetActiveGimmick(battler) == GIMMICK_TERA)
             type = GetBattlerTeraType(battler);
     }
-    else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_TERA_BLAST_SPGREEN)
+    else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_TERA_BLAST_SPGREEN || moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_TERA_BALL)
     {
         type = GetBattlerTeraType(battler);
     }
