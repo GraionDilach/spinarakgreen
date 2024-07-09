@@ -1768,6 +1768,7 @@ static void FreeRestoreBattleData(void)
     FreeMonSpritesGfx();
     FreeBattleSpritesData();
     FreeBattleResources();
+    ResetDynamicAiFunc();
 }
 
 void CB2_QuitRecordedBattle(void)
@@ -5594,6 +5595,7 @@ static void FreeResetData_ReturnToOvOrDoEvolutions(void)
     if (gBattleStruct != NULL && !(gBattleTypeFlags & BATTLE_TYPE_LINK))
     {
         ZeroEnemyPartyMons();
+        ResetDynamicAiFunc();
         FreeMonSpritesGfx();
         FreeBattleResources();
         FreeBattleSpritesData();
