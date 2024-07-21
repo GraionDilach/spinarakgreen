@@ -181,7 +181,7 @@ top:
         }
 
         Test_MgbaPrintf(":N%s", gTestRunnerState.test->name);
-        MgbaPrintf_(":L%s:%d", gTestRunnerState.test->filename);
+        Test_MgbaPrintf(":L%s:%d", gTestRunnerState.test->filename);
         gTestRunnerState.result = TEST_RESULT_PASS;
         gTestRunnerState.expectedResult = TEST_RESULT_PASS;
         gTestRunnerState.expectLeaks = FALSE;
@@ -219,7 +219,7 @@ top:
         // NOTE: Assumes that the compiler interns __FILE__.
         if (gTestRunnerState.skipFilename == gTestRunnerState.test->filename) // Assumption fails for tests in this file.
         {
-            MgbaPrintf_(":L%s:%d", gTestRunnerState.test->filename, gTestRunnerState.failedAssumptionsBlockLine);
+            Test_MgbaPrintf(":L%s:%d", gTestRunnerState.test->filename, gTestRunnerState.failedAssumptionsBlockLine);
             gTestRunnerState.result = TEST_RESULT_ASSUMPTION_FAIL;
             return;
         }
