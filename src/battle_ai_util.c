@@ -411,8 +411,6 @@ bool32 IsDamageMoveUnusable(u32 move, u32 battlerAtk, u32 battlerDef)
     else
         battlerDefAbility = aiData->abilities[battlerDef];
 
-    // Battler doesn't see partners Ability for some reason.
-    // This is a small hack to avoid the issue but should be investigated
     if (battlerDef == BATTLE_PARTNER(battlerAtk))
         battlerDefAbility = AI_GetBattlerAbility(battlerDef);
 
