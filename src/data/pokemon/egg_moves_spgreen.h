@@ -6651,6 +6651,23 @@ static const u16 sCresseliaEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sSwirlixEggMoveLearnset[] = {
+    MOVE_AFTER_YOU,
+    MOVE_AROMATHERAPY,
+    MOVE_BELLY_DRUM,
+    MOVE_COPYCAT,
+    MOVE_COTTON_GUARD,
+    MOVE_COTTON_SPORE,
+    MOVE_GASTRO_ACID,
+    MOVE_HEAL_BELL,
+    MOVE_HELPING_HAND,
+    MOVE_STICKY_WEB,
+    MOVE_STRING_SHOT,
+    MOVE_WISH,
+    MOVE_YAWN,
+    MOVE_UNAVAILABLE,
+};
+
 static const u16 sHatennaEggMoveLearnset[] = {
     MOVE_AFTER_YOU,
     MOVE_AROMATHERAPY,

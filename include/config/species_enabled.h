@@ -405,7 +405,7 @@
 #define P_FAMILY_ESPURR                  TRUE
 #define P_FAMILY_HONEDGE                 FALSE
 #define P_FAMILY_SPRITZEE                FALSE
-#define P_FAMILY_SWIRLIX                 FALSE
+#define P_FAMILY_SWIRLIX                 TRUE
 #define P_FAMILY_INKAY                   TRUE
 #define P_FAMILY_BINACLE                 FALSE
 #define P_FAMILY_SKRELP                  FALSE
