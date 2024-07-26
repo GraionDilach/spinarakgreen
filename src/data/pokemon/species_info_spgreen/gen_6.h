@@ -2241,14 +2241,14 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
     [SPECIES_SLURPUFF] =
     {
         .baseHP        = 82,
-        .baseAttack    = 80,
+        .baseAttack    = 90,
         .baseDefense   = 86,
         .baseSpeed     = 72,
         .baseSpAttack  = 110,
         .baseSpDefense = 121,
         .types = { TYPE_FAIRY, TYPE_FAIRY },
-        .catchRate = 47,
-        .expYield = 293,
+        .catchRate = 44,
+        .expYield = 298,
         .evYield_Defense = 2,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
