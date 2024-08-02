@@ -1152,8 +1152,9 @@
 // LEGEND PLATE
 
 #define ITEM_ABILITY_CHANGER 975
+#define ITEM_WONDER_SYSTEM 976
 
-#define ITEMS_COUNT 976
+#define ITEMS_COUNT 977
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
@@ -1312,6 +1313,8 @@
 #define KEYITEM_SCROLL_OF_DARKNESS   75
 #define KEYITEM_SCROLL_OF_WATERS     76
 #define KEYITEM_TERA_ORB             77
+
+#define KEYITEM_WONDER_SYSTEM        78
 
 #define KEYITEMS_COUNT              127
 

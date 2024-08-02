@@ -16262,4 +16262,19 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_AbilityCapsule,
         .iconPalette = gItemIconPalette_AbilityCapsule,
     },
+
+    [ITEM_WONDER_SYSTEM] =
+    {
+        .name = _("Wonder System"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Can initiate\n"
+            "Wonder Trades."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_TeachyTV,
+        .iconPalette = gItemIconPalette_TeachyTV,
+    },
 };

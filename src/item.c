@@ -123,6 +123,8 @@ static const u16 sKeyItemsLookupTable[KEYITEMS_COUNT] =
     [KEYITEM_SCROLL_OF_DARKNESS] =   ITEM_SCROLL_OF_DARKNESS,
     [KEYITEM_SCROLL_OF_WATERS]   =   ITEM_SCROLL_OF_WATERS,
     [KEYITEM_TERA_ORB]           =   ITEM_TERA_ORB,
+
+    [KEYITEM_WONDER_SYSTEM]      =   ITEM_WONDER_SYSTEM,
 };
 
 static u16 GetBagItemQuantity(u16 *quantity)
