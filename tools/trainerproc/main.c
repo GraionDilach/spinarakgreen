@@ -1728,8 +1728,18 @@ static void fprint_trainers(const char *output_path, FILE *f, struct Parsed *par
         }
         else
         {
-            fprintf(f, "// #line AUTO-GENERATED\n");
-            fprintf(f, "        .dynamicLevelRatio = %d,\n", (80 + 5 * trainer->ai_flags_n));
+            int bonusflags = 0;
+            for (int i = 0; i < trainer->ai_flags_n; i++)
+            {
+                if (starts_with(trainer->ai_flags[i], "Basic Trai"))
+                    bonusflags += 2;
+
+                if (starts_with(trainer->ai_flags[i], "Smart Trai"))
+                    bonusflags += 5;
+            }
+
+            fprintf(f, "#line %d //AUTO-GENERATED\n", trainer->ai_flags_line);
+            fprintf(f, "        .dynamicLevelRatio = %d,\n", (80 + 5 * (trainer->ai_flags_n + bonusflags)));
         }
 
         fprintf(f, "        .partySize = %d,\n", trainer->pokemon_n);
