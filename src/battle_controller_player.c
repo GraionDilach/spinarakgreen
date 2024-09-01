@@ -1732,34 +1732,34 @@ u8 TypeEffectiveness(struct ChooseMoveStruct *moveInfo, u32 battler, u8 targetId
         if (type != TYPE_MYSTERY)
         {
 
-            mod = gTypeEffectivenessTable[type][gBattleMons[targetId].type1];
+            mod = gTypeEffectivenessTable[type][gBattleMons[targetId].types[0]];
 
-            if (gBattleMons[targetId].type2 != gBattleMons[targetId].type1)
+            if (gBattleMons[targetId].types[1] != gBattleMons[targetId].types[0])
             {
-                u16 mod2 = gTypeEffectivenessTable[type][gBattleMons[targetId].type2];
+                u16 mod2 = gTypeEffectivenessTable[type][gBattleMons[targetId].types[1]];
                 MulModifier(&mod, mod2);
             }
 
-            if (gBattleMons[targetId].type3 != TYPE_MYSTERY)
+            if (gBattleMons[targetId].types[2] != TYPE_MYSTERY)
             {
-                u16 mod3 = gTypeEffectivenessTable[type][gBattleMons[targetId].type3];
+                u16 mod3 = gTypeEffectivenessTable[type][gBattleMons[targetId].types[2]];
                 MulModifier(&mod, mod3);
             }
 
         }
         else
         {
-            mod = gTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].type1];
+            mod = gTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].types[0]];
 
-            if (gBattleMons[targetId].type2 != gBattleMons[targetId].type1)
+            if (gBattleMons[targetId].types[1] != gBattleMons[targetId].types[0])
             {
-                u16 mod2 = gTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].type2];
+                u16 mod2 = gTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].types[1]];
                 MulModifier(&mod, mod2);
             }
 
-            if (gBattleMons[targetId].type3 != TYPE_MYSTERY)
+            if (gBattleMons[targetId].types[2] != TYPE_MYSTERY)
             {
-                u16 mod3 = gTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].type3];
+                u16 mod3 = gTypeEffectivenessTable[gMovesInfo[moveID].type][gBattleMons[targetId].types[2]];
                 MulModifier(&mod, mod3);
             }
 
@@ -1767,18 +1767,18 @@ u8 TypeEffectiveness(struct ChooseMoveStruct *moveInfo, u32 battler, u8 targetId
 
         if (gMovesInfo[moveID].effect == EFFECT_TWO_TYPED_MOVE)
         {
-            u16 mod4 = gTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].type1];
+            u16 mod4 = gTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].types[0]];
             MulModifier(&mod, mod4);
 
-            if (gBattleMons[targetId].type2 != gBattleMons[targetId].type1)
+            if (gBattleMons[targetId].types[1] != gBattleMons[targetId].types[0])
             {
-                u16 mod5 = gTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].type2];
+                u16 mod5 = gTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].types[1]];
                 MulModifier(&mod, mod5);
             }
 
-            if (gBattleMons[targetId].type3 != TYPE_MYSTERY)
+            if (gBattleMons[targetId].types[2] != TYPE_MYSTERY)
             {
-                u16 mod6 = gTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].type3];
+                u16 mod6 = gTypeEffectivenessTable[gMovesInfo[moveID].argument][gBattleMons[targetId].types[2]];
                 MulModifier(&mod, mod6);
             }
         }
@@ -1848,52 +1848,12 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
     type = gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type;
 
-    if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_HIDDEN_POWER)
-    {
-        u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_HP_IV) & 1) << 0)
-                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_ATK_IV) & 1) << 1)
-                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_DEF_IV) & 1) << 2)
-                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_SPEED_IV) & 1) << 3)
-                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_SPATK_IV) & 1) << 4)
-                     | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_SPDEF_IV) & 1) << 5);
-
-        type = ((NUMBER_OF_MON_TYPES - 3) * typeBits) / 63 + 1;
-        if (type >= TYPE_MYSTERY)
-            type++;
-    }
-    else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_TERA_BLAST)
-    {
-        if (IsGimmickSelected(battler, GIMMICK_TERA) || GetActiveGimmick(battler) == GIMMICK_TERA)
-            type = GetBattlerTeraType(battler);
-            end = StringCopy(txtPtr, gTypesInfo[type].name);
-    }
-    else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_TERA_BLAST_SPGREEN || moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_TERA_BALL)
-    {
-        type = GetBattlerTeraType(battler);
-    }
-    else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_IVY_CUDGEL)
-    {
-        speciesId = gBattleMons[battler].species;
-
-        if (speciesId == SPECIES_OGERPON_WELLSPRING_MASK || speciesId == SPECIES_OGERPON_WELLSPRING_MASK_TERA
-            || speciesId == SPECIES_OGERPON_HEARTHFLAME_MASK || speciesId == SPECIES_OGERPON_HEARTHFLAME_MASK_TERA
-            || speciesId == SPECIES_OGERPON_CORNERSTONE_MASK || speciesId == SPECIES_OGERPON_CORNERSTONE_MASK_TERA)
-            type = gBattleMons[battler].types[1];
-            end = StringCopy(txtPtr, gTypesInfo[type].name);
-    }
     // Max Guard is a Normal-type move
-    else if (gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].category == DAMAGE_CATEGORY_STATUS
+    if (gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].category == DAMAGE_CATEGORY_STATUS
              && (GetActiveGimmick(battler) == GIMMICK_DYNAMAX || IsGimmickSelected(battler, GIMMICK_DYNAMAX)))
     {
         type = TYPE_NORMAL;
         end = StringCopy(txtPtr, gTypesInfo[type].name);
-    }
-    else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_TERA_STARSTORM)
-    {
-        if (gBattleMons[battler].species == SPECIES_TERAPAGOS_STELLAR
-        || (IsGimmickSelected(battler, GIMMICK_TERA) && gBattleMons[battler].species == SPECIES_TERAPAGOS_TERASTAL))
-            type = TYPE_STELLAR;
-            end = StringCopy(txtPtr, gTypesInfo[type].name);
     }
     else if (P_SHOW_DYNAMIC_TYPES)
     {

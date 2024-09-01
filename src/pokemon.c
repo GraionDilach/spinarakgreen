@@ -7984,7 +7984,11 @@ static inline u32 CalculateHiddenPowerType(struct Pokemon *mon)
                  | ((GetMonData(mon, MON_DATA_SPATK_IV) & 1) << 4)
                  | ((GetMonData(mon, MON_DATA_SPDEF_IV) & 1) << 5);
 
-    type = (15 * typeBits) / 63 + 2;
+    // type = (15 * typeBits) / 63 + 2;
+    // Subtract 6 instead of 1 below because 5 types are excluded (TYPE_NONE, TYPE_NORMAL, TYPE_MYSTERY, TYPE_FAIRY and TYPE_STELLAR)
+    // The final + 2 skips past TYPE_NONE and Normal.
+    // Graion: changed the 6 to 4, to include TYPE_FAIRY and TYPE_STELLAR
+    type = ((NUMBER_OF_MON_TYPES - 4) * typeBits) / 63 + 2;
     if (type >= TYPE_MYSTERY)
         type++;
     type |= 0xC0;
@@ -8012,9 +8016,15 @@ u32 CheckDynamicMoveType(struct Pokemon *mon, u32 move, u32 battler)
     }
     else if (move == MOVE_STRUGGLE)
     {
-        return TYPE_NORMAL;
+        return TYPE_MYSTERY;
     }
+    /*
     else if (effect == EFFECT_TERA_BLAST && GetActiveGimmick(battler) == GIMMICK_TERA && gBattleMons[battler].species == species)
+    {
+        return GetMonData(mon, MON_DATA_TERA_TYPE);
+    }
+    */
+   else if (effect == EFFECT_TERA_BLAST && gBattleMons[battler].species == species)
     {
         return GetMonData(mon, MON_DATA_TERA_TYPE);
     }
