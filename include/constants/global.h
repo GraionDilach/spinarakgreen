@@ -8,6 +8,7 @@
 #include "config/level_caps.h"
 #include "config/pokemon.h"
 #include "config/overworld.h"
+#include "config/ev_caps.h"
 
 #include "constants/items.h"
 
