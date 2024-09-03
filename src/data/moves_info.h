@@ -22094,7 +22094,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .argument = MAX_EFFECT_FIXED_POWER, //EFFECT TODO
+        .argument = MAX_EFFECT_FIXED_POWER,
         .ignoresTargetAbility = TRUE,
         .battleAnimScript = Move_G_MAX_DRUM_SOLO,
     },
@@ -22111,7 +22111,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .argument = MAX_EFFECT_FIXED_POWER, //EFFECT TODO
+        .argument = MAX_EFFECT_FIXED_POWER,
         .ignoresTargetAbility = TRUE,
         .battleAnimScript = Move_G_MAX_FIREBALL,
     },
@@ -22128,7 +22128,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .argument = MAX_EFFECT_FIXED_POWER, //EFFECT TODO
+        .argument = MAX_EFFECT_FIXED_POWER,
         .ignoresTargetAbility = TRUE,
         .battleAnimScript = Move_G_MAX_HYDROSNIPE,
     },
@@ -22370,7 +22370,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .argument = MAX_EFFECT_BYPASS_PROTECT, //EFFECT TODO
+        .argument = MAX_EFFECT_BYPASS_PROTECT,
         .battleAnimScript = Move_G_MAX_ONE_BLOW,
     },
 
@@ -22386,7 +22386,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .argument = MAX_EFFECT_BYPASS_PROTECT, //EFFECT TODO
+        .argument = MAX_EFFECT_BYPASS_PROTECT,
         .battleAnimScript = Move_G_MAX_RAPID_FLOW,
     },
 
