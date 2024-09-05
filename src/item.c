@@ -29,14 +29,8 @@ static bool8 CheckPyramidBagHasItem(u16 itemId, u16 count);
 static bool8 CheckPyramidBagHasSpace(u16 itemId, u16 count);
 static const u8 *ItemId_GetPluralName(u16);
 static bool32 DoesItemHavePluralName(u16);
-static void ShowItemIconSprite(u16 item, bool8 firstTime, bool8 flash);
-static void DestroyItemIconSprite(void);
 
 EWRAM_DATA struct BagPocket gBagPockets[POCKETS_COUNT] = {0};
-EWRAM_DATA static u8 sHeaderBoxWindowId = 0;
-EWRAM_DATA u8 sItemIconSpriteId = 0;
-EWRAM_DATA u8 sItemIconSpriteId2 = 0;
-
 EWRAM_DATA struct ItemSlot gTmHmItemSlots[BAG_TMHM_COUNT] = {0};
 EWRAM_DATA struct ItemSlot gKeyItemSlots[BAG_KEYITEMS_COUNT] = {0};
 

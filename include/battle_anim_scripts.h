@@ -1016,6 +1016,6 @@ extern const u8 gBattleAnimSpecial_CriticalCaptureBallThrow[];
 
 //SpinarakGreen
 extern const u8 gBattleAnimMove_Psyripple[];
-extern const u8 gBattleAnimMove_Comet_Crash[];
+extern const u8 gBattleAnimMove_CometCrash[];
 
 #endif // GUARD_BATTLE_ANIM_SCRIPTS_H

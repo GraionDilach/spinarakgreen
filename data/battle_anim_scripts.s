@@ -2406,7 +2406,7 @@ DracoMeteor4:
 	createsprite gDracoMeteorTailSpriteTemplate 0x83, 5, 0xffb0, 0xffc0, 0xFFF8, 0x20, 0x19
 	return
 
-Move_COMET_CRASH::
+gBattleAnimMove_CometCrash::
 	loadspritegfx ANIM_TAG_WARM_ROCK
 	loadspritegfx ANIM_TAG_GOLD_STARS
 	loadspritegfx ANIM_TAG_IMPACT
@@ -21941,7 +21941,7 @@ gBattleAnimMove_Psychic::
 	call UnsetPsychicBg
 	end
 
-Move_PSYRIPPLE::
+gBattleAnimMove_Psyripple::
 	monbg ANIM_DEF_PARTNER
 	setalpha 8, 8
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 10, 1
