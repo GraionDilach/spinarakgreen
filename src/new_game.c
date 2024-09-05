@@ -208,7 +208,6 @@ void NewGameInitData(void)
     memset(gSaveBlock1Ptr->dexNavSearchLevels, 0, sizeof(gSaveBlock1Ptr->dexNavSearchLevels));
     gSaveBlock2Ptr->autoRun = TRUE;
     gSaveBlock1Ptr->dexNavChain = 0;
-    memset(&gSaveBlock2Ptr->itemFlags, 0, sizeof(gSaveBlock2Ptr->itemFlags));
 }
 
 static void ResetMiniGamesRecords(void)

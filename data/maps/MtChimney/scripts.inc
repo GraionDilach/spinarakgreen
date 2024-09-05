@@ -120,7 +120,7 @@ MtChimney_EventScript_LavaCookieLady::
 
 MtChimney_EventScript_BagIsFull::
 	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
-	@hidemoneybox
+	hidemoneybox
 	release
 	end
 .else
@@ -858,4 +858,3 @@ MtChimney_Text_SawyerRematchDefeat:
 MtChimney_Text_SawyerPostRematch:
 	.string "Actually, it really is hot here.\n"
 	.string "I'm overdressed for these parts.$"
-
