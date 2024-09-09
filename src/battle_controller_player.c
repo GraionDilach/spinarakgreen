@@ -1848,23 +1848,17 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
     type = gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type;
 
-    // Max Guard is a Normal-type move
     if (gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].category == DAMAGE_CATEGORY_STATUS
              && (GetActiveGimmick(battler) == GIMMICK_DYNAMAX || IsGimmickSelected(battler, GIMMICK_DYNAMAX)))
     {
-        type = TYPE_NORMAL;
-        end = StringCopy(txtPtr, gTypesInfo[type].name);
+        type = TYPE_NORMAL; // Max Guard is always a Normal-type move
     }
-    else if (P_SHOW_DYNAMIC_TYPES)
+    else if (P_SHOW_DYNAMIC_TYPES) // Non-vanilla changes to battle UI showing dynamic types
     {
         struct Pokemon *mon = &gPlayerParty[gBattlerPartyIndexes[battler]];
         type = CheckDynamicMoveType(mon, moveInfo->moves[gMoveSelectionCursor[battler]], battler);
-        end = StringCopy(txtPtr, gTypesInfo[type].name);
     }
-    else
-    {
-        end = StringCopy(txtPtr, gTypesInfo[type].name);
-    }
+    end = StringCopy(txtPtr, gTypesInfo[type].name);
 
     PrependFontIdToFit(txtPtr, end, FONT_NORMAL, WindowWidthPx(B_WIN_MOVE_TYPE) - 25);
     BattlePutTextOnWindow(gDisplayedStringBattle, TypeEffectiveness(moveInfo, battler, 1, type));
