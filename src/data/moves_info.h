@@ -537,6 +537,29 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .battleAnimScript = gBattleAnimMove_Cut,
     },
 
+    [MOVE_LEAF_SLICE] =
+    {
+        .name = COMPOUND_STRING("Leaf Slice"),
+        .description = COMPOUND_STRING(
+            "Cuts the foe with sharp\n"
+            "scythes, claws, etc."),
+        .effect = EFFECT_HIT,
+        .power = 55,
+        .type = TYPE_GRASS,
+        .accuracy = 100,
+        .pp = 25,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .slicingMove = TRUE,
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_SWORDS_DANCE},
+        .battleAnimScript = gBattleAnimMove_Cut,
+    },
+
     [MOVE_GUST] =
     {
         .name = COMPOUND_STRING("Gust"),
