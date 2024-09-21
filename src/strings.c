@@ -223,23 +223,19 @@ const u8 *const gPyramidBagMenu_ReturnToStrings[] =
 };
 
 const u8 gText_ReturnToVar1[] = _("Return to\n{STR_VAR_1}.");
-const u8 gText_MedicinePocket[] = _("MEDICINE");
-const u8 gText_BattleItemsPocket[] = _("BATTLE ITEM");
-const u8 gText_PowerUpPocket[] = _("POWER-UP");
-const u8 gText_MegaStonesPocket[] = _("MEGA STONES");
-const u8 gText_ZCrystalsPocket[] = _("TERA SHARDS");
 
 const u8 *const gPocketNamesStringsTable[] =
 {
     [ITEMS_POCKET] =    COMPOUND_STRING("ITEMS"),
+    [MEDICINE_POCKET] = COMPOUND_STRING("MEDICINE"),
     [BALLS_POCKET] =    COMPOUND_STRING("POKé BALLS"),
-    [TMHM_POCKET]  =    COMPOUND_STRING("TMs & HMs"),
+    [BATTLEITEMS_POCKET] = COMPOUND_STRING("BATTLE ITEM"),
     [BERRIES_POCKET] =  COMPOUND_STRING("BERRIES"),
-    [KEYITEMS_POCKET] = COMPOUND_STRING("KEY ITEMS")
-    [POWERUP_POCKET] = gText_PowerUpPocket,
-    [MEGASTONES_POCKET] = gText_MegaStonesPocket,
-    [ZCRYSTALS_POCKET] = gText_ZCrystalsPocket,
-    [TMHM_POCKET]  = gText_TMHMPocket,
+    [POWERUP_POCKET] = COMPOUND_STRING("POWER-UP"),
+    [MEGASTONES_POCKET] = COMPOUND_STRING("MEGA STONES"),
+    [ZCRYSTALS_POCKET] = COMPOUND_STRING("TERA SHARDS"),
+    [TMHM_POCKET]  =    COMPOUND_STRING("TMs & HMs"),
+    [KEYITEMS_POCKET] = COMPOUND_STRING("KEY ITEMS"),
 };
 
 const u8 gText_NumberItem_TMBerry[] = _("{NO}{STR_VAR_1}{CLEAR 0x07}{STR_VAR_2}");
