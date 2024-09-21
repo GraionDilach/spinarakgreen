@@ -660,4 +660,8 @@ extern const u8 EventScript_TooDark[];
 extern const u8 EventScript_MovedTooFast[];
 
 
+extern const u8 EventScript_CancelMessageBox[];
+extern const u8 Common_EventScript_ShowPokemonCenterSign[];
+extern const u8 Common_EventScript_ShowPokemartSign[];
+
 #endif // GUARD_EVENT_SCRIPTS_H
