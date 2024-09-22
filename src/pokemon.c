@@ -649,6 +649,9 @@ static const u16 sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
     HOENN_TO_NATIONAL(BEAUTIFLY),
     HOENN_TO_NATIONAL(CASCOON),
     HOENN_TO_NATIONAL(DUSTOX),
+    HOENN_TO_NATIONAL(SEWADDLE),
+    HOENN_TO_NATIONAL(SWADLOON),
+    HOENN_TO_NATIONAL(LEAVANNY),
     HOENN_TO_NATIONAL(SCATTERBUG),
     HOENN_TO_NATIONAL(SPEWPA),
     HOENN_TO_NATIONAL(VIVILLON),
@@ -4735,11 +4738,11 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 
                             // Ensure the increase does not exceed the max EV per stat (252)
                             evCap = (itemEffect[10] & ITEM10_IS_VITAMIN) ? EV_ITEM_RAISE_LIMIT : MAX_PER_STAT_EVS;
-                            
+
                             // Check if the per-stat limit is reached
                             if (dataSigned >= evCap)
                                 return TRUE;  // Prevents item use if the per-stat cap is already reached
-                            
+
                             if (dataSigned + evChange > evCap)
                                 temp2 = evCap - dataSigned;
                             else
@@ -4924,11 +4927,11 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 
                             // Ensure the increase does not exceed the max EV per stat (252)
                             evCap = (itemEffect[10] & ITEM10_IS_VITAMIN) ? EV_ITEM_RAISE_LIMIT : MAX_PER_STAT_EVS;
-                            
+
                             // Check if the per-stat limit is reached
                             if (dataSigned >= evCap)
                                 return TRUE;  // Prevents item use if the per-stat cap is already reached
-                            
+
                             if (dataSigned + evChange > evCap)
                                 temp2 = evCap - dataSigned;
                             else

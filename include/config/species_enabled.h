@@ -329,7 +329,7 @@
 #define P_FAMILY_TYMPOLE                 TRUE
 #define P_FAMILY_THROH                   FALSE
 #define P_FAMILY_SAWK                    FALSE
-#define P_FAMILY_SEWADDLE                FALSE
+#define P_FAMILY_SEWADDLE                TRUE
 #define P_FAMILY_VENIPEDE                TRUE
 #define P_FAMILY_COTTONEE                TRUE
 #define P_FAMILY_PETILIL                 TRUE

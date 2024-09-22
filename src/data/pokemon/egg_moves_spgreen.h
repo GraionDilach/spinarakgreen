@@ -4721,6 +4721,25 @@ static const u16 sWurmpleEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sSewaddleEggMoveLearnset[] = {
+    MOVE_BUG_BITE,
+    MOVE_CAMOUFLAGE,
+    MOVE_FLAIL,
+    MOVE_GRASSY_TERRAIN,
+    MOVE_LUNGE,
+    MOVE_ME_FIRST,
+    MOVE_MIND_READER,
+    MOVE_RAZOR_LEAF,
+    MOVE_SCREECH,
+    MOVE_SILVER_WIND,
+    MOVE_SKITTER_SMACK,
+    MOVE_STICKY_WEB,
+    MOVE_STRING_SHOT,
+    MOVE_SWITCHEROO,
+    MOVE_SYNTHESIS,
+    MOVE_UNAVAILABLE,
+};
+
 static const u16 sScatterbugEggMoveLearnset[] = {
     MOVE_BUG_BITE,
     MOVE_POISON_POWDER,
