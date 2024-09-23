@@ -1,6 +1,8 @@
 #ifndef GUARD_CONFIG_TEST_H
 #define GUARD_CONFIG_TEST_H
 
+/*
+
 #undef POKEMON_NAME_LENGTH
 #define POKEMON_NAME_LENGTH 12
 
@@ -1128,5 +1130,7 @@
 #define P_FAMILY_TERAPAGOS               TRUE
 #undef P_FAMILY_PECHARUNT
 #define P_FAMILY_PECHARUNT               TRUE
+
+*/
 
 #endif // GUARD_CONFIG_TEST_H

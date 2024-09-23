@@ -1,181 +1,5 @@
 #include "constants/abilities.h"
-
-// Shared Pokédex entries
-const u8 gPichuPokedexText[] = _(
-    "It is still inept at retaining electricity.\n"
-    "When it is startled, it discharges power\n"
-    "accidentally. It gets better at holding\n"
-    "power as it grows older.");
-
-const u8 gPikachuPokedexText[] = _(
-    "It stores electricity in the electric sacs\n"
-    "on its cheeks. When it releases pent-up\n"
-    "energy in a burst, the electric power is\n"
-    "equal to a lightning bolt.");
-
-const u8 gUnownPokedexText[] = _(
-    "This Pokémon is shaped like ancient text\n"
-    "characters. Although research is ongoing,\n"
-    "it is a mystery as to which came first,\n"
-    "the ancient writings or the various Unown.");
-
-const u8 gDeoxysNormalPokedexText[] = _(
-    "Deoxys emerged from a virus that came\n"
-    "from space. It is highly intelligent and\n"
-    "can shoot lasers from the crystalline\n"
-    "organ on its chest.");
-
-const u8 gArceusPokedexText[] = _(
-    "It is told in mythology that this Pokémon\n"
-    "emerged from an egg and shaped all there\n"
-    "is in this world, before the universe\n"
-    "even existed.");
-
-const u8 gGenesectPokedexText[] = _(
-    "Over 300 million years ago, it was\n"
-    "feared as the strongest of hunters.\n"
-    "Team Plasma altered it and attached\n"
-    "a cannon to its back.");
-
-const u8 gGreninjaPokedexText[] = _(
-    "It appears and vanishes with a ninja's\n"
-    "grace. It toys with its enemies using swift\n"
-    "movements, while slicing them with throwing\n"
-    "stars made of compressed water.");
-
-const u8 gFurfrouPokedexText[] = _(
-    "Trimming its fluffy fur not only makes\n"
-    "it more elegant but also increases the\n"
-    "swiftness of its movements. These\n"
-    "Pokémon were the guardians of kings.");
-
-const u8 gXerneasPokedexText[] = _(
-    "Legends say that when the horns on\n"
-    "its head shine in seven colors, it is\n"
-    "sharing everlasting life. It slept for a\n"
-    "thousand years in the form of a tree");
-
-const u8 gZygarde50PokedexText[] = _(
-    "It's said to be monitoring the ecosystem\n"
-    "from deep in the caves where it lives.\n"
-    "There are rumors that even greater power\n"
-    "lies hidden within its cells.");
-
-const u8 gZygarde10PokedexText[] = _(
-    "This is Zygarde when about 10% of\n"
-    "its pieces have been assembled. It\n"
-    "leaps at its opponent's chest and\n"
-    "sinks its sharp fangs into them.");
-
-const u8 gRockruffPokedexText[] = _(
-    "This Pokémon has lived with people since\n"
-    "times long ago. It can sense when its\n"
-    "Trainer is in the dumps and will stick\n"
-    "close by its Trainer's side.");
-
-const u8 gSilvallyNormalPokedexText[] = _(
-    "Its trust in its partner awakens it.\n"
-    "This Pokémon is capable of changing its\n"
-    "type by equipping special memories, a\n"
-    "trait that is well displayed in battle.");
-
-const u8 gSilvallyMemoryPokedexText[] = _(
-    "Upon awakening, its RKS System is\n"
-    "activated. By employing specific\n"
-    "memories, this Pokémon can adapt its\n"
-    "type to confound its enemies.");
-
-const u8 gMiniorMeteorPokedexText[] = _(
-    "Originally making its home in the ozone\n"
-    "layer, it hurtles to the ground when the\n"
-    "shell encasing its body grows too heavy.\n"
-    "It was born from mutated nanoparticles.");
-
-const u8 gMiniorCorePokedexText[] = _(
-    "If its core stays exposed, it will\n"
-    "soon die off. It's possible that it\n"
-    "may survive if it's put into a Poké Ball\n"
-    "quickly enough.");
-
-const u8 gAlcremieVanillaCreamPokedexText[] = _(
-    "When it trusts a Trainer, it will treat\n"
-    "them to berries it's decorated with cream.");
-
-const u8 gAlcremieRubyCreamPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
-    "sweet and tart flavor. This is\n"
-    "because of the way its cells\n"
-    "spontaneously shifted during evolution.");
-
-const u8 gAlcremieMatchaCreamPokedexText[] = _(
-    "The moment it evolved, it took on\n"
-    "an aromatic flavor. This is because\n"
-    "of the way its cells spontaneously\n"
-    "shifted during evolution.");
-
-const u8 gAlcremieMintCreamPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
-    "refreshing flavor. This is because\n"
-    "of the way its cells spontaneously\n"
-    "shifted during evolution.");
-
-const u8 gAlcremieLemonCreamPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
-    "sour flavor. This is because of the\n"
-    "way its cells spontaneously shifted\n"
-    "during evolution.");
-
-const u8 gAlcremieSaltedCreamPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
-    "salty flavor. This is because of the\n"
-    "way its cells spontaneously shifted\n"
-    "during evolution.");
-
-const u8 gAlcremieRubySwirlPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
-    "mixed flavor. This is because of the\n"
-    "way its cells spontaneously shifted\n"
-    "during evolution.");
-
-const u8 gAlcremieCaramelSwirlPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
-    "bitter flavor. This is because of\n"
-    "the way its cells spontaneously\n"
-    "shifted during evolution.");
-
-const u8 gAlcremieRainbowSwirlPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
-    "complex flavor. This is because of\n"
-    "the way its cells spontaneously\n"
-    "shifted during evolution.");
-
-const u8 gToxtricityGigantamaxPokedexText[] = _(
-    "Out of control after its own\n"
-    "poison penetrated its brain, it tears\n"
-    "across the land in a rampage,\n"
-    "contaminating the earth with toxic sweat.");
-
-const u8 gOgerponTealMaskPokedexText[] = _(
-    "This Pokémon's type changes based on\n"
-    "which mask it's wearing. It confounds\n"
-    "its enemies with nimble movements\n"
-    "and kicks.");
-
-const u8 gOgerponWellspringMaskPokedexText[] = _(
-    "This form excels in both attack\n"
-    "and defense. It ceaselessly unleashes\n"
-    "moves like a spring gushes water.");
-
-const u8 gOgerponHearthflameMaskPokedexText[] = _(
-    "This form is the most aggressive,\n"
-    "bombarding enemies with the\n"
-    "intensity of flames blazing within a hearth.");
-
-const u8 gOgerponCornerstoneMaskPokedexText[] = _(
-    "In this form, it draws on the power\n"
-    "of stone. Its body is rock-solid,\n"
-    "protecting it from all manner of\n"
-    "attacks.");
+#include "species_info/shared_dex_text.h"
 
 // Macros for ease of use.
 
@@ -216,6 +40,81 @@ const u8 gOgerponCornerstoneMaskPokedexText[] = _(
 #define LEARNSETS(learn)                                    \
         .levelUpLearnset = s ## learn##LevelUpLearnset,     \
         .teachableLearnset = s ## learn##TeachableLearnset
+
+#if P_FOOTPRINTS
+#define FOOTPRINT(sprite) .footprint = gMonFootprint_## sprite,
+#else
+#define FOOTPRINT(sprite)
+#endif
+
+#if B_ENEMY_MON_SHADOW_STYLE >= GEN_4
+#define SHADOW(x, y, size)  .enemyShadowXOffset = x, .enemyShadowYOffset = y, .enemyShadowSize = size,
+#define NO_SHADOW           .suppressEnemyShadow = TRUE,
+#else
+#define SHADOW(x, y, size)  .enemyShadowXOffset = 0, .enemyShadowYOffset = 0, .enemyShadowSize = 0,
+#define NO_SHADOW           .suppressEnemyShadow = FALSE,
+#endif
+
+#define SIZE_32x32 1
+#define SIZE_64x64 0
+
+// Set .compressed = OW_GFX_COMPRESS
+#define COMP OW_GFX_COMPRESS
+
+#if OW_POKEMON_OBJECT_EVENTS
+#if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
+#define OVERWORLD_PAL(...)                                  \
+    .overworldPalette = DEFAULT(NULL, __VA_ARGS__),         \
+    .overworldShinyPalette = DEFAULT_2(NULL, __VA_ARGS__),
+#else
+#define OVERWORLD_PAL(...)
+#endif //OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
+
+#define OVERWORLD(picTable, _size, shadow, _tracks, ...)                                    \
+.overworldData = {                                                                          \
+    .tileTag = TAG_NONE,                                                                    \
+    .paletteTag = OBJ_EVENT_PAL_TAG_DYNAMIC,                                                \
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,                                         \
+    .size = (_size == SIZE_32x32 ? 512 : 2048),                                             \
+    .width = (_size == SIZE_32x32 ? 32 : 64),                                               \
+    .height = (_size == SIZE_32x32 ? 32 : 64),                                              \
+    .paletteSlot = PALSLOT_NPC_1,                                                           \
+    .shadowSize = shadow,                                                                   \
+    .inanimate = FALSE,                                                                     \
+    .compressed = COMP,                                                                     \
+    .tracks = _tracks,                                                                      \
+    .oam = (_size == SIZE_32x32 ? &gObjectEventBaseOam_32x32 : &gObjectEventBaseOam_64x64), \
+    .subspriteTables = (_size == SIZE_32x32 ? sOamTables_32x32 : sOamTables_64x64),         \
+    .anims = sAnimTable_Following,                                                          \
+    .images = picTable,                                                                     \
+    .affineAnims = gDummySpriteAffineAnimTable,                                             \
+},                                                                                          \
+    OVERWORLD_PAL(__VA_ARGS__)
+
+#define OVERWORLD_SET_ANIM(picTable, _size, shadow, _tracks, _anims, ...)                   \
+.overworldData = {                                                                          \
+    .tileTag = TAG_NONE,                                                                    \
+    .paletteTag = OBJ_EVENT_PAL_TAG_DYNAMIC,                                                \
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,                                         \
+    .size = (_size == SIZE_32x32 ? 512 : 2048),                                             \
+    .width = (_size == SIZE_32x32 ? 32 : 64),                                               \
+    .height = (_size == SIZE_32x32 ? 32 : 64),                                              \
+    .paletteSlot = PALSLOT_NPC_1,                                                           \
+    .shadowSize = shadow,                                                                   \
+    .inanimate = FALSE,                                                                     \
+    .compressed = COMP,                                                                     \
+    .tracks = _tracks,                                                                      \
+    .oam = (_size == SIZE_32x32 ? &gObjectEventBaseOam_32x32 : &gObjectEventBaseOam_64x64), \
+    .subspriteTables = (_size == SIZE_32x32 ? sOamTables_32x32 : sOamTables_64x64),         \
+    .anims = _anims,                                                                        \
+    .images = picTable,                                                                     \
+    .affineAnims = gDummySpriteAffineAnimTable,                                             \
+},                                                                                          \
+    OVERWORLD_PAL(__VA_ARGS__)
+#else
+#define OVERWORLD(picTable, _size, shadow, _tracks, ...)
+#define OVERWORLD_SET_ANIM(picTable, _size, shadow, _tracks, _anims, ...)
+#endif //OW_POKEMON_OBJECT_EVENTS
 
 // Maximum value for a female Pokémon is 254 (MON_FEMALE) which is 100% female.
 // 255 (MON_GENDERLESS) is reserved for genderless Pokémon.
