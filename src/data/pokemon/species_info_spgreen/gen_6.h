@@ -829,13 +829,13 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 #define VIVILLON_MISC_INFO(form, color, iconPal)                                            \
         .baseHP        = 80,                                                                \
         .baseAttack    = 52,                                                                \
-        .baseDefense   = 55,                                                                \
+        .baseDefense   = 85,                                                                \
         .baseSpeed     = 100,                                                               \
         .baseSpAttack  = 115,                                                               \
         .baseSpDefense = 55,                                                                \
         .types = { TYPE_BUG, TYPE_FLYING },                                                 \
-        .catchRate = 81,                                                                    \
-        .expYield = 221,                                                                    \
+        .catchRate = 69,                                                                    \
+        .expYield = 236,                                                                    \
         .evYield_HP = 1,                                                                    \
         .evYield_Speed = 1,                                                                 \
         .evYield_SpAttack = 1,                                                              \
