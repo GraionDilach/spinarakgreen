@@ -20,7 +20,7 @@
 #include "field_weather.h"
 #include "graphics.h"
 #include "item.h"
-#include "level_caps.h"
+#include "caps.h"
 #include "link.h"
 #include "main.h"
 #include "overworld.h"
@@ -63,7 +63,6 @@
 #include "constants/union_room.h"
 #include "constants/weather.h"
 #include "wild_encounter.h"
-#include "ev_caps.h"
 
 #define FRIENDSHIP_EVO_THRESHOLD ((P_FRIENDSHIP_EVO_THRESHOLD >= GEN_9) ? 160 : 220)
 
