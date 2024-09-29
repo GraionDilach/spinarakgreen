@@ -411,6 +411,9 @@ bool32 IsDamageMoveUnusable(u32 move, u32 battlerAtk, u32 battlerDef)
 
     if (battlerDef == BATTLE_PARTNER(battlerAtk))
 
+    if (gBattleStruct->commandingDondozo & (1u << battlerDef))
+        return TRUE;
+
     switch (battlerDefAbility)
     {
     case ABILITY_LIGHTNING_ROD:
@@ -1506,6 +1509,8 @@ bool32 IsMoveRedirectionPrevented(u32 move, u32 atkAbility)
 bool32 IsSemiInvulnerable(u32 battlerDef, u32 move)
 {
     if (gStatuses3[battlerDef] & STATUS3_PHANTOM_FORCE)
+        return TRUE;
+    else if (gBattleStruct->commandingDondozo & (1u << battlerDef))
         return TRUE;
     else if (!gMovesInfo[move].damagesAirborne && gStatuses3[battlerDef] & STATUS3_ON_AIR)
         return TRUE;
