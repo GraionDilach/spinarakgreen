@@ -159,7 +159,7 @@ static bool32 IsMetatileBlocking(s16, s16, u32);
 static bool32 IsMetatileLand(s16, s16, u32);
 
 static u8 TrySpinPlayerForWarp(struct ObjectEvent *, s16 *);
-static void PlayerGoSlow(u8 direction);
+static void PlayerWalkSlow(u8 direction);
 
 // .rodata
 
@@ -464,7 +464,7 @@ static bool8 DoForcedMovement(u8 direction, void (*moveFunc)(u8))
 {
     struct PlayerAvatar *playerAvatar = &gPlayerAvatar;
     u8 collision;
-    
+
     // Check for sideways stairs onto ice movement.
     switch (direction)
     {
@@ -477,7 +477,7 @@ static bool8 DoForcedMovement(u8 direction, void (*moveFunc)(u8))
         direction = DIR_EAST;
         break;
     }
-    
+
     collision = CheckForPlayerAvatarCollision(direction);
 
     playerAvatar->flags |= PLAYER_AVATAR_FLAG_FORCED_MOVE;
@@ -668,14 +668,14 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
             return;
         }
     }
-    
+
     gPlayerAvatar.creeping = FALSE;
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING)
     {
         if (FlagGet(FLAG_SYS_DEXNAV_SEARCH) && (heldKeys & A_BUTTON))
         {
             gPlayerAvatar.creeping = TRUE;
-            PlayerGoSlow(direction);
+            PlayerWalkSlow(direction);
         }
         else
         {
@@ -696,7 +696,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
             if (FlagGet(FLAG_SYS_DEXNAV_SEARCH) && (heldKeys & A_BUTTON))
             {
                 gPlayerAvatar.creeping = TRUE;
-                PlayerGoSlow(direction);
+                PlayerWalkSlow(direction);
             }
             else
             {
@@ -706,7 +706,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
         else
         {
             PlayerRun(direction);
-        
+
             gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
         }
         return;
@@ -714,7 +714,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     else if (FlagGet(FLAG_SYS_DEXNAV_SEARCH) && (heldKeys & A_BUTTON))
     {
         gPlayerAvatar.creeping = TRUE;
-        PlayerGoSlow(direction);
+        PlayerWalkSlow(direction);
     }
     else
     {
@@ -753,7 +753,7 @@ static u8 CheckForPlayerAvatarStaticCollision(u8 direction)
 u8 CheckForObjectEventCollision(struct ObjectEvent *objectEvent, s16 x, s16 y, u8 direction, u8 metatileBehavior)
 {
     u8 collision = GetCollisionAtCoords(objectEvent, x, y, direction);
-    
+
     if (collision == COLLISION_ELEVATION_MISMATCH && CanStopSurfing(x, y, direction))
         return COLLISION_STOP_SURFING;
 
@@ -771,7 +771,7 @@ u8 CheckForObjectEventCollision(struct ObjectEvent *objectEvent, s16 x, s16 y, u
             return COLLISION_ROTATING_GATE;
         CheckAcroBikeCollision(x, y, metatileBehavior, &collision);
     }
-    
+
     return collision;
 }
 
@@ -2516,7 +2516,7 @@ u8 GetRightSideStairsDirection(u8 direction)
         if (direction > DIR_EAST)
             direction -= DIR_EAST;
         return direction;
-    }           
+    }
 }
 
 u8 GetLeftSideStairsDirection(u8 direction)
@@ -2539,11 +2539,11 @@ bool8 ObjectMovingOnRockStairs(struct ObjectEvent *objectEvent, u8 direction)
     #if SLOW_MOVEMENT_ON_STAIRS == TRUE
         s16 x = objectEvent->currentCoords.x;
         s16 y = objectEvent->currentCoords.y;
-        
+
         // TODO followers on sideways stairs
         if (IsFollowerVisible() && GetFollowerObject() != NULL && (objectEvent->isPlayer || objectEvent->localId == OBJ_EVENT_ID_FOLLOWER))
             return FALSE;
-        
+
         switch (direction)
         {
         case DIR_NORTH:
@@ -2567,4 +2567,3 @@ bool8 ObjectMovingOnRockStairs(struct ObjectEvent *objectEvent, u8 direction)
         return FALSE;
     #endif
 }
-
