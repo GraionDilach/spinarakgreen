@@ -2144,7 +2144,7 @@ void ObjectEventInteractionGetBerryCountString(void)
     u8 treeId = GetObjectEventBerryTreeId(gSelectedObjectEvent);
     u8 berry = GetBerryTypeByBerryTreeId(treeId);
     u8 count = GetBerryCountByBerryTreeId(treeId);
-    
+
     gSpecialVar_0x8006 = BerryTypeToItemId(berry);
     CopyItemNameHandlePlural(BerryTypeToItemId(berry), gStringVar1, count);
     gSpecialVar_0x8006 = BerryTypeToItemId(berry);
@@ -2423,7 +2423,7 @@ static u16 GetBerryPestSpecies(u8 berryId)
             return P_FAMILY_VOLBEAT_ILLUMISE ? SPECIES_ILLUMISE : SPECIES_NONE;
             break;
         case BERRY_COLOR_GREEN:
-            return P_FAMILY_BURMY ? SPECIES_BURMY_PLANT_CLOAK : SPECIES_NONE;
+            return P_FAMILY_BURMY ? SPECIES_BURMY_PLANT : SPECIES_NONE;
             break;
         case BERRY_COLOR_YELLOW:
             return P_FAMILY_CUTIEFLY ? SPECIES_CUTIEFLY : SPECIES_NONE;
