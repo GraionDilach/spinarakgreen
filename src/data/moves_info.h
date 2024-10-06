@@ -4741,7 +4741,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         #endif
         .accuracy = 0,
         .pp = 30,
-        .target = MOVE_TARGET_USER,
+        .target = B_UPDATED_MOVE_DATA >= GEN_5 ? MOVE_TARGET_SELECTED : MOVE_TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
         .zMove = { .effect = Z_EFFECT_RECOVER_HP },
