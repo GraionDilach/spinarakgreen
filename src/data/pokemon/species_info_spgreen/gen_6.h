@@ -1352,7 +1352,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "longer be found blooming anywhere. It's\n"
             "also thought to contain terrifying\n"
             "power."),
-        .cryId = CRY_FLOETTE_ETERNAL_FLOWER,
+        .cryId = CRY_FLOETTE_ETERNAL,
         FRONT_PIC(FloetteEternalFlower, 64, 64),
         .frontPicYOffset = 3,
         .enemyMonElevation = 4,

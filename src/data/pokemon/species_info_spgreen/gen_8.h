@@ -3720,7 +3720,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .evYield_SpAttack = 2,
         .genderRatio = MON_MALE,
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_SYNCHRONIZE, ABILITY_PSYCHIC_SURGE },
-        .cryId = CRY_INDEEDEE_MALE,
+        .cryId = CRY_INDEEDEE_M,
         .description = COMPOUND_STRING(
             "It uses the horns on its head to sense the\n"
             "emotions of others. Males will act as\n"
@@ -3751,7 +3751,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .evYield_SpDefense = 2,
         .genderRatio = MON_FEMALE,
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_SYNCHRONIZE, ABILITY_PSYCHIC_SURGE },
-        .cryId = CRY_INDEEDEE_FEMALE,
+        .cryId = CRY_INDEEDEE_F,
         .description = COMPOUND_STRING(
             "They diligently serve people and\n"
             "Pokémon so they can gather feelings\n"
