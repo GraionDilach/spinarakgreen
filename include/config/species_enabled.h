@@ -344,7 +344,7 @@
 #define P_FAMILY_TIRTOUGA                TRUE
 #define P_FAMILY_ARCHEN                  TRUE
 #define P_FAMILY_TRUBBISH                TRUE
-#define P_FAMILY_ZORUA                   FALSE
+#define P_FAMILY_ZORUA                   TRUE
 #define P_FAMILY_MINCCINO                TRUE
 #define P_FAMILY_GOTHITA                 TRUE
 #define P_FAMILY_SOLOSIS                 FALSE

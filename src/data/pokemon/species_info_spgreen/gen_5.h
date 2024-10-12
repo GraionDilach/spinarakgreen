@@ -4281,47 +4281,41 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 
 #if P_FAMILY_ZORUA
 #define ZORUA_MISC_INFO                                     \
-        .catchRate = 75,                                    \
-        .expYield = 66,                                     \
+        .catchRate = 139,                                   \
+        .expYield = 132,                                    \
         .evYield_SpAttack = 1,                              \
         .genderRatio = PERCENT_FEMALE(12.5),                \
         .eggCycles = 25,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
-        .growthRate = GROWTH_MEDIUM_SLOW,                   \
+        .growthRate = GROWTH_350,                           \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },  \
         .abilities = { ABILITY_ILLUSION, ABILITY_NONE },    \
         .bodyColor = BODY_COLOR_GRAY,                       \
-        .speciesName = _("Zorua"),                          \
         .cryId = CRY_ZORUA,                                 \
-        .natDexNum = NATIONAL_DEX_ZORUA,                    \
         .height = 7,                                        \
         .weight = 125,                                      \
         .pokemonScale = 365,                                \
         .pokemonOffset = 12,                                \
         .trainerScale = 256,                                \
-        .trainerOffset = 0,                                 \
-        .formSpeciesIdTable = sZoruaFormSpeciesIdTable
+        .trainerOffset = 0
 
 #define ZOROARK_MISC_INFO                                   \
-        .catchRate = 45,                                    \
-        .expYield = 179,                                    \
+        .catchRate = 61,                                    \
+        .expYield = 247,                                    \
         .evYield_SpAttack = 2,                              \
         .genderRatio = PERCENT_FEMALE(12.5),                \
         .eggCycles = 20,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
-        .growthRate = GROWTH_MEDIUM_SLOW,                   \
+        .growthRate = GROWTH_550,                           \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },  \
         .abilities = { ABILITY_ILLUSION, ABILITY_NONE },    \
         .bodyColor = BODY_COLOR_GRAY,                       \
-        .speciesName = _("Zoroark"),                        \
         .cryId = CRY_ZOROARK,                               \
-        .natDexNum = NATIONAL_DEX_ZOROARK,                  \
         .height = 16,                                       \
         .pokemonScale = 259,                                \
         .pokemonOffset = 1,                                 \
         .trainerScale = 296,                                \
-        .trainerOffset = 1,                                 \
-        .formSpeciesIdTable = sZoroarkFormSpeciesIdTable
+        .trainerOffset = 1
 
     [SPECIES_ZORUA] =
     {
@@ -4333,6 +4327,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 80,
         .baseSpDefense = 40,
         .types = { TYPE_DARK, TYPE_DARK },
+        .speciesName = _("Zorua"),
+        .natDexNum = NATIONAL_DEX_ZORUA,
         .categoryName = _("Tricky Fox"),
         .description = COMPOUND_STRING(
             "To protect themselves from danger, they\n"
@@ -4363,6 +4359,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 120,
         .baseSpDefense = 60,
         .types = { TYPE_DARK, TYPE_DARK },
+        .speciesName = _("Zoroark"),
+        .natDexNum = NATIONAL_DEX_ZOROARK,
         .categoryName = _("Illusion Fox"),
         .weight = 811,
         .description = COMPOUND_STRING(
@@ -4394,12 +4392,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 85,
         .baseSpDefense = 40,
         .types = { TYPE_NORMAL, TYPE_GHOST },
+        .speciesName = _("Zorosha"),
+        .natDexNum = NATIONAL_DEX_ZORUA_HISUIAN,
         .categoryName = _("Spiteful Fox"),
         .description = COMPOUND_STRING(
             "Derives power from resentment,\n"
             "which rises as energy atop its head and\n"
             "takes on the forms of foes. In this\n"
-            "way, Zorua vents lingering malice."),
+            "way, Zorosha vents lingering malice."),
         FRONT_PIC(ZoruaHisuian, 48, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = sAnims_ZoruaHisuian,
@@ -4425,13 +4425,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 125,
         .baseSpDefense = 60,
         .types = { TYPE_NORMAL, TYPE_GHOST },
+        .speciesName = _("Zoroshade"),
+        .natDexNum = NATIONAL_DEX_ZOROARK_HISUIAN,
         .categoryName = _("Baneful Fox"),
         .weight = 730,
         .description = COMPOUND_STRING(
             "Heedless of its own safety,\n"
-            "Zoroark attacks its nemeses with a bitter\n"
-            "energy so intense, it lacerates\n"
-            "Zoroark's own body."),
+            "Zoroshade attacks its nemeses with a\n"
+            "bitter energy so intense, it\n"
+            "lacerates Zoroshade's own body."),
         FRONT_PIC(ZoroarkHisuian, 64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_ZoroarkHisuian,
