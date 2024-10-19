@@ -33,6 +33,7 @@
  */
 
 #include "mini_printf.h"
+#include "string_util.h"
 #include "gba/types.h"
 #include "gba/defines.h"
 #include "config/general.h"
