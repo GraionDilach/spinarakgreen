@@ -5938,7 +5938,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
 #if P_FAMILY_PONYTA
 #define KANTONIAN_PONYTA_FAMILY_INFO                                                \
-        .types = { TYPE_FIRE, TYPE_NORMAL },                                        \
+        .types = { TYPE_FIRE, TYPE_FAIRY },                                         \
         .abilities = { ABILITY_RUN_AWAY, ABILITY_FLASH_FIRE, ABILITY_FLAME_BODY },  \
         .bodyColor = BODY_COLOR_YELLOW,                                             \
         .eggMoveLearnset = sPonytaEggMoveLearnset
