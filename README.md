@@ -32,6 +32,8 @@ Huge thanks to the RH Hideout discord community for their help, advice, and test
 Implements programmatic palette shifting in the OkLCH (Polar OKLab) colour space to allow for easy, deterministic colour variations.
 
 
+![Image showing example colour variations of Taillow, Corsola, Bellosom and Tentacool](./pokemonVariations2.jpeg)
+
 More information on OKLab: [https://bottosson.github.io/posts/oklab/](https://bottosson.github.io/posts/oklab/)
 
 ![Image showing example colour variations of Zigzagoon, Poochyena, Wurmple and Smeargle](./pokemonVariations.jpeg)
