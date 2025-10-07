@@ -96,13 +96,15 @@ const struct ApricornTree gApricornTrees[APRICORN_TREE_COUNT] =
 
     [APRICORN_TREE_ROUTE101_RED_SAPLING] =
     {
-        .isSapling = TRUE,
+        .minimum = 1,
+        .maximum = 1,
         .apricornType = APRICORN_RED,
     },
 
     [APRICORN_TREE_ROUTE101_WHITE_TREE] =
     {
-        .isSapling = FALSE,
+        .minimum = 2,
+        .maximum = 3,
         .apricornType = APRICORN_WHITE,
     },
     #endif
