@@ -82,7 +82,7 @@ struct TrainerMon
 
 #define TRAINER_PARTY(partyArray) partyArray, .partySize = ARRAY_COUNT(partyArray)
 
-enum TrainerBattleType 
+enum TrainerBattleType
 {
     TRAINER_BATTLE_TYPE_SINGLES,
     TRAINER_BATTLE_TYPE_DOUBLES,
@@ -130,13 +130,13 @@ struct TypeInfo
     u16 isHiddenPowerType:1; // Changing this for any type will change the distribution of all Hidden Power types from vanilla.
     u16 padding:11;
     const u16 *const paletteTMHM;
-    //u16 enhanceItem;
+    u16 enhanceItem;
     //u16 berry;
     //u16 gem;
     //u16 plate;
     //u16 memory;
     //u16 zCrystal;
-    //u16 teraShard;
+    u16 teraShard;
     //u16 arceusForm;
 };
 
