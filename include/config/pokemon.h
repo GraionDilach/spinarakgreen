@@ -72,6 +72,10 @@
 #define P_FLAG_FORCE_SHINY               0  // If this flag is set, all wild and gift Pokémon will forced into being Shiny.
 #define P_FLAG_FORCE_NO_SHINY            0  // If this flag is set, all wild and gift Pokémon will forced into NOT being Shiny.
 
+// SpinarakGreen additional settings
+#define P_TOTAL_EV_CAP                   GEN_SPGRN   // SpinarakGreen uses Gen1/Gen2 stat experience.
+#define P_DERIVE_EV_FROM_STATS           GEN_SPGRN   // SpinarakGreen derives EVs from base stats.
+
 // Go here if you want to disable specific families of Pokémon.
 #include "config/species_enabled.h"
 
