@@ -145,7 +145,7 @@
 #define MAX_GIFT_RIBBON 64
 
 #define MIN_LEVEL 1
-#define MAX_LEVEL 100
+#define MAX_LEVEL 150
 
 #define MAX_DYNAMAX_LEVEL 10
 
@@ -234,6 +234,16 @@ enum GrowthRate
     GROWTH_MEDIUM_SLOW,
     GROWTH_FAST,
     GROWTH_SLOW,
+    GROWTH_50,
+    GROWTH_150,
+    GROWTH_250,
+    GROWTH_350,
+    GROWTH_450,
+    GROWTH_550,
+    GROWTH_650,
+    GROWTH_750,
+    GROWTH_850,
+    GROWTH_950,
 };
 
 // Body colors for Pokédex search
