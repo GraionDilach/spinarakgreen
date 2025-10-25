@@ -366,3 +366,6 @@
 .include "sound/voicegroups/voicegroup605.inc"
 
 @ --End BW/2--
+
+@ TEMP restoration because I can't find which this one is supposed to be now
+.include "sound/voicegroups/voicegroup000.inc"

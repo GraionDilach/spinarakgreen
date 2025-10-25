@@ -1182,7 +1182,7 @@ gSongTable::
     song mus_pkmn_bw12_202, 0, 0
     song mus_pkmn_bw12_203, 0, 0
     song mus_pkmn_bw12_204, 0, 0
-    song mus_pkmn_bw12_205, 0, 0	song mus_hg_win_minigame, 2, 2
+    song mus_pkmn_bw12_205, 0, 0
 
 	.align 2
 dummy_song_header:

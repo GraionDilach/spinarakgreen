@@ -3599,7 +3599,7 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_RG_ENCOUNTER_DEOXYS)      \
     X(MUS_RG_TRAINER_TOWER)         \
     X(MUS_RG_SLOW_PALLET)           \
-    X(MUS_RG_TEACHY_TV_MENU)
+    X(MUS_RG_TEACHY_TV_MENU) \
     X(MUS_DP_TWINLEAF_DAY) \
     X(MUS_DP_SANDGEM_DAY) \
     X(MUS_DP_FLOAROMA_DAY) \
@@ -4171,7 +4171,7 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
 	X(MUS_BW12_SPOTTED_BEAUTY) \
 	X(MUS_BW12_CREDITS) \
 	X(MUS_BW12_CREDITS_END) \
-	X(MUS_BW12_PWT_VENUE) \    X(MUS_HG_WIN_MINIGAME) \
+	X(MUS_BW12_PWT_VENUE) \
 
 #define SOUND_LIST_SE               \
     X(SE_USE_ITEM)                  \
