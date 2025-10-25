@@ -320,7 +320,7 @@
 #define P_FAMILY_ROGGENROLA              FALSE
 #define P_FAMILY_WOOBAT                  FALSE
 #define P_FAMILY_DRILBUR                 FALSE
-#define P_FAMILY_AUDINO                  FALSE
+#define P_FAMILY_AUDINO                  P_GEN_5_POKEMON
 #define P_FAMILY_TIMBURR                 FALSE
 #define P_FAMILY_TYMPOLE                 FALSE
 #define P_FAMILY_THROH                   FALSE
@@ -334,7 +334,7 @@
 #define P_FAMILY_DARUMAKA                FALSE
 #define P_FAMILY_MARACTUS                FALSE
 #define P_FAMILY_DWEBBLE                 FALSE
-#define P_FAMILY_SCRAGGY                 FALSE
+#define P_FAMILY_SCRAGGY                 P_GEN_5_POKEMON
 #define P_FAMILY_SIGILYPH                FALSE
 #define P_FAMILY_YAMASK                  FALSE
 #define P_FAMILY_TIRTOUGA                FALSE
