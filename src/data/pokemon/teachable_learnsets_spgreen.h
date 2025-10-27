@@ -12754,6 +12754,10 @@ static const u16 sTogekissTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sTogethreatTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
 static const u16 sNatuTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ALLY_SWITCH,
@@ -13761,6 +13765,10 @@ static const u16 sYanmegaTeachableLearnset[] = {
     MOVE_TOXIC,
     MOVE_U_TURN,
     MOVE_WHIRLWIND,
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sYanmonstaTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
@@ -28018,6 +28026,10 @@ static const u16 sRampardosTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sFossolodosTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
 static const u16 sCherubiTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BULLET_SEED,
@@ -28700,6 +28712,18 @@ static const u16 sLepewTeachableLearnset[] = {
 };
 
 static const u16 sPincushyTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sLarkyTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sShalandTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sShalakingTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 

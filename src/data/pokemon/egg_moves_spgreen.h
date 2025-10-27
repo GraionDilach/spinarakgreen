@@ -7838,6 +7838,10 @@ static const u16 sTogekissEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sTogethreatEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
 static const u16 sNatuEggMoveLearnset[] = {
     MOVE_AIR_CUTTER,
     MOVE_AIR_SLASH,
@@ -8532,6 +8536,10 @@ static const u16 sYanmegaEggMoveLearnset[] = {
     MOVE_SUPERSONIC,
     MOVE_UPROAR,
     MOVE_WING_ATTACK,
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sYanmonstaEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
@@ -17257,6 +17265,10 @@ static const u16 sRampardosEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sFossolodosEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
 static const u16 sCherubiEggMoveLearnset[] = {
     MOVE_ABSORB,
     MOVE_AROMATHERAPY,
@@ -17719,6 +17731,18 @@ static const u16 sLepewEggMoveLearnset[] = {
 };
 
 static const u16 sPincushyEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sLarkyEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sShalandEggMoveLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sShalakingEggMoveLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
