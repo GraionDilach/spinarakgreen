@@ -80,6 +80,7 @@ static void MoveSelectionDisplayPpNumber(u32 battler);
 static void MoveSelectionDisplayPpString(u32 battler);
 static void MoveSelectionDisplayMoveType(u32 battler);
 static void MoveSelectionDisplayMoveNames(u32 battler);
+static void MoveSelectionDisplaySplitIcon(u32 move);
 static void TryMoveSelectionDisplayMoveDescription(u32 battler);
 static void MoveSelectionDisplayMoveDescription(u32 battler);
 static void WaitForMonSelection(u32 battler);
@@ -1708,6 +1709,20 @@ static void MoveSelectionDisplayMoveType(u32 battler)
 
     PrependFontIdToFit(txtPtr, end, FONT_NORMAL, WindowWidthPx(B_WIN_MOVE_TYPE) - 25);
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
+
+    MoveSelectionDisplaySplitIcon(move);
+}
+
+static void MoveSelectionDisplaySplitIcon(u32 move){
+	static const u16 sSplitIcons_Pal[] = INCBIN_U16("graphics/interface/split_icons_battle.gbapal");
+	static const u8 sSplitIcons_Gfx[] = INCBIN_U8("graphics/interface/split_icons_battle.4bpp");
+	int icon;
+
+	icon = GetMoveCategory(move);
+	LoadPalette(sSplitIcons_Pal, 10 * 0x10, 0x20);
+	BlitBitmapToWindow(B_WIN_DUMMY, sSplitIcons_Gfx + 0x80 * icon, 0, 0, 16, 16);
+	PutWindowTilemap(B_WIN_DUMMY);
+	CopyWindowToVram(B_WIN_DUMMY, 3);
 }
 
 static void TryMoveSelectionDisplayMoveDescription(u32 battler)
