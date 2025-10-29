@@ -8,6 +8,7 @@
 ###### bassforte - Traits branch
 ###### CyanSMP64/grunt-lucas/AichiyaSanse - DPPt/HGSS/BW Music Expansion
 ###### ipatix HQ audio
+###### Pokabbie/AlexOnl1ne Battle Speed
 
 # Other hacks looked at inspiration wrt Pokémon statchanges/rebalancing (asin stats copied over from their documentation)
 
