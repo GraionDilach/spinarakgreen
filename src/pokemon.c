@@ -46,6 +46,7 @@
 #include "text.h"
 #include "trainer_hill.h"
 #include "util.h"
+#include "variant_colours.h"
 #include "constants/abilities.h"
 #include "constants/battle_frontier.h"
 #include "constants/battle_move_effects.h"
