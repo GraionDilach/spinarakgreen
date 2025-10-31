@@ -2009,6 +2009,17 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 SetMonData(&party[i], MON_DATA_SPDEF_EV, &(partyData[monIndex].ev[4]));
                 SetMonData(&party[i], MON_DATA_SPEED_EV, &(partyData[monIndex].ev[5]));
             }
+            else
+            {
+                s32 ev = ((partyData[i].lvl * 5 / 2) < 255) ? (partyData[i].lvl * 5 / 2) : 255;
+                SetMonData(&party[i], MON_DATA_HP_EV, &ev);
+                SetMonData(&party[i], MON_DATA_ATK_EV, &ev);
+                SetMonData(&party[i], MON_DATA_DEF_EV, &ev);
+                SetMonData(&party[i], MON_DATA_SPATK_EV, &ev);
+                SetMonData(&party[i], MON_DATA_SPDEF_EV, &ev);
+                SetMonData(&party[i], MON_DATA_SPEED_EV, &ev);
+            }
+
             if (partyData[monIndex].ability != ABILITY_NONE)
             {
                 const struct SpeciesInfo *speciesInfo = &gSpeciesInfo[partyData[monIndex].species];
@@ -6105,7 +6116,7 @@ u32 GetDynamicMoveType(struct Pokemon *mon, u32 move, u32 battler, enum MonState
         return TYPE_WATER;
     }
     else if (moveEffect == EFFECT_AURA_WHEEL
-     && species == SPECIES_MORPEKO_HANGRY 
+     && species == SPECIES_MORPEKO_HANGRY
      && !BattlerHasTrait(battler, ABILITY_NORMALIZE))
     {
         return TYPE_DARK;
