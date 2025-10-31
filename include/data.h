@@ -107,6 +107,7 @@ struct Trainer
     /*0x24*/ u8 poolPruneIndex;
     /*0x25*/ u16 overrideTrainer;
     /*0x26*/ u8 trainerBackPic;
+    /*0x27*/ u8 dynamicLevelRatio;
 };
 
 struct TrainerClass
