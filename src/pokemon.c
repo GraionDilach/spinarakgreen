@@ -1704,6 +1704,8 @@ static u16 CalculateBoxMonChecksumReencrypt(struct BoxPokemon *boxMon)
 {                                                               \
     u8 baseStat = gSpeciesInfo[species].base;                   \
     s32 n = (((2 * baseStat + iv + ev / 4) * level) / 100) + 5; \
+    if (B_ADD_EFFORT_LEVEL_BONUS == TRUE)                                  \
+        n = n + (Sqrt(8 * iv + ev) * Sqrt(baseStat) / 10 + level) * 2 / 5; \
     n = ModifyStatByNature(nature, n, statIndex);               \
     if (B_FRIENDSHIP_BOOST == TRUE)                             \
         n = n + ((n * 10 * friendship) / (MAX_FRIENDSHIP * 100));\
@@ -1743,6 +1745,8 @@ void CalculateMonStats(struct Pokemon *mon)
     {
         s32 n = 2 * GetSpeciesBaseHP(species) + hpIV;
         newMaxHP = (((n + hpEV / 4) * level) / 100) + level + 10;
+        if (B_ADD_EFFORT_LEVEL_BONUS == TRUE)
+            newMaxHP = newMaxHP + (Sqrt(8 * hpIV + hpEV) * Sqrt(gSpeciesInfo[species].baseHP) / 10 + level) * 2 / 5;
     }
 
     gBattleScripting.levelUpHP = newMaxHP - oldMaxHP;

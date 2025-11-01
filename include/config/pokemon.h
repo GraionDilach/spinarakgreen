@@ -75,6 +75,7 @@
 // SpinarakGreen additional settings
 #define P_TOTAL_EV_CAP                   GEN_SPGRN   // SpinarakGreen uses Gen1/Gen2 stat experience.
 #define P_DERIVE_EV_FROM_STATS           GEN_SPGRN   // SpinarakGreen derives EVs from base stats.
+#define B_ADD_EFFORT_LEVEL_BONUS         TRUE        // Apply SpGreen approximation of PLA Effort Level Bonus.
 
 // Go here if you want to disable specific families of Pokémon.
 #include "config/species_enabled.h"
