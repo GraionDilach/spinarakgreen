@@ -776,8 +776,12 @@ static void Task_EvolutionScene(u8 taskId)
             BattlePutTextOnWindow(gStringVar4, B_WIN_MSG);
             PlayBGM(MUS_EVOLVED);
             gTasks[taskId].tState++;
+            u32 level = GetLevelFromMonExp(mon);
             SetMonData(mon, MON_DATA_SPECIES, (void *)(&gTasks[taskId].tPostEvoSpecies));
             SetMonData(mon, MON_DATA_EVOLUTION_TRACKER, &zero);
+            u32 experience = gExperienceTables[gSpeciesInfo[gTasks[taskId].tPostEvoSpecies].growthRate][level];
+            if (experience > GetMonData(mon, MON_DATA_EXP))
+                SetMonData(mon, MON_DATA_EXP, &experience);
             CalculateMonStats(mon);
             EvolutionRenameMon(mon, gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies);
             GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_SEEN);
