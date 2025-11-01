@@ -1517,9 +1517,21 @@ static u8 GetEncounterLevelFromMapData(u16 species, enum EncounterType environme
 {
     u32 headerId = GetCurrentMapWildMonHeaderId();
     enum TimeOfDay timeOfDay;
-    u8 min = 100;
+    u8 min = MAX_LEVEL;
     u8 max = 0;
     u8 i;
+
+    // Scale the wild mons against the party mons
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&gPlayerParty[i], MON_DATA_SANITY_IS_EGG))
+        {
+            min = (min < GetMonData(&gPlayerParty[i], MON_DATA_LEVEL)) ? min : GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+            max = (max > GetMonData(&gPlayerParty[i], MON_DATA_LEVEL)) ? max : GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+        }
+    }
+
+    min = (max - min > max / 5) ? min : max - (max / 5 );
 
     switch (environment)
     {
