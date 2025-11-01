@@ -248,6 +248,8 @@ EWRAM_DATA u8 gPartyCriticalHits[PARTY_SIZE] = {0};
 EWRAM_DATA static u8 sTriedEvolving = 0;
 EWRAM_DATA u8 gCategoryIconSpriteId = 0;
 
+EWRAM_DATA u8 currentPlayerAceLevel = 0;
+
 COMMON_DATA void (*gPreBattleCallback1)(void) = NULL;
 COMMON_DATA void (*gBattleMainFunc)(void) = NULL;
 COMMON_DATA struct BattleResults gBattleResults = {0};
@@ -1979,6 +1981,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 }
             }
 
+            currentPlayerAceLevel = partyMaxLevel;
             partyMaxLevel = partyMaxLevel * trainer->dynamicLevelRatio / 100;
 
             for (i = 0; i < trainer->poolSize; i++)

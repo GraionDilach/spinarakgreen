@@ -312,4 +312,9 @@ static inline const u64 GetTrainerAIFlagsFromId(u16 trainerId)
     return GetTrainerStructFromId(trainerId)->aiFlags;
 }
 
+static inline const u8 GetTrainerDynamicPartyLevelFromId(u16 trainerId)
+{
+    return GetTrainerStructFromId(trainerId)->dynamicLevelRatio;
+}
+
 #endif // GUARD_DATA_H
