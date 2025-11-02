@@ -107,5 +107,19 @@ const struct ApricornTree gApricornTrees[APRICORN_TREE_COUNT] =
         .maximum = 3,
         .apricornType = APRICORN_WHITE,
     },
+
+    [APRICORN_TREE_PETALBURG_WHITE_TREE] =
+    {
+        .minimum = 2,
+        .maximum = 3,
+        .apricornType = APRICORN_WHITE,
+    },
+
+    [APRICORN_TREE_PETALBURG_CHERI_SAPLING] =
+    {
+        .minimum = 1,
+        .maximum = 1,
+        .apricornType = APRICORN_BERRY_CHERI,
+    },
     #endif
 };
