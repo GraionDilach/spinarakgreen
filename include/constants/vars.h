@@ -64,105 +64,105 @@
 // which will be axed when the project gets enough mature
 #define VAR_EMERALD_START_INDEX                          0x4031
 
-#define VAR_RECYCLE_GOODS                                (VAR_EMERALD_START_INDEX + 001)
-#define VAR_MIRAGE_RND_H                                 (VAR_EMERALD_START_INDEX + 002)
-#define VAR_MIRAGE_RND_L                                 (VAR_EMERALD_START_INDEX + 003)
-#define VAR_SECRET_BASE_MAP                              (VAR_EMERALD_START_INDEX + 004)
-#define VAR_CYCLING_ROAD_RECORD_COLLISIONS               (VAR_EMERALD_START_INDEX + 005)
-#define VAR_CYCLING_ROAD_RECORD_TIME_L                   (VAR_EMERALD_START_INDEX + 006)
-#define VAR_CYCLING_ROAD_RECORD_TIME_H                   (VAR_EMERALD_START_INDEX + 007)
-#define VAR_RESET_RTC_ENABLE                             (VAR_EMERALD_START_INDEX + 008)
-#define VAR_ENIGMA_BERRY_AVAILABLE                       (VAR_EMERALD_START_INDEX + 009)
-#define VAR_WONDER_NEWS_STEP_COUNTER                     (VAR_EMERALD_START_INDEX + 010)
-#define VAR_FRONTIER_MANIAC_FACILITY                     (VAR_EMERALD_START_INDEX + 011)
-#define VAR_FRONTIER_GAMBLER_CHALLENGE                   (VAR_EMERALD_START_INDEX + 012)
-#define VAR_FRONTIER_GAMBLER_SET_CHALLENGE               (VAR_EMERALD_START_INDEX + 013)
-#define VAR_FRONTIER_GAMBLER_AMOUNT_BET                  (VAR_EMERALD_START_INDEX + 014)
-#define VAR_FRONTIER_GAMBLER_STATE                       (VAR_EMERALD_START_INDEX + 015)
-#define VAR_DEOXYS_ROCK_STEP_COUNT                       (VAR_EMERALD_START_INDEX + 016)
-#define VAR_DEOXYS_ROCK_LEVEL                            (VAR_EMERALD_START_INDEX + 017)
-#define VAR_ABNORMAL_WEATHER_LOCATION                    (VAR_EMERALD_START_INDEX + 018)
-#define VAR_ABNORMAL_WEATHER_STEP_COUNTER                (VAR_EMERALD_START_INDEX + 019)
-#define VAR_SHOULD_END_ABNORMAL_WEATHER                  (VAR_EMERALD_START_INDEX + 020)
-#define VAR_FARAWAY_ISLAND_STEP_COUNTER                  (VAR_EMERALD_START_INDEX + 021)
-#define VAR_REGICE_STEPS_1                               (VAR_EMERALD_START_INDEX + 022)
-#define VAR_REGICE_STEPS_2                               (VAR_EMERALD_START_INDEX + 023)
-#define VAR_REGICE_STEPS_3                               (VAR_EMERALD_START_INDEX + 024)
-#define VAR_ALTERING_CAVE_WILD_SET                       (VAR_EMERALD_START_INDEX + 025)
-#define VAR_DISTRIBUTE_EON_TICKET                        (VAR_EMERALD_START_INDEX + 026) // This var is read and written, but is always zero. The only way to obtain the Eon Ticket in Emerald is via Record Mixing
-#define VAR_FANCLUB_FAN_COUNTER                          (VAR_EMERALD_START_INDEX + 027)
-#define VAR_FANCLUB_LOSE_FAN_TIMER                       (VAR_EMERALD_START_INDEX + 028)
-#define VAR_DEPT_STORE_FLOOR                             (VAR_EMERALD_START_INDEX + 029)
-#define VAR_TRICK_HOUSE_LEVEL                            (VAR_EMERALD_START_INDEX + 030)
-#define VAR_POKELOT_PRIZE_ITEM                           (VAR_EMERALD_START_INDEX + 031)
-#define VAR_SEEDOT_SIZE_RECORD                           (VAR_EMERALD_START_INDEX + 032)
-#define VAR_ASH_GATHER_COUNT                             (VAR_EMERALD_START_INDEX + 033)
-#define VAR_BIRCH_STATE                                  (VAR_EMERALD_START_INDEX + 034)
-#define VAR_CRUISE_STEP_COUNT                            (VAR_EMERALD_START_INDEX + 035)
-#define VAR_POKELOT_RND1                                 (VAR_EMERALD_START_INDEX + 036)
-#define VAR_POKELOT_RND2                                 (VAR_EMERALD_START_INDEX + 037)
-#define VAR_POKELOT_PRIZE_PLACE                          (VAR_EMERALD_START_INDEX + 038)
-#define VAR_LOTAD_SIZE_RECORD                            (VAR_EMERALD_START_INDEX + 039)
-#define VAR_LITTLEROOT_TOWN_STATE                        (VAR_EMERALD_START_INDEX + 040)
-#define VAR_OLDALE_TOWN_STATE                            (VAR_EMERALD_START_INDEX + 041)
-#define VAR_DEWFORD_TOWN_STATE                           (VAR_EMERALD_START_INDEX + 042) // Unused Var
-#define VAR_LAVARIDGE_TOWN_STATE                         (VAR_EMERALD_START_INDEX + 043)
-#define VAR_CURRENT_SECRET_BASE                          (VAR_EMERALD_START_INDEX + 044) // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
-#define VAR_VERDANTURF_TOWN_STATE                        (VAR_EMERALD_START_INDEX + 045) // Unused Var
-#define VAR_PACIFIDLOG_TOWN_STATE                        (VAR_EMERALD_START_INDEX + 046) // Unused Var
-#define VAR_PETALBURG_CITY_STATE                         (VAR_EMERALD_START_INDEX + 047)
-#define VAR_SLATEPORT_CITY_STATE                         (VAR_EMERALD_START_INDEX + 048)
-#define VAR_MAUVILLE_CITY_STATE                          (VAR_EMERALD_START_INDEX + 049) // Unused Var
-#define VAR_RUSTBORO_CITY_STATE                          (VAR_EMERALD_START_INDEX + 050)
-#define VAR_FORTREE_CITY_STATE                           (VAR_EMERALD_START_INDEX + 051) // Unused Var
-#define VAR_LILYCOVE_CITY_STATE                          (VAR_EMERALD_START_INDEX + 052) // Unused Var
-#define VAR_MOSSDEEP_CITY_STATE                          (VAR_EMERALD_START_INDEX + 053)
-#define VAR_SOOTOPOLIS_CITY_STATE                        (VAR_EMERALD_START_INDEX + 054)
-#define VAR_EVER_GRANDE_CITY_STATE                       (VAR_EMERALD_START_INDEX + 055) // Unused Var
-#define VAR_ROUTE101_STATE                               (VAR_EMERALD_START_INDEX + 056)
-#define VAR_ROUTE102_STATE                               (VAR_EMERALD_START_INDEX + 057) // Unused Var
-#define VAR_ROUTE103_STATE                               (VAR_EMERALD_START_INDEX + 058) // Unused Var
-#define VAR_ROUTE104_STATE                               (VAR_EMERALD_START_INDEX + 059)
-#define VAR_ROUTE105_STATE                               (VAR_EMERALD_START_INDEX + 060) // Unused Var
-#define VAR_ROUTE106_STATE                               (VAR_EMERALD_START_INDEX + 061) // Unused Var
-#define VAR_ROUTE107_STATE                               (VAR_EMERALD_START_INDEX + 062) // Unused Var
-#define VAR_ROUTE108_STATE                               (VAR_EMERALD_START_INDEX + 063) // Unused Var
-#define VAR_ROUTE109_STATE                               (VAR_EMERALD_START_INDEX + 064) // Unused Var
-#define VAR_ROUTE110_STATE                               (VAR_EMERALD_START_INDEX + 065)
-#define VAR_ROUTE111_STATE                               (VAR_EMERALD_START_INDEX + 066) // Unused Var
-#define VAR_ROUTE112_STATE                               (VAR_EMERALD_START_INDEX + 067) // Unused Var
-#define VAR_ROUTE113_STATE                               (VAR_EMERALD_START_INDEX + 068) // Unused Var
-#define VAR_ROUTE114_STATE                               (VAR_EMERALD_START_INDEX + 069) // Unused Var
-#define VAR_ROUTE115_STATE                               (VAR_EMERALD_START_INDEX + 070) // Unused Var
-#define VAR_ROUTE116_STATE                               (VAR_EMERALD_START_INDEX + 071)
-#define VAR_ROUTE117_STATE                               (VAR_EMERALD_START_INDEX + 072) // Unused Var
-#define VAR_ROUTE118_STATE                               (VAR_EMERALD_START_INDEX + 073)
-#define VAR_ROUTE119_STATE                               (VAR_EMERALD_START_INDEX + 074)
-#define VAR_ROUTE120_STATE                               (VAR_EMERALD_START_INDEX + 075) // Unused Var
-#define VAR_ROUTE121_STATE                               (VAR_EMERALD_START_INDEX + 076)
-#define VAR_ROUTE122_STATE                               (VAR_EMERALD_START_INDEX + 077) // Unused Var
-#define VAR_ROUTE123_STATE                               (VAR_EMERALD_START_INDEX + 078) // Unused Var
-#define VAR_ROUTE124_STATE                               (VAR_EMERALD_START_INDEX + 079) // Unused Var
-#define VAR_ROUTE125_STATE                               (VAR_EMERALD_START_INDEX + 080) // Unused Var
-#define VAR_ROUTE126_STATE                               (VAR_EMERALD_START_INDEX + 081) // Unused Var
-#define VAR_ROUTE127_STATE                               (VAR_EMERALD_START_INDEX + 082) // Unused Var
-#define VAR_ROUTE128_STATE                               (VAR_EMERALD_START_INDEX + 083)
-#define VAR_ROUTE129_STATE                               (VAR_EMERALD_START_INDEX + 084) // Unused Var
-#define VAR_ROUTE130_STATE                               (VAR_EMERALD_START_INDEX + 085) // Unused Var
-#define VAR_ROUTE131_STATE                               (VAR_EMERALD_START_INDEX + 086) // Unused Var
-#define VAR_ROUTE132_STATE                               (VAR_EMERALD_START_INDEX + 087) // Unused Var
-#define VAR_ROUTE133_STATE                               (VAR_EMERALD_START_INDEX + 088) // Unused Var
-#define VAR_ROUTE134_STATE                               (VAR_EMERALD_START_INDEX + 089) // Unused Var
-#define VAR_LITTLEROOT_HOUSES_STATE_MAY                  (VAR_EMERALD_START_INDEX + 090)
-#define VAR_BIRCH_LAB_STATE                              (VAR_EMERALD_START_INDEX + 091)
-#define VAR_PETALBURG_GYM_STATE                          (VAR_EMERALD_START_INDEX + 092) // 0-1: Wally tutorial, 2-6: 0-4 badges, 7: Defeated Norman, 8: Rematch Norman
-#define VAR_CONTEST_HALL_STATE                           (VAR_EMERALD_START_INDEX + 093)
-#define VAR_CABLE_CLUB_STATE                             (VAR_EMERALD_START_INDEX + 094)
-#define VAR_CONTEST_TYPE                                 (VAR_EMERALD_START_INDEX + 095)
-#define VAR_SECRET_BASE_INITIALIZED                      (VAR_EMERALD_START_INDEX + 096)
-#define VAR_CONTEST_PRIZE_PICKUP                         (VAR_EMERALD_START_INDEX + 097)
-#define VAR_LITTLEROOT_HOUSES_STATE_BRENDAN              (VAR_EMERALD_START_INDEX + 098)
-#define VAR_LITTLEROOT_RIVAL_STATE                       (VAR_EMERALD_START_INDEX + 099)
+#define VAR_RECYCLE_GOODS                                (VAR_EMERALD_START_INDEX +   1)
+#define VAR_MIRAGE_RND_H                                 (VAR_EMERALD_START_INDEX +   2)
+#define VAR_MIRAGE_RND_L                                 (VAR_EMERALD_START_INDEX +   3)
+#define VAR_SECRET_BASE_MAP                              (VAR_EMERALD_START_INDEX +   4)
+#define VAR_CYCLING_ROAD_RECORD_COLLISIONS               (VAR_EMERALD_START_INDEX +   5)
+#define VAR_CYCLING_ROAD_RECORD_TIME_L                   (VAR_EMERALD_START_INDEX +   6)
+#define VAR_CYCLING_ROAD_RECORD_TIME_H                   (VAR_EMERALD_START_INDEX +   7)
+#define VAR_RESET_RTC_ENABLE                             (VAR_EMERALD_START_INDEX +   8)
+#define VAR_ENIGMA_BERRY_AVAILABLE                       (VAR_EMERALD_START_INDEX +   9)
+#define VAR_WONDER_NEWS_STEP_COUNTER                     (VAR_EMERALD_START_INDEX +  10)
+#define VAR_FRONTIER_MANIAC_FACILITY                     (VAR_EMERALD_START_INDEX +  11)
+#define VAR_FRONTIER_GAMBLER_CHALLENGE                   (VAR_EMERALD_START_INDEX +  12)
+#define VAR_FRONTIER_GAMBLER_SET_CHALLENGE               (VAR_EMERALD_START_INDEX +  13)
+#define VAR_FRONTIER_GAMBLER_AMOUNT_BET                  (VAR_EMERALD_START_INDEX +  14)
+#define VAR_FRONTIER_GAMBLER_STATE                       (VAR_EMERALD_START_INDEX +  15)
+#define VAR_DEOXYS_ROCK_STEP_COUNT                       (VAR_EMERALD_START_INDEX +  16)
+#define VAR_DEOXYS_ROCK_LEVEL                            (VAR_EMERALD_START_INDEX +  17)
+#define VAR_ABNORMAL_WEATHER_LOCATION                    (VAR_EMERALD_START_INDEX +  18)
+#define VAR_ABNORMAL_WEATHER_STEP_COUNTER                (VAR_EMERALD_START_INDEX +  19)
+#define VAR_SHOULD_END_ABNORMAL_WEATHER                  (VAR_EMERALD_START_INDEX +  20)
+#define VAR_FARAWAY_ISLAND_STEP_COUNTER                  (VAR_EMERALD_START_INDEX +  21)
+#define VAR_REGICE_STEPS_1                               (VAR_EMERALD_START_INDEX +  22)
+#define VAR_REGICE_STEPS_2                               (VAR_EMERALD_START_INDEX +  23)
+#define VAR_REGICE_STEPS_3                               (VAR_EMERALD_START_INDEX +  24)
+#define VAR_ALTERING_CAVE_WILD_SET                       (VAR_EMERALD_START_INDEX +  25)
+#define VAR_DISTRIBUTE_EON_TICKET                        (VAR_EMERALD_START_INDEX +  26) // This var is read and written, but is always zero. The only way to obtain the Eon Ticket in Emerald is via Record Mixing
+#define VAR_FANCLUB_FAN_COUNTER                          (VAR_EMERALD_START_INDEX +  27)
+#define VAR_FANCLUB_LOSE_FAN_TIMER                       (VAR_EMERALD_START_INDEX +  28)
+#define VAR_DEPT_STORE_FLOOR                             (VAR_EMERALD_START_INDEX +  29)
+#define VAR_TRICK_HOUSE_LEVEL                            (VAR_EMERALD_START_INDEX +  30)
+#define VAR_POKELOT_PRIZE_ITEM                           (VAR_EMERALD_START_INDEX +  31)
+#define VAR_SEEDOT_SIZE_RECORD                           (VAR_EMERALD_START_INDEX +  32)
+#define VAR_ASH_GATHER_COUNT                             (VAR_EMERALD_START_INDEX +  33)
+#define VAR_BIRCH_STATE                                  (VAR_EMERALD_START_INDEX +  34)
+#define VAR_CRUISE_STEP_COUNT                            (VAR_EMERALD_START_INDEX +  35)
+#define VAR_POKELOT_RND1                                 (VAR_EMERALD_START_INDEX +  36)
+#define VAR_POKELOT_RND2                                 (VAR_EMERALD_START_INDEX +  37)
+#define VAR_POKELOT_PRIZE_PLACE                          (VAR_EMERALD_START_INDEX +  38)
+#define VAR_LOTAD_SIZE_RECORD                            (VAR_EMERALD_START_INDEX +  39)
+#define VAR_LITTLEROOT_TOWN_STATE                        (VAR_EMERALD_START_INDEX +  40)
+#define VAR_OLDALE_TOWN_STATE                            (VAR_EMERALD_START_INDEX +  41)
+#define VAR_DEWFORD_TOWN_STATE                           (VAR_EMERALD_START_INDEX +  42) // Unused Var
+#define VAR_LAVARIDGE_TOWN_STATE                         (VAR_EMERALD_START_INDEX +  43)
+#define VAR_CURRENT_SECRET_BASE                          (VAR_EMERALD_START_INDEX +  44) // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
+#define VAR_VERDANTURF_TOWN_STATE                        (VAR_EMERALD_START_INDEX +  45) // Unused Var
+#define VAR_PACIFIDLOG_TOWN_STATE                        (VAR_EMERALD_START_INDEX +  46) // Unused Var
+#define VAR_PETALBURG_CITY_STATE                         (VAR_EMERALD_START_INDEX +  47)
+#define VAR_SLATEPORT_CITY_STATE                         (VAR_EMERALD_START_INDEX +  48)
+#define VAR_MAUVILLE_CITY_STATE                          (VAR_EMERALD_START_INDEX +  49) // Unused Var
+#define VAR_RUSTBORO_CITY_STATE                          (VAR_EMERALD_START_INDEX +  50)
+#define VAR_FORTREE_CITY_STATE                           (VAR_EMERALD_START_INDEX +  51) // Unused Var
+#define VAR_LILYCOVE_CITY_STATE                          (VAR_EMERALD_START_INDEX +  52) // Unused Var
+#define VAR_MOSSDEEP_CITY_STATE                          (VAR_EMERALD_START_INDEX +  53)
+#define VAR_SOOTOPOLIS_CITY_STATE                        (VAR_EMERALD_START_INDEX +  54)
+#define VAR_EVER_GRANDE_CITY_STATE                       (VAR_EMERALD_START_INDEX +  55) // Unused Var
+#define VAR_ROUTE101_STATE                               (VAR_EMERALD_START_INDEX +  56)
+#define VAR_ROUTE102_STATE                               (VAR_EMERALD_START_INDEX +  57) // Unused Var
+#define VAR_ROUTE103_STATE                               (VAR_EMERALD_START_INDEX +  58) // Unused Var
+#define VAR_ROUTE104_STATE                               (VAR_EMERALD_START_INDEX +  59)
+#define VAR_ROUTE105_STATE                               (VAR_EMERALD_START_INDEX +  60) // Unused Var
+#define VAR_ROUTE106_STATE                               (VAR_EMERALD_START_INDEX +  61) // Unused Var
+#define VAR_ROUTE107_STATE                               (VAR_EMERALD_START_INDEX +  62) // Unused Var
+#define VAR_ROUTE108_STATE                               (VAR_EMERALD_START_INDEX +  63) // Unused Var
+#define VAR_ROUTE109_STATE                               (VAR_EMERALD_START_INDEX +  64) // Unused Var
+#define VAR_ROUTE110_STATE                               (VAR_EMERALD_START_INDEX +  65)
+#define VAR_ROUTE111_STATE                               (VAR_EMERALD_START_INDEX +  66) // Unused Var
+#define VAR_ROUTE112_STATE                               (VAR_EMERALD_START_INDEX +  67) // Unused Var
+#define VAR_ROUTE113_STATE                               (VAR_EMERALD_START_INDEX +  68) // Unused Var
+#define VAR_ROUTE114_STATE                               (VAR_EMERALD_START_INDEX +  69) // Unused Var
+#define VAR_ROUTE115_STATE                               (VAR_EMERALD_START_INDEX +  70) // Unused Var
+#define VAR_ROUTE116_STATE                               (VAR_EMERALD_START_INDEX +  71)
+#define VAR_ROUTE117_STATE                               (VAR_EMERALD_START_INDEX +  72) // Unused Var
+#define VAR_ROUTE118_STATE                               (VAR_EMERALD_START_INDEX +  73)
+#define VAR_ROUTE119_STATE                               (VAR_EMERALD_START_INDEX +  74)
+#define VAR_ROUTE120_STATE                               (VAR_EMERALD_START_INDEX +  75) // Unused Var
+#define VAR_ROUTE121_STATE                               (VAR_EMERALD_START_INDEX +  76)
+#define VAR_ROUTE122_STATE                               (VAR_EMERALD_START_INDEX +  77) // Unused Var
+#define VAR_ROUTE123_STATE                               (VAR_EMERALD_START_INDEX +  78) // Unused Var
+#define VAR_ROUTE124_STATE                               (VAR_EMERALD_START_INDEX +  79) // Unused Var
+#define VAR_ROUTE125_STATE                               (VAR_EMERALD_START_INDEX +  80) // Unused Var
+#define VAR_ROUTE126_STATE                               (VAR_EMERALD_START_INDEX +  81) // Unused Var
+#define VAR_ROUTE127_STATE                               (VAR_EMERALD_START_INDEX +  82) // Unused Var
+#define VAR_ROUTE128_STATE                               (VAR_EMERALD_START_INDEX +  83)
+#define VAR_ROUTE129_STATE                               (VAR_EMERALD_START_INDEX +  84) // Unused Var
+#define VAR_ROUTE130_STATE                               (VAR_EMERALD_START_INDEX +  85) // Unused Var
+#define VAR_ROUTE131_STATE                               (VAR_EMERALD_START_INDEX +  86) // Unused Var
+#define VAR_ROUTE132_STATE                               (VAR_EMERALD_START_INDEX +  87) // Unused Var
+#define VAR_ROUTE133_STATE                               (VAR_EMERALD_START_INDEX +  88) // Unused Var
+#define VAR_ROUTE134_STATE                               (VAR_EMERALD_START_INDEX +  89) // Unused Var
+#define VAR_LITTLEROOT_HOUSES_STATE_MAY                  (VAR_EMERALD_START_INDEX +  90)
+#define VAR_BIRCH_LAB_STATE                              (VAR_EMERALD_START_INDEX +  91)
+#define VAR_PETALBURG_GYM_STATE                          (VAR_EMERALD_START_INDEX +  92) // 0-1: Wally tutorial, 2-6: 0-4 badges, 7: Defeated Norman, 8: Rematch Norman
+#define VAR_CONTEST_HALL_STATE                           (VAR_EMERALD_START_INDEX +  93)
+#define VAR_CABLE_CLUB_STATE                             (VAR_EMERALD_START_INDEX +  94)
+#define VAR_CONTEST_TYPE                                 (VAR_EMERALD_START_INDEX +  95)
+#define VAR_SECRET_BASE_INITIALIZED                      (VAR_EMERALD_START_INDEX +  96)
+#define VAR_CONTEST_PRIZE_PICKUP                         (VAR_EMERALD_START_INDEX +  97)
+#define VAR_LITTLEROOT_HOUSES_STATE_BRENDAN              (VAR_EMERALD_START_INDEX +  98)
+#define VAR_LITTLEROOT_RIVAL_STATE                       (VAR_EMERALD_START_INDEX +  99)
 #define VAR_BOARD_BRINEY_BOAT_STATE                      (VAR_EMERALD_START_INDEX + 100)
 #define VAR_DEVON_CORP_3F_STATE                          (VAR_EMERALD_START_INDEX + 101)
 #define VAR_BRINEY_HOUSE_STATE                           (VAR_EMERALD_START_INDEX + 102)
