@@ -4154,7 +4154,7 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
 	X(MUS_BW12_FROZEN_TOWN) \
 	X(MUS_BW12_186) \
 	X(MUS_BW12_187) \
-	X(MUS_BW12_188) \
+	X(MUS_BW12_LOW_HEALTH) \
 	X(MUS_BW12_189) \
 	X(MUS_BW12_190) \
 	X(MUS_BW12_191) \
