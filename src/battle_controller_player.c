@@ -1720,9 +1720,9 @@ static void MoveSelectionDisplaySplitIcon(u32 move){
 
 	icon = GetMoveCategory(move);
 	LoadPalette(sSplitIcons_Pal, 10 * 0x10, 0x20);
-	BlitBitmapToWindow(B_WIN_DUMMY, sSplitIcons_Gfx + 0x80 * icon, 0, 0, 16, 16);
+	BlitBitmapToWindow(B_WIN_DUMMY, sSplitIcons_Gfx + 0x40 * icon, 0, 0, 8, 16);
 	PutWindowTilemap(B_WIN_DUMMY);
-	CopyWindowToVram(B_WIN_DUMMY, 3);
+	CopyWindowToVram(B_WIN_DUMMY, COPYWIN_FULL);
 }
 
 static void TryMoveSelectionDisplayMoveDescription(u32 battler)
