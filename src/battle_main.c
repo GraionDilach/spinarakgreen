@@ -1984,9 +1984,19 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             currentPlayerAceLevel = partyMaxLevel;
             partyMaxLevel = partyMaxLevel * trainer->dynamicLevelRatio / 100;
 
-            for (i = 0; i < trainer->poolSize; i++)
+            if (trainer->poolSize > 0)
             {
-                npcTrainerPartyMaxLevel = (npcTrainerPartyMaxLevel > partyData[i].lvl) ? npcTrainerPartyMaxLevel : partyData[i].lvl;
+                for (i = 0; i < trainer->poolSize; i++)
+                {
+                    npcTrainerPartyMaxLevel = (npcTrainerPartyMaxLevel > partyData[i].lvl) ? npcTrainerPartyMaxLevel : partyData[i].lvl;
+                }
+            }
+            else
+            {
+                for (i = 0; i < trainer->partySize; i++)
+                {
+                    npcTrainerPartyMaxLevel = (npcTrainerPartyMaxLevel > partyData[i].lvl) ? npcTrainerPartyMaxLevel : partyData[i].lvl;
+                }
             }
         }
 
