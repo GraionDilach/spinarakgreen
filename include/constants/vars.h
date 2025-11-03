@@ -59,10 +59,11 @@
 #define VAR_DEXNAV_SPECIES                               0x4028
 #define VAR_DEXNAV_STEP_COUNTER                          0x4029
 #define VAR_ITEM_LAST_REPEL_LURE_USED                    0x4030
+#define VAR_BATTLE_SPEED                                 0x4031
 
 // define a fallback starting point to allow renumbering the Emerald-only vars
 // which will be axed when the project gets enough mature
-#define VAR_EMERALD_START_INDEX                          0x4031
+#define VAR_EMERALD_START_INDEX                          0x4032
 
 #define VAR_RECYCLE_GOODS                                (VAR_EMERALD_START_INDEX +   1)
 #define VAR_MIRAGE_RND_H                                 (VAR_EMERALD_START_INDEX +   2)
