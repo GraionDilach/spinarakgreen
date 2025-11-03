@@ -273,4 +273,9 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SKY_PILLAR_WALLACE
 	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
 	call EventScript_ResetAllBerries
+	call EventScript_SetCustomAttributesAtNewGame
 	end
+
+EventScript_SetCustomAttributesAtNewGame::
+	setvar VAR_BATTLE_SPEED, OPTIONS_BATTLE_SCENE_3X
+	return
