@@ -128,7 +128,7 @@ static void SetUpItemUseCallback(u8 taskId)
         type = gTasks[taskId].tEnigmaBerryType - 1;
     else
         type = GetItemType(gSpecialVar_ItemId) - 1;
-    
+
     if (gTasks[taskId].tUsingRegisteredKeyItem && type == (ITEM_USE_PARTY_MENU - 1))
     {
         FadeScreen(FADE_TO_BLACK, 0);
@@ -1597,6 +1597,20 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
     {
         gTasks[taskId].func = ItemUseOnFieldCB_TownMap;
     }
+}
+
+void ItemUseOutOfBattle_RunningShoes(u8 taskId)
+{
+    PlaySE(SE_SELECT);
+    if (FlagGet(FLAG_AUTO_RUN))
+    {
+        DisplayItemMessage(taskId, FONT_NORMAL, gText_AutoRunOff, CloseItemMessage);
+    }
+    else
+    {
+        DisplayItemMessage(taskId, FONT_NORMAL, gText_AutoRunOn, CloseItemMessage);
+    }
+    FlagToggle(FLAG_AUTO_RUN);
 }
 
 #undef tUsingRegisteredKeyItem

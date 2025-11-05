@@ -1303,3 +1303,7 @@ const u8 gText_CannotSendMonToBoxHM[] = _("Cannot send that mon to the box,\nbec
 
 //New Summary Screen Pages
 const u8 gText_PkmnTraits[] = _("TRAITS");
+
+//SpGreen
+const u8 gText_AutoRunOn[] =_("Auto Run has been turned on.{PAUSE_UNTIL_PRESS}");
+const u8 gText_AutoRunOff[] =_("Auto Run has been turned off.{PAUSE_UNTIL_PRESS}");

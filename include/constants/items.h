@@ -997,7 +997,16 @@
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 829
+#define EXPANSION_ITEMS_COUNT 829
+
+//SpGreen
+#define SPGREEN_ITEM_START EXPANSION_ITEMS_COUNT
+#define ITEM_RUNNING_SHOES (SPGREEN_ITEM_START + 0)
+
+#define SPGREEN_LAST_ITEM (SPGREEN_ITEM_START + 1)
+
+#define ITEMS_COUNT SPGREEN_LAST_ITEM
+
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

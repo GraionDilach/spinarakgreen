@@ -14589,6 +14589,22 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+    // SpGreen
+    [ITEM_RUNNING_SHOES] =
+    {
+        .name = ITEM_NAME("Running Shoes"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A pair of shoes\n"
+            "designed for\n"
+            "running."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_RunningShoes,
+        .iconPic = gItemIcon_RunningShoes,
+        .iconPalette = gItemIconPalette_RunningShoes,
+    },
 };
 
 #undef ITEM_NAME
