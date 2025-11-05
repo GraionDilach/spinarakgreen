@@ -11,6 +11,10 @@
 ###### Pokabbie/AlexOnl1ne Battle Speed
 ###### SpaceOtter99 Pokémon color variations
 
+# Graphics
+
+###### Poffin_Case & hyo - RSE2FRLG overworld pack
+
 # Other hacks looked at inspiration wrt Pokémon statchanges/rebalancing (asin stats copied over from their documentation)
 
 ###### PureRGB
