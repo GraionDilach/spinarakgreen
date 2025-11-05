@@ -1115,6 +1115,15 @@ static void Task_DexNavSearch(u8 taskId)
                             sDexNavSearchDataPtr->abilityNum, sDexNavSearchDataPtr->heldItem, sDexNavSearchDataPtr->moves);
 
         FlagClear(DN_FLAG_SEARCHING);
+        FlagSet(FLAG_OVERRIDE_BATTLE_BGM);
+        if (sDexNavSearchDataPtr->isHiddenMon)
+        {
+            VarSet(VAR_BATTLE_BGM, MUS_HG_VS_WILD_KANTO);
+        }
+        else
+        {
+            VarSet(VAR_BATTLE_BGM, MUS_RG_VS_WILD);
+        }
         ScriptContext_SetupScript(EventScript_StartDexNavBattle);
         Free(sDexNavSearchDataPtr);
         DestroyTask(taskId);

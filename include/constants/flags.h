@@ -58,9 +58,9 @@
 #define FLAG_OW_NO_ENCOUNTER         0x2C
 #define FLAG_OW_NO_TRAINER_SEE       0x2D
 #define FLAG_FORCE_SHINY             0x2E
+#define FLAG_OVERRIDE_BATTLE_BGM     0x2F
 
 
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag

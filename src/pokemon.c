@@ -60,6 +60,7 @@
 #include "constants/item_effects.h"
 #include "constants/items.h"
 #include "constants/layouts.h"
+#include "constants/map_types.h"
 #include "constants/moves.h"
 #include "constants/regions.h"
 #include "constants/songs.h"
@@ -5799,6 +5800,11 @@ bool32 IsSpeciesInHoennDex(u16 species)
 
 u16 GetBattleBGM(void)
 {
+    if (FlagGet(FLAG_OVERRIDE_BATTLE_BGM)){
+        FlagClear(FLAG_OVERRIDE_BATTLE_BGM);
+        return VarGet(VAR_BATTLE_BGM);
+    }
+
     if (gBattleTypeFlags & BATTLE_TYPE_LEGENDARY)
     {
         switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL))
@@ -5865,12 +5871,37 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
         default:
-            return MUS_VS_TRAINER;
+            switch (gMapHeader.mapType)
+            {
+            case MAP_TYPE_CITY:
+            case MAP_TYPE_INDOOR:
+                return MUS_DP_VS_TRAINER;
+            case MAP_TYPE_UNDERGROUND:
+                return MUS_HG_VS_TRAINER_KANTO;
+            case MAP_TYPE_UNDERWATER:
+            case MAP_TYPE_OCEAN_ROUTE:
+                return MUS_VS_TRAINER;
+            default:
+                return MUS_RG_VS_TRAINER;
+            }
         }
     }
     else
     {
-        return MUS_VS_WILD;
+        switch (gMapHeader.mapType)
+        {
+        case MAP_TYPE_TOWN:
+        case MAP_TYPE_CITY:
+        case MAP_TYPE_INDOOR:
+        case MAP_TYPE_UNDERGROUND:
+        case MAP_TYPE_UNDERWATER:
+        case MAP_TYPE_OCEAN_ROUTE:
+        case MAP_TYPE_SECRET_BASE:
+            return MUS_HG_VS_WILD;
+        case MAP_TYPE_ROUTE:
+        default:
+            return MUS_VS_WILD;
+        }
     }
 }
 
