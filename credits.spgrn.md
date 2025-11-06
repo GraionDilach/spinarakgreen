@@ -10,10 +10,15 @@
 ###### ipatix HQ audio
 ###### Pokabbie/AlexOnl1ne Battle Speed
 ###### SpaceOtter99 Pokémon color variations
+###### ghoulslash autorun
 
 # Graphics
 
 ###### Poffin_Case & hyo - RSE2FRLG overworld pack
+
+# Misc
+
+###### BuffelSaft trainer ball data
 
 # Other hacks looked at inspiration wrt Pokémon statchanges/rebalancing (asin stats copied over from their documentation)
 
