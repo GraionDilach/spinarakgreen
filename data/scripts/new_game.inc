@@ -278,4 +278,5 @@ EventScript_ResetAllMapFlags::
 
 EventScript_SetCustomAttributesAtNewGame::
 	setvar VAR_BATTLE_SPEED, OPTIONS_BATTLE_SCENE_3X
+	setflag FLAG_SYS_QUEST_MENU_GET
 	return
