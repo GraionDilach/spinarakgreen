@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          submodules: recursive
 
       - name: Install binutils
         run: |
@@ -31,7 +33,7 @@ jobs:
         env:
           COMPARE: 0
         run: make -j${nproc} -O all
-        
+
       - name: LTO
         run: |
           make tidy
@@ -50,4 +52,3 @@ jobs:
     steps:
       - name: Automatically pass for allcontributors
         run: echo "CI automatically passes for allcontributors" && exit 0
-
