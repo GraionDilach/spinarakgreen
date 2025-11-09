@@ -897,6 +897,11 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_POWERCONSTRUCTPRESENCEOFMANY]         = COMPOUND_STRING("You sense the presence of many!"),
     [STRINGID_POWERCONSTRUCTTRANSFORM]              = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} transformed into its Complete Forme!"),
     [STRINGID_ABILITYSHIELDPROTECTS]                = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Ability is protected by the effects of its {B_LAST_ITEM}!"),
+
+    [STRINGID_PICKUP]                               = COMPOUND_STRING("Your POKéMON picked\nup some items!"),
+    [STRINGID_PICKUPSOLO]                           = COMPOUND_STRING("{B_BUFF1} picked up {B_BUFF2} {B_BUFF3}!"),
+    [STRINGID_HONEYGATHERED]                        = COMPOUND_STRING("{B_BUFF1} gathered some {B_BUFF3}!"),
+    [STRINGID_JUICECRUSHED]                         = COMPOUND_STRING("{B_BUFF1} crushed some {B_BUFF3}!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

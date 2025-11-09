@@ -886,4 +886,9 @@ extern const u8 BattleScript_QuestionForfeitBattle[];
 extern const u8 BattleScript_ForfeitBattleGaveMoney[];
 extern const u8 BattleScript_AbilityPopUp[];
 
+extern const u8 BattleScript_PickedUpItem[];
+extern const u8 BattleScript_PickedUpItemSolo[];
+extern const u8 BattleScript_HoneyGathered[];
+extern const u8 BattleScript_JuiceCrushed[];
+
 #endif // GUARD_BATTLE_SCRIPTS_H

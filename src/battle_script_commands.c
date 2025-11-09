@@ -1091,7 +1091,7 @@ bool32 EmergencyExitCanBeTriggered(u32 battler)
         PushTraitStack(battler, ability);
         return TRUE;
      }
-        
+
     return FALSE;
 }
 
@@ -5526,7 +5526,7 @@ static void Cmd_unused_0x48(void)
 
 static inline bool32 TryTriggerSymbiosis(u32 battler, u32 ally)
 {
-    return BattlerHasTrait(ally, ABILITY_SYMBIOSIS)    
+    return BattlerHasTrait(ally, ABILITY_SYMBIOSIS)
         && gBattleMons[battler].item == ITEM_NONE
         && gBattleMons[ally].item != ITEM_NONE
         && CanBattlerGetOrLoseItem(battler, gBattleMons[ally].item)
@@ -6179,7 +6179,7 @@ static void Cmd_moveend(void)
                 effect = TRUE;
             else if (TryClearIllusion(gBattlerTarget, ABILITYEFFECT_MOVE_END))
                     effect = TRUE;
-            } 
+            }
             gBattleScripting.moveendState++;
             break;
         case MOVEEND_ABILITIES_ATTACKER: // Poison Touch, possibly other in the future
@@ -13548,6 +13548,9 @@ static void Cmd_jumpifnotcurrentmoveargtype(void)
         gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
+static const u8 gText_An[] = _("an");
+static const u8 gText_A[] = _("a");
+
 static void Cmd_pickup(void)
 {
     CMD_ARGS();
@@ -13555,6 +13558,11 @@ static void Cmd_pickup(void)
     u32 i, j;
     u16 species, heldItem; //ability;
     u8 lvlDivBy10;
+
+    u8 nickname[POKEMON_NAME_LENGTH * 2];
+    u32 index = 0;
+    u32 mode = 0;
+    u32 pickupSuccess = 0;
 
     if (!InBattlePike()) // No items in Battle Pike.
     {
@@ -13577,6 +13585,8 @@ static void Cmd_pickup(void)
                 {
                     heldItem = GetBattlePyramidPickupItemId();
                     SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
+                    pickupSuccess++;
+                    index = i;
                 }
                 else
                 {
@@ -13589,6 +13599,8 @@ static void Cmd_pickup(void)
                         if (rand < percentTotal)
                         {
                             SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sPickupTable[j].itemId);
+                            pickupSuccess++;
+                            index = i;
                             break;
                         }
                     }
@@ -13603,6 +13615,9 @@ static void Cmd_pickup(void)
                 {
                     heldItem = ITEM_HONEY;
                     SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
+                    pickupSuccess++;
+                    index = i;
+                    mode = 1;
                 }
             }
             else if (P_SHUCKLE_BERRY_JUICE == GEN_2
@@ -13612,11 +13627,64 @@ static void Cmd_pickup(void)
             {
                 heldItem = ITEM_BERRY_JUICE;
                 SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
+                pickupSuccess++;
+                index = i;
+                mode = 2;
             }
         }
     }
 
-    gBattlescriptCurrInstr = cmd->nextInstr;
+    if (pickupSuccess == 1)
+    {
+        GetMonData(&gPlayerParty[index], MON_DATA_NICKNAME, nickname);
+        StringCopy_Nickname(gBattleTextBuff1, nickname);
+
+        CopyItemName(GetMonData(&gPlayerParty[index], MON_DATA_HELD_ITEM), gBattleTextBuff3);
+
+        switch (gBattleTextBuff3[0])
+        {
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            StringCopy(gBattleTextBuff2, (u8 *)gText_An);
+            break;
+        default:
+            StringCopy(gBattleTextBuff2, (u8 *)gText_A);
+        }
+
+        switch(mode)
+        {
+        case 0:
+        default:
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_PickedUpItemSolo;
+            break;
+        case 1:
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_HoneyGathered;
+            break;
+        case 2:
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_JuiceCrushed;
+            break;
+        }
+    }
+    else if (pickupSuccess > 1)
+    {
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_PickedUpItem;
+    }
+    else
+    {
+        gBattlescriptCurrInstr = cmd->nextInstr;
+    }
 }
 
 static void Cmd_unused_0xE6(void)
@@ -15030,7 +15098,7 @@ static bool8 CanBattlerPreventStatLoss(u16 battler)
      || SearchTraits(battlerTraits, ABILITY_FULL_METAL_BODY)
      || SearchTraits(battlerTraits, ABILITY_WHITE_SMOKE))
         return TRUE;
-    
+
     return FALSE;
 }
 
@@ -16810,7 +16878,7 @@ void BS_JumpIfIntimidateAbilityPrevented(void)
     {
         gBattlescriptCurrInstr = cmd->nextInstr;
     }
-    
+
     if (BattlerHasTrait(gBattlerTarget, ABILITY_GUARD_DOG))
     {
         ability = ABILITY_GUARD_DOG;

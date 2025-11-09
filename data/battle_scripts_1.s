@@ -9908,3 +9908,23 @@ BattleScript_ForfeitBattleGaveMoney::
 .endif
 	waitmessage B_WAIT_TIME_LONG
 	end2
+
+BattleScript_PickedUpItem::
+	printstring STRINGID_PICKUP
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_PickedUpItemSolo::
+	printstring STRINGID_PICKUPSOLO
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_HoneyGathered::
+	printstring STRINGID_HONEYGATHERED
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_JuiceCrushed::
+	printstring STRINGID_JUICECRUSHED
+	waitmessage B_WAIT_TIME_LONG
+	return
