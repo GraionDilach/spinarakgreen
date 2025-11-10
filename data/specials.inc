@@ -564,3 +564,21 @@ gSpecials::
 	def_special EnterCode
 	def_special GetCodeFeedback
 	def_special SetHiddenNature
+
+@ Start Menu functions begin below:
+	def_special PlayRainStoppingSoundEffect
+	def_special Script_StartMenu_OpenPokedexMenu
+	def_special Script_StartMenu_OpenPokemonMenu
+	def_special Script_StartMenu_OpenBagMenu
+	def_special Script_StartMenu_OpenPokenavMenu
+	def_special Script_StartMenu_OpenTrainerCardMenu
+	def_special Script_StartMenu_OpenOptionsMenu
+	def_special InBattlePyramid_
+	def_special ShowSafariBallsWindow
+	def_special ShowPyramidFloorWindow
+	def_special RemoveExtraStartMenuWindows
+	def_special Script_StartMenu_OpenRetireSafari
+	def_special InBattlePike
+	def_special Script_StartMenu_OpenDexNavMenu
+	def_special Script_StartMenu_OpenQuestsMenu
+@ Start menu functions end above:

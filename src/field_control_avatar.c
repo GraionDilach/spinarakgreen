@@ -223,8 +223,10 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         return TRUE;
     if (input->pressedStartButton)
     {
+        ScriptContext_SetupScript(EventScript_StartMenu);
+
         PlaySE(SE_WIN_OPEN);
-        ShowStartMenu();
+        // ShowStartMenu();
         return TRUE;
     }
 

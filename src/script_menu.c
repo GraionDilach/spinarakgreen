@@ -68,6 +68,11 @@ static void MultichoiceDynamicEventShowItem_OnInit(struct DynamicListMenuEventAr
 static void MultichoiceDynamicEventShowItem_OnSelectionChanged(struct DynamicListMenuEventArgs *eventArgs);
 static void MultichoiceDynamicEventShowItem_OnDestroy(struct DynamicListMenuEventArgs *eventArgs);
 
+static void MultichoiceDynamicEventUpdateStartMenuCursorPos_OnSelectionChanged(struct DynamicListMenuEventArgs *eventArgs)
+{
+    VarSet(VAR_START_MENU_CURSOR_POS, eventArgs->selectedItem);
+}
+
 static const struct DynamicListMenuEventCollection sDynamicListMenuEventCollections[] =
 {
     [DYN_MULTICHOICE_CB_DEBUG] =
@@ -81,6 +86,10 @@ static const struct DynamicListMenuEventCollection sDynamicListMenuEventCollecti
         .OnInit = MultichoiceDynamicEventShowItem_OnInit,
         .OnSelectionChanged = MultichoiceDynamicEventShowItem_OnSelectionChanged,
         .OnDestroy = MultichoiceDynamicEventShowItem_OnDestroy
+    },
+    [DYN_MULTICHOICE_CB_UPDATE_START_MENU_CURSOR_POS] =
+    {
+        .OnSelectionChanged = MultichoiceDynamicEventUpdateStartMenuCursorPos_OnSelectionChanged,
     }
 };
 
