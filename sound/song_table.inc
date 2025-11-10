@@ -1165,7 +1165,7 @@ gSongTable::
     song mus_pkmn_bw12_185, 0, 0
     song mus_pkmn_bw12_186, 0, 0
     song mus_pkmn_bw12_187, 0, 0
-    song mus_pkmn_bw12_188, 0, 0
+    song mus_pkmn_bw12_188, 3, 3
     song mus_pkmn_bw12_189, 0, 0
     song mus_pkmn_bw12_190, 0, 0
     song mus_pkmn_bw12_191, 0, 0

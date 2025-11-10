@@ -1066,7 +1066,7 @@ void HandleLowHpMusicChange(struct Pokemon *mon, u8 battler)
         if (!gBattleSpritesDataPtr->battlerData[battler].lowHpSong)
         {
             if (!gBattleSpritesDataPtr->battlerData[BATTLE_PARTNER(battler)].lowHpSong)
-                PlaySE(SE_LOW_HEALTH);
+                PlaySE(MUS_BW12_LOW_HEALTH);
             gBattleSpritesDataPtr->battlerData[battler].lowHpSong = 1;
         }
     }
@@ -1075,12 +1075,12 @@ void HandleLowHpMusicChange(struct Pokemon *mon, u8 battler)
         gBattleSpritesDataPtr->battlerData[battler].lowHpSong = 0;
         if (!IsDoubleBattle())
         {
-            m4aSongNumStop(SE_LOW_HEALTH);
+            m4aSongNumStop(MUS_BW12_LOW_HEALTH);
             return;
         }
         if (IsDoubleBattle() && !gBattleSpritesDataPtr->battlerData[BATTLE_PARTNER(battler)].lowHpSong)
         {
-            m4aSongNumStop(SE_LOW_HEALTH);
+            m4aSongNumStop(MUS_BW12_LOW_HEALTH);
             return;
         }
     }
@@ -1094,7 +1094,7 @@ void BattleStopLowHpSound(void)
     if (IsDoubleBattle())
         gBattleSpritesDataPtr->battlerData[BATTLE_PARTNER(playerBattler)].lowHpSong = 0;
 
-    m4aSongNumStop(SE_LOW_HEALTH);
+    m4aSongNumStop(MUS_BW12_LOW_HEALTH);
 }
 
 u8 GetMonHPBarLevel(struct Pokemon *mon)

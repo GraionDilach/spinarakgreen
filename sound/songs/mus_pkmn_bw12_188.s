@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	mus_pkmn_bw12_188_grp, voicegroup000
-	.equ	mus_pkmn_bw12_188_pri, 0
+	.equ	mus_pkmn_bw12_188_pri, 3
 	.equ	mus_pkmn_bw12_188_rev, 0
 	.equ	mus_pkmn_bw12_188_mvl, 100
 	.equ	mus_pkmn_bw12_188_key, 0
@@ -32,25 +32,25 @@ mus_pkmn_bw12_188_1:
 	.byte		N12   , Dn4 , v100
 	.byte	W12
 	.byte		BEND  , c_v+31
-	.byte		N12   , An3 
+	.byte		N12   , An3
 	.byte	W24
 	.byte	TEMPO , 150*mus_pkmn_bw12_188_tbs/2
 	.byte		VOICE , 15
 	.byte		VOL   , 112*mus_pkmn_bw12_188_mvl/mxv
 	.byte		BEND  , c_v+17
-	.byte		N12   , Dn4 
+	.byte		N12   , Dn4
 	.byte	W12
 	.byte		BEND  , c_v+31
-	.byte		N12   , An3 
+	.byte		N12   , An3
 	.byte	W24
 	.byte	TEMPO , 150*mus_pkmn_bw12_188_tbs/2
 	.byte		VOICE , 15
 	.byte		VOL   , 112*mus_pkmn_bw12_188_mvl/mxv
 	.byte		BEND  , c_v+17
-	.byte		N12   , Dn4 
+	.byte		N12   , Dn4
 	.byte	W12
 	.byte		BEND  , c_v+31
-	.byte		N12   , An3 
+	.byte		N12   , An3
 	.byte	W12
 @ 001   ----------------------------------------
 	.byte	W12
@@ -58,10 +58,10 @@ mus_pkmn_bw12_188_1:
 	.byte		VOICE , 15
 	.byte		VOL   , 112*mus_pkmn_bw12_188_mvl/mxv
 	.byte		BEND  , c_v+17
-	.byte		N12   , Dn4 
+	.byte		N12   , Dn4
 	.byte	W12
 	.byte		BEND  , c_v+31
-	.byte		N12   , An3 
+	.byte		N12   , An3
 	.byte	W24
 	.byte		VOICE , 15
 	.byte		PAN   , c_v+0
