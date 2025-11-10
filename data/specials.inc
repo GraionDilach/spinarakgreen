@@ -582,3 +582,5 @@ gSpecials::
 	def_special Script_StartMenu_OpenDexNavMenu
 	def_special Script_StartMenu_OpenQuestsMenu
 @ Start menu functions end above:
+
+	def_special HeadbuttWildEncounter

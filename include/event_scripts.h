@@ -689,4 +689,7 @@ extern const u8 EventScript_MovedTooFast[];
 // start menu
 extern const u8 EventScript_StartMenu[];
 
+extern const u8 EventScript_UseHeadbutt[];
+extern const u8 EventScript_Headbutt[];
+
 #endif // GUARD_EVENT_SCRIPTS_H
