@@ -169,6 +169,12 @@ const u8 gText_drastically[] = _("drastically ");
 const u8 gText_severely[] = _("severely ");
 static const u8 sText_TerrainReturnedToNormal[] = _("The terrain returned to normal!"); // Unused
 
+const u16 gItemDroppedStringIds[] =
+{
+    [B_MSG_ITEM_DROPPED] = STRINGID_PKMNDROPPEDITEM,
+    [B_MSG_BAG_IS_FULL] = STRINGID_BAGISFULL,
+};
+
 const u8 *const gBattleStringsTable[STRINGID_COUNT] =
 {
     [STRINGID_TRAINER1LOSETEXT]                     = COMPOUND_STRING("{B_TRAINER1_LOSE_TEXT}"),
@@ -902,6 +908,8 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PICKUPSOLO]                           = COMPOUND_STRING("{B_BUFF1} picked up {B_BUFF2} {B_BUFF3}!"),
     [STRINGID_HONEYGATHERED]                        = COMPOUND_STRING("{B_BUFF1} gathered some {B_BUFF3}!"),
     [STRINGID_JUICECRUSHED]                         = COMPOUND_STRING("{B_BUFF1} crushed some {B_BUFF3}!"),
+    [STRINGID_PKMNDROPPEDITEM]                      = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} dropped\nits {B_LAST_ITEM}!"),
+    [STRINGID_BAGISFULL]                            = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} dropped\n{B_LAST_ITEM}!\pBut your bag is full!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

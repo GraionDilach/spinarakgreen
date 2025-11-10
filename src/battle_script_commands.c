@@ -18681,3 +18681,36 @@ void BS_DebugPrint(void)
 
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
+
+void BS_PrepareBattlerItemToDrop(void)
+{
+    NATIVE_ARGS(u8 battler);
+    u32 battler = GetBattlerForBattleScript(cmd->battler);
+    gBattleHistory->heldItems[battler] = gBattleMons[battler].item;
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_GiveDroppedItems(void)
+{
+    NATIVE_ARGS();
+    u8 i;
+    u8 battlers[] = {GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT),
+                     GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)};
+    for (i = 0; i < 1 + IsDoubleBattle(); i++)
+    {
+        gLastUsedItem = gBattleHistory->heldItems[battlers[i]];
+        gBattleHistory->heldItems[battlers[i]] = ITEM_NONE;
+        if (gLastUsedItem && !(gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_FIRST_BATTLE | BATTLE_TYPE_WALLY_TUTORIAL)))
+        {
+            if(AddBagItem(gLastUsedItem, 1))
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ITEM_DROPPED;
+            else
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_BAG_IS_FULL;
+
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_ItemDropped;
+            return;
+        }
+    }
+    gBattlescriptCurrInstr = cmd->nextInstr;
+}

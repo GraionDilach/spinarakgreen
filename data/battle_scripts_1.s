@@ -5051,6 +5051,7 @@ BattleScript_FaintAttacker::
 	pause B_WAIT_TIME_LONG
 	dofaintanimation BS_ATTACKER
 	printstring STRINGID_ATTACKERFAINTED
+	preparebattleritemtodrop BS_ATTACKER
 	cleareffectsonfaint BS_ATTACKER
 	waitanimation
 	tryactivatesoulheart
@@ -5066,6 +5067,7 @@ BattleScript_FaintTarget::
 	pause B_WAIT_TIME_LONG
 	dofaintanimation BS_TARGET
 	printstring STRINGID_TARGETFAINTED
+	preparebattleritemtodrop BS_TARGET
 	cleareffectsonfaint BS_TARGET
 	waitanimation
 	tryactivatesoulheart
@@ -5207,6 +5209,7 @@ BattleScript_LocalBattleWonReward::
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_PayDayMoneyAndPickUpItems::
 	givepaydaymoney
+	givedroppeditems
 	pickup
 	end2
 
@@ -9927,4 +9930,9 @@ BattleScript_HoneyGathered::
 BattleScript_JuiceCrushed::
 	printstring STRINGID_JUICECRUSHED
 	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_ItemDropped::
+	playse SE_BALL_BOUNCE_1
+	printfromtable gItemDroppedStringIds
 	return

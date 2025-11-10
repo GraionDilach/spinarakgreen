@@ -2542,3 +2542,12 @@
 	.macro debugprint
 	callnative BS_DebugPrint
 	.endm
+
+	.macro preparebattleritemtodrop battler:req
+	callnative BS_PrepareBattlerItemToDrop
+	.byte \battler
+	.endm
+
+	.macro givedroppeditems
+	callnative BS_GiveDroppedItems
+	.endm

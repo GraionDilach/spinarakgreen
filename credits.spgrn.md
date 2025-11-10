@@ -15,6 +15,7 @@
 ###### Deokishisu - Pickup messages (ported from FRLG+)
 ###### Lunos DynMultichoice Start Menu
 ###### Lunos OW Headbutt
+###### AgustinGDLV Item drops
 
 # Graphics
 
