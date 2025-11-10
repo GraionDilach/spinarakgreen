@@ -2551,3 +2551,7 @@
 	.macro givedroppeditems
 	callnative BS_GiveDroppedItems
 	.endm
+
+	.macro rollterashards
+	callnative BS_RollTeraShards
+	.endm
