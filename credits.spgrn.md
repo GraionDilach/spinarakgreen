@@ -20,6 +20,7 @@
 # Graphics
 
 ###### Poffin_Case & hyo - RSE2FRLG overworld pack
+###### ORAS Full Tileset by leob0505 (insprired by TheDeadHeroAlistair from Deviantart)
 
 # Misc
 
