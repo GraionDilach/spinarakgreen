@@ -1672,3 +1672,22 @@ const u16 gTilesetPalettes_SpG_Pallet[][16] =
 };
 
 const u32 gTilesetTiles_SpG_Pallet[] = INCBIN_U32("data/tilesets/secondary/spg_pallet/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Sp_KantoRoute[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Sp_KantoRoute[] = INCBIN_U32("data/tilesets/secondary/sp_kanto_route/tiles.4bpp.lz");

@@ -852,3 +852,14 @@ const struct Tileset gTileset_SpG_Pallet =
     .metatileAttributes = gMetatileAttributes_SpG_Pallet,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Sp_KantoRoute =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Sp_KantoRoute,
+    .palettes = gTilesetPalettes_Sp_KantoRoute,
+    .metatiles = gMetatiles_Sp_KantoRoute,
+    .metatileAttributes = gMetatileAttributes_Sp_KantoRoute,
+    .callback = NULL,
+};

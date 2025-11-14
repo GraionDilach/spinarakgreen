@@ -213,3 +213,6 @@ const u16 gMetatileAttributes_SpG_General[] = INCBIN_U16("data/tilesets/primary/
 
 const u16 gMetatiles_SpG_Pallet[] = INCBIN_U16("data/tilesets/secondary/spg_pallet/metatiles.bin");
 const u16 gMetatileAttributes_SpG_Pallet[] = INCBIN_U16("data/tilesets/secondary/spg_pallet/metatile_attributes.bin");
+
+const u16 gMetatiles_Sp_KantoRoute[] = INCBIN_U16("data/tilesets/secondary/sp_kanto_route/metatiles.bin");
+const u16 gMetatileAttributes_Sp_KantoRoute[] = INCBIN_U16("data/tilesets/secondary/sp_kanto_route/metatile_attributes.bin");
