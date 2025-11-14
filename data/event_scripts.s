@@ -1160,3 +1160,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
 	.include "data/scripts/dynmulti_start_menu.inc"
+
+	.include "data/maps/SpG_Pallet_Town/scripts.inc"
