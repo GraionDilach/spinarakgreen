@@ -34,7 +34,8 @@
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
-    "gMapGroup_SpG_Pallet"
+    "gMapGroup_SpG_Pallet",
+    "gMapGroup_SpRoutes"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -624,5 +625,8 @@
   ],
   "gMapGroup_SpG_Pallet": [
     "SpG_Pallet_Town"
+  ],
+  "gMapGroup_SpRoutes": [
+    "Sp_Route1"
   ]
 }

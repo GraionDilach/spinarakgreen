@@ -1162,3 +1162,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/dynmulti_start_menu.inc"
 
 	.include "data/maps/SpG_Pallet_Town/scripts.inc"
+
+	.include "data/maps/Sp_Route1/scripts.inc"
