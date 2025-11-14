@@ -4414,7 +4414,7 @@
     {
       "id": "LAYOUT_SPG_PALLET_TOWN",
       "name": "SpG_Pallet_Town_Layout",
-      "width": 24,
+      "width": 34,
       "height": 20,
       "primary_tileset": "gTileset_SpG_General",
       "secondary_tileset": "gTileset_SpG_Pallet",
