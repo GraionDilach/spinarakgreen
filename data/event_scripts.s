@@ -1164,3 +1164,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/SpG_Pallet_Town/scripts.inc"
 
 	.include "data/maps/Sp_Route1/scripts.inc"
+
+	.include "data/maps/Sp_Pallet_PlayerHouse_2F/scripts.inc"
+
+	.include "data/maps/Sp_Pallet_PlayerHouse_1F/scripts.inc"

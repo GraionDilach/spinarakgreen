@@ -4430,6 +4430,26 @@
       "secondary_tileset": "gTileset_SpG_Pallet",
       "border_filepath": "data/layouts/Sp_Route1/border.bin",
       "blockdata_filepath": "data/layouts/Sp_Route1/map.bin"
+    },
+    {
+      "id": "LAYOUT_SP_PALLET_PLAYER_HOUSE_2F",
+      "name": "Sp_Pallet_PlayerHouse_2F_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/Sp_Pallet_PlayerHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/Sp_Pallet_PlayerHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SP_PALLET_PLAYER_HOUSE_1F",
+      "name": "Sp_Pallet_PlayerHouse_1F_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/Sp_Pallet_PlayerHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/Sp_Pallet_PlayerHouse_1F/map.bin"
     }
   ]
 }

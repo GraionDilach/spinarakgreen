@@ -1,5 +1,7 @@
 {
   "group_order": [
+    "gMapGroup_SpRoutes",
+    "gMapGroup_SpPallet",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -33,9 +35,15 @@
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
-    "gMapGroup_IndoorRoute124",
-    "gMapGroup_SpG_Pallet",
-    "gMapGroup_SpRoutes"
+    "gMapGroup_IndoorRoute124"
+  ],
+  "gMapGroup_SpRoutes": [
+    "Sp_Route1"
+  ],
+  "gMapGroup_SpPallet": [
+    "SpG_Pallet_Town",
+    "Sp_Pallet_PlayerHouse_1F",
+    "Sp_Pallet_PlayerHouse_2F"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -622,11 +630,5 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
-  ],
-  "gMapGroup_SpG_Pallet": [
-    "SpG_Pallet_Town"
-  ],
-  "gMapGroup_SpRoutes": [
-    "Sp_Route1"
   ]
 }

@@ -11534,7 +11534,7 @@
         },
         {
           "map": "MAP_SP_ROUTE1",
-          "base_label": "gSp_Route1_Day",
+          "base_label": "gSp_Route1",
           "land_mons": {
             "encounter_rate": 10,
             "mons": [

@@ -1652,7 +1652,7 @@ const u16 gTilesetPalettes_SpG_General[][16] =
     INCBIN_U16("data/tilesets/primary/spg_general/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_SpG_General[] = INCBIN_U32("data/tilesets/primary/spg_general/tiles.4bpp.lz");
+const u32 gTilesetTiles_SpG_General[] = INCBIN_U32("data/tilesets/primary/spg_general/tiles.4bpp.fastSmol");
 
 const u16 gTilesetPalettes_SpG_Pallet[][16] =
 {
@@ -1671,7 +1671,7 @@ const u16 gTilesetPalettes_SpG_Pallet[][16] =
     INCBIN_U16("data/tilesets/secondary/spg_pallet/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_SpG_Pallet[] = INCBIN_U32("data/tilesets/secondary/spg_pallet/tiles.4bpp.lz");
+const u32 gTilesetTiles_SpG_Pallet[] = INCBIN_U32("data/tilesets/secondary/spg_pallet/tiles.4bpp.fastSmol");
 
 const u16 gTilesetPalettes_Sp_KantoRoute[][16] =
 {
@@ -1690,4 +1690,4 @@ const u16 gTilesetPalettes_Sp_KantoRoute[][16] =
     INCBIN_U16("data/tilesets/secondary/sp_kanto_route/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_Sp_KantoRoute[] = INCBIN_U32("data/tilesets/secondary/sp_kanto_route/tiles.4bpp.lz");
+const u32 gTilesetTiles_Sp_KantoRoute[] = INCBIN_U32("data/tilesets/secondary/sp_kanto_route/tiles.4bpp.fastSmol");
