@@ -4425,7 +4425,7 @@
       "id": "LAYOUT_SP_ROUTE1",
       "name": "Sp_Route1_Layout",
       "width": 24,
-      "height": 40,
+      "height": 44,
       "primary_tileset": "gTileset_SpG_General",
       "secondary_tileset": "gTileset_SpG_Pallet",
       "border_filepath": "data/layouts/Sp_Route1/border.bin",
