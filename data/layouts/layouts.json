@@ -4450,6 +4450,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/Sp_Pallet_PlayerHouse_1F/border.bin",
       "blockdata_filepath": "data/layouts/Sp_Pallet_PlayerHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SP_VIRIDIAN_CITY",
+      "name": "ViridianCity_Layout",
+      "width": 48,
+      "height": 41,
+      "primary_tileset": "gTileset_SpG_General",
+      "secondary_tileset": "gTileset_SpViridianCity",
+      "border_filepath": "data/layouts/ViridianCity/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianCity/map.bin"
     }
   ]
 }

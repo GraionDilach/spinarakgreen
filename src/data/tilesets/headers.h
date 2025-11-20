@@ -863,3 +863,14 @@ const struct Tileset gTileset_Sp_KantoRoute =
     .metatileAttributes = gMetatileAttributes_Sp_KantoRoute,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_SpViridianCity =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SpViridianCity,
+    .palettes = gTilesetPalettes_SpViridianCity,
+    .metatiles = gMetatiles_SpViridianCity,
+    .metatileAttributes = gMetatileAttributes_SpViridianCity,
+    .callback = NULL,
+};

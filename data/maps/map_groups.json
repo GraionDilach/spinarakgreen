@@ -2,6 +2,7 @@
   "group_order": [
     "gMapGroup_SpRoutes",
     "gMapGroup_SpPallet",
+    "gMapGroup_SpViridian",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -44,6 +45,9 @@
     "SpG_Pallet_Town",
     "Sp_Pallet_PlayerHouse_1F",
     "Sp_Pallet_PlayerHouse_2F"
+  ],
+  "gMapGroup_SpViridian": [
+    "ViridianCity"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
