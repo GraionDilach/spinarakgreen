@@ -72,6 +72,8 @@
 #define P_FLAG_FORCE_SHINY               0  // If this flag is set, all wild and gift Pokémon will forced into being Shiny.
 #define P_FLAG_FORCE_NO_SHINY            0  // If this flag is set, all wild and gift Pokémon will forced into NOT being Shiny.
 
+#define B_ADD_EFFORT_LEVEL_BONUS         TRUE        // Apply SpGreen approximation of PLA Effort Level Bonus.
+
 // Go here if you want to disable specific families of Pokémon.
 #include "config/species_enabled.h"
 
